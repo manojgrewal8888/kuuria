@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Link } from "react-router-dom";
+
 
 
 export default class Tiket extends Component {
@@ -18,18 +20,18 @@ export default class Tiket extends Component {
                     </div>
 
                     <div className="browse-btn">
-                        <a href="/" className="browse-a">
+                        <Link className="link_reset" exact to="/ticketevent" className="browse-a">
                             Browse
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="wrap-ticketbox">
-                        <div className="item"><p className="award">AWARD EVENT 1</p></div>
-                        <div className="item"><p className="award">AWARD EVENT 2</p></div>
-                        <div className="item"><p className="award">AWARD EVENT 3</p></div>
-                        <div className="item"><p className="award">AWARD EVENT 1</p></div>
-                        <div className="item"><p className="award">AWARD EVENT 2</p></div>
-                        <div className="item"><p className="award">AWARD EVENT 3</p></div>
+                        <div className="item"><Link className="link_reset" exact to="tiket"> <p className="award">AWARD EVENT 1</p></Link></div>
+                        <div className="item"><Link className="link_reset" exact to="tiket"> <p className="award">AWARD EVENT 2</p></Link></div>
+                        <div className="item"><Link className="link_reset" exact to="tiket"> <p className="award">AWARD EVENT 3</p></Link></div>
+                        <div className="item"><Link className="link_reset" exact to="tiket"> <p className="award">AWARD EVENT 1</p></Link></div>
+                        <div className="item"><Link className="link_reset" exact to="tiket"> <p className="award">AWARD EVENT 2</p></Link></div>
+                        <div className="item"><Link className="link_reset" exact to="tiket"> <p className="award">AWARD EVENT 3</p></Link></div>
                     </div>
 
                     <div className="dot-resize">

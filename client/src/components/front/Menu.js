@@ -18,7 +18,7 @@ export default class Menu extends Component {
                                 <NavLink exact activeClassName="active-class" className="navitem" to="/Tiket">Ticketing</NavLink>
                             </li>
                             <li>
-                                <NavLink exact activeClassName="active-class"  className="navitem" to="/Umb">File Nomination</NavLink>
+                                <NavLink exact activeClassName="active-class"  className="navitem" to="/dashnominee">File Nomination</NavLink>
                             </li>
                             <li >
                                 <NavLink exact activeClassName="active-class" className="navitem"  to="/Signup">Sign Up</NavLink>

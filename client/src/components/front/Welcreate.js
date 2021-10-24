@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
 
-export default class Welcreate extends Component {
+export default class Create extends Component {
     render() {
         return (
             <div>
@@ -35,7 +35,7 @@ export default class Welcreate extends Component {
                             <option value="aus">Australia</option>
                         </select>
 
-                        <Link exact to='/Eventcategory'><button className="create_cae">CREATE</button></Link>
+                        <Link className="link_reset" exact to='/Eventcategory'><button className="create_cae">CREATE</button></Link>
                     </div>
 
                     
