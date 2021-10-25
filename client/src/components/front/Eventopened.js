@@ -3,12 +3,12 @@ import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
 import { Link } from "react-router-dom";
 
 const data = [
-  { name: 'Group A', value: 400 },
+  { name: 'Group A', value: 800 },
   { name: 'Group B', value: 300 },
   { name: 'Group C', value: 300 },
-  { name: 'Group D', value: 200 },
+ ,
 ];
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+const COLORS = ['#ffffff', '#008CFF', '#FFBB28',];
 
 export default class Opened extends PureComponent {
   static demoUrl = 'https://codesandbox.io/s/pie-chart-with-padding-angle-7ux0o';
