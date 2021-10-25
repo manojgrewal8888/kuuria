@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
-
+ 
 const data = [
   { name: 'Group A', value: 400 },
   { name: 'Group B', value: 300 },
