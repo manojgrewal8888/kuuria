@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
+import { Link } from "react-router-dom";
 
 const data = [
   { name: 'Group A', value: 400 },
@@ -19,11 +20,11 @@ export default class Opened extends PureComponent {
         <div className="contain_home">
             <div className="left_home">
                 <img src="./img/kuria-new.png" alt="" className="event_img" />
-                <i className="fa fa-home home_icon"></i>
-                <i className="fa fa-gear home_icon"></i>
-                <i className="fa fa-th home_icon"></i>
-                <i className="fa fa-trash home_icon"></i>
-                <span className="only_edash"><i className="fa fa-home home_icon1"></i>Dashboard</span>
+                <Link className="link_reset" to='/eventopened'><i className="fa fa-home home_icon"></i></Link>
+                <Link className="link_reset" to='/settinggen'><i className="fa fa-gear home_icon"></i></Link>
+                <Link className="link_reset" to='/category'><i className="fa fa-th home_icon"></i></Link>
+                <Link className="link_reset" to='/category'><i className="fa fa-trash home_icon"></i></Link>
+                <Link className="link_reset" to='/eventopened'><span className="only_edash"><i className="fa fa-home home_icon1"></i>Dashboard</span></Link>
             </div>
                     
             <div className="right_home">

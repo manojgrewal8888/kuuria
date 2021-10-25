@@ -26,12 +26,12 @@ export default class Tiket extends Component {
                     </div>
 
                     <div className="wrap-ticketbox">
-                        <div className="item"><Link className="link_reset" exact to="tiket"> <p className="award">AWARD EVENT 1</p></Link></div>
-                        <div className="item"><Link className="link_reset" exact to="tiket"> <p className="award">AWARD EVENT 2</p></Link></div>
-                        <div className="item"><Link className="link_reset" exact to="tiket"> <p className="award">AWARD EVENT 3</p></Link></div>
-                        <div className="item"><Link className="link_reset" exact to="tiket"> <p className="award">AWARD EVENT 1</p></Link></div>
-                        <div className="item"><Link className="link_reset" exact to="tiket"> <p className="award">AWARD EVENT 2</p></Link></div>
-                        <div className="item"><Link className="link_reset" exact to="tiket"> <p className="award">AWARD EVENT 3</p></Link></div>
+                        <div className="item"><p className="award">AWARD EVENT 1</p></div>
+                        <div className="item"><p className="award">AWARD EVENT 2</p></div>
+                        <div className="item"><p className="award">AWARD EVENT 3</p></div>
+                        <div className="item"><p className="award">AWARD EVENT 1</p></div>
+                        <div className="item"><p className="award">AWARD EVENT 2</p></div>
+                        <div className="item"><p className="award">AWARD EVENT 3</p></div>
                     </div>
 
                     <div className="dot-resize">

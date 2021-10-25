@@ -8,26 +8,26 @@ export default class Menu extends Component {
             <div>
                 <div className="wrapmenu">
                     <div className="headlogo">
-                        <NavLink exact activeClassName="active-class"  to="/Home">
+                        <NavLink exact activeClassName="active-class"  to="/index">
                             <img src="./img/kuria-new.png" alt="" className="img-headlogo" />
                         </NavLink>
                     </div>
                     <div className="menu">
                         <ul className="navlist">
                             <li >
-                                <NavLink exact activeClassName="active-class" className="navitem" to="/Tiket">Ticketing</NavLink>
+                                <NavLink exact activeClassName="active-class" className="navitem" to="/ticket">Ticketing</NavLink>
                             </li>
                             <li>
                                 <NavLink exact activeClassName="active-class"  className="navitem" to="/dashnominee">File Nomination</NavLink>
                             </li>
                             <li >
-                                <NavLink exact activeClassName="active-class" className="navitem"  to="/Signup">Sign Up</NavLink>
+                                <NavLink exact activeClassName="active-class" className="navitem"  to="/signup">Sign Up</NavLink>
                             </li>
                             <li >
-                                <NavLink exact activeClassName="active-class" className="navitem"  to="/Login">Log In</NavLink>
+                                <NavLink exact activeClassName="active-class" className="navitem"  to="/login">Log In</NavLink>
                             </li>
                             <li >
-                                <NavLink exact activeClassName="active-class" className="navitem" to="/License">Buy License</NavLink>
+                                <NavLink exact activeClassName="active-class" className="navitem" to="/license">Buy License</NavLink>
                             </li>
                         </ul>
                     </div>

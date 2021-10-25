@@ -9,10 +9,10 @@ export default class Eventcategory extends Component {
                   <div className="contain_home">
                     <div className="left_home">
                         <img src="./img/kuria-new.png" alt="" className="event_img" />
-                        <i className="fa fa-home home_icon"></i>
-                        <i className="fa fa-gear home_icon"></i>
-                        <i className="fa fa-th home_icon"></i>
-                        <i className="fa fa-trash home_icon"></i>
+                        <Link className="link_reset" to='/eventopened'><i className="fa fa-home home_icon"></i></Link>
+                        <Link className="link_reset" to='/eventsetting'><i className="fa fa-gear home_icon"></i></Link>
+                        <Link className="link_reset" to='/eventcategory'><i className="fa fa-th home_icon"></i></Link>
+                        <Link className="link_reset" to='/eventdelete'><i className="fa fa-trash home_icon"></i></Link>
                     </div>
                     <div className="cat_box1"></div>
                     <div className="cat_box2"></div>

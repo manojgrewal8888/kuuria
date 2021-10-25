@@ -8,13 +8,31 @@
 
 a.link_reset {
   text-decoration: none;
+  color: #ffffff;
+}
+
+a.link_ressign {
+  color: #fdd600;
+  background: none;
+  text-shadow: 2px 2px black;
+  text-decoration: none;
 }
 
 ::placeholder {
   color: #ffffff;
 }
 
-/*for index*/
+
+
+
+
+
+
+
+
+
+
+/*for indexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 .wrapmenu {
   display: inline-flex;
@@ -569,18 +587,8 @@ input.search-input:hover {
   transition: width 1s, height 1s, transform 3s;
 }
 
-.browse-btn:hover {
-  width: 250px;
-  margin-left: 83px;
-  height: 60px;
-  background: transparent;
-  border: 1px solid white;
-  border-radius: 10px;
-  box-shadow: 2px 2px 2px 2px cyan;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  transform: rotate(360deg);
-}
+
+
 
 a.browse-a {
   text-decoration: none;
@@ -817,6 +825,8 @@ p.sub_vanue {
 
 .radio_evevnt1 {
   margin-left: 30px;
+  height: 20px;
+  width: 20px;
 }
 
 label.label_evevnts {
@@ -829,6 +839,8 @@ label.label_evevnts {
 
 .radio_evevnt {
   margin-left: -45px;
+  height: 20px;
+  width: 20px;
 }
 
 button.buybtn {
@@ -1072,12 +1084,18 @@ p.btn-pra {
 
 /*for the eventopen dashboardddddddddddddddddddddddddddddddddddddddddddddd/*/
 
-.recharts-wrapper {
-  cursor: default;
-  width: 205px;
-  height: 205px;
-  float: right;
+.recharts-wrapper.pie_resize {
+  
+  left: 608px;
+  background: none;
 }
+
+
+.recharts-wrapper.pie_resize {
+  margin-top: 150px;
+  margin-left: 90px;
+}
+
 
 .home_icon1 {
   background: none;
@@ -1132,7 +1150,7 @@ span.only_edash {
   width: 540px;
   height: 200px;
   left: 445px;
-  top: 275px;
+  top: 395px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-sizing: border-box;
@@ -1308,6 +1326,16 @@ span.count_x3 {
   color: #FFD600;
 }
 
+
+
+
+
+
+
+
+
+
+
 /*for loginnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn*/
 
 img.login_img {
@@ -1349,6 +1377,27 @@ img.login_img {
   backdrop-filter: blur(4px);
 }
 
+p.signup_para {
+  font-size: 15px;
+  font-weight: 100;
+  background: none;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+a.link_loginz {
+  background: none;
+  color: #ffd600;
+  margin-left: 10px;
+}
+
+a.link_loginz:hover{
+  background: none;
+  color: #ffffff;
+  margin-left: 10px;
+}
+
 .login_input {
   display: block;
   width: 70%;
@@ -1366,20 +1415,7 @@ img.login_img {
   transition: ease-in-out;
 }
 
-.login_input:hover:focus {
-  display: block;
-  width: 80%;
-  height: 45px;
-  font-size: 18px;
-  margin: auto;
-  margin-top: 35px;
-  background: rgba(255, 255, 255, 0.02);
-  box-sizing: border-box;
-  backdrop-filter: blur(4px);
-  border-radius: 8px;
-  padding-left: 20px;
-  border: none;
-}
+
 
 .contain_login {
   background: rgba(255, 255, 255, 0.05);
@@ -1457,6 +1493,7 @@ h2.log_head {
   box-sizing: border-box;
   border-radius: 5px;
 }
+
 
 a.btn-animatelog {
   border: 1px solid #ffffff;
@@ -1582,22 +1619,56 @@ p.btn-pra {
   background: none;
 }
 
-p.login_para {
+.login_para {
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   text-align: center;
-  color: #FFFFFF;
+ 
   margin-top: 35px;
   margin-bottom: 50px;
   background: none;
   letter-spacing: 5px;
+  display: block;
+  color: #ffd600;
+}
+
+.login_para:hover {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  text-align: center;
+
+  margin-top: 35px;
+  margin-bottom: 50px;
+  background: none;
+  letter-spacing: 5px;
+  display: block;
+  color: #008cff;
 }
 
 .newevnt-btn {
   background: none;
 }
+
+option.flag_resize {
+  background-image:url('../img/africaflag.jpg');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*for Ump Awardssssssssssssssssssssssssssssssssss*/
 

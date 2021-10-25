@@ -10,9 +10,9 @@ export default class Awardevent extends Component {
                     <p className="ticket-heading">TICKETS</p>
 
                     <div className="event_btn">
-                        <a href="/" className="browse-a">
+                        <Link to="/ticket" className="browse-a">
                             Award Event 1
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="wrap_eventlog">

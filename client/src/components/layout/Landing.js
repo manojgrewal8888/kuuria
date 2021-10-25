@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Menu from "../../Menu";
 class Landing extends Component {
   render() {
     return (
       <div>
             
 
-
+                <Menu/>
                 <div className="firstsection">
                     <input className="first_search" type="text" placeholder="Search.." name="search" />
                     <i className="fa fa-search first_icon"></i>

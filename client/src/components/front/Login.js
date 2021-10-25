@@ -12,12 +12,12 @@ export default class Login extends Component {
                     <input className="login_input" type="password" name="pwd" id="pwd" placeholder="Password"/> 
                     <div className="newevnt-btn">
 
-                        <Link exact to="/Newevent" className="btn-animatelog">
+                        <Link exact to="/welcome" className="btn-animatelog">
                             <span className="span-toplog"></span>
                             <span className="span-rightlog"></span>
                             <span className="span-bottomlog"></span>
                             <span className="span-leftlog"></span>
-                            <p className="btn-pra">Log IN</p>
+                            <p className="btn-pra">Log In</p>
                         </Link>
 
                     </div>

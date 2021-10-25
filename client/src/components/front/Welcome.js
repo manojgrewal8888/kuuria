@@ -26,7 +26,7 @@ export default class Welcome extends Component {
 
                     <div className="newevnt-btn">
 
-                        <Link exact to='/Welcreate' className="btn-animate">
+                        <Link exact to='/create' className="btn-animate">
                             <span className="span-top"></span>
                             <span className="span-right"></span>
                             <span className="span-bottom"></span>

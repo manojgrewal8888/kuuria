@@ -19,7 +19,7 @@ export default class Dashvoting extends Component {
                     <div className="wrapinner_nom">
                         <input className='search-inputumb' type="text" placeholder="Search  Nominee" name="search" />
                         <i className="fa fa-search umb-search"></i>
-                        <Link className='link_reset' exact to='/votehome'> 
+                        <Link className='link_reset' to='/votecheck'> 
                             <button className="umb_check">Check Vote</button>
                         </Link>
 
@@ -33,7 +33,7 @@ export default class Dashvoting extends Component {
                             <div className="item_umb"><p className="nom_subumb"> Nominee 2</p></div>
                             <div className="item_umb"><p className="nom_subumb"> Nominee 3</p></div>
                         </div>
-                        <button className="umb_back">Back To Category</button>
+                        <button className="umb_back"><Link className="link_reset" to ='/dashnominee'> Back To Category</Link></button>
                     </div>
                 </div>
 

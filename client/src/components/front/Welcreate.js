@@ -35,7 +35,7 @@ export default class Create extends Component {
                             <option value="aus">Australia</option>
                         </select>
 
-                        <Link className="link_reset" exact to='/Eventcategory'><button className="create_cae">CREATE</button></Link>
+                        <Link className="link_reset" exact to='/eventopened'><button className="create_cae">CREATE</button></Link>
                     </div>
 
                     
