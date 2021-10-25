@@ -6,7 +6,7 @@ export default class Settinggen extends Component {
     render() {
         return (
             <div>
-                <Menu/>
+               
                 <div className="setgen_main">
                     <div className="wrapgen_set">
                         <h1 className="acc_set">Account Setting</h1>

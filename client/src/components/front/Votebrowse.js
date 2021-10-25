@@ -7,7 +7,7 @@ export default class Votebrowse extends Component {
             <div>
                 <div className="wrapvote_browse">
                     <div className="leftv_browse">
-                        <img src="./img/dash logo.jpg" alt="" className="voteimg_resize" />
+                        <img src="./img/dashlogo.jpg" alt="" className="voteimg_resize" />
                         <Link className="link_reset" to='/votecheck'><i class="fa fa-home vot_icon"></i></Link>
                         <Link className="link_reset" to='/votecheck'><i class="fa fa-th vot_icon"></i></Link>
                         <Link className="link_reset" to='/votebrowse'><span className="thicon_span"><i class="fa fa-th vot_iconth2"></i>Event List</span></Link>

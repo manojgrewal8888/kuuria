@@ -48,8 +48,8 @@ export default class Index extends Component {
                 </div>
 
                 <div className="forth_secton">
-                    <img src="./img/Group 2.png" alt="" className="group_1" />
-                    <img src="./img/Group 2.png" alt="" className="group_1" />
+                    <img src="./img/Group2.png" alt="" className="group_1" />
+                    <img src="./img/Group2.png" alt="" className="group_1" />
                 </div>
 
 

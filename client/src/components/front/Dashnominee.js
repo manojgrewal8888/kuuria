@@ -6,7 +6,7 @@ export default class Dashnom extends Component {
             <div>
 
                 <div className="nav_umb">
-                    <img src="./img/dash logo.jpg" alt="" className="umb_logo" />
+                    <img src="./img/dashlogo.jpg" alt="" className="umb_logo" />
                     <h1 className="umb_heading">UMB GHANA TERTIARY AWARDS</h1>
                 </div>
                 <div className="umb_contain">

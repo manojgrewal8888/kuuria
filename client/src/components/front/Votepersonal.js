@@ -7,7 +7,7 @@ export default class Votepersonal extends Component {
             <div>
                 <div className="wrapvote_browse">
                     <div className="leftv_browse">
-                        <img src="./img/dash logo.jpg" alt="" className="voteimg_resize" />
+                        <img src="./img/dashlogo.jpg" alt="" className="voteimg_resize" />
                         <Link className="link_reset" to='/votecheck'><i class="fa fa-home vot_icon"></i></Link>
                         <Link className="link_reset" to='/votebrowse'><i class="fa fa-th vot_icon"></i></Link>
                         <Link className="link_reset" to='/votepersonal'><i class="fa fa-user vot_icon"></i></Link>
@@ -19,7 +19,7 @@ export default class Votepersonal extends Component {
                     <div className="rightv_browse">
                         <p className="fill_personal">Fill In Personal Information</p>
                         <input className="input_person" type="text" name="" id="" placeholder="Name" />
-                        <input className="input_person" type="email" name="" id="" placeholder="E_mail" />
+                        <input className="input_person" type="email" name="" id="" placeholder="Email" />
                         <select className="selector_per" name="ccode" id="ccode">
                             <option value="timezone"> +91</option>
                             <option value="india">+111</option>
