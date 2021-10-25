@@ -15,13 +15,13 @@ export default class Create extends Component {
 
                         <div className="wrap_span">
                             <span className="cal1">
-                                <i class="fa fa-calendar-o cal_1"></i>
+                                <i className="fa fa-calendar-o cal_1"></i>
                                 <p className="cal_p1">September 27,2021 10:00am</p>
 
                             </span>
 
                             <span className="cal2">
-                                <i class="fa fa-calendar-o cal_1"></i>
+                                <i className="fa fa-calendar-o cal_1"></i>
                                 <p className="cal_p1">October 27,2021 10:00am</p>
                             </span>
                         </div>

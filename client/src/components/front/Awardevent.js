@@ -21,7 +21,7 @@ export default class Awardevent extends Component {
                         <p className="hostp">HOSTS</p>
                         <div className="wrap_host">
                             <p className="lefthost">DOE NATHANIEL</p>
-                            <div class="vlx"></div>
+                            <div className="vlx"></div>
                             <p className="righthost">SEDUDZI CYRIL</p>
                         </div>
 
