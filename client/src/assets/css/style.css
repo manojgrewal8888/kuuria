@@ -45,15 +45,15 @@ ul.navlist {
 
 a.navitem {
   text-decoration: none;
-  font-size: 15px;
-  margin: 0px 35px;
+  font-size: 12px;
+  margin: 0px 24px;
   color: #ffffff;
 }
 
 a.navitem:hover {
   text-decoration: none;
   font-size: 15px;
-  margin: 0px 35px;
+  margin: 0px 24px;
   color: #ffd600;
 }
 
@@ -1877,7 +1877,7 @@ span.cal1 {
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   border-radius: 8px;
-  margin-left: 170px;
+  margin-left: 192px;
   margin-top: 35px;
 }
 
@@ -1899,7 +1899,7 @@ span.cal2 {
   backdrop-filter: blur(4px);
   border-radius: 8px;
   margin-top: 35px;
-  margin-left: 50px;
+  margin-left: 133px;
 }
 
 i.fa.fa-calendar-o.cal_1 {
