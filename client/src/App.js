@@ -78,7 +78,7 @@ class App extends Component {
         <Provider store={store}>
           <Router>
             
-            <div className="App">
+            
 
 
                 <Switch>
@@ -125,9 +125,11 @@ class App extends Component {
                   <Route exact path='/eventhome' component={Eventhome} />
 
                 </Switch>
-                </div>
                 </Router>
-          </Provider>
+                </Provider>
+               
+               
+         
         </>
             );
   }

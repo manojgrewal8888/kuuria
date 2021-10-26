@@ -8,12 +8,12 @@ export default class Votecheck extends Component {
                 <div className="wrapvote_browse">
                     <div className="leftv_browse">
                         <img src="./img/dashlogo.jpg" alt="" className="voteimg_resize" />
-                        <Link className="link_reset" to='/votecheck'><i class="fa fa-home vot_icon"></i></Link>
+                        <Link className="link_reset" to='/votecheck'><i className="fa fa-home vot_icon"></i></Link>
                         
-                        <Link className="link_reset" to='/votecheck'><span className="homeicon_span"><i class="fa fa-home vot_iconhome"></i>Home</span></Link>
-                        <Link className="link_reset" to='/votebrowse'><i class="fa fa-th vot_icon"></i></Link>
-                        <Link className="link_reset" to='/votepersonal'><i class="fa fa-user vot_icon"></i></Link>
-                        <Link className="link_reset" to='/voteprices'><i class="fa fa-database vot_icon"></i></Link>
+                        <Link className="link_reset" to='/votecheck'><span className="homeicon_span"><i className="fa fa-home vot_iconhome"></i>Home</span></Link>
+                        <Link className="link_reset" to='/votebrowse'><i className="fa fa-th vot_icon"></i></Link>
+                        <Link className="link_reset" to='/votepersonal'><i className="fa fa-user vot_icon"></i></Link>
+                        <Link className="link_reset" to='/voteprices'><i className="fa fa-database vot_icon"></i></Link>
 
                     </div>
 

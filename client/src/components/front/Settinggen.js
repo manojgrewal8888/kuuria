@@ -6,7 +6,7 @@ export default class Settinggen extends Component {
     render() {
         return (
             <div>
-               
+                <Menu/>
                 <div className="setgen_main">
                     <div className="wrapgen_set">
                         <h1 className="acc_set">Account Setting</h1>
@@ -27,7 +27,7 @@ export default class Settinggen extends Component {
                         <div className="lineh_gen"></div>
 
                         <div className="right_gen">
-                            <i class="fa fa-user-o"></i><p className="fa_user">Profile Settings</p>
+                            <i className="fa fa-user-o"></i><p className="fa_user">Profile Settings</p>
                             <div className="fauser_vl"></div>
                             <p className="genset_name">Name</p>
                             <p className="gen_spara">Your Name Or The Name Of The Primary Contact Of The Account, Visit The <Link className="genset_link">Organisation Setting</Link> To Change Name Of The Organisation</p>

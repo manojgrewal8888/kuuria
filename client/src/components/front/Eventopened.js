@@ -3,12 +3,12 @@ import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
 import { Link } from "react-router-dom";
 
 const data = [
-  { name: 'Group A', value: 800 },
+  { name: 'Group A', value: 900 },
   { name: 'Group B', value: 300 },
   { name: 'Group C', value: 300 },
- ,
+  
 ];
-const COLORS = ['#ffffff', '#008CFF', '#FFBB28',];
+const COLORS = ['#ffffff', '#008cff', '#FFd600'];
 
 export default class Opened extends PureComponent {
   static demoUrl = 'https://codesandbox.io/s/pie-chart-with-padding-angle-7ux0o';
@@ -35,12 +35,12 @@ export default class Opened extends PureComponent {
             <div className="date_format">
                 <div className="devide_opened"></div>
 
-                <i class="fa fa-calendar-o cal_left"></i>
+                <i className="fa fa-calendar-o cal_left"></i>
                 <span className="date_o1">Start Date</span>
                 <span className="date_o2">September 27th,2021</span>
                 <span className="date_o3">10:00 AM</span>
                 
-                <i class="fa fa-calendar-o cal_right"></i>
+                <i className="fa fa-calendar-o cal_right"></i>
                 <span className="date_o4">End Date</span>
                 <span className="date_o5">October 27th,2021</span>
                 <span className="date_o6">10:00 AM</span>
@@ -49,13 +49,13 @@ export default class Opened extends PureComponent {
 
             <input className="input_opened" type="text" placeholder="//http karmatech.com" />
 
-            <i class="fa fa-circle cwhite"></i>
+            <i className="fa fa-circle cwhite"></i>
                 <span className="vot_count">Voter</span>
 
-                <i class="fa fa-circle cblue"></i>
+                <i className="fa fa-circle cblue"></i>
                 <span className="nomi_count">Nominee</span>
 
-                <i class="fa fa-circle cyellow"></i>
+                <i className="fa fa-circle cyellow"></i>
                 <span className="categories_count">Category</span>
 
                 <PieChart width={400} height={700} onMouseEnter={this.onPieEnter}>

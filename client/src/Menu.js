@@ -8,7 +8,7 @@ export default class Menu extends Component {
             <div>
                 <div className="wrapmenu">
                     <div className="headlogo">
-                        <NavLink exact activeClassName="active-class"  to="/">
+                        <NavLink exact activeClassName="active-class"  to="/index">
                             <img src="./img/kuria-new.png" alt="" className="img-headlogo" />
                         </NavLink>
                     </div>
@@ -21,17 +21,18 @@ export default class Menu extends Component {
                                 <NavLink exact activeClassName="active-class"  className="navitem" to="/dashnominee">File Nomination</NavLink>
                             </li>
                             <li >
-                                <NavLink exact activeClassName="active-class" className="navitem"  to="/Signup">Sign Up</NavLink>
+                                <NavLink exact activeClassName="active-class" className="navitem"  to="/signup">Sign Up</NavLink>
                             </li>
                             <li >
-                                <NavLink exact activeClassName="active-class" className="navitem"  to="/Login">Log In</NavLink>
+                                <NavLink exact activeClassName="active-class" className="navitem"  to="/login">Log In</NavLink>
                             </li>
                             <li >
-                                <NavLink exact activeClassName="active-class" className="navitem" to="/License">Buy License</NavLink>
+                                <NavLink exact activeClassName="active-class" className="navitem" to="/license">Buy License</NavLink>
                             </li>
                         </ul>
                     </div>
-                </div> 
+                </div>
+                
             </div>
         )
     }

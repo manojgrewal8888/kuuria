@@ -1,12 +1,15 @@
-import React, { Component } from 'react'
-import { Link } from "react-router-dom";
+import React from 'react'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import 'react-phone-number-input/style.css'
 
 
+import PhoneInput from 'react-phone-number-input'
 
-
-export default class Login extends Component {
-    render() {
-        return (
+export default function Signup() {
+    const [value, setValue] = useState()
+    return (
+        <>
             <div className="wrap_login">
                 <img src="./img/kuria-new.png" alt="" className="login_img" />
 
@@ -14,13 +17,15 @@ export default class Login extends Component {
                     <h2 className="log_head">Sign Up</h2>
                     <input className="login_input" type="text" name="orgname" id="orgname" placeholder="Organisation Name"/>
                     <input className="login_input" type="email" name="mail" id="mail" placeholder="Email"/>
-                    <select className="selector_signup" name="ccode" id="ccode">
-                            <option value="timezone"> +91</option>
-                            <option value="india">+111</option>
-                            <option value="europe"> +919</option>
-                            
-                    </select>   
-                    <input className="login_input1" type="number" name="phone" id="phone" placeholder="Phone Number"/>
+
+                      <div className="reset_signup">
+                        <PhoneInput
+                        defaultCountry="GH"
+                        value={value}
+                        onChange={setValue} />
+                        </div>
+
+                    
                     <input className="login_input" type="password" name="pwd" id="pwd" placeholder="Password"/>
                     <input className="login_input" type="password" name="pwd" id="pwd" placeholder="Confirm Password"/> 
                     <div className="newevnt-btn">
@@ -43,7 +48,7 @@ export default class Login extends Component {
                 <div className="box4_login"></div>
                 <div className="box1_sign"></div>
             </div>
+        </>
         )
     }
-}
 

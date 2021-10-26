@@ -70,7 +70,7 @@ export default class Index extends Component {
                     <div className="foot-flex">
                         <Link exact to='/index'><img src="./img/kuria-new.png" alt="" className="foot-logo" /></Link>
 
-                        <ul class="foot-left">
+                        <ul className="foot-left">
                             <li className="leftf-list"><Link exact to="/empty" className="left-afoot">File For Nomination</Link></li>
                             <li className="leftf-list"><Link exact to="/ticket" className="left-afoot">Ticketing</Link></li>
                             <li className="leftf-list"><Link exact to="/empty" className="left-afoot">Reality Shows</Link></li>
@@ -78,7 +78,7 @@ export default class Index extends Component {
                             <li className="leftf-list"><Link exact to="/login" className="left-afoot">Log In</Link></li>
                         </ul>
 
-                        <ul class="foot-right">
+                        <ul className="foot-right">
                             <li className="rightf-list"><Link exact to="/empty" className="right-afoot">Terms Of Services</Link></li>
                             <li className="rightf-list"><Link exact to="/empty" className="right-afoot">Privacy Policy</Link></li>
                             <li className="rightf-list"><Link exact to="/empty" className="right-afoot">Reviews</Link></li>
