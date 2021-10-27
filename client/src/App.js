@@ -11,6 +11,7 @@ import Dashboard from "./components/dashboard/Dashboard";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import "./assets/css/style.css";
+import "./assets/css/screening.css";
 import Menu from "./Menu";
 import Index from './components/front/Index';
 

@@ -9,6 +9,7 @@
 a.link_reset {
   text-decoration: none;
   background: none;
+  color: #ffffff;
 }
 
 ::placeholder {
@@ -466,7 +467,7 @@ p.foot-slogan {
   color: #ffffff;
   text-align: center;
   margin-top: 60px;
-  letter-spacing: 5px;
+
 }
 
 i.fa.fa-heart.heartfoot {
@@ -496,7 +497,7 @@ p.ticket-heading {
 input.search-input {
   margin: auto;
   display: block;
-  width: 466px;
+  width: 60%;
   height: 45px;
   border-radius: 20px;
   padding-left: 20px;
@@ -504,15 +505,8 @@ input.search-input {
   color: grey;
   background: #ffffff;
 }
-
 input.search-input:hover {
-  margin: auto;
-  display: block;
-  width: 600px;
-  height: 45px;
-  border-radius: 5px;
-  padding-left: 20px;
-  font-size: 20px;
+
   color: grey;
   border-bottom: 3px solid aqua;
   background: #ffffff;
@@ -556,7 +550,7 @@ input.search-input:hover {
 
 .browse-btn {
   width: 200px;
-  margin-left: 83px;
+  margin-left: 6%;
   height: 40px;
   text-align: center;
   background: transparent;
@@ -631,8 +625,8 @@ i.fa.fa-search.ticket-search {
   font-size: 25px;
   color: grey;
   position: absolute;
-  margin-left: 964px;
-  margin-top: 13px;
+  margin-left: 77%;
+  top: 120px;
 }
 
 /*for event awawrddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd tixittttttttttttttt*/
@@ -873,30 +867,10 @@ input#event {
 }
 
 input#event:hover {
-  width: 50%;
-  height: 60px;
-  margin: auto;
-  display: block;
-  margin-top: 70px;
-  background-color: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(5px);
-  border: 1px solid #ffffff;
-  border-radius: 17px;
-  box-shadow: 2px 2px aqua;
+  border: 2px aqua;
 }
 
-input#event:focus {
-  width: 50%;
-  height: 60px;
-  margin: auto;
-  display: block;
-  margin-top: 70px;
-  background-color: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(5px);
-  border: 1px solid #ffffff;
-  border-radius: 17px;
-  box-shadow: 2px 2px aqua;
-}
+
 
 .box-new {
   width: 52px;
@@ -1368,14 +1342,7 @@ span.span-leftlog {
   animation: 2s animeLeftlog linear -1s infinite;
 }
 
-@keyframes animeLeftlog {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(100%);
-  }
-}
+
 
 p.btn-pra {
   font-weight: bold;
@@ -1749,7 +1716,7 @@ i.fa.fa-search.catsearch_icon {
   position: absolute;
   margin-top: 45px;
   font-size: 25px;
-  left: 1244px;
+  left: 87%;
 }
 
 .ecat_box {
@@ -1868,19 +1835,18 @@ input.wtitle_input {
 
 span.cal1 {
   display: flex;
-  width: 375px;
+  width: 33%;
   height: 45px;
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   box-shadow: 0px 11px 17px 2px rgb(0 0 0 / 15%);
   -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(4 px);
   border-radius: 8px;
-  margin-left: 192px;
+  margin-left: 15%;
   margin-top: 35px;
 }
-
 p.cal_p1 {
   background: none;
   font-size: 15px;
@@ -1889,7 +1855,7 @@ p.cal_p1 {
 
 span.cal2 {
   display: flex;
-  width: 375px;
+  width: 33%;
   height: 45px;
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1899,7 +1865,7 @@ span.cal2 {
   backdrop-filter: blur(4px);
   border-radius: 8px;
   margin-top: 35px;
-  margin-left: 133px;
+  margin-left: 4%;
 }
 
 i.fa.fa-calendar-o.cal_1 {
@@ -2026,7 +1992,7 @@ a.set_linxg {
 /*for right*/
 
 .right_gen {
-  width: 69%;
+  width: 63%;
   position: absolute;
   left: 395px;
   top: 80px;
@@ -2073,7 +2039,7 @@ p.gen_spara {
 
 input.input_genset1 {
   position: absolute;
-  width: 515px;
+  width: 63%;
   height: 42px;
   left: 42px;
   top: 294px;
@@ -2094,7 +2060,7 @@ label.label_genset {
 
 input.input_genset2 {
   position: absolute;
-  width: 514px;
+  width: 63%;
   height: 42px;
   left: 42px;
   top: 415px;
@@ -2156,7 +2122,7 @@ button.genset_btn {
   position: absolute;
   width: 90px;
   height: 90px;
-  left: 90px;
+  left: 5%;
   top: 421px;
   background: rgba(255, 255, 255, 0.06);
   border-radius: 5px;
@@ -2214,7 +2180,7 @@ p.subdomain_p2 {
 
 input.input_genset3 {
   position: absolute;
-  width: 516px;
+  width: 63%;
   height: 42px;
   left: 41px;
   top: 465px;
@@ -2876,7 +2842,7 @@ button.proceed_person {
 .reset_signup {
   width: 117%;
   background: none;
-  margin-left: -50px;
+  margin-left: -8%;
 }
 
 .PhoneInputCountry {

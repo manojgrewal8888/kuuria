@@ -20,11 +20,11 @@ export default class Opened extends PureComponent {
         <div className="contain_home">
             <div className="left_home">
                 <img src="./img/kuria-new.png" alt="" className="event_img" />
-                <Link className="link_reset" to='/eventopened'><i className="fa fa-home home_icon"></i></Link>
+                <Link className="link_reset" to='/eventopened'><i className="fa fa-home home_icon home_iconsm"></i><span className="only_edash">Dashboard</span></Link>
                 <Link className="link_reset" to='/settinggen'><i className="fa fa-gear home_icon"></i></Link>
                 <Link className="link_reset" to='/category'><i className="fa fa-th home_icon"></i></Link>
                 <Link className="link_reset" to='/category'><i className="fa fa-trash home_icon"></i></Link>
-                <Link className="link_reset" to='/eventopened'><span className="only_edash"><i className="fa fa-home home_icon1"></i>Dashboard</span></Link>
+                
             </div>
                     
             <div className="right_home">

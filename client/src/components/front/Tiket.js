@@ -12,12 +12,12 @@ export default class Tiket extends Component {
 
                     <p className="ticket-heading">TICKETS</p>
 
-                    <div className="search-container">
+                    
 
                         <input className='search-input' type="text" placeholder="Search  Tickets" name="search" />
                         <i className="fa fa-search ticket-search"></i>
 
-                    </div>
+                    
 
                     <div className="browse-btn">
                         <Link className="link_reset" exact to="/ticketevent" className="browse-a">
