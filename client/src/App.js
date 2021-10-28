@@ -21,6 +21,10 @@ import Awardevent from './components/front/Awardevent';
 
 import Signup from './components/front/Signup';
 import Login from './components/front/Login';
+import Emailhead from "./components/front/Emailhead";
+import Forget from "./components/front/Forget";
+import Varification from "./components/front/Varification";
+import Justloged from "./components/front/Justloged";
 
 import Dashnom from './components/front/Dashnominee';
 import Dashvoting from './components/front/Dashvoting';
@@ -44,6 +48,10 @@ import Eventcategory from './components/front/Eventcategory';
 import Eventnominee from './components/front/Eventnominee';
 import Eventnominfo from './components/front/Eventnominfo';
 import Eventdelete from './components/front/Eventdelete';
+
+
+import Vendordash from "./components/front/Vendordash";
+import Manageeventv from "./components/front/Manageeventv";
 
 
 
@@ -91,6 +99,12 @@ class App extends Component {
 
                   <Route exact path='/signup' component={Signup} />
                   <Route exact path='/login' component={Login} />
+                  <Route exact path='/mailhead' component={Emailhead}   />
+                  <Route exact path='/forgetpassword' component={Forget}  />
+                  <Route exact path='/varification' component={Varification}  />
+                  <Route exact path='/login_confirmation' component={Justloged}  />
+
+
 
 
                   <Route exact path='/dashnominee' component={Dashnom} />
@@ -115,6 +129,14 @@ class App extends Component {
                   <Route exact path='/eventnominee' component={Eventnominee} />
                   <Route exact path='/nomineeinfo' component={Eventnominfo} />
                   <Route exact path='/eventdelete' component={Eventdelete} />
+
+
+
+
+
+                  <Route exact path='/vender_dash' component={Vendordash} />
+                  <Route exact path='/manage_events' component={Manageeventv}  />
+
               
 
 
