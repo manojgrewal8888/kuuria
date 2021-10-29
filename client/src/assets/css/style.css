@@ -1327,6 +1327,21 @@ a.btn-animatelog {
   margin-top: 50px;
 }
 
+.btn-animatelog {
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  margin: auto;
+  width: 35%;
+  height: 50px;
+  display: block;
+  transform: translate(0%, 0%);
+  overflow: hidden;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 50px;
+}
+
 /*to left*/
 
 span.span-leftlog {

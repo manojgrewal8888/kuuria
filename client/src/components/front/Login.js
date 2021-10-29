@@ -1,27 +1,94 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
-export default class Login extends Component {
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { loginUser } from "../../actions/authActions";
+import classnames from "classnames";
+class Login extends Component {
+    constructor() {
+        super();
+        this.state = {
+          email: "",
+          password: "",
+          errors: {}
+        };
+      }
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.auth.isAuthenticated) {
+          this.props.history.push("/dashboard"); // push user to dashboard when they login
+        }
+    if (nextProps.errors) {
+          this.setState({
+            errors: nextProps.errors
+          });
+        }
+      }
+    onChange = e => {
+        this.setState({ [e.target.id]: e.target.value });
+      };
+    onSubmit = e => {
+        e.preventDefault();
+    const userData = {
+          email: this.state.email,
+          password: this.state.password
+        };
+    this.props.loginUser(userData); // since we handle the redirect within our component, we don't need to pass in this.props.history as a parameter
+      };
+    
+      componentDidMount() {
+        // If logged in and user navigates to Login page, should redirect them to dashboard
+        if (this.props.auth.isAuthenticated) {
+          this.props.history.push("/dashboard");
+        }
+      }
+    
     render() {
+        const { errors } = this.state;
         return (
             <div className="wrap_login">
                 <img src="./img/kuria-new.png" alt="" className="login_img" />
 
                 <div className="contain_login">
-                    <h2 className="log_head">Login</h2>
-                    <input className="login_input" type="email" name="mail" id="mail" placeholder="Email"/>
-                    <input className="login_input" type="password" name="pwd" id="pwd" placeholder="Password"/> 
-                    <div className="newevnt-btn">
-
-                        <Link exact to="/welcome" className="btn-animatelog">
-                            <span className="span-toplog"></span>
-                            <span className="span-rightlog"></span>
-                            <span className="span-bottomlog"></span>
-                            <span className="span-leftlog"></span>
-                            <p className="btn-pra">Log In</p>
-                        </Link>
-
+                <form noValidate onSubmit={this.onSubmit}>
+                    <h2 className="log_head">Log In</h2>
+                   {/*  <input className="login_input" type="email" name="mail" id="mail" placeholder="Email"/> */}
+                   <input
+                  onChange={this.onChange}
+                  value={this.state.email}
+                  error={errors.email}
+                  id="email"
+                  type="email"
+                  className={'login_input '+classnames("", {
+                    invalid: errors.email || errors.emailnotfound
+                  })}/>
+                   <span className="red-text">
+                  {errors.email}
+                  {errors.emailnotfound}
+                </span>
+                   {/*  <input className="login_input" type="password" name="pwd" id="pwd" placeholder="Password"/>  */}
+                   <input
+                  onChange={this.onChange}
+                  value={this.state.password}
+                  error={errors.password}
+                  id="password"
+                  type="password"
+                  placeholder="Password"
+                  className={'login_input '+classnames("", {
+                    invalid: errors.password || errors.passwordincorrect
+                  })}
+                />
+                   <span className="red-text">
+                  {errors.password}
+                  {errors.passwordincorrect}
+                </span>
+                    <div className="newevnt-btn"> 
+                        <button  type="submit"
+                            className="btn-animatelog btn btn-large waves-effect waves-light hoverable blue accent-3"
+                                >
+                                Log In
+                        </button>  
                     </div>
-
+                    </form>
                     <p className="login_para">Forget Password?</p>
                 </div>
                 <div className="box1_login"></div>
@@ -32,3 +99,16 @@ export default class Login extends Component {
         )
     }
 }
+Login.propTypes = {
+  loginUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
+};
+const mapStateToProps = state => ({
+  auth: state.auth,
+  errors: state.errors
+});
+export default connect(
+  mapStateToProps,
+  { loginUser }
+)(Login);
