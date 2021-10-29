@@ -8,12 +8,15 @@ export default class Manageeventv extends Component {
                     <div className="left_vendor">
                         <div className="left_subven">
                             <img src="./img/kuria-new.png" alt="" className="res_venlogo" />
-                            <div className="home_vendori">
-                                <i className="fa fa-home cus_vicon1"></i>
-                                <span className="home_vender">Dashboard</span>
+
+                            <i className="fa fa-home cus_vicon"></i>
+
+
+                            <div className="home_vendori2">
+                                <i className="fa fa-calendar-check-o cus_vicon2"></i>
+                                <span className="home_vender2">Dashboard</span>
                             </div>
 
-                            <i className="fa fa-calendar-check-o cus_vicon"></i>
                             <i className="fa fa-ticket cus_vicon"></i>
                             <i className="fa fa-money cus_vicon"></i>
                             <i className="fa fa-comment cus_vicon"></i>
@@ -35,15 +38,29 @@ export default class Manageeventv extends Component {
                             <div className="manage_wrap">
                                 <button className="manage_btnv"><i class="fa fa-plus-circle adicon_v"></i>ADD QUESTIONS</button>
 
-                                
+
                                 <div className="wrap_txtman">
-                                <i class="fa fa-circle circ_vicon"></i>
-                                <p className="txtp_mana">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                                    <div className="contain_txtmana">
+                                        <i class="fa fa-circle circ_vicon"></i>
+                                        <p className="txtp_mana">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                                    </div>
+
+                                    <div className="contain_txtmana">
+                                        <i class="fa fa-circle circ_vicon"></i>
+                                        <p className="txtp_mana">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                                    </div>
+
+                                    <div className="contain_txtmana">
+                                        <i class="fa fa-circle circ_vicon"></i>
+                                        <p className="txtp_mana">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <p className="bottom_vendash">Made With <i className="fa fa-heart icon_venbottom" ></i> In Trasacco Valley ,Ghana</p>
             </div>
 
         )

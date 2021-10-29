@@ -127,13 +127,12 @@ span.searchspan {
 .spansearch {
   display: block;
   position: absolute;
-  width: 36%;
+  width: 31%;
   margin-left: 130px;
   margin-top: 0px;
   height: 270px;
   border-radius: 10px;
 }
-
 .first_icon1 {
   background: none;
   margin-right: 5px;
@@ -289,7 +288,7 @@ img.group_1 {
   background: none;
   height: 145px;
   margin-right: 115px;
-  width: 650px;
+  width: 45%;
   margin-top: 50px;
 }
 
@@ -3152,6 +3151,7 @@ p.lastp_forget {
   width: 90%;
 
   margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 h2.head_vendor {
@@ -3271,7 +3271,7 @@ span.home_vender {
 p.bottom_vendash {
   text-align: center;
   font-size: 20px;
-  margin-top: 75px;
+  margin-top: 25px;
   margin-bottom: 35px;
 }
 
@@ -3320,6 +3320,7 @@ i.fa.fa-sign-out {
   border-radius: 8px;
   width: 80%;
   margin: auto;
+  margin-bottom: 100px;
 }
 
 button.manage_btnv {
@@ -3334,6 +3335,7 @@ button.manage_btnv {
   font-size: 20px;
   float: right;
   margin-right: 5%;
+  margin-top: 35px;
 }
 
 i.fa.fa-plus-circle.adicon_v {
@@ -3341,4 +3343,419 @@ i.fa.fa-plus-circle.adicon_v {
   font-size: 20px;
   color: #ffd600;
   background: none;
+}
+
+i.fa.fa-circle.circ_vicon {
+  background: none;
+  color: #ffd600;
+  margin-top: 28px;
+}
+
+.contain_txtmana {
+  background: none;
+  width: 95%;
+  display: flex;
+  
+  margin: auto;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.4);
+}
+
+.wrap_txtman {
+  display: block;
+  width: 100%;
+ 
+  margin-top: 100px;
+  background: none;
+  margin-bottom: 100px;
+}
+
+
+p.txtp_mana {
+  background: none;
+  margin-top: 25px;
+  margin-left: 2%;
+  font-size: 15px;
+  width: 80%;
+  margin-bottom: 25px;
+}
+
+
+
+
+
+
+
+/* for managing ticketsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss vendor/**/
+
+span.home_vender2 {
+    position: relative;
+    left: 35%;
+    top: -30px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-sizing: border-box;
+    box-shadow: 10px 12px 26px 2px rgb(0 0 0 / 20%);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+    padding: 8px 30px;
+    padding-left: 32%;
+    color: #ffd600;
+    font-size: 20px;
+}
+
+i.fa.fa-calendar-check-o.cus_vicon2 {
+  display: block;
+  background: none;
+  font-size: 30px;
+ 
+  color: #ffd600;
+  margin-left: 40%;
+}
+
+.home_vendori2 {
+  background: none;
+}
+
+button.mantik_btnv {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-sizing: border-box;
+  box-shadow: 10px 12px 26px 2px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  display: block;
+  margin-top: 25px;
+  padding: 8px 20px;
+  color: #ffd600;
+  font-size: 18px;
+  float: right;
+  margin-right: 20%;
+}
+
+input.man_tickets {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-sizing: border-box;
+  box-shadow: 10px 12px 26px 2px rgb(0 0 0 / 20%);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  display: block;
+  width: 60%;
+  margin: auto;
+  height: 45px;
+  margin-top: 250px;
+  padding-left: 20px;
+}
+
+i.fa.fa-plus-circle.adicon_tik {
+  color: #ffd600;
+  padding-right: 10px;
+  background: none;
+}
+
+a.mantik_pra2 {
+  background: none;
+  margin-top: 25px;
+  font-size: 12px;
+  color: #ffd600;
+  text-decoration: none;
+  width: 48%;
+  
+}
+
+p.mantik_pra {
+  background: none;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 2%;
+  font-size: 15px;
+  width: 48%;
+  margin-right: 43%;
+}
+
+.wrapman_tik {
+  display: flex;
+  width: 65%;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.4);
+  margin: auto;
+  background: none;
+}
+
+.tick_wraping {
+  margin-top: 95px;
+  margin-bottom: 150px;
+  background: none;
+}
+
+
+
+
+/* for view and edit ticketsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss*/
+
+.viewt_wrap {
+  
+  width: 75%;
+  margin: auto;
+  margin-top: 150px;
+  display: flex;
+  background: none;
+  margin-bottom: 150px;
+}
+
+.left_viewt {
+
+  width: 40%;
+  
+  background: none;
+}
+
+.right_viewt {
+
+  width: 60%;
+ 
+  background: none;
+}
+
+p.left_vt1 {
+  background: none;
+  font-size: 15px;
+  padding: 5px 0px;
+  background: none;
+}
+
+
+select.right_vt4 {
+  background: rgba(46, 45, 63, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 3px 5px;
+  margin-top: 7px;
+}
+
+p.right_vt1 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  color: #FFFFFF;
+  padding: 5px 0px;
+  background: none;
+}
+
+p.right_vt2 {
+  color: #FFFFFF;
+  opacity: 0.18;
+  font-size: 16px;
+  background: none;
+}
+
+p.right_vt3 {
+  padding-top: 4px;
+  font-size: 15px;
+  background: none;
+}
+
+p.right_vt5 {
+  padding: 17px 0px;
+  font-size: 15px;
+  font-weight: 600;
+  background: none;
+}
+
+p.right_vt6 {
+  font-size: 15px;
+  font-weight: 600;
+  background: none;
+}
+
+.hori_viewt {
+  position: relative;
+  border-left: 2px solid rgba(196, 196, 196, 0.2);
+  left: -15%;
+}
+
+
+
+button.save_vte {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-sizing: border-box;
+  box-shadow: 10px 12px 26px 2px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  width: 20%;
+  padding: 5px 0px;
+  margin: auto;
+  display: block;
+  margin-bottom: 75px;
+  color: #ffd600;
+  font-size: 20px;
+}
+
+.home_vendori3 {
+  background: none;
+ 
+  width: 155%;
+}
+
+i.fa.fa-ticket.cus_vicon3 {
+  display: block;
+  background: none;
+  font-size: 30px;
+  color: #ffd600;
+  margin-left: 25%;
+}
+
+span.home_vender3 {
+  position: relative;
+  left: 19%;
+  top: -29px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px
+solid rgba(255, 255, 255, 0.15);
+  box-sizing: border-box;
+  box-shadow: 10px 12px 26px 2px rgb(0 0 0 / 20%);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  padding: 15px 13px;
+  padding-left: 32%;
+  color: #ffd600;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+/* for revanue1111111111111111111111111111111111111111111111111 from vendor dashhhhhhhhhhhhhhhhhhhhhhhhhhhhhh*/
+
+p.sal_pra {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  color: #FFD600;
+  background: none;
+  margin-left: 5%;
+  margin-top: 20px;
+  margin-right: 2%;
+}
+
+span.sal_span {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-sizing: border-box;
+  box-shadow: 10px 12px 26px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  padding: 5px 47px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+p.vote_datasal {
+  margin-top: 40px;
+  background: none;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: 5%;
+}
+
+.wrapchart_rev {
+  display: flex;
+  width: 100%;
+  border: 1px solid;
+  height: 500px;
+  background: none;
+}
+
+.chrt_rev {
+  border: 1px solid red;
+  width: 65%;
+}
+
+.stat_chart {
+  width: 35%;
+  border: 1px solid;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: relative;
+  top: -175px;
+  width: auto;
+  padding: 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+  user-select: none;
+  background: none;
+}
+
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  float: right;
+  margin-top: -17px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.sales_wr {
+  display: flex;
+  background: none;
+  width: 100%;
+  
+  margin-top: 173px;
+}
+
+button.vote_sal {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-sizing: border-box;
+  box-shadow: 10px 12px 26px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  margin-left: 12%;
+  padding: 10px 65px;
+  margin-right: 35px;
+}
+
+.btn_salewr {
+  background: none;
+  display: flex;
+  margin-top: 30px;
+  width: 100%;
+}
+
+button.tiket_sal {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-sizing: border-box;
+  box-shadow: 10px 12px 26px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  padding: 10px 65px;
 }
