@@ -5,8 +5,8 @@ import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import { Provider } from "react-redux";
 import store from "./store";
-import Landing from "./components/layout/Landing";
-import PrivateRoute from "./components/private-route/PrivateRoute";
+//import Landing from "./components/layout/Landing";
+//import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 import 'bootstrap/dist/css/bootstrap.min.css';
 

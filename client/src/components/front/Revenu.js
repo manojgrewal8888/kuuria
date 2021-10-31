@@ -83,8 +83,8 @@ export default class Revenu extends Component {
                                         <Bar dataKey="x" stackId="a" fill="#ffd600" />
                                         <Bar dataKey="y" stackId="a" fill="#ffffff" />
                                     </BarChart>
-                                    <a className="prev" onclick="plusSlides(-1)">&#10094;</a>
-                                    <a className="next" onclick="plusSlides(1)">&#10095;</a>
+                                    <a href='javascript(void)' className="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                    <a href='javascript(void)' className="next" onclick="plusSlides(1)">&#10095;</a>
                                 </div>
 
                                 <div className="stat_chart">

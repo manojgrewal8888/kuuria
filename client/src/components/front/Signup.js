@@ -30,7 +30,7 @@ export default function Signup() {
                     <input className="login_input" type="password" name="pwd" id="pwd" placeholder="Confirm Password"/> 
                     <div className="newevnt-btn">
 
-                        <a href="#" className="btn-animatelog">
+                        <a href="javascript(void)" className="btn-animatelog">
                             <span className="span-toplog"></span>
                             <span className="span-rightlog"></span>
                             <span className="span-bottomlog"></span>
