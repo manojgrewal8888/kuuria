@@ -1,6 +1,7 @@
 import axios from "axios";
 import setAuthToken from "../utils/setAuthToken";
 import jwt_decode from "jwt-decode";
+import { useHistory } from "react-router-dom";
 import {
   GET_ERRORS,
   SET_CURRENT_USER,
@@ -54,12 +55,14 @@ export const setUserLoading = () => {
     type: USER_LOADING
   };
 };
-// Log user out
-export const logoutUser = () => dispatch => {
+// Log user out 
+export const logoutUser = (history) => dispatch => {
+  
   // Remove token from local storage
   localStorage.removeItem("jwtToken");
   // Remove auth header for future requests
   setAuthToken(false);
   // Set current user to empty object {} which will set isAuthenticated to false
   dispatch(setCurrentUser({}));
+  history.push("/");
 };

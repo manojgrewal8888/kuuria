@@ -40,7 +40,7 @@ export default function Signup() {
 
                     </div>
 
-                    <p className="login_para">Already Have An Account?<Link exact to='/Login'>Log In</Link></p>
+                    <p className="login_para">Already Have An Account?<Link  to='/Login'>Log In</Link></p>
                 </div>
                 <div className="box1_login"></div>
                 <div className="box2_login"></div>

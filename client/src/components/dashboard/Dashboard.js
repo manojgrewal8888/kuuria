@@ -5,7 +5,7 @@ import { logoutUser } from "../../actions/authActions";
 class Dashboard extends Component {
   onLogoutClick = e => {
     e.preventDefault();
-    this.props.logoutUser();
+    this.props.logoutUser(this.props.history);
   };
 render() {
     const { user } = this.props.auth;

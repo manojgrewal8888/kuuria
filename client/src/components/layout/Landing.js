@@ -66,18 +66,18 @@ class Landing extends Component {
                         <img src="./img/kuria-new.png" alt="" className="foot-logo" />
 
                         <ul className="foot-left">
-                            <li className="leftf-list"><Link exact to="/empty" className="left-afoot">File For Nomination</Link></li>
-                            <li className="leftf-list"><Link exact to="/Tiket" className="left-afoot">Ticketing</Link></li>
-                            <li className="leftf-list"><Link exact to="/empty" className="left-afoot">Reality Shows</Link></li>
-                            <li className="leftf-list"><Link exact to="/empty" className="left-afoot">Support</Link></li>
-                            <li className="leftf-list"><Link exact to="/Login" className="left-afoot">Log In</Link></li>
+                            <li className="leftf-list"><Link  to="/empty" className="left-afoot">File For Nomination</Link></li>
+                            <li className="leftf-list"><Link  to="/Tiket" className="left-afoot">Ticketing</Link></li>
+                            <li className="leftf-list"><Link  to="/empty" className="left-afoot">Reality Shows</Link></li>
+                            <li className="leftf-list"><Link  to="/empty" className="left-afoot">Support</Link></li>
+                            <li className="leftf-list"><Link  to="/Login" className="left-afoot">Log In</Link></li>
                         </ul>
 
                         <ul className="foot-right">
-                            <li className="rightf-list"><Link exact to="/empty" className="right-afoot">Terms Of Services</Link></li>
-                            <li className="rightf-list"><Link exact to="/empty" className="right-afoot">Privacy Policy</Link></li>
-                            <li className="rightf-list"><Link exact to="/empty" className="right-afoot">Reviews</Link></li>
-                            <li className="rightf-list"><Link exact to="/empty" className="right-afoot">FAQ's</Link></li>
+                            <li className="rightf-list"><Link  to="/empty" className="right-afoot">Terms Of Services</Link></li>
+                            <li className="rightf-list"><Link  to="/empty" className="right-afoot">Privacy Policy</Link></li>
+                            <li className="rightf-list"><Link  to="/empty" className="right-afoot">Reviews</Link></li>
+                            <li className="rightf-list"><Link  to="/empty" className="right-afoot">FAQ's</Link></li>
                         </ul>
 
                         <img src="./img/playstore.png" alt="" className="footplay" />

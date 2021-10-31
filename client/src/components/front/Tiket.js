@@ -20,7 +20,7 @@ export default class Tiket extends Component {
                     
 
                     <div className="browse-btn">
-                        <Link className="link_reset browse-a" exact to="/ticketevent" >
+                        <Link className="link_reset browse-a"  to="/ticketevent" >
                             Browse
                         </Link>
                     </div>

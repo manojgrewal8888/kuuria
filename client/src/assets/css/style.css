@@ -176,7 +176,7 @@ span.searchspan {
   transition: width 1s, height 1s, transform 3s;
 }
 
-.brs_btn:hover {
+/* .brs_btn:hover {
   width: 300px;
   margin-left: 145px;
   height: 50px;
@@ -189,7 +189,7 @@ span.searchspan {
   margin-bottom: 20px;
   transition: width 1s, height 1s, transform 3s;
   transform: rotate(360deg);
-}
+} */
 
 .cat-box {
   height: 655px;
@@ -1257,7 +1257,19 @@ h2.log_head {
   font-weight: 700;
   letter-spacing: 5px;
 }
-
+.log_head1 {
+  text-align: center;
+  margin-top: 6px;
+  font-size: 20px;
+  background: none;
+  font-family: 'Poppins';
+  font-weight: 700;
+  letter-spacing: 2px; 
+}
+span.red-text {
+  color: #ffffff;
+  border-bottom: 3px solid #ff2e2e;
+}
 .box2_login {
   position: absolute;
   width: 116px;

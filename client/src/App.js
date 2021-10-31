@@ -92,71 +92,47 @@ class App extends Component {
       <>
         <Provider store={store}>
           <Router>
-            
-            
-
-
                 <Switch>
-                  <Route exact path='/menu' component={Menu} />
-                  <Route exact path='/' component={Index} />
-
-                  <Route exact path='/ticket' component={Tiket} />
-                  <Route exact path='/ticketevent' component={Awardevent} />
-
-                  <Route exact path='/signup' component={Signup} />
-                  <Route exact path='/login' component={Login} />
-                  <Route exact path='/mailhead' component={Emailhead}   />
-                  <Route exact path='/forgetpassword' component={Forget}  />
-                  <Route exact path='/varification' component={Varification}  />
-                  <Route exact path='/login_confirmation' component={Justloged}  />
-
-
-
-
-                  <Route exact path='/dashnominee' component={Dashnom} />
-                  <Route exact path='/dashvote' component={Dashvoting} />
-                  <Route exact path='/votecheck' component={ Votecheck} />
-                  <Route exact path='/votebrowse' component={Votebrowse} />
-                  <Route exact path='/votenominee' component={Votenominee} />
-                  <Route exact path='/votepersonal' component={Votepersonal} />
-                  <Route exact path='/voteprices' component={Voteprices} />
-                  <Route exact path='/votesubmit' component={Votesubmit} />
-
-
-                  <Route exact path='/welcome' component={Welcome} />
-                  <Route exact path='/create' component={Create} />
-                  <Route exact path='/eventdash' component={Eventdash} />
-                  <Route exact path='/eventopened' component={Opened} />
-                  <Route exact path='/eventsetting' component={Eventsetting} />
-                  <Route exact path='/settinggen' component={Settinggen} />
-                  <Route exact path='/settingorg' component={Settingorg} />
-                  <Route exact path='/settingapp' component={Settingapp} />
-                  <Route exact path='/category' component={Eventcategory} />
-                  <Route exact path='/eventnominee' component={Eventnominee} />
-                  <Route exact path='/nomineeinfo' component={Eventnominfo} />
-                  <Route exact path='/eventdelete' component={Eventdelete} />
-
-
-
-
-
-                  <Route exact path='/vender_dash' component={Vendordash} />
-                  <Route exact path='/manage_events' component={Manageeventv}  />
-                  <Route exact path='/manage_ticket' component={Manageticket} />
-                  <Route exact path='/viewedit_ticket' component={Vieweditticket} />
-                  <Route exact path='/revenue' component={Revenu}   />
-
-                  <Route exact path='/chart'  component={Chart}  />
-                  <Route exact path='/chartreal' component={Chartdeno}   />
-              
-
-
-
-
-
-
-                  <Route exact path='/license' component={License} />
-                  <Route exact path='/eventhome' component={Eventhome} />
+                  <Route  exact={true} path='/menu' component={Menu} />
+                  <Route  exact={true} path='/dashboard' component={Dashboard} />
+                  <Route  exact={true} path='/' component={Index} /> 
+                  <Route  exact={true} path='/ticket' component={Tiket} />
+                  <Route  exact={true} path='/ticketevent' component={Awardevent} /> 
+                  <Route  exact={true} path='/signup' component={Signup} />
+                  <Route  exact={true} path='/login' component={Login} />
+                  <Route  exact={true} path='/mailhead' component={Emailhead} />
+                  <Route  exact={true} path='/forgetpassword' component={Forget}  />
+                  <Route  exact={true} path='/varification' component={Varification}  />
+                  <Route  exact={true} path='/login_confirmation' component={Justloged}  /> 
+                  <Route  exact={true} path='/dashnominee' component={Dashnom} />
+                  <Route  exact={true} path='/dashvote' component={Dashvoting} />
+                  <Route  exact={true} path='/votecheck' component={ Votecheck} />
+                  <Route  exact={true} path='/votebrowse' component={Votebrowse} />
+                  <Route  exact={true} path='/votenominee' component={Votenominee} />
+                  <Route  exact={true} path='/votepersonal' component={Votepersonal} />
+                  <Route  exact={true} path='/voteprices' component={Voteprices} />
+                  <Route  exact={true} path='/votesubmit' component={Votesubmit} /> 
+                  <Route  exact={true} path='/welcome' component={Welcome} />
+                  <Route  exact={true} path='/create' component={Create} />
+                  <Route  exact={true} path='/eventdash' component={Eventdash} />
+                  <Route  exact={true} path='/eventopened' component={Opened} />
+                  <Route  exact={true} path='/eventsetting' component={Eventsetting} />
+                  <Route  exact={true} path='/settinggen' component={Settinggen} />
+                  <Route  exact={true} path='/settingorg' component={Settingorg} />
+                  <Route  exact={true} path='/settingapp' component={Settingapp} />
+                  <Route  exact={true} path='/category' component={Eventcategory} />
+                  <Route  exact={true} path='/eventnominee' component={Eventnominee} />
+                  <Route  exact={true} path='/nomineeinfo' component={Eventnominfo} />
+                  <Route  exact={true} path='/eventdelete' component={Eventdelete} /> 
+                  <Route  exact={true} path='/vender_dash' component={Vendordash} />
+                  <Route  exact={true} path='/manage_events' component={Manageeventv}  />
+                  <Route  exact={true} path='/manage_ticket' component={Manageticket} />
+                  <Route  exact={true} path='/viewedit_ticket' component={Vieweditticket} />
+                  <Route  exact={true} path='/revenue' component={Revenu}   /> 
+                  <Route  exact={true} path='/chart'  component={Chart}  />
+                  <Route  exact={true} path='/chartreal' component={Chartdeno}   /> 
+                  <Route  exact={true} path='/license' component={License} />
+                  <Route  exact={true} path='/eventhome' component={Eventhome} />
 
                 </Switch>
                 </Router>

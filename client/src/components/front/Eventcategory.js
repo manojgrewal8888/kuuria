@@ -20,7 +20,7 @@ export default class Eventcategory extends Component {
                     
                     <div className="right_home">
                         <i className="fa fa-plus ecat_icon"></i>
-                        <Link exact to='/Eventcatdelete'><p className="ecat_txt">NEW CATEGORY </p></Link>
+                        <Link to='/Eventcatdelete'><p className="ecat_txt">NEW CATEGORY </p></Link>
 
                         <input className="evevntcat_search" type="text" placeholder="Search Categories.." name="search" />
                         <i className="fa fa-search catsearch_icon"></i>

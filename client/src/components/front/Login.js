@@ -49,7 +49,7 @@ class Login extends Component {
                 <img src="./img/kuria-new.png" alt="" className="login_img" />
 
                 <div className="contain_login">
-                <form noValidate onSubmit={this.onSubmit}>
+                <form noValidate onSubmit={this.onSubmit} className=''>
                     <h2 className="log_head">Log In</h2>
                    {/*  <input className="login_input" type="email" name="mail" id="mail" placeholder="Email"/> */}
                    <input
@@ -61,10 +61,10 @@ class Login extends Component {
                   className={'login_input '+classnames("", {
                     invalid: errors.email || errors.emailnotfound
                   })}/>
-                   <span className="red-text">
+                    <div className="log_head1"><span className="red-text">
                   {errors.email}
                   {errors.emailnotfound}
-                </span>
+                </span></div>
                    {/*  <input className="login_input" type="password" name="pwd" id="pwd" placeholder="Password"/>  */}
                    <input
                   onChange={this.onChange}
@@ -77,10 +77,10 @@ class Login extends Component {
                     invalid: errors.password || errors.passwordincorrect
                   })}
                 />
-                   <span className="red-text">
+                   <div className="log_head1"><span className="red-text">
                   {errors.password}
                   {errors.passwordincorrect}
-                </span>
+                </span></div>
                     <div className="newevnt-btn"> 
                         <button  type="submit"
                             className="btn-animatelog btn btn-large waves-effect waves-light hoverable blue accent-3"

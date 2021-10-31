@@ -51,12 +51,7 @@ export default class Awardevent extends Component {
 
                         </div>
 
-                       <button className="buybtn"> <Link className="link_reset" exact to="/ticket"> BUY TICKET </Link></button>
-
-
-                        
-
-
+                       <button className="buybtn"> <Link className="link_reset"  to="/ticket"> BUY TICKET </Link></button>
 
                     </div>
 

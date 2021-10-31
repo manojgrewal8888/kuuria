@@ -13,13 +13,13 @@ export default class Settingorg extends Component {
                         <div className="left_gen">
 
                             <img src="./img/kuria-new.png" alt="" className="genset_img" />
-                            <Link className="set_linx" exact to='/settinggen'>General</Link>
-                            <Link className="set_linx" exact to='/settingorg'>Organisation</Link>
-                            <Link className="set_linx" exact to='/settingapp'>Appearance</Link>
-                            <Link className="set_linx" exact to='/empty'>Mobile App</Link>
-                            <Link className="set_linx" exact to='/empty'>Billing</Link>
-                            <Link className="set_linx" exact to='/empty'>Security</Link>
-                            <Link className="set_linxo" exact to='/settingorg'>Organisation</Link>
+                            <Link className="set_linx"  to='/settinggen'>General</Link>
+                            <Link className="set_linx"  to='/settingorg'>Organisation</Link>
+                            <Link className="set_linx"  to='/settingapp'>Appearance</Link>
+                            <Link className="set_linx"  to='/empty'>Mobile App</Link>
+                            <Link className="set_linx"  to='/empty'>Billing</Link>
+                            <Link className="set_linx"  to='/empty'>Security</Link>
+                            <Link className="set_linxo"  to='/settingorg'>Organisation</Link>
 
 
                         </div>
