@@ -12,6 +12,8 @@ a.link_reset {
   color: #ffffff;
 }
 
+
+
 ::placeholder {
   color: #ffffff;
 }
@@ -3771,3 +3773,11 @@ button.tiket_sal {
   border-radius: 8px;
   padding: 10px 65px;
 }
+
+
+.resetsignup {
+  margin-top: 40px;
+  margin-left: 78px;
+  width: 378px;
+}
+
