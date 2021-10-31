@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
@@ -46,7 +46,7 @@ class Login extends Component {
         const { errors } = this.state;
         return (
             <div className="wrap_login">
-                <img src="./img/kuria-new.png" alt="" className="login_img" />
+                 <Link to="/"><img src="./img/kuria-new.png" alt="" className="login_img" /></Link>
 
                 <div className="contain_login">
                 <form noValidate onSubmit={this.onSubmit} className=''>
@@ -89,7 +89,7 @@ class Login extends Component {
                         </button>  
                     </div>
                     </form>
-                    <p className="login_para">Forget Password?</p>
+                    <Link to="/forgetpassword"><p className="login_para">Forget Password?</p></Link>
                 </div>
                 <div className="box1_login"></div>
                 <div className="box2_login"></div>

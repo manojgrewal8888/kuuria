@@ -66,26 +66,26 @@ class Landing extends Component {
                         <img src="./img/kuria-new.png" alt="" className="foot-logo" />
 
                         <ul className="foot-left">
-                            <li className="leftf-list"><Link  to="/empty" className="left-afoot">File For Nomination</Link></li>
+                            <li className="leftf-list"><Link  to="/" className="left-afoot">File For Nomination</Link></li>
                             <li className="leftf-list"><Link  to="/Tiket" className="left-afoot">Ticketing</Link></li>
-                            <li className="leftf-list"><Link  to="/empty" className="left-afoot">Reality Shows</Link></li>
-                            <li className="leftf-list"><Link  to="/empty" className="left-afoot">Support</Link></li>
+                            <li className="leftf-list"><Link  to="/" className="left-afoot">Reality Shows</Link></li>
+                            <li className="leftf-list"><Link  to="/" className="left-afoot">Support</Link></li>
                             <li className="leftf-list"><Link  to="/Login" className="left-afoot">Log In</Link></li>
                         </ul>
 
                         <ul className="foot-right">
-                            <li className="rightf-list"><Link  to="/empty" className="right-afoot">Terms Of Services</Link></li>
-                            <li className="rightf-list"><Link  to="/empty" className="right-afoot">Privacy Policy</Link></li>
-                            <li className="rightf-list"><Link  to="/empty" className="right-afoot">Reviews</Link></li>
-                            <li className="rightf-list"><Link  to="/empty" className="right-afoot">FAQ's</Link></li>
+                            <li className="rightf-list"><Link  to="/" className="right-afoot">Terms Of Services</Link></li>
+                            <li className="rightf-list"><Link  to="/" className="right-afoot">Privacy Policy</Link></li>
+                            <li className="rightf-list"><Link  to="/" className="right-afoot">Reviews</Link></li>
+                            <li className="rightf-list"><Link  to="/" className="right-afoot">FAQ's</Link></li>
                         </ul>
 
                         <img src="./img/playstore.png" alt="" className="footplay" />
                         <img src="./img/appstore.svg" alt="" className="footplay2" />
                         <div className="socialfoot">
-                            <Link to ='./empty' ><i className="fa fa-instagram iconfoot" ></i></Link>
-                            <Link to ='./empty' ><i className="fa fa-facebook iconfoot" ></i></Link>
-                            <Link to ='./empty' ><i className="fa fa-twitter iconfoot" ></i></Link>
+                            <Link to ='./' ><i className="fa fa-instagram iconfoot" ></i></Link>
+                            <Link to ='./' ><i className="fa fa-facebook iconfoot" ></i></Link>
+                            <Link to ='./' ><i className="fa fa-twitter iconfoot" ></i></Link>
                         </div>
                     </div>
 

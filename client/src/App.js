@@ -93,9 +93,9 @@ class App extends Component {
         <Provider store={store}>
           <Router>
                 <Switch>
+                  <Route  exact={true} path='/' component={Index} /> 
                   <Route  exact={true} path='/menu' component={Menu} />
                   <Route  exact={true} path='/dashboard' component={Dashboard} />
-                  <Route  exact={true} path='/' component={Index} /> 
                   <Route  exact={true} path='/ticket' component={Tiket} />
                   <Route  exact={true} path='/ticketevent' component={Awardevent} /> 
                   <Route  exact={true} path='/signup' component={Signup} />

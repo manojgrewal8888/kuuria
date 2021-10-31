@@ -71,21 +71,21 @@ export default class Index extends Component {
                         <Link to='/index'><img src="./img/kuria-new.png" alt="" className="foot-logo" /></Link>
 
                         <ul className="foot-left">
-                            <li className="leftf-list"><Link to="/empty" className="left-afoot">File For Nomination</Link></li>
+                            <li className="leftf-list"><Link to="/" className="left-afoot">File For Nomination</Link></li>
                             <li className="leftf-list"><Link to="/ticket" className="left-afoot">Ticketing</Link></li>
-                            <li className="leftf-list"><Link to="/empty" className="left-afoot">Reality Shows</Link></li>
-                            <li className="leftf-list"><Link to="/empty" className="left-afoot">Support</Link></li>
+                            <li className="leftf-list"><Link to="/" className="left-afoot">Reality Shows</Link></li>
+                            <li className="leftf-list"><Link to="/" className="left-afoot">Support</Link></li>
                             <li className="leftf-list"><Link to="/login" className="left-afoot">Log In</Link></li>
                         </ul>
 
                         <ul className="foot-right">
-                            <li className="rightf-list"><Link to="/empty" className="right-afoot">Terms Of Services</Link></li>
-                            <li className="rightf-list"><Link to="/empty" className="right-afoot">Privacy Policy</Link></li>
-                            <li className="rightf-list"><Link to="/empty" className="right-afoot">Reviews</Link></li>
-                            <li className="rightf-list"><Link to="/empty" className="right-afoot">FAQ's</Link></li>
+                            <li className="rightf-list"><Link to="/" className="right-afoot">Terms Of Services</Link></li>
+                            <li className="rightf-list"><Link to="/" className="right-afoot">Privacy Policy</Link></li>
+                            <li className="rightf-list"><Link to="/" className="right-afoot">Reviews</Link></li>
+                            <li className="rightf-list"><Link to="/" className="right-afoot">FAQ's</Link></li>
                         </ul>
 
-                        <Link to ='./empty' >
+                        <Link to ='./' >
                             <img src="./img/playstore.png" alt="" className="footplay" />
                         </Link>
 
