@@ -80,14 +80,12 @@ class Login extends Component {
                    <div className="log_head1"><span className="red-text">
                   {errors.password}
                   {errors.passwordincorrect}
-                </span></div>
-                    <div className="newevnt-btn"> 
+                </span></div> 
                         <button  type="submit"
-                            className="btn-animatelog btn btn-large waves-effect waves-light hoverable blue accent-3"
+                            className="newevnt-btn btn-animatelog btn btn-large waves-effect waves-light hoverable blue accent-3"
                                 >
                                 Log In
-                        </button>  
-                    </div>
+                        </button>   
                     </form>
                     <Link to="/forgetpassword"><p className="login_para">Forget Password?</p></Link>
                 </div>
