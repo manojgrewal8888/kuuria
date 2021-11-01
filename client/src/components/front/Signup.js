@@ -99,19 +99,37 @@ class Register extends Component {
                                 searchClass="searchxlasic"
                                 />
                                 </div>
-
+                            <span className="red-text">{errors.phone}</span>
                             
-                            <input className="login_input" type="password" name="pwd" id="pwd" placeholder="Password"/>
-                            <input className="login_input" type="password" name="pwd" id="pawd" placeholder="Confirm Password"/> 
+                           {/*  <input className="login_input" type="password" name="pwd" id="pwd" placeholder="Password"/> */}
+                           <input
+                            onChange={this.onChange}
+                            value={this.state.password}
+                            error={errors.password}
+                            id="password"
+                            type="password"
+                            className={'login_input '+classnames("", {
+                              invalid: errors.password
+                            })} 
+                          />
+                           <span className="red-text">{errors.password}</span>
+                         {/*    <input className="login_input" type="password" name="pwd" id="pawd" placeholder="Confirm Password"/>  */}
+                         <input
+                          onChange={this.onChange}
+                          value={this.state.password2}
+                          error={errors.password2}
+                          id="password2"
+                          type="password"
+                          className={'login_input '+classnames("", {
+                            invalid: errors.password
+                          })} 
+                        />
+                         <span className="red-text">{errors.password2}</span>
                             <div className="newevnt-btn">
 
-                                <a href="javascript(void)" className="btn-animatelog">
-                                    <span className="span-toplog"></span>
-                                    <span className="span-rightlog"></span>
-                                    <span className="span-bottomlog"></span>
-                                    <span className="span-leftlog"></span>
+                                <button type="submit"   className="btn-animatelog"> 
                                     <p className="btn-pra">SIGN UP</p>
-                                </a>
+                                </button>
 
                             </div>
 

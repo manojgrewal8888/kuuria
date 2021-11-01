@@ -3813,8 +3813,7 @@ input.inputxlasic.form-control {
 
 .btnxlasic.flag-dropdown {
   background: #f9faff00 !important;
-  border: none !important;
-  width: 100%;
+  border: none !important; 
 }
 
 ul.dropxlassic.country-list {
