@@ -39,7 +39,8 @@ class Register extends Component {
           name: this.state.name,
           email: this.state.email,
           password: this.state.password,
-          password2: this.state.password2
+          password2: this.state.password2,
+          phone: this.state.phone
         };
     this.props.registerUser(newUser, this.props.history); 
       };
@@ -65,22 +66,20 @@ class Register extends Component {
                             <input   
                             placeholder="Organisation Name"
                                 onChange={this.onChange}
-                                value={this.state.username}
-                                error={errors.username}
-                                id="username"
+                                value={this.state.name} 
+                                id="name"
                                 type="text"
                                 className={'login_input '+classnames("", {
-                                    invalid: errors.username
+                                    invalid: errors.name
                                 })}
                             />
-                            <span className="red-text">{errors.username}</span>
+                            <span className="red-text">{errors.name}</span>
 
                           {/*   <input className="login_input" type="email" name="mail" id="mail" placeholder="Email"/> */}
                           <input  
                           placeholder="Email"
                                 onChange={this.onChange}
-                                value={this.state.email}
-                                error={errors.email}
+                                value={this.state.email} 
                                 id="email"
                                 type="email"
                                 className={'login_input '+classnames("", {
@@ -106,8 +105,7 @@ class Register extends Component {
                            {/*  <input className="login_input" type="password" name="pwd" id="pwd" placeholder="Password"/> */}
                            <input
                             onChange={this.onChange}
-                            value={this.state.password}
-                            error={errors.password}
+                            value={this.state.password} 
                             id="password"
                             type="password"
                             placeholder="Password"
@@ -120,8 +118,7 @@ class Register extends Component {
                          <input
                          placeholder="Confirm Password"
                           onChange={this.onChange}
-                          value={this.state.password2}
-                          error={errors.password2}
+                          value={this.state.password2} 
                           id="password2"
                           type="password"
                           className={'login_input '+classnames("", {
