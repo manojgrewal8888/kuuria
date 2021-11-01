@@ -544,9 +544,23 @@
         background: none;
     }
     .menu {
-        border: 2px solid;
+        
         width: 67%;
     }
+
+    a.navitem:hover {
+        text-decoration: none;
+        font-size: 12px;
+        margin: 0px 24px;
+        color: #ffd600;
+      }
+
+      a.navitem.active-class {
+        text-decoration: none;
+        margin: 0px 35px;
+        color: #ffd600;
+        font-size: 15px;
+      }
     p.progress_umb {
         color: #FFB800;
         background: none;
