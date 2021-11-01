@@ -552,12 +552,13 @@
         text-decoration: none;
         font-size: 12px;
         margin: 0px 24px;
-        color: #ffd600;
+        color: #ffffff;
+       
       }
 
       a.navitem.active-class {
         text-decoration: none;
-        margin: 0px 35px;
+        margin: 0px 25px;
         color: #ffd600;
         font-size: 15px;
       }
