@@ -92,6 +92,11 @@ class Register extends Component {
                                 country={'gh'}
                                 value={this.state.phone}
                                 onChange={phone => this.setState({ phone })}
+                                inputClass="inputxlasic"
+                                buttonClass="btnxlasic"
+                                containerClass="lcontainxlasic"
+                                dropdownClass="dropxlassic"
+                                searchClass="searchxlasic"
                                 />
                                 </div>
 
