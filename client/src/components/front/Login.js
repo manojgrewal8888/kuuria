@@ -53,6 +53,7 @@ class Login extends Component {
                     <h2 className="log_head">Log In</h2>
                    {/*  <input className="login_input" type="email" name="mail" id="mail" placeholder="Email"/> */}
                    <input
+                   placeholder="Email"
                   onChange={this.onChange}
                   value={this.state.email}
                   error={errors.email}

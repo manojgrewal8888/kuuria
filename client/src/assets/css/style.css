@@ -1275,7 +1275,8 @@ h2.log_head {
 }
 span.red-text {
   color: #ffffff;
-  border-bottom: 3px solid #ff2e2e;
+  border-bottom: 3px solid #ff2e2e;  
+  margin-left: 84px;
 }
 .box2_login {
   position: absolute;

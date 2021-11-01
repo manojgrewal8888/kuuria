@@ -63,6 +63,7 @@ class Register extends Component {
                             <h2 className="log_head">Sign Up</h2>
                           {/*   <input className="login_input" type="text" name="orgname" id="orgname" placeholder="Organisation Name"/> */}
                             <input   
+                            placeholder="Organisation Name"
                                 onChange={this.onChange}
                                 value={this.state.username}
                                 error={errors.username}
@@ -76,6 +77,7 @@ class Register extends Component {
 
                           {/*   <input className="login_input" type="email" name="mail" id="mail" placeholder="Email"/> */}
                           <input  
+                          placeholder="Email"
                                 onChange={this.onChange}
                                 value={this.state.email}
                                 error={errors.email}
@@ -108,6 +110,7 @@ class Register extends Component {
                             error={errors.password}
                             id="password"
                             type="password"
+                            placeholder="Password"
                             className={'login_input '+classnames("", {
                               invalid: errors.password
                             })} 
@@ -115,6 +118,7 @@ class Register extends Component {
                            <span className="red-text">{errors.password}</span>
                          {/*    <input className="login_input" type="password" name="pwd" id="pawd" placeholder="Confirm Password"/>  */}
                          <input
+                         placeholder="Confirm Password"
                           onChange={this.onChange}
                           value={this.state.password2}
                           error={errors.password2}
