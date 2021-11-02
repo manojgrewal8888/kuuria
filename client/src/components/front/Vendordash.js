@@ -1,7 +1,14 @@
-import React, { Component } from 'react'
-
-export default class Vendordash extends Component {
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { logoutUser } from "../../actions/authActions";
+class Vendordash extends Component {
+    onLogoutClick = e => {
+        e.preventDefault();
+        this.props.logoutUser(this.props.history);
+      };
     render() {
+        const { user } = this.props.auth;
         return (
             <div>
                 <div className="wrap_vwendor">
@@ -19,6 +26,18 @@ export default class Vendordash extends Component {
                                 <i className="fa fa-comment cus_vicon"></i>
                                 <i className="fa fa-bar-chart cus_vicon"></i>
                                 <i className="fa fa-file-text-o cus_vicon"></i>
+                                  <button
+                                    style={{
+                                        width: "150px",
+                                        borderRadius: "3px",
+                                        letterSpacing: "1.5px",
+                                        marginTop: "1rem"
+                                    }}
+                                    onClick={this.onLogoutClick}
+                                    className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                                    >Logout &nbsp;
+                                    <i className="fa fa-sign-out"></i> 
+                                    </button> 
                                
                         </div>
                     </div>
@@ -68,3 +87,15 @@ export default class Vendordash extends Component {
         )
     }
 }
+
+Vendordash.propTypes = {
+    logoutUser: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired
+  };
+  const mapStateToProps = state => ({
+    auth: state.auth
+  });
+  export default connect(
+    mapStateToProps,
+    { logoutUser }
+  )(Vendordash);

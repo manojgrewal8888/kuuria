@@ -73,7 +73,7 @@ class Register extends Component {
                                     invalid: errors.name
                                 })}
                             />
-                            <span className="red-text">{errors.name}</span>
+                            <span className="red-text1">{errors.name}</span>
 
                           {/*   <input className="login_input" type="email" name="mail" id="mail" placeholder="Email"/> */}
                           <input  
@@ -86,7 +86,7 @@ class Register extends Component {
                                     invalid: errors.email
                                 })}
                                 />
-                            <span className="red-text">{errors.email}</span>
+                            <span className="red-text1">{errors.email}</span>
 
                             <div className="resetsignup">
                             <PhoneInput
@@ -100,7 +100,7 @@ class Register extends Component {
                                 searchClass="searchxlasic"
                                 />
                                 </div>
-                            <span className="red-text">{errors.phone}</span>
+                            <span className="red-text1">{errors.phone}</span>
                             
                            {/*  <input className="login_input" type="password" name="pwd" id="pwd" placeholder="Password"/> */}
                            <input
@@ -113,7 +113,7 @@ class Register extends Component {
                               invalid: errors.password
                             })} 
                           />
-                           <span className="red-text">{errors.password}</span>
+                           <span className="red-text1">{errors.password}</span>
                          {/*    <input className="login_input" type="password" name="pwd" id="pawd" placeholder="Confirm Password"/>  */}
                          <input
                          placeholder="Confirm Password"
@@ -125,7 +125,7 @@ class Register extends Component {
                             invalid: errors.password
                           })} 
                         />
-                         <span className="red-text">{errors.password2}</span>
+                         <span className="red-text1">{errors.password2}</span>
                             <div className="">
 
                                 <button type="submit"   className="newevnt-btn btn-animatelog"> 
@@ -134,7 +134,7 @@ class Register extends Component {
 
                             </div>
 
-                            <p className="login_para">Already Have An Account?<Link  to='/Login'>Log In</Link></p>
+                            <p className="login_para">Already Have An Account?<Link className='login_B' to='/Login'>Log In</Link></p>
                         </div>
                     </form>
                 <div className="box1_login"></div>

@@ -62,7 +62,7 @@ class Login extends Component {
                   className={'login_input '+classnames("", {
                     invalid: errors.email || errors.emailnotfound
                   })}/>
-                    <div className="log_head1"><span className="red-text">
+                    <div className="log_head1"><span className="red-text1">
                   {errors.email}
                   {errors.emailnotfound}
                 </span></div>
@@ -78,7 +78,7 @@ class Login extends Component {
                     invalid: errors.password || errors.passwordincorrect
                   })}
                 />
-                   <div className="log_head1"><span className="red-text">
+                   <div className="log_head1"><span className="red-text1">
                   {errors.password}
                   {errors.passwordincorrect}
                 </span></div> 

@@ -1,14 +1,43 @@
-import React, { Component } from 'react'
-import { Link } from "react-router-dom";
-
-export default class Welcome extends Component {
+ import React, { Component } from "react";
+ import { Link, withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { onNext } from "../../actions/ManagerActions";
+class Welcome extends Component {
+    constructor() {
+        super();
+        this.state = {
+          event: "", 
+          error:''
+        };
+         
+    } 
+    onNext = e => {
+        e.preventDefault();
+        if(this.state.event.length > 0){
+            this.setState({ event: e.target.value }); 
+            this.props.onNext(this.state.event);
+            this.setState({ error: '' }); 
+            this.props.history.push("/create");
+        }else{
+            console.log(this.state.event.length)
+            this.setState({ error: 'Enter event name !!!' }); 
+        }
+      };
+      setval = e => {
+        if(e.target.value.length > 0){
+            this.setState({ event: e.target.value }); 
+        }else{
+            this.setState({ event: '' }); 
+        }
+      };
     render() {
         return (
             <div>
                 <div className="wrap-newevent">
 
                     <div className="new-logo">
-                        <img src="./img/kuria-new.png" alt="" className="logo-new"/>
+                    <Link to="/dashboard"><img src="./img/kuria-new.png" alt="" className="logo-new"/></Link>
                     </div>
 
                     <div className="newevent-txt">
@@ -20,19 +49,15 @@ export default class Welcome extends Component {
                     <div className="box-new"></div>
                     <div className="box-new1"></div>
 
-                    <input type="text" name="event" id="event">
-                           
+                    <input type="text" onChange={this.setval} defaultValue={this.state.event ?? ''} name="event" id="event">
                     </input>
 
+                           <div className='text-center'>{this.state.error}</div>
                     <div className="newevnt-btn">
 
-                        <Link to='/create' className="btn-animate">
-                            <span className="span-top"></span>
-                            <span className="span-right"></span>
-                            <span className="span-bottom"></span>
-                            <span className="span-left"></span>
+                        <a  onClick={this.onNext} className="btn-animate"> 
                             <p className="btn-pra">NEXT</p>
-                        </Link>
+                        </a>    
 
                     </div>
 
@@ -43,3 +68,15 @@ export default class Welcome extends Component {
         )
     }
 }
+
+Welcome.propTypes = {
+    onNext: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired
+  };
+  const mapStateToProps = state => ({
+    auth: state.auth
+  });
+  export default connect(
+    mapStateToProps,
+    { onNext }
+  )(Welcome);

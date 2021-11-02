@@ -1,7 +1,14 @@
-import React, { Component } from 'react'
-
-export default class Manageeventv extends Component {
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { logoutUser } from "../../actions/authActions";
+class Manageevents extends Component {
+    onLogoutClick = e => {
+        e.preventDefault();
+        this.props.logoutUser(this.props.history);
+      };
     render() {
+        const { user } = this.props.auth;
         return (
             <div>
                 <div className="wrap_vwendor">
@@ -27,11 +34,13 @@ export default class Manageeventv extends Component {
                     </div>
 
                     <div className="right_vendor">
-                        <div className="right_subven">
-                            <button className="logout_ven">
-                                <i class="fa fa-sign-out"></i>
-                                Log Out
-                            </button>
+                        <div className="right_subven"> 
+                            <button 
+                                onClick={this.onLogoutClick}
+                                className="logout_ven"
+                                >Log out &nbsp;
+                                <i className="fa fa-sign-out"></i> 
+                            </button> 
 
                             <h4 className="meve_headin">Manage Questions For Filling Of Nomination</h4>
 
@@ -66,3 +75,15 @@ export default class Manageeventv extends Component {
         )
     }
 }
+
+Manageevents.propTypes = {
+    logoutUser: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired
+  };
+  const mapStateToProps = state => ({
+    auth: state.auth
+  });
+  export default connect(
+    mapStateToProps,
+    { logoutUser }
+  )(Manageevents);
