@@ -8,7 +8,7 @@ export default class Menu extends Component {
             <div>
                 <div className="wrapmenu">
                     <div className="headlogo">
-                        <NavLink exact={true} activeClassName="active-class"  to="/index">
+                        <NavLink exact={true} activeClassName="active-class"  to="/">
                             <img src="./img/kuria-new.png" alt="" className="img-headlogo" />
                         </NavLink>
                     </div>

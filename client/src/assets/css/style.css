@@ -1226,20 +1226,7 @@ img.login_img {
   transition: ease-in-out;
 }
 
-.login_input:hover:focus {
-  display: block;
-  width: 80%;
-  height: 45px;
-  font-size: 18px;
-  margin: auto;
-  margin-top: 35px;
-  background: rgba(255, 255, 255, 0.02);
-  box-sizing: border-box;
-  backdrop-filter: blur(4px);
-  border-radius: 8px;
-  padding-left: 20px;
-  border: none;
-}
+
 
 .contain_login {
   background: rgba(255, 255, 255, 0.05);
