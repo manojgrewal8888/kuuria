@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const path = require('path');
 const bodyParser = require("body-parser");
 const app = express();
 const passport = require("passport");
@@ -10,7 +11,9 @@ app.use(
         extended: false
     })
 );
+const port = 8080;
 app.use(bodyParser.json());
+/* app.use('/',express.static(path.join(__dirname, './client/build'))); */
 // DB Config
 const db = require("./config/keys").mongoURI;
 // Connect to MongoDB
@@ -26,6 +29,12 @@ mongoose
     require("./config/passport")(passport);
     // Routes
     app.use("/api/users", users);
-const port = process.env.PORT || 5000; // process.env.port is Heroku's port if you choose to deploy the app there
-app.listen(port, () => console.log(`Server up and running on port ${port} !`));
+/* const port = process.env.PORT || 8080; // process.env.port is Heroku's port if you choose to deploy the app there
+ */
+/* app.get('/', (req,res) => {
+    res.sendFile(path.join(__dirname, './client/build/index.html'));
+}); */
+
+
+app.listen(port,'https://v1.kuuria.com', () => console.log(`Server up and running on port ${port} !`));
 
