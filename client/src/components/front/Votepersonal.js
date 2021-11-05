@@ -11,12 +11,12 @@ export default function Country() {
         <>
             <div className="wrapvote_browse">
                 <div className="leftv_browse">
-                    <img src="./img/dash logo.jpg" alt="" className="voteimg_resize" />
-                    <Link className="link_reset" to='/votecheck'><i class="fa fa-home vot_icon"></i></Link>
-                    <Link className="link_reset" to='/votebrowse'><i class="fa fa-th vot_icon"></i></Link>
-                    <Link className="link_reset" to='/votepersonal'><i class="fa fa-user vot_icon"></i></Link>
-                    <Link className="link_reset" to='/votepersonal'><span className="personalicon_span"><i class="fa fa-user vot_iconpersonal"></i>Personal</span></Link>
-                    <Link className="link_reset" to='/voteprices'><i class="fa fa-database vot_icon"></i></Link>
+                    <img src="./img/dashlogo.jpg" alt="" className="voteimg_resize" />
+                    <Link className="link_reset" to='/votecheck'><i className="fa fa-home vot_icon"></i></Link>
+                    <Link className="link_reset" to='/votebrowse'><i className="fa fa-th vot_icon"></i></Link>
+                    
+                    <Link className="link_reset" to='/votepersonal'><span className="personalicon_span"><i className="fa fa-user vot_iconpersonal"></i>Personal</span></Link>
+                    <Link className="link_reset" to='/voteprices'><i className="fa fa-database vot_icon"></i></Link>
 
                 </div>
 
@@ -26,16 +26,17 @@ export default function Country() {
                     <input className="input_person" type="email" name="" id="" placeholder="E_mail" />
                     <div className="resetx">
                         <PhoneInput
-                        defaultCountry="GH"
-                        value={value}
-                        onChange={setValue} />
-                        </div> 
+                            defaultCountry="GH"
+                            value={value}
+                            onChange={setValue} />
+                    </div>
 
 
 
-
-                    <Link className="link_reset" to='/votebrowse'><button className="back_person">Back</button></Link>
-                    <Link className="link_reset" to='/voteprice'><button className="proceed_person">Proceed</button></Link>
+                    <div className="wrapx_btnp">
+                        <Link className="link_reset" to='/votebrowse'><button className="back_person">Back</button></Link>
+                        <Link className="link_reset" to='/voteprice'><button className="proceed_person">Proceed</button></Link>
+                    </div>
                 </div>
             </div>
         </>
