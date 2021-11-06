@@ -48,7 +48,7 @@ ul.navlist {
   display: inline-flex;
   list-style: none;
   margin-top: 60px;
-  margin-left: 300px;
+  margin-left: 60px;
 }
 
 a.navitem {
@@ -1621,10 +1621,10 @@ i.fa.fa-search.umb-search {
 }
 
 i.fa.fa-search.umb2-search {
-  position: absolute;
+  position: relative;
   font-size: 20px;
-  top: 60px;
-  left: 990px;
+  top: -31px;
+  left: 792px;
 }
 
 button.umb_check {
@@ -2432,7 +2432,7 @@ a.set_linxapp {
 /* for vote check homeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee*/
 
 .wrapvote_browse {
-
+  display: flex;
   width: 100%;
 }
 
