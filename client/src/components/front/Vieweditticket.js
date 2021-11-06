@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 
 export default class Vieweditticket extends Component {
     render() {
@@ -7,23 +8,23 @@ export default class Vieweditticket extends Component {
                 <div className="wrap_vwendor">
                     <div className="left_vendor">
                         <div className="left_subven">
-                            <img src="./img/kuria-new.png" alt="" className="res_venlogo" />
+                            <Link className="linx_ven" exact to="/"><img src="./img/kuria-new.png" alt="" className="res_venlogo" /></Link>
 
-                            <i className="fa fa-home cus_vicon"></i>
+                            <Link className="linx_ven" exact to='/vender_dash'> <i className="fa fa-home cus_vicon"></i></Link>
 
 
-                           
-                                <i className="fa fa-calendar-check-o cus_vicon"></i>
-                              
-                            <div className="home_vendori3">
-                            <i className="fa fa-ticket cus_vicon3"></i>
-                            <span className="home_vender3">Manage Tickets</span>
-                            </div>
 
-                            <i className="fa fa-money cus_vicon"></i>
-                            <i className="fa fa-comment cus_vicon"></i>
-                            <i className="fa fa-bar-chart cus_vicon"></i>
-                            <i className="fa fa-file-text-o cus_vicon"></i>
+                            <Link className="linx_ven" exact to='/manage_events'> <i className="fa fa-calendar-check-o cus_vicon"></i></Link>
+
+                            <Link className="linx_ven" exact to='/manage_ticket'><div className="home_vendori3">
+                               <i className="fa fa-ticket cus_vicon3"></i>
+                                    <span className="home_vender3">Manage Tickets</span>
+                            </div></Link>
+
+                            <Link className="linx_ven" exact to="/"><i className="fa fa-money cus_vicon"></i></Link>
+                            <Link className="linx_ven" exact to="/"><i className="fa fa-comment cus_vicon"></i></Link>
+                            <Link className="linx_ven" exact to="/"><i className="fa fa-bar-chart cus_vicon"></i></Link>
+                            <Link className="linx_ven" exact to="/"><i className="fa fa-file-text-o cus_vicon"></i></Link>
 
                         </div>
                     </div>
@@ -46,19 +47,19 @@ export default class Vieweditticket extends Component {
                                 </div>
 
                                 <div className="hori_viewt"></div>
-                               
+
                                 <div className="right_viewt">
-                                <p className="right_vt1">AWARD EVENT 2021</p>
-                                <p className="right_vt2">October 10 ,2021</p>
-                                <p className="right_vt3">8:00 PM</p>
-                                <select className="right_vt4" name="" id="" placeholder="Choose Price and Number of Votes">
-                                    <option value="">Choose Price and Number of Votes</option>
-                                    <option value="">99$ 4 votes</option>
-                                    <option value="">99$ 4 votes</option>
-                                    <option value="">99$ 4 votes</option>
-                                </select>
-                                <p className="right_vt5">Conference Center</p>
-                                <p className="right_vt6"># 007</p>
+                                    <p className="right_vt1">AWARD EVENT 2021</p>
+                                    <p className="right_vt2">October 10 ,2021</p>
+                                    <p className="right_vt3">8:00 PM</p>
+                                    <select className="right_vt4" name="" id="" placeholder="Choose Price and Number of Votes">
+                                        <option value="">Choose Price and Number of Votes</option>
+                                        <option value="">99$ 4 votes</option>
+                                        <option value="">99$ 4 votes</option>
+                                        <option value="">99$ 4 votes</option>
+                                    </select>
+                                    <p className="right_vt5">Conference Center</p>
+                                    <p className="right_vt6"># 007</p>
                                 </div>
                             </div>
 

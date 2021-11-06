@@ -124,6 +124,7 @@ class App extends Component {
                   <Route  exact={true} path='/eventnominee' component={Eventnominee} />
                   <Route  exact={true} path='/nomineeinfo' component={Eventnominfo} />
                   <Route  exact={true} path='/eventdelete' component={Eventdelete} /> 
+                  
                   <Route  exact={true} path='/vender_dash' component={Vendordash} />
                   <Route  exact={true} path='/manage_events' component={Manageevents}  />
                   <Route  exact={true} path='/manage_ticket' component={Manageticket} />

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
@@ -14,18 +15,18 @@ class Vendordash extends Component {
                 <div className="wrap_vwendor">
                     <div className="left_vendor">
                         <div className="left_subven">
-                            <img src="./img/kuria-new.png" alt="" className="res_venlogo" />
+                        <Link className="linx_ven" exact to="/"><img src="./img/kuria-new.png" alt="" className="res_venlogo" /></Link>
                                <div className="home_vendori">
-                                <i className="fa fa-home cus_vicon1"></i>
+                               <Link className="linx_ven" exact to="/vender_dash"><i className="fa fa-home cus_vicon1"></i></Link>
                                 <span className="home_vender">Dashboard</span>
                                 </div>
                                 
-                                <i className="fa fa-calendar-check-o cus_vicon"></i>
-                                <i className="fa fa-ticket cus_vicon"></i>
-                                <i className="fa fa-money cus_vicon"></i>
-                                <i className="fa fa-comment cus_vicon"></i>
-                                <i className="fa fa-bar-chart cus_vicon"></i>
-                                <i className="fa fa-file-text-o cus_vicon"></i>
+                                <Link className="linx_ven" exact to='/manage_events'><i className="fa fa-calendar-check-o cus_vicon"></i></Link>
+                                <Link className="linx_ven" exact to='/manage_ticket'><i className="fa fa-ticket cus_vicon"></i></Link>
+                                <Link className="linx_ven" exact to="/"><i className="fa fa-money cus_vicon"></i></Link>
+                                <Link className="linx_ven" exact to="/"><i className="fa fa-comment cus_vicon"></i></Link>
+                                <Link className="linx_ven" exact to="/"><i className="fa fa-bar-chart cus_vicon"></i></Link>
+                                <Link className="linx_ven" exact to="/"><i className="fa fa-file-text-o cus_vicon"></i></Link>
                                   <button
                                     style={{
                                         width: "150px",

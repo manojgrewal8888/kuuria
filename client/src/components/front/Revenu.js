@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import {
     BarChart, Bar, XAxis, YAxis,
@@ -33,20 +34,23 @@ export default class Revenu extends Component {
                 <div className="wrap_vwendor">
                     <div className="left_vendor">
                         <div className="left_subven">
-                            <img src="./img/kuria-new.png" alt="" className="res_venlogo" />
+                        <Link className="linx_ven" exact to="/"><img src="./img/kuria-new.png" alt="" className="res_venlogo" /></Link>
 
-                            <i className="fa fa-home cus_vicon"></i>
+                        <Link className="linx_ven" exact to='/vender_dash'> <i className="fa fa-home cus_vicon"></i></Link>
 
 
 
                             <i className="fa fa-calendar-check-o cus_vicon"></i>
 
-                            <div className="home_vendori3">
-                                <i className="fa fa-ticket cus_vicon3"></i>
-                                <span className="home_vender3">Manage Tickets</span>
-                            </div>
+                            
+                                <i className="fa fa-ticket cus_vicon"></i>
+                                
+                           
 
-                            <i className="fa fa-money cus_vicon"></i>
+                            <div className="home_vendori4">
+                                <i className="fa fa-money cus_vicon4"></i> 
+                                <span className="home_vender4">Revenue</span>
+                            </div>
                             <i className="fa fa-comment cus_vicon"></i>
                             <i className="fa fa-bar-chart cus_vicon"></i>
                             <i className="fa fa-file-text-o cus_vicon"></i>
@@ -68,15 +72,15 @@ export default class Revenu extends Component {
                             </div>
 
                             <div className="btn_salewr">
-                                <button className="vote_sal">Votes</button>
-                                <button className="tiket_sal">Tickets</button>
+                                <Link className="lix_btx" exact to='/'><button className="vote_sal">Votes</button></Link>
+                                <Link className="lix_btx" exact to='/'><button className="vote_sal">Tickets</button></Link>
                             </div>
 
                             <p className="vote_datasal">Votes Data for the period. Each Bar represents a single day.</p>
 
                             <div className="wrapchart_rev">
                                 <div className="chrt_rev">
-                                    <BarChart width={600} height={300} data={data} >
+                                    <BarChart className="rewrapx" width={400} height={200} data={data} >
                                         <CartesianGrid />
                                         <XAxis dataKey="name" />
                                         <YAxis />
@@ -88,18 +92,43 @@ export default class Revenu extends Component {
                                 </div>
 
                                 <div className="stat_chart">
+                                    <div className="wrap_tbx">
                                     <table className="table_rev" >
                                         <tr>
                                             <th>Votes<i class="fa fa-caret-down crt_tb" aria-hidden="true"></i></th>
 
                                         </tr>
-                                        <tr>
-                                            <td>Emil</td>
-                                            <td>Tobias</td>
+                                        <tr className="trtabdat">
+                                            <td className="datetab">01 Sep</td>
+                                            <td className="pricxetab">70 Cedis</td>
+                                            
+                                        </tr>
+                                        <tr className="trtabdat">
+                                            <td className="datetab">01 Sep</td>
+                                            <td className="pricxetab">70 Cedis</td>
+                                            
+                                        </tr>
+
+                                        <tr className="trtabdat">
+                                            <td className="datetab">01 Sep</td>
+                                            <td className="pricxetab">70 Cedis</td>
+                                            
+                                        </tr>
+
+                                        <tr className="trtabdat">
+                                            <td className="datetab">01 Sep</td>
+                                            <td className="pricxetab">70 Cedis</td>
+                                            
+                                        </tr>
+
+                                        <tr className="trtabdat">
+                                            <td className="datetab">01 Sep</td>
+                                            <td className="pricxetab">70 Cedis</td>
                                             
                                         </tr>
                                        
                                     </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
