@@ -95,7 +95,7 @@ class App extends Component {
                 <Switch>
                   <Route  exact={true} path='/' component={Index} /> 
                   <Route  exact={true} path='/menu' component={Menu} />
-                  <Route  exact={true} path='/dashboard' component={Eventdash} />
+                  <Route  exact={true} path='/dashboard' component={Vendordash} />
                   <Route  exact={true} path='/ticket' component={Tiket} />
                   <Route  exact={true} path='/ticketevent' component={Awardevent} /> 
                   <Route  exact={true} path='/signup' component={Signup} />
@@ -125,7 +125,7 @@ class App extends Component {
                   <Route  exact={true} path='/nomineeinfo' component={Eventnominfo} />
                   <Route  exact={true} path='/eventdelete' component={Eventdelete} /> 
                   
-                  <Route  exact={true} path='/vender_dash' component={Vendordash} />
+                  <Route  exact={true} path='/vendor_dashboard' component={Vendordash} />
                   <Route  exact={true} path='/manage_events' component={Manageevents}  />
                   <Route  exact={true} path='/manage_ticket' component={Manageticket} />
                   <Route  exact={true} path='/viewedit_ticket' component={Vieweditticket} />

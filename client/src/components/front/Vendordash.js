@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import Sidebar from "./Sidebar";
 import { logoutUser } from "../../actions/authActions";
 class Vendordash extends Component {
     onLogoutClick = e => {
@@ -12,36 +13,8 @@ class Vendordash extends Component {
         const { user } = this.props.auth;
         return (
             <div>
-                <div className="wrap_vwendor">
-                    <div className="left_vendor">
-                        <div className="left_subven">
-                        <Link className="linx_ven" exact to="/"><img src="./img/kuria-new.png" alt="" className="res_venlogo" /></Link>
-                               <div className="home_vendori">
-                               <Link className="linx_ven" exact to="/vender_dash"><i className="fa fa-home cus_vicon1"></i></Link>
-                                <span className="home_vender">Dashboard</span>
-                                </div>
-                                
-                                <Link className="linx_ven" exact to='/manage_events'><i className="fa fa-calendar-check-o cus_vicon"></i></Link>
-                                <Link className="linx_ven" exact to='/manage_ticket'><i className="fa fa-ticket cus_vicon"></i></Link>
-                                <Link className="linx_ven" exact to="/"><i className="fa fa-money cus_vicon"></i></Link>
-                                <Link className="linx_ven" exact to="/"><i className="fa fa-comment cus_vicon"></i></Link>
-                                <Link className="linx_ven" exact to="/"><i className="fa fa-bar-chart cus_vicon"></i></Link>
-                                <Link className="linx_ven" exact to="/"><i className="fa fa-file-text-o cus_vicon"></i></Link>
-                                  <button
-                                    style={{
-                                        width: "150px",
-                                        borderRadius: "3px",
-                                        letterSpacing: "1.5px",
-                                        marginTop: "1rem"
-                                    }}
-                                    onClick={this.onLogoutClick}
-                                    className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-                                    >Logout &nbsp;
-                                    <i className="fa fa-sign-out"></i> 
-                                    </button> 
-                               
-                        </div>
-                    </div>
+                <div className="wrap_vwendor"> 
+                            <Sidebar />  
 
                     <div className="right_vendor">
                         <div className="right_subven">

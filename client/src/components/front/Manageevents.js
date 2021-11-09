@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
+import Sidebar from "./Sidebar";
 import { Link } from "react-router-dom";
 class Manageevents extends Component {
     onLogoutClick = e => {
@@ -14,35 +15,16 @@ class Manageevents extends Component {
         return (
             <div>
                 <div className="wrap_vwendor">
-                    <div className="left_vendor">
-                        <div className="left_subven">
-                        <Link className="linx_ven" exact to="/"><img src="./img/kuria-new.png" alt="" className="res_venlogo" /></Link>
-
-                            <Link className="linx_ven" exact to='/vender_dash'><i className="fa fa-home cus_vicon"></i></Link>
-
-
-                            <div className="home_vendori2">
-                            <Link className="linx_ven" exact to='/manage_events'><i className="fa fa-calendar-check-o cus_vicon2"></i>
-                                <span className="home_vender2">Dashboard</span></Link>
-                            </div>
-
-                            <Link className="linx_ven" exact to='/manage_ticket'><i className="fa fa-ticket cus_vicon"></i></Link>
-                            <Link className="linx_ven" exact to="/"><i className="fa fa-money cus_vicon"></i></Link>
-                            <Link className="linx_ven" exact to="/"><i className="fa fa-comment cus_vicon"></i></Link>
-                            <Link className="linx_ven" exact to="/"><i className="fa fa-bar-chart cus_vicon"></i></Link>
-                            <Link className="linx_ven" exact to="/"><i className="fa fa-file-text-o cus_vicon"></i></Link>
-
-                        </div>
-                    </div>
+                    <Sidebar />
 
                     <div className="right_vendor">
                         <div className="right_subven"> 
-                            <button 
+                           {/*  <button 
                                 onClick={this.onLogoutClick}
                                 className="logout_ven"
                                 >Log out &nbsp;
                                 <i className="fa fa-sign-out"></i> 
-                            </button> 
+                            </button>  */}
 
                             <h4 className="meve_headin">Manage Questions For Filling Of Nomination</h4>
 

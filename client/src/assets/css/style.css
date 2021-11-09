@@ -3326,7 +3326,7 @@ img.res_venlogo {
   background: none;
 }
 
-i.fa.fa-home.cus_vicon1 {
+/* i.fa.fa-home.cus_vicon1 {
   display: block;
   background: none;
   font-size: 40px;
@@ -3334,7 +3334,7 @@ i.fa.fa-home.cus_vicon1 {
   color: #ffd600;
   margin-left: 40%;
 }
-
+ */
 span.home_vender {
   position: relative;
   left: 37%;
@@ -3471,21 +3471,17 @@ p.txtp_mana {
 
 /* for managing ticketsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss vendor/**/
 
-span.home_vender2 {
-    position: relative;
-    left: 35%;
-    top: -30px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-sizing: border-box;
-    box-shadow: 10px 12px 26px 2px rgb(0 0 0 / 20%);
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-    border-radius: 8px;
-    padding: 8px 30px;
-    padding-left: 32%;
-    color: #ffd600;
-    font-size: 20px;
+span.home_vender2 { 
+  position: absolute;
+  margin-left: 24px;
+  width: 166px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15); 
+  box-shadow: 10px 12px 26px 2px rgb(0 0 0 / 20%);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  padding: 8px; 
 }
 
 i.fa.fa-calendar-check-o.cus_vicon2 {
@@ -3497,8 +3493,8 @@ i.fa.fa-calendar-check-o.cus_vicon2 {
   margin-left: 40%;
 }
 
-.home_vendori2 {
-  background: none;
+.home_vendor_ {
+  height: 70px;
 }
 
 button.mantik_btnv {
