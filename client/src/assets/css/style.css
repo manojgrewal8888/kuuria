@@ -1177,7 +1177,7 @@ span.count_x3 {
 img.login_img {
   margin: auto;
   display: block;
-  width: 300px;
+  width: 30%;
   margin-top: 75px;
 }
 
@@ -1216,7 +1216,7 @@ img.login_img {
 .login_input {
   display: block;
   width: 70%;
-  height: 45px;
+  height: 35px;
   font-size: 12px;
   margin: auto;
   margin-top: 35px;
@@ -1241,7 +1241,7 @@ img.login_img {
   backdrop-filter: blur(4px);
   border-radius: 8px;
   margin: auto;
-  width: 40%;
+  width: 75%;
   margin-top: 30px;
   margin-bottom: 75px;
 }
@@ -1249,12 +1249,13 @@ img.login_img {
 h2.log_head {
   text-align: center;
   margin-top: 60px;
-  font-size: 30px;
+  font-size: 20px;
   background: none;
   font-family: 'Poppins';
   font-weight: 700;
   letter-spacing: 5px;
 }
+
 .log_head1 {
   text-align: center;
   margin-top: 6px;
@@ -1345,8 +1346,8 @@ a.btn-animatelog {
   border: 1px solid #ffffff;
   border-radius: 5px;
   margin: auto;
-  width: 35%;
-  height: 50px;
+  width: 40%;
+  height: 35px;
   display: block;
   transform: translate(0%, 0%);
   overflow: hidden;
@@ -1354,6 +1355,56 @@ a.btn-animatelog {
   text-align: center;
   text-decoration: none;
   margin-top: 50px;
+  cursor: pointer;
+  transition: 1s;
+  background: none;
+}
+
+.newevnt-btn {
+  background: none;
+  width: 40%;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  height: 35px;
+  margin: auto;
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.newevnt-btn:hover {
+  background: #ffd600;
+  width: 40%;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  height: 35px;
+  margin: auto;
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.btn-animatelog:hover {
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  margin: auto;
+  width: 40%;
+  height: 35px;
+  display: block;
+  transform: translate(0%, 0%);
+  overflow: hidden;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 50px;
+  cursor: pointer;
+  transition: 1s;
+  background-color: #ffd600;
+}
+
+p.wecreate {
+  text-align: center;
+  margin-bottom: 0px;
 }
 
 /*to left*/
@@ -1380,7 +1431,7 @@ p.login_para {
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
-  font-size: 15px;
+  font-size: 12px;
   text-align: center;
   color: #FFFFFF;
   margin-top: 35px;
@@ -3326,7 +3377,7 @@ img.res_venlogo {
   background: none;
 }
 
-/* i.fa.fa-home.cus_vicon1 {
+i.fa.fa-home.cus_vicon1 {
   display: block;
   background: none;
   font-size: 40px;
@@ -3334,7 +3385,7 @@ img.res_venlogo {
   color: #ffd600;
   margin-left: 40%;
 }
- */
+
 span.home_vender {
   position: relative;
   left: 37%;
@@ -3471,17 +3522,21 @@ p.txtp_mana {
 
 /* for managing ticketsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss vendor/**/
 
-span.home_vender2 { 
-  position: absolute;
-  margin-left: 24px;
-  width: 166px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15); 
-  box-shadow: 10px 12px 26px 2px rgb(0 0 0 / 20%);
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
-  border-radius: 8px;
-  padding: 8px; 
+span.home_vender2 {
+    position: relative;
+    left: 35%;
+    top: -30px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-sizing: border-box;
+    box-shadow: 10px 12px 26px 2px rgb(0 0 0 / 20%);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+    padding: 8px 30px;
+    padding-left: 32%;
+    color: #ffd600;
+    font-size: 20px;
 }
 
 i.fa.fa-calendar-check-o.cus_vicon2 {
@@ -3493,8 +3548,8 @@ i.fa.fa-calendar-check-o.cus_vicon2 {
   margin-left: 40%;
 }
 
-.home_vendor_ {
-  height: 70px;
+.home_vendori2 {
+  background: none;
 }
 
 button.mantik_btnv {
@@ -3862,12 +3917,30 @@ button.vote_sal {
   margin-right: 35px;
 }
 
+.wrap_login {
+  display: flex;
+ 
+  background: #0F2650;
+}
+
+.wrapleft_sign {
+ 
+  width: 50%;
+
+}
+
+.wrapright_sign {
+  width: 50%;
+  
+}
+
 .btn_salewr {
   background: none;
   display: flex;
   margin-top: 30px;
   width: 100%;
   margin-left: 11%;
+  
 }
 
 button.tiket_sal {
@@ -3889,15 +3962,15 @@ button.tiket_sal {
 }
 
 input.inputxlasic.form-control {
-  background: rgba(255, 255, 255, 0.02);
+  background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   box-shadow: 0px 11px 17px 2px rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(4px);
+ 
   border-radius: 8px;
   width: 100%;
   margin: auto;
-  height: 45px;
+  height: 32px;
   color: #ffffff;
 }
 
@@ -3998,10 +4071,20 @@ button.btn.btn-large.waves-effect.waves-light.hoverable.blue.accent-3 {
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4 px );
 }
+
 .login_B{
   color:  #7ac4fa;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 15px;
+}
+
+.left_alisi {
+  width: 80%;
+ 
+  float: right;
+  background-image: url(../img/signback.png);
+  background-size: cover;
+  height: 895px;
 }
 
 
@@ -4141,4 +4224,62 @@ i.fa.fa-money.cus_vicon4 {
   float: left;
   margin-left: 30px;
   margin-bottom: 60px;
+}
+
+img.star_rese {
+  width: 38px;
+  height: 38px;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.onestar {
+  display: flex;
+  width: 74%;
+  background: #1D537F;
+  border-radius: 10px;
+  float: right;
+  margin-top: 315px;
+}
+
+.para_swrap {
+  background: #ffffff;
+  border-radius: 10px;
+  margin-left: 4%;
+  color: black;
+}
+
+p.para_str {
+  font-size: 12px;
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  padding: 10px 0px;
+}
+
+.onestar2 {
+  display: flex;
+  width: 74%;
+  background: #1D537F;
+  border-radius: 10px;
+  margin: auto;
+  
+}
+
+.onestar3 {
+  display: flex;
+  width: 74%;
+  background: #1D537F;
+  border-radius: 10px;
+
+}
+
+.space_sig {
+  margin-top: 50px;
+  display: block;
+  
+}
+
+.space_sig2 {
+  margin-top: 415px;
 }
