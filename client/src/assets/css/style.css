@@ -1214,6 +1214,7 @@ img.login_img {
 }
 
 .login_input {
+  color: #f9d40f;
   display: block;
   width: 70%;
   height: 35px;
@@ -1266,9 +1267,9 @@ h2.log_head {
   letter-spacing: 2px; 
 }
 span.red-text1 {
-  color: #ffffff;
-  border-bottom: 3px solid #ff2e2e;  
-  margin-left: 84px;
+  color: #ffffff; 
+  font-size: 12px;
+  color: #f9d40f;
 }
 span.red-text {
   color: #ffffff;
@@ -1439,6 +1440,18 @@ p.login_para {
   background: none;
   letter-spacing: 5px;
 }
+p.login_para1 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: center;
+  color: #FFFFFF; 
+  background: none;
+  letter-spacing: 5px;
+}
+
 
 .newevnt-btn {
   background: none;

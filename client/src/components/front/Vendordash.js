@@ -5,16 +5,16 @@ import { connect } from "react-redux";
 import Sidebar from "./Sidebar";
 import { logoutUser } from "../../actions/authActions";
 class Vendordash extends Component {
-    onLogoutClick = e => {
+  /*   onLogoutClick = e => {
         e.preventDefault();
         this.props.logoutUser(this.props.history);
-      };
+      }; */
     render() {
         const { user } = this.props.auth;
         return (
             <div>
                 <div className="wrap_vwendor"> 
-                            <Sidebar />  
+                <Sidebar history={this.props.history}/>  
 
                     <div className="right_vendor">
                         <div className="right_subven">
