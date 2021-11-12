@@ -18,12 +18,14 @@ export default class Create extends Component {
                               {/*   <i className="fa fa-calendar-o cal_1"></i>
                                 <p className="cal_p1">September 27,2021 10:00am</p>
                             */}
-                            <input className="date_inp" type="date" placeholder="Start Date"/>
+                             <i className="fa fa-calendar-o cal_1"></i>
+                            <input className="date_inpx" type="datetime-local" type="text" value="01-September-2017 10:00 AM"/>
                             </span>
 
                             <span className="cal2">
-                            <input className="date_inp" type="date" placeholder="Start Date"/>
-                                {/* <i className="fa fa-calendar-o cal_1"></i>
+                            <i className="fa fa-calendar-o cal_1"></i>
+                            <input className="date_inpx" type="datetime-local" type="text" value="01-October-2017 10:00 AM"/>
+                                {/*
                                 <p className="cal_p1">October 27,2021 10:00am</p> */}
                             </span>
                         </div>

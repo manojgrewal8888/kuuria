@@ -14,19 +14,19 @@ export default class Menu extends Component {
                     </div>
                     <div className="menu">
                         <ul className="navlist">
-                            <li >
+                            <li className="navli" >
                                 <NavLink exact={true} activeClassName="active-class" className="navitem" to="/ticket">Ticketing</NavLink>
                             </li>
-                            <li>
-                                <NavLink exact={true} activeClassName="active-class"  className="navitem" to="/dashnominee">File Nomination</NavLink>
+                            <li className="navli">
+                                <NavLink exact={true} activeClassName="active-class"  className="navitem" to="/dashvote">File Nomination</NavLink>
                             </li>
-                            <li >
+                            <li className="navli" >
                                 <NavLink exact={true} activeClassName="active-class" className="navitem"  to="/signup">Sign Up</NavLink>
                             </li>
-                            <li >
+                            <li className="navli" >
                                 <NavLink exact={true} activeClassName="active-class" className="navitem"  to="/login">Log In</NavLink>
                             </li>
-                            <li >
+                            <li className="navli" >
                                 <NavLink exact={true} activeClassName="active-class" className="navitem" to="/license">Buy License</NavLink>
                             </li>
                         </ul>

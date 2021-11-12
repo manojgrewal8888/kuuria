@@ -6,8 +6,15 @@
   
 }
 
+Link{
+  text-decoration: none;
+}
+Link:hover{
+  text-decoration: none;
+}
+
 body{
-  background-color: #273589;
+  background-color: #0F2650;
   color: white;
 }
 
@@ -29,9 +36,9 @@ a.link_reset {
   display: inline-flex;
   width: 100%;
   height: 125px;
-  border-bottom: 2px solid;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  background: #0F2650;
 }
-
 img.img-headlogo {
   /* height: 125px; */
   width: 220px;
@@ -39,10 +46,7 @@ img.img-headlogo {
   margin-top: 25px;
 }
 
-.headlogo {
-  margin-right: 0px;
-  width: 50%;
-}
+
 
 ul.navlist {
   display: inline-flex;
@@ -54,22 +58,30 @@ ul.navlist {
 a.navitem {
   text-decoration: none;
   font-size: 12px;
-  margin: 0px 24px;
+
   color: #ffffff;
 }
 
 a.navitem:hover {
   text-decoration: none;
-  font-size: 15px;
-  margin: 0px 24px;
+
+ 
   color: #ffd600;
+}
+
+li.navli {
+  margin: 0px 30px;
+}
+
+.menu {
+  width: 65%;
 }
 
 a.navitem.active-class {
   text-decoration: none;
-  margin: 0px 35px;
+  
   color: #ffd600;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 /*for main indexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
@@ -233,7 +245,7 @@ h1.award_items {
 /*third sectionnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn*/
 
 .third_section {
-  background: #ffffff;
+  background: #695475;
   height: 300px;
   justify-content: center;
   display: inline-flex;
@@ -313,7 +325,7 @@ img.group_1 {
   height: 290px;
   float: right;
   margin-top: 0px;
-  background: #273589;
+  background: #0F2650;
 }
 
 .right_fifth::before {
@@ -321,7 +333,7 @@ img.group_1 {
   position: relative;
   top: 290px;
   left: 0px;
-  border-top: 290px solid #273589;
+  border-top: 290px solid #0F2650;
   border-left: 85px solid #ffffff;
   width: 0;
   border-bottom: 0px;
@@ -392,7 +404,7 @@ input.fifth_input::placeholder {
 
 .footer {
   height: 410px;
-  background: #273589;
+  background: #0f2650;
 }
 
 .foot-flex {
@@ -401,16 +413,24 @@ input.fifth_input::placeholder {
 }
 
 img.foot-logo {
-  width: 290px;
-  height: 125px;
-  margin-top: 125px;
-  margin-left: 115px;
+  width: 150px;
+  height: 75px;
+  margin-top: 135px;
+  margin-left: 60px;
+}
+
+p.foot_agend {
+  
+  font-size: 15px;
+  width: 18%;
+  margin-top: 115px;
+  margin-left: 2%;
 }
 
 ul.foot-left {
   list-style: none;
   margin-top: 110px;
-  margin-left: 135px;
+  margin-left: 2%;
 }
 
 li.leftf-list {
@@ -421,21 +441,33 @@ li.leftf-list {
 a.left-afoot {
   text-decoration: none;
   font-family: "Poppins";
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+}
+a.left-afoot:hover {
+  text-decoration: none;
+  font-family: "Poppins";
   color: #ffffff;
 }
 
+
 ul.foot-right {
   list-style: none;
-  margin-left: 80px;
+  margin-left: 1%;
   margin-top: 110px;
 }
-
 li.rightf-list {
   width: 150px;
   padding-bottom: 10px;
 }
 
 a.right-afoot {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Poppins";
+  text-decoration: none;
+  font-size: 15px;
+}
+a.right-afoot:hover {
   color: #ffffff;
   font-family: "Poppins";
   text-decoration: none;
@@ -445,19 +477,24 @@ img.footplay {
   width: 100px;
   height: 45px;
   margin-top: 115px;
-  margin-left: 115px;
+  margin-left: 30%;
 }
 
 img.footplay2 {
   width: 100px;
-  height: 95px;
-  margin-top: 89px;
+  height: 100px;
+  margin-top: 87px;
+  margin-left: 30%;
 }
 
 .socialfoot {
   position: absolute;
-  margin-top: 160px;
-  margin-left: 1158px;
+  margin-top: 180px;
+  margin-left: 75%;
+}
+
+img.mcseq {
+  width: 65%;
 }
 
 .iconfoot {
@@ -638,7 +675,7 @@ i.fa.fa-search.ticket-search {
 
 .event_btn {
   width: 200px;
-  margin-left: 118px;
+  margin-left: 8%;
   height: 40px;
   text-align: center;
   background: transparent;
@@ -819,16 +856,16 @@ button.buybtn {
 /*for new events custommmmmmmmmmmmmmm,mmmmmmmmmmmmmmm*/
 
 .wrap-newevent {
-  background-color: #273589;
+  display: flow-root;
   width: 100%;
-  height: 715px;
+
 }
 
 img.logo-new {
-  width: 400px;
+  width: 20%;
   margin: auto;
   display: block;
-  margin-top: 75px;
+  margin-top: 100px;
 }
 
 h1.heding-newevent {
@@ -837,6 +874,7 @@ h1.heding-newevent {
   font-weight: 400;
   text-align: center;
   font-family: 'vtks noise', sans-serif;
+  margin-top: 60px;
 }
 
 p.newevent-para {
@@ -926,12 +964,33 @@ span.span-top {
   animation: 2s animeTop linear infinite;
 }
 
-p.btn-pra {
-  font-weight: bold;
+button.btn-pra {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  background: transparent;
+  color: #ffffff;
   font-size: 20px;
-  margin-top: 10px;
-  letter-spacing: 10px;
-  background: none;
+  border: 1px solid;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+}
+button.btn-pra:hover {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  background:#ffd600;
+  color: #000000;
+  font-size: 20px;
+  border-bottom: 2px solid aqua;
+
+}
+
+.wrapx_wex {
+  
+  width: 20%;
+  margin: auto;
+  margin-top: 75px;
 }
 
 /*for the eventopen dashboardddddddddddddddddddddddddddddddddddddddddddddd/*/
@@ -1029,14 +1088,11 @@ input.input_opened {
   top: 10px;
 }
 
-i.fa.fa-calendar-o.cal_left {
-  display: block;
-  width: 49%;
-  text-align: center;
-  font-size: 30px;
-  background: none;
-  margin-top: 35px;
-  float: left;
+i.fa.fa-calendar-o.cal_1 {
+  font-size: 20px;
+  position: relative;
+  top: 10px;
+  left: 8%;
 }
 
 span.date_o1 {
@@ -1510,9 +1566,6 @@ h1.umb_heading {
   width: auto;
 }
 
-.wrapnom_umb {
-  background: #273589;
-}
 
 .umb_title {
   position: relative;
@@ -1942,6 +1995,7 @@ input.wtitle_input {
 .wrap_span {
   display: flex;
   background: none;
+  
 }
 
 span.cal1 {
@@ -1953,10 +2007,10 @@ span.cal1 {
   box-sizing: border-box;
   box-shadow: 0px 11px 17px 2px rgb(0 0 0 / 15%);
   -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4 px);
+  backdrop-filter: blur(4px);
   border-radius: 8px;
-  margin-left: 15%;
   margin-top: 35px;
+  margin-left: 15%;
 }
 
 p.cal_p1 {
@@ -1980,12 +2034,6 @@ span.cal2 {
   margin-left: 4%;
 }
 
-i.fa.fa-calendar-o.cal_1 {
-  font-size: 20px;
-  background: none;
-  margin-left: 30px;
-  margin-top: 13px;
-}
 
 select.selector_create {
   width: 70%;
@@ -2000,6 +2048,7 @@ select.selector_create {
   box-shadow: 0px 11px 17px 2px rgb(0 0 0 / 15%);
   backdrop-filter: blur(4px);
   padding-left: 20px;
+  color: #ffffff;
 }
 
 button.create_cae {
@@ -2016,8 +2065,16 @@ button.create_cae {
   margin-top: 50px;
   color: black;
   font-size: 20px;
+  cursor: pointer;
   font-weight: 800;
+  transition: .5s ease-in-out;
 }
+button.create_cae:hover {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffd600;
+}
+
 
 /*for general settinggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg*/
 
@@ -4295,4 +4352,24 @@ p.para_str {
 
 .space_sig2 {
   margin-top: 415px;
+}
+
+
+
+
+
+
+/*==============================================================================================================*/
+input[type="datetime-local"]::-webkit-inner-spin-button,
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+input.date_inpx {
+  width: 100%;
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  text-align: right;
 }

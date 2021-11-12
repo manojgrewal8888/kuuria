@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
+import Menu from './Menu';
 
 
 
@@ -7,7 +8,7 @@ export default class Tiket extends Component {
     render() {
         return (
             <div>
-               
+               <Menu/>
                 <div className="wrap-tickets">
 
                     <p className="ticket-heading">TICKETS</p>

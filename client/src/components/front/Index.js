@@ -70,6 +70,8 @@ export default class Index extends Component {
                     <div className="foot-flex">
                         <Link to='/index'><img src="./img/kuria-new.png" alt="" className="foot-logo" /></Link>
 
+                        <p className="foot_agend">Kuuria is the most powerful online Event setup and E-voting software in Africa.You don't believe us? Checkout for yourself.</p>
+
                         <ul className="foot-left">
                             <li className="leftf-list"><Link to="/" className="left-afoot">File For Nomination</Link></li>
                             <li className="leftf-list"><Link to="/ticket" className="left-afoot">Ticketing</Link></li>
@@ -81,8 +83,8 @@ export default class Index extends Component {
                         <ul className="foot-right">
                             <li className="rightf-list"><Link to="/" className="right-afoot">Terms Of Services</Link></li>
                             <li className="rightf-list"><Link to="/" className="right-afoot">Privacy Policy</Link></li>
-                            <li className="rightf-list"><Link to="/" className="right-afoot">Reviews</Link></li>
-                            <li className="rightf-list"><Link to="/" className="right-afoot">FAQ's</Link></li>
+                            <li className="rightf-list"><Link to="/" className="right-afoot">About</Link></li>
+                            <li className="rightf-list"><Link to="/" className="right-afoot">Contact Us</Link></li>
                         </ul>
 
                         <Link to ='./' >
@@ -94,18 +96,8 @@ export default class Index extends Component {
                         </Link>
 
                         <div className="socialfoot">
-
-                            <Link to ='./empty' >
-                                <i className="fa fa-instagram iconfoot" ></i>
-                            </Link>
-
-                            <Link to ='./empty' >
-                                <i className="fa fa-facebook iconfoot" ></i>
-                            </Link>
-
-                            <Link to ='./empty' >
-                                <i className="fa fa-twitter iconfoot" ></i>
-                            </Link>
+                        <img className="mcseq" src="./img/mcseq.png" alt="" />
+             
                         </div>
                     </div>
 
