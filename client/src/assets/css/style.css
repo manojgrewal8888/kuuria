@@ -48,7 +48,7 @@ img.img-headlogo {
 
 
 .headlogo {
-  width: 50%;
+  width: 35%;
 }
 ul.navlist {
   display: inline-flex;
@@ -233,18 +233,19 @@ h1.award_items {
 }
 
 button.custom_btn {
-  display: flex;
   background: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
-  width: 240px;
-  text-align: center;
-  padding: 5px;
-  font-size: 20px;
-  padding-top: 10px;
+  width: 225px;
   border: 1px solid #ffffff;
   border-radius: 15px;
-  padding-left: 10%;
-  color: #ffd600;
+  position: relative;
+  left: -35px;
+  padding: 8px 5px;
+  font-size: 15px;
+}
+
+.cus_vicon {
+  font-size: 30px;
+  padding-top: 5px;
 }
 .custom_btn1 {
   margin-left: 38px;
@@ -3452,7 +3453,7 @@ img.res_venlogo {
   margin: auto;
   display: block;
   margin-top: 35px;
-  margin-bottom: 75px;
+  margin-bottom: 15px;
 }
 
 span.menu_it_em {
@@ -3461,12 +3462,11 @@ span.menu_it_em {
 }
 
 .cus_vicon {
-  display: block;
-  background: none;
   font-size: 30px;
   margin-left: 14px;
   margin-bottom: 35px;
 }
+
 
 .home_vendori {
   background: none;
@@ -3827,11 +3827,17 @@ button.save_vte {
 
 .home_vendori3 {
   background: none;
- 
-  width: 155%;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  display: flex;
+  justify-content: flex-start;
+  
+  margin-left: 40%;
+  width: 250px;
 }
 
-i.fa.fa-ticket.cus_vicon3 {
+/*
+.cus_vicon3 {
   display: block;
   background: none;
   font-size: 30px;
@@ -3839,7 +3845,7 @@ i.fa.fa-ticket.cus_vicon3 {
   left: -5px;
   position: relative;
 }
-
+*/
 span.home_vender3 {
   position: relative;
   left: 19%;
