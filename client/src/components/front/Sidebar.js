@@ -28,7 +28,7 @@ class Sidebar extends Component {
         const { user } = this.props.auth;
         
         return (
-                <>
+            <>
                 <div className="left_vendor">
                     <div className="left_subven">
                     <Link className="linx_ven" to="/"><img src="./img/kuria-new.png" alt="" className="res_venlogo" /></Link> 
@@ -84,23 +84,23 @@ class Sidebar extends Component {
                             }}
                             onClick={this.onLogoutClick}
                             className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-                            >Logout &nbsp;
-                            <i className="fa fa-sign-out"></i> 
-                        </button> 
+                        >Logout &nbsp;
+                            <i className="fa fa-sign-out"></i>
+                        </button>
                     </div>
                 </div>
-                </>
+            </>
         )
     }
 }
 Sidebar.propTypes = {
     logoutUser: PropTypes.func.isRequired,
     auth: PropTypes.object.isRequired
-    };
-    const mapStateToProps = state => ({
+};
+const mapStateToProps = state => ({
     auth: state.auth
-    });
-    export default connect(
+});
+export default connect(
     mapStateToProps,
     { logoutUser }
 )(Sidebar);
