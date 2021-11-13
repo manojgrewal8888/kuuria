@@ -22,8 +22,12 @@ class Sidebar extends Component {
                     <Link className="linx_ven" exact to='/vendor_dashboard'> <i className="fa fa-home cus_vicon"></i></Link> 
                     <Link className="linx_ven" exact to='/manage_events'> <i className="fa fa-calendar-check-o cus_vicon"></i></Link> 
                     <div className="home_vendori3">
-                    <Link className="linx_ven" exact to='/manage_ticket'><i className="fa fa-ticket cus_vicon3"></i>
-                    <span className="home_vender3">Manage Tickets</span></Link>
+                        <button className="custom_btn">
+                        <i className="fa fa-ticket cus_vicon3"></i>
+                       MANAGE TICKET
+                        </button>
+                   
+              
                     </div>
 
                     <Link className="linx_ven" exact to="/"><i className="fa fa-money cus_vicon"></i></Link>

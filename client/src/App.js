@@ -63,7 +63,7 @@ import Chartdeno from "./components/front/Chartdeno";
 
 import Eventhome from './components/front/Event-home';
 import License from './components/front/License';
-
+import Sidebar from "./components/front/Sidebar";
 
 
 
@@ -134,6 +134,7 @@ class App extends Component {
                   <Route  exact={true} path='/chartreal' component={Chartdeno}   /> 
                   <Route  exact={true} path='/license' component={License} />
                   <Route  exact={true} path='/eventhome' component={Eventhome} />
+                  <Route exact={true} path='/sidebar' component={Sidebar} />
 
                 </Switch>
                 </Router>

@@ -182,7 +182,7 @@ span.searchspan {
 
 .brs_btn {
   width: 200px;
-  margin-left: 145px;
+  margin-left: 11%;
   height: 40px;
   text-align: center;
   background: transparent;
@@ -195,20 +195,7 @@ span.searchspan {
   transition: width 1s, height 1s, transform 3s;
 }
 
-/* .brs_btn:hover {
-  width: 300px;
-  margin-left: 145px;
-  height: 50px;
-  text-align: center;
-  background: transparent;
-  border: 1px solid white;
-  border-radius: 10px;
-  box-shadow: 2px 2px cyan;
-  margin-top: 50px;
-  margin-bottom: 20px;
-  transition: width 1s, height 1s, transform 3s;
-  transform: rotate(360deg);
-} */
+
 
 .cat-box {
   height: 655px;
@@ -234,14 +221,29 @@ span.searchspan {
 }
 
 h1.award_items {
-  margin-top: 250px;
+  margin-top: 255px;
   font-size: 22px;
   font-weight: bold;
   text-align: center;
-  height: 40px;
+  height: 45px;
   padding-top: 10px;
+  background: #0F2650;
 }
 
+button.custom_btn {
+  display: flex;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  width: 240px;
+  text-align: center;
+  padding: 5px;
+  font-size: 20px;
+  padding-top: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  padding-left: 10%;
+  color: #ffd600;
+}
 /*third sectionnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn*/
 
 .third_section {
@@ -3811,7 +3813,8 @@ i.fa.fa-ticket.cus_vicon3 {
   background: none;
   font-size: 30px;
   color: #ffd600;
-  margin-left: 25%;
+  left: -5px;
+  position: relative;
 }
 
 span.home_vender3 {
