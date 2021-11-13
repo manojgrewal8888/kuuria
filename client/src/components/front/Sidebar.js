@@ -3,46 +3,78 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions"; 
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; 
 class Sidebar extends Component {
+    constructor() {
+        super(); 
+        this.state = {
+            route: ""
+        };
+    }
     onLogoutClick = e => {
         e.preventDefault();
         this.props.logoutUser(this.props.history);
-      };
-    render() {
+    };
+
+    componentDidMount(){
+        if(this.props.history.location.pathname){
+            this.setState({
+                route: this.props.history.location.pathname
+            });
+        }
+    }
+    
+    render() {  
         const { user } = this.props.auth;
+        
         return (
                 <>
                 <div className="left_vendor">
                     <div className="left_subven">
-                    <Link className="linx_ven" exact to="/"><img src="./img/kuria-new.png" alt="" className="res_venlogo" /></Link>
-                    {/* <div className="home_vendor_">
-                        <span className="home_vender2"><Link className="linx_ven" to="/vendor_dash"> <i className="fa fa-home"></i>  Dashboard </Link> </span> 
-                        </div>  */}
-                        <Link className="" exact to='/vendor_dashboard'>
-                            <div class='custom_btn1'>
+                    <Link className="linx_ven" to="/"><img src="./img/kuria-new.png" alt="" className="res_venlogo" /></Link> 
+                        <Link  to='/dashboard'>
+                            <div className={this.state.route == '/dashboard' ? 'custom_btn1' : 'custom_btn0' }>
                                 <i className="fa fa-home cus_vicon"></i>
-                                <span className='menu_it_em'>Dashboard</span>
+                                <span className='menu_it_em1'>Dashboard</span>
                             </div>
                         </Link> 
-                        <Link className="linx_ven" exact to='/manage_events'> 
-                            <div class='custom_btn1'>
+                        <Link   to='/manage_events'> 
+                            <div className={this.state.route == '/manage_events' ? 'custom_btn1' : 'custom_btn0' }>
                                 <i className="fa fa-calendar-check-o cus_vicon"></i>
-                                <span className='menu_it_em'>Manage Events</span>
+                                <span className='menu_it_em1'>Manage Events</span>
                             </div>
                         </Link> 
-
-                    {/* <div className="home_vendori3">
-                        <button className="">
-                        <i className="fa fa-ticket cus_vicon3"></i>
-                       MANAGE TICKET
-                        </button> 
-                    </div> */}
-
-                    <Link className="linx_ven" exact to="/"><i className="fa fa-money cus_vicon"></i></Link>
-                    <Link className="linx_ven" exact to="/"><i className="fa fa-comment cus_vicon"></i></Link>
-                    <Link className="linx_ven" exact to="/"><i className="fa fa-bar-chart cus_vicon"></i></Link>
-                    <Link className="linx_ven" exact to="/"><i className="fa fa-file-text-o cus_vicon"></i></Link>
+                        <Link   to='/manage_ticket'> 
+                            <div className={this.state.route == '/manage_ticket' ? 'custom_btn1' : 'custom_btn0' }>
+                                <i className="fa fa-ticket cus_vicon"></i>
+                                <span className='menu_it_em1' > MANAGE TICKET</span>
+                            </div>
+                        </Link>  
+                        <Link   to='/revenue'> 
+                            <div className={this.state.route == '/revenue' ? 'custom_btn1' : 'custom_btn0' }>
+                                <i className="fa fa-money cus_vicon"></i>
+                                <span className='menu_it_em1' > Payments</span>
+                            </div>
+                        </Link>  
+                        <Link   to='/comments'> 
+                            <div className={this.state.route == '/comments' ? 'custom_btn1' : 'custom_btn0' }>
+                                <i className="fa fa-comment cus_vicon"></i>
+                                <span className='menu_it_em1' > Comments</span>
+                            </div>
+                        </Link>  
+                        <Link  to='/verification'> 
+                            <div className={this.state.route == '/verification' ? 'custom_btn1' : 'custom_btn0' }>
+                                <i className="fa fa-bar-chart cus_vicon"></i>
+                                <span className='menu_it_em1' > Verification</span>
+                            </div>
+                        </Link>  
+                        <Link   to='/forms'> 
+                            <div className={this.state.route == '/forms' ? 'custom_btn1' : 'custom_btn0' }>
+                                <i className="fa fa-file-text-o cus_vicon"></i>
+                                <span className='menu_it_em1' >Nomination Form</span>
+                            </div>
+                        </Link>  
+   
                         <button
                             style={{
                                 width: "150px",

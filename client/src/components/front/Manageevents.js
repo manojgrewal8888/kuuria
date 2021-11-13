@@ -15,7 +15,7 @@ class Manageevents extends Component {
         return (
             <div>
                 <div className="wrap_vwendor">
-                    <Sidebar />
+                <Sidebar history={this.props.history}/>  
 
                     <div className="right_vendor">
                         <div className="right_subven"> 

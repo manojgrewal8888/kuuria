@@ -248,7 +248,7 @@ button.custom_btn {
 }
 .custom_btn1 {
   margin-left: 38px;
-  width: 196px;
+  width: 206px;
   height: 36px;
   display: flex;
   background: rgba(255, 255, 255, 0.15);
@@ -261,6 +261,18 @@ button.custom_btn {
   border-radius: 15px; 
   margin-bottom: 20px;
   color: #ffd600;
+}
+.custom_btn0 {
+  margin-left: 38px;
+  width: 206px;
+  height: 36px;
+  display: flex; 
+  color: #ffffff;
+  width: 240px;
+  height: 36px;
+  text-align: center;
+  padding-top: 2px;
+  margin-bottom: 20px;
 }
 /*third sectionnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn*/
 
@@ -3459,11 +3471,29 @@ span.menu_it_em {
   margin-top: 5px;
   margin-left: 10px;
 }
-
+span.menu_it_em1 {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+ .custom_btn1 .menu_it_em1{
+   display:block;
+ }
+ .custom_btn1:hover .menu_it_em{
+   display:block;
+ }
+ .custom_btn0:hover .menu_it_em1{
+   display:block;
+ }
+ .menu_it_em1{
+   display:none;
+ }
+ 
 .cus_vicon {
   display: block;
   background: none;
-  font-size: 30px;
+  font-size: 22px;
+  margin-left: 14px;
+  margin-top: 4px;
   margin-left: 14px;
   margin-bottom: 35px;
 }
