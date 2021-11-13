@@ -247,6 +247,7 @@ button.custom_btn {
   color: #ffd600;
 }
 .custom_btn1 {
+  margin-left: 38px;
   width: 196px;
   height: 36px;
   display: flex;
