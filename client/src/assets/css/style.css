@@ -50,6 +50,20 @@ img.img-headlogo {
 .headlogo {
   width: 35%;
 }
+
+button.nom_subumb {
+  background: no-repeat;
+  border: none;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 500;
+  margin: auto;
+  display: block;
+  margin-top: 40%;
+  cursor: pointer;
+}
+
+
 ul.navlist {
   display: inline-flex;
   list-style: none;
@@ -4404,4 +4418,22 @@ input.date_inpx {
   color: #ffffff;
   border: none;
   text-align: right;
+}
+
+
+
+
+/*=================================modal===============================*/
+.ReactModal__Content.ReactModal__Content--after-open {
+  position: absolute;
+  inset: 40px;
+  border: 1px solid rgb(204, 204, 204);
+  background: #0F2650 !important;
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px;
+  height: 500px;
+  width: 80%;
+  left: 10% !important;
 }

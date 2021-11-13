@@ -1,9 +1,12 @@
-import React, { Component } from 'react'
+import React, {useState} from 'react';
+import Modal from 'react-modal';
 import { Link } from "react-router-dom";
-export default class Dashvoting extends Component {
-    render() {
-        return (
-            <>
+
+function Dashvoting() {
+    const [modalIsOpen, setModalIsOpen] = useState(false)
+    return (
+        <div>
+                
                 <div className="nav_umb">
                     <img src="./img/dashlogo.jpg" alt="" className="umb_logo" />
                     <h1 className="umb_heading">UMB GHANA TERTIARY AWARDS</h1>
@@ -34,17 +37,28 @@ export default class Dashvoting extends Component {
                         <p className="select_umbp">Select Category To View Nominee And Vote</p>
 
                         <div className="flex_umb">
-                            <div className="item_umb"> <div class="interior">
-                                <a class="btn" href="#open-modal">👋 Basic CSS-Only Modal</a>
+                            <div className="item_umb"> 
+                                <button className="nom_subumb"  onClick={() => setModalIsOpen(true)} >
+                                    nominee 1
+                                </button>
+                                <Modal isOpen={modalIsOpen} onRequestClose={() =>setModalIsOpen(false)}>
+                                <div className="one_wraappp">
+                            <div className="one_rightxvc">
+
+                                <img src="./img/user.png" alt="" className="resize_uservote" />
+                                <p className="Nom1_check">Nominee 1 Name</p>
+                                <p className="check_votep">Category Name</p>
+                                <p className="about_check">About</p>
+                                <p className="dummy_txtvote">Kuuria is the best voting platfortm which proviodes u a huge range of functionality so you can manage your events easly and professionally</p>
                             </div>
+                            <div className="check_vertical"></div>
+
+                            <div className="one_rightxvc2">
+                                <Link to="/votesubmit"><button className="vote_check">VOTE</button></Link>
+                                <Link to='/dashnpminee'><button className="back_check">Back To Nominee</button> </Link>
                             </div>
-                            <div id="open-modal" class="modal-window">
-                                <div>
-                                    <a href="#" title="Close" class="modal-close">Close</a>
-                                    <h1>Voilà!</h1>
-                                    <div>A CSS-only modal based on the :target pseudo-class. Hope you find it helpful.</div>
-                                    <div><small>Check out</small></div>
-                                    <Link to="/" >👉 Amino: Live CSS Editor for Chrome</Link></div>
+                        </div>
+                                </Modal>
                             </div>
                         <div className="item_umb"><p className="nom_subumb"> Nominee 2</p></div>
                         <div className="item_umb"><p className="nom_subumb"> Nominee 3</p></div>
@@ -55,8 +69,8 @@ export default class Dashvoting extends Component {
                     <Link className="link_reset" to='/dashnominee'><button className="umb_back"> Back To Category</button></Link>
                 </div>
             </div>
-
-            </>
-        )
-    }
+        </div>
+    )
 }
+
+export default Dashvoting
