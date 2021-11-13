@@ -246,6 +246,21 @@ button.custom_btn {
   padding-left: 10%;
   color: #ffd600;
 }
+.custom_btn1 {
+  width: 196px;
+  height: 36px;
+  display: flex;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  width: 240px;
+  height: 36px;
+  text-align: center;
+  padding-top: 2px; 
+  border: 1px solid #ffffff;
+  border-radius: 15px; 
+  margin-bottom: 20px;
+  color: #ffd600;
+}
 /*third sectionnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn*/
 
 .third_section {
@@ -3439,11 +3454,16 @@ img.res_venlogo {
   margin-bottom: 75px;
 }
 
+span.menu_it_em {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
 .cus_vicon {
   display: block;
   background: none;
   font-size: 30px;
-  margin-left: 40%;
+  margin-left: 14px;
   margin-bottom: 35px;
 }
 
