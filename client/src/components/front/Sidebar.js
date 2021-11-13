@@ -20,12 +20,17 @@ class Sidebar extends Component {
                         <span className="home_vender2"><Link className="linx_ven" to="/vendor_dash"> <i className="fa fa-home"></i>  Dashboard </Link> </span> 
                         </div>  */}
                         <Link className="" exact to='/vendor_dashboard'>
-                        <div class='custom_btn1'>
-                            <i className="fa fa-home cus_vicon"></i>
-                              <span className='menu_it_em'>Dashboard</span>
-                        </div>
+                            <div class='custom_btn1'>
+                                <i className="fa fa-home cus_vicon"></i>
+                                <span className='menu_it_em'>Dashboard</span>
+                            </div>
                         </Link> 
-                    <Link className="linx_ven" exact to='/manage_events'> <i className="fa fa-calendar-check-o cus_vicon"></i></Link> 
+                        <Link className="linx_ven" exact to='/manage_events'> 
+                            <div class='custom_btn1'>
+                                <i className="fa fa-calendar-check-o cus_vicon"></i>
+                                <span className='menu_it_em'>Manage Events</span>
+                            </div>
+                        </Link> 
 
                     {/* <div className="home_vendori3">
                         <button className="">
