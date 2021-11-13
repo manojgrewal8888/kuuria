@@ -32,43 +32,43 @@ class Sidebar extends Component {
                 <div className="left_vendor">
                     <div className="left_subven">
                     <Link className="linx_ven" to="/"><img src="./img/kuria-new.png" alt="" className="res_venlogo" /></Link> 
-                        <Link  to='/dashboard'>
+                        <Link className="ven_under" to='/dashboard'>
                             <div className={this.state.route == '/dashboard' ? 'custom_btn1' : 'custom_btn0' }>
                                 <i className="fa fa-home cus_vicon"></i>
                                 <span className='menu_it_em1'>Dashboard</span>
                             </div>
                         </Link> 
-                        <Link   to='/manage_events'> 
+                        <Link className="ven_under"  to='/manage_events'> 
                             <div className={this.state.route == '/manage_events' ? 'custom_btn1' : 'custom_btn0' }>
                                 <i className="fa fa-calendar-check-o cus_vicon"></i>
                                 <span className='menu_it_em1'>Manage Events</span>
                             </div>
                         </Link> 
-                        <Link   to='/manage_ticket'> 
+                        <Link className="ven_under"  to='/manage_ticket'> 
                             <div className={this.state.route == '/manage_ticket' ? 'custom_btn1' : 'custom_btn0' }>
                                 <i className="fa fa-ticket cus_vicon"></i>
                                 <span className='menu_it_em1' > MANAGE TICKET</span>
                             </div>
                         </Link>  
-                        <Link   to='/revenue'> 
+                        <Link className="ven_under"  to='/revenue'> 
                             <div className={this.state.route == '/revenue' ? 'custom_btn1' : 'custom_btn0' }>
                                 <i className="fa fa-money cus_vicon"></i>
                                 <span className='menu_it_em1' > Payments</span>
                             </div>
                         </Link>  
-                        <Link   to='/comments'> 
+                        <Link className="ven_under"  to='/comments'> 
                             <div className={this.state.route == '/comments' ? 'custom_btn1' : 'custom_btn0' }>
                                 <i className="fa fa-comment cus_vicon"></i>
                                 <span className='menu_it_em1' > Comments</span>
                             </div>
                         </Link>  
-                        <Link  to='/verification'> 
+                        <Link className="ven_under" to='/verification'> 
                             <div className={this.state.route == '/verification' ? 'custom_btn1' : 'custom_btn0' }>
                                 <i className="fa fa-bar-chart cus_vicon"></i>
                                 <span className='menu_it_em1' > Verification</span>
                             </div>
                         </Link>  
-                        <Link   to='/forms'> 
+                        <Link className="ven_under"  to='/forms'> 
                             <div className={this.state.route == '/forms' ? 'custom_btn1' : 'custom_btn0' }>
                                 <i className="fa fa-file-text-o cus_vicon"></i>
                                 <span className='menu_it_em1' >Nomination Form</span>
