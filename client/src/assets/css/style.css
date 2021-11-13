@@ -48,7 +48,7 @@ img.img-headlogo {
 
 
 .headlogo {
-  width: 35%;
+  width: 50%;
 }
 
 button.nom_subumb {
@@ -74,7 +74,7 @@ ul.navlist {
 a.navitem {
   text-decoration: none;
   font-size: 12px;
-
+  white-space: nowrap;
   color: #ffffff;
 }
 
@@ -88,10 +88,7 @@ a.navitem:hover {
 li.navli {
   margin: 0px 30px;
 }
-
-.menu {
-  width: 65%;
-}
+ 
 
 a.navitem.active-class {
   text-decoration: none;
