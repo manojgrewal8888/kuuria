@@ -47,7 +47,9 @@ img.img-headlogo {
 }
 
 
-
+.headlogo {
+  width: 50%;
+}
 ul.navlist {
   display: inline-flex;
   list-style: none;
