@@ -55,7 +55,7 @@ class Sidebar extends Component {
                                 <span className='menu_it_em1' > Payments</span>
                             </div>
                         </Link>  
-                        <Link className="ven_under"  to='/comments'> 
+                        <Link className="ven_under"  to='./massages'> 
                             <div className={this.state.route == '/comments' ? 'custom_btn1' : 'custom_btn0' }>
                                 <i className="fa fa-comment cus_vicon"></i>
                                 <span className='menu_it_em1' > Comments</span>

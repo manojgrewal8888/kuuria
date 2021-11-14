@@ -4689,3 +4689,171 @@ i.fa.fa-eye.icon_datemodp:hover {
   color: greenyellow;
   font-size: 20px;
 }
+
+
+
+
+
+
+/*===========================================for masage=========================================*/
+h2.msg_heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-left: 5%;
+}
+
+p.all_msgz {
+  color: #ffd600;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 11%;
+  margin-top: 25px;
+  text-decoration: 2px underline;
+}
+
+.left_submsg {
+  width: 41%;
+  float: left;
+  margin-left: 2%;
+}
+
+.right_submsg {
+  width: 55%;
+  float: right;
+  border-left: 2px solid rgba(196, 196, 196, 0.3);
+}
+
+input.msg_sear {
+  background: none;
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  width: 80%;
+  margin-left: 5%;
+}
+
+i.fa.fa-search.cus_msgi {
+  position: relative;
+  left: -8%;
+}
+
+.ku_msg {
+  
+  display: flex;
+  margin-top: 30px;
+  height: 50px;
+  border-bottom: 2px solid rgba(196, 196, 196, 0.3);
+}
+
+i.fa.fa-user-circle-o.cus_msgiu {
+  font-size: 35px;
+  margin-left: 5%;
+  margin-right: 10px;
+}
+
+img.user_logim {
+  width: 25%;
+  height: 40px;
+}
+
+.cus_slider {
+  width: 100% !important;
+  height: 500px !important;
+}
+
+.wrtap_msgdummy {
+ 
+  height: 600px;
+  border-radius: 20px;
+}
+
+.leftmsg_txt {
+  background: #204A6A;
+  width: 50%;
+  margin-top: 25px;
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-left: 5%;
+}
+
+p.lefttxtmsg {
+  width: 80%;
+  font-size: 12px;
+  font-weight: 100;
+  padding: 10px 0px;
+  padding-left: 15%;
+}
+
+.rightmsg_txt {
+  border: 1px solid #ffffff;
+  width: 50%;
+  float: right;
+  margin-top: 25px;
+  margin-right: 5%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 20px;
+  background: #ffffff;
+}
+
+p.righttxtmsg {
+  color: #204A6A;
+  font-size: 12px;
+  font-weight: 100;
+  padding: 10px 0px;
+  padding-left: 15%;
+  width: 80%;
+}
+
+span.circle_msg {
+  border: 1px solid  #008cff;
+  background: #008cff;
+  padding: 0px 6px;
+  border-radius: 25px;
+  font-size: 15px;
+  position: relative;
+  top: -15px;
+}
+
+.subku_msg {
+ 
+  margin-top: 25px;
+  display: flex;
+  height: 300px;
+  border-bottom: 2px solid rgba(196, 196, 196, 0.3);
+}
+
+i.fa.fa-user.cus_msgiu2 {
+  font-size: 25px;
+  margin-left: 7%;
+  margin-right: 15px;
+}
+
+p.subkuria_msg {
+  font-size: 15px;
+  font-weight: 100;
+  padding-top: 5px;
+}
+
+.wrap_sendmsg {
+ 
+  width: 85%;
+  margin: auto;
+}
+
+input.send_msgtx {
+  width: 80%;
+  background: none;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  height: 35px;
+}
+
+i.fa.fa-send.cus_send_ic {
+  border: 1px solid;
+  background: rgba(196, 196, 196, 0.42);
+  border-radius: 20px;
+  padding: 10px;
+  float: right;
+}
