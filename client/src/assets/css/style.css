@@ -4450,6 +4450,81 @@ input.date_inpx {
   text-align: right;
 }
 
+button.modlog_btn {
+  background: rgba(255, 255, 255, 0.05);
+
+  border-radius: 8px;
+  color: #ffffff;
+  margin-top: 50px;
+  float: right;
+  box-sizing: border-box;
+  margin-right: 5%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 10px 12px 26px 2px rgb(0 0 0 / 20%);
+  padding: 5px 40px;
+}
+
+button.modnew_btn {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  color: #ffffff;
+  margin-top: 150px;
+  float: right;
+  box-sizing: border-box;
+  margin-right: 0px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 10px 12px 26px 2px rgb(0 0 0 / 20%);
+  padding: 5px 40px;
+  display: block;
+}
+
+i.fa.fa-plus.icon_modp {
+  border: 1px solid #ffd600;
+  border-radius: 25px;
+  font-size: 15px;
+  padding: 2px 3px;
+  background: #ffd600;
+  color: #000000;
+}
+
+
+.modser_wrap {
+ 
+  display: flex;
+  width: 85%;
+  margin: auto;
+  margin-top: 250px;
+}
+
+.sermod_box {
+  
+  width: 70%;
+}
+
+input.modx_ser {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  width: 90%;
+  margin: auto;
+  height: 35px;
+}
+
+i.fa.fa-search.icon_serchmodp {
+  position: relative;
+  left: -6%;
+}
+
+.mod_sel {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.3);
+  width: 35%;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
 
 
 

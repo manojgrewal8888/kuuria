@@ -65,6 +65,8 @@ import Eventhome from './components/front/Event-home';
 import License from './components/front/License';
 import Sidebar from "./components/front/Sidebar";
 
+import Modifyevent from "./components/front/Modifyevent";
+
 
 
 
@@ -135,6 +137,10 @@ class App extends Component {
                   <Route  exact={true} path='/license' component={License} />
                   <Route  exact={true} path='/eventhome' component={Eventhome} />
                   <Route exact={true} path='/sidebar' component={Sidebar} />
+
+                  <Route exact={true} path='/modify' component={Modifyevent} />
+
+                
 
                 </Switch>
                 </Router>
