@@ -74,7 +74,7 @@ class Sidebar extends Component {
                             </div>
                         </Link>
                         
-                        <Link className="ven_under"  to='/forms'> 
+                        <Link className="ven_under"  to='/modify'> 
                             <div className={this.state.route == '/forms' ? 'custom_btn1' : 'custom_btn0' }>
                                 <i className="fa fa-street-view cus_vicon"></i>
                                 <span className='menu_it_em1' >Manage Events</span>
