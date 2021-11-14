@@ -68,6 +68,8 @@ import Sidebar from "./components/front/Sidebar";
 
 import ManageEvents from "./components/front/Manageevent";
 
+import Forgetpassword from "./components/front/Forgetpassword";
+
 
 
 
@@ -141,6 +143,7 @@ class App extends Component {
                   <Route exact={true} path='/sidebar' component={Sidebar} />
 
                   <Route exact={true} path='/manage_events' component={ManageEvents} />
+                  <Route exact={true} path='/forget_password' component={Forgetpassword} />
 
                 
 
