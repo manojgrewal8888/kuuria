@@ -10,3 +10,9 @@ a.ven_under.back_ic {
 input.man_tickets {
     color: #f6cf04;
 }
+p.left_vt_in {
+    margin-top: 44px;
+}
+textarea.ticket_form {
+    width: 100%;
+}

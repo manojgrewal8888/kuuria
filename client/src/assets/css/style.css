@@ -4365,7 +4365,7 @@ cursor: pointer;
 }
 
 .check_tog:checked {
-  background: aqua;
+  background: #ffd600;
 }
 
 .check_tog::before {

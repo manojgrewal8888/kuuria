@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import Sidebar from "./Sidebar";
-import { logoutUser } from "../../actions/authActions";
-class Modifyevent extends Component {
+import Sidebar from "./Sidebar"; 
+import Logout from "./Logout"; 
+class Manageevent extends Component {
 
     render() {
         return (
@@ -14,11 +14,7 @@ class Modifyevent extends Component {
 
                     <div className="right_vendor">
                         <div className="right_subven">
-                            <button className="modlog_btn">
-                                <i className="fa fa-sign-out icon_modx" ></i>
-
-                                Log Out
-                            </button>
+                           <Logout />
 
                             <Link className="Link_reset" to='/eventopened'><button className="modnew_btn">
                                 <i className="fa fa-plus icon_modp" ></i>
@@ -69,6 +65,6 @@ class Modifyevent extends Component {
     }
 }
 
-export default Modifyevent;
+export default Manageevent;
 
 

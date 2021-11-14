@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Sidebar from "./Sidebar";
+import Logout from "./Logout";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions"; 
 import PropTypes from "prop-types";
@@ -23,10 +24,7 @@ class Manageticket extends Component {
 
                     <div className="right_vendor">
                         <div className="right_subven">
-                            <div  className="logout_ven1">
-                                <i  onClick={this.onLogoutClick} class="fa fa-sign-out "></i>
-                                Log Out
-                            </div>
+                        <Logout history={this.props.history}/>
 
                             <input className="man_tickets" type="search" placeholder="Search Ticket" name="" id="" />
                             <Link   to='/viewedit_ticket'> 

@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import Sidebar from "./Sidebar";
+import Logout from "./Logout";
 import { Link } from "react-router-dom";
 class ManageQuestions extends Component {
     onLogoutClick = e => {
@@ -19,10 +20,7 @@ class ManageQuestions extends Component {
 
                     <div className="right_vendor">
                         <div className="right_subven"> 
-                            <div  className="logout_ven1">
-                                <i  onClick={this.onLogoutClick} class="fa fa-sign-out "></i>
-                                Log Out
-                            </div>
+                        <Logout history={this.props.history}/>
 
                             <h4 className="meve_headin">Manage Questions For Filling Of Nomination</h4>
 

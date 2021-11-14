@@ -29,21 +29,20 @@ class ManageQuestions extends Component {
 
                             <div className="viewt_wrap">
                                 <div className="left_viewt"> 
-                                    <p className="left_vt1">Question</p>
-                                    <p className="left_vt1">Status</p> 
+                                    <p className="left_vt_in">Question</p> 
+                                    <p className="left_vt_in">Status</p> 
                                 </div>
 
                                 <div className="hori_viewt"></div>
 
                                 <div className="right_viewt">
-                                    <p className="right_vt1">
-                                        <textarea className="ticket_form" type="text" placeholder="Enter Event Name" name="eventname" id="" ></textarea>
+                                    <p className="left_vt_in">
+                                        <textarea className="ticket_form" type="text" placeholder="Enter Question" name="eventname" id="" ></textarea>
                                     </p>
-                                    <p className="right_vt2">
-                                        <input className="ticket_form" type="date" placeholder="Event Start Date" name="" id="" />
-                                    </p>
-                                    <p className="right_vt3">
-                                        <input className="ticket_form" type="time" placeholder="Event Start Time" name="" id="" />
+                                    <p className="left_vt_in">
+                                        <div className="togfree">
+                                           <input className="check_tog" type="checkbox" name="" id="" />
+                                        </div>
                                     </p> 
                                 </div>
                             </div>
