@@ -3417,12 +3417,11 @@ h2.head_vendor {
   margin-left: 65px;
   font-size: 25px;
   margin-bottom: 35px;
+  color: #ffd600;
 }
 
 .msg_box {
-  display: flex;
-  
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex; 
   cursor: pointer;
 }
 

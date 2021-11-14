@@ -23,14 +23,14 @@ class Vendordash extends Component {
                                 <div className="msg_box">
                                     <i className="fa fa-check-square-o icon_vendor" ></i>
                                     <details>
-                                        <summary className="res_summary" >1 MSG From Kuuria</summary>
+                                        <summary className="res_summary" >No notification's yet !!!</summary>
                                         <div className="details-content">
-                                            Hello ,Organiosation 1 this is to inform you that your events are deleted due to frauds
+                                            -
                                         </div>
                                     </details>
                                 </div>
 
-                                <div className="msg_box">
+                                {/* <div className="msg_box">
                                     <i className="fa fa-check-square-o icon_vendor" ></i>
                                     <details>
                                         <summary className="res_summary" >1 MSG From Kuuria</summary>
@@ -48,7 +48,7 @@ class Vendordash extends Component {
                                             Hello ,Organiosation 1 this is to inform you that your events are deleted due to frauds
                                         </div>
                                     </details>
-                                </div>
+                                </div> */}
 
 
                             </div>
