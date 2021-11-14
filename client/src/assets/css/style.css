@@ -3565,6 +3565,7 @@ button.logout_ven {
   border-radius: 8px;
   margin-top: 40px;
   padding: 10px 30px;
+  color: #ffffff;
 }
 i.fa.fa-key {
   margin-left: 14px;
@@ -4069,6 +4070,7 @@ button.vote_sal {
   margin-left: 12%;
   padding: 10px 65px;
   margin-right: 35px;
+  color: #ffffff;
 }
 
 .wrap_login {
