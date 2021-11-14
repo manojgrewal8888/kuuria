@@ -1087,34 +1087,36 @@ span.only_edash {
   height: 800px;
   width: 0px;
   position: absolute;
-  left: 1020px;
+  left: 70%;
   top: 160px;
 }
 
 .date_format {
-  position: absolute;
-  width: 540px;
+  position: relative;
+  width: 55%;
   height: 200px;
-  left: 445px;
+  left: 0px;
   top: 275px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-sizing: border-box;
   box-shadow: 10px 12px 26px 2px rgb(0 0 0 / 20%);
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   border-radius: 10px;
 }
 
 input.input_opened {
-  position: absolute;
-  width: 540px;
+  position: relative;
+  width: 55%;
   height: 47px;
-  left: 445px;
-  top: 630px;
+  left: 0px;
+  top: 350px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-sizing: border-box;
   box-shadow: 10px 12px 26px 2px rgb(0 0 0 / 20%);
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   border-radius: 8px;
   padding-left: 20px;
@@ -1195,61 +1197,59 @@ span.date_o4 {
 }
 
 span.nomi_count {
-  position: absolute;
-  top: 700px;
-  left: 1220px;
+  position: relative;
+  top: 35%;
+  left: 16%;
   color: #008CFF;
   font-size: 16px;
   font-weight: 800;
 }
 
 i.fa.fa-circle.cblue {
-  top: 704px;
-  position: absolute;
-  left: 1200px;
+  top: 35%;
+  position: relative;
+  left: 15%;
   color: #008CFF;
 }
 
 span.vot_count {
-  top: 705;
-  position: absolute;
-  top: 700px;
-  left: 1120px;
+  position: relative;
+  top: 35%;
+  left: 10%;
   font-size: 16px;
   font-weight: 800;
 }
 
 i.fa.fa-circle.cwhite {
-  position: absolute;
-  top: 705px;
-  left: 1096px;
+  position: relative;
+  top: 35%;
+  left: 8%;
 }
 
 i.fa.fa-circle.cyellow {
-  position: absolute;
-  top: 705px;
-  left: 1331px;
+  position: relative;
+  top: 35%;
+  left: 20%;
   color: #FFD600;
 }
 
 span.categories_count {
-  position: absolute;
-  top: 700px;
-  left: 1352px;
+  position: relative;
+  top: 35%;
+  left: 21%;
   font-size: 16px;
   font-weight: 800;
   color: #FFD600;
 }
 
 span.count_x1 {
-  position: absolute;
-  top: 738px;
-  left: 1118px;
+  position: relative;
+  top: 35%;
+  left: 67%;
   font-size: 16px;
   font-weight: 800;
   text-shadow: 2 2 black;
 }
-
 span.count_x2 {
   top: 738px;
   position: absolute;
@@ -1267,6 +1267,43 @@ span.count_x3 {
   font-weight: 800;
   left: 1374px;
   color: #FFD600;
+}
+
+.spans_ope {
+  display: flex;
+  position: relative;
+  top: 30%;
+  left: 65%;
+}
+
+i.fa.fa-circle.white_cop {
+  color: white;
+  padding-right: 5px;
+}
+
+span.open_spv {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+span.open_spv2 {
+  color: #008cff;
+  font-size: 15px;
+}
+
+i.fa.fa-circle.blue_cop {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+span.open_spv3 {
+  color: #ffd600;
+  font-size: 15px;
+}
+
+i.fa.fa-circle.yellow_cop {
+  margin-left: 10px;
+  margin-right: 5px;
 }
 
 /*for loginnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn*/
