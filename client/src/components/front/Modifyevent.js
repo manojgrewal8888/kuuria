@@ -20,10 +20,10 @@ class Modifyevent extends Component {
                                 Log Out
                             </button>
 
-                            <button className="modnew_btn">
+                            <Link className="Link_reset" to='/eventopened'><button className="modnew_btn">
                                 <i className="fa fa-plus icon_modp" ></i>
                                 NEW EVENT
-                            </button>
+                            </button></Link>
 
                             <div className="modser_wrap">
                                 <div className="sermod_box">
