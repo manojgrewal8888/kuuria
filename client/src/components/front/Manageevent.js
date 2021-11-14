@@ -48,9 +48,9 @@ class Manageevent extends Component {
                                     <td className="mod_th">26/09/21, 10 AM</td>
                                     <td className="mod_th">27/10/21, 10 AM</td>
                                     <td className="mod_th2">Active</td>
-                                    <span className="del_mode">Action <i className="fa fa-trash icon_datemodp" >
+                                   {/*  <span className="del_mode">Action <i className="fa fa-trash icon_datemodp" >
                                         </i>
-                                        <i className="fa fa-eye icon_datemodp" ></i></span>
+                                        <i className="fa fa-eye icon_datemodp" ></i></span> */}
                                 </tr>
                              
                             </table>
