@@ -81,7 +81,7 @@ class Sidebar extends Component {
                             </div>
                         </Link>  
                         <Link className="ven_under"  onClick={this.onLogoutClick}> 
-                            <div className={this.state.route == '/forms' ? 'custom_btn1' : 'custom_btn0' }>
+                            <div className={this.state.route == '/modify' ? 'custom_btn1' : 'custom_btn0' }>
                                 <i className="fa fa-key"></i>
                                 <span className='menu_it_em1' >Log out</span>
                             </div>
