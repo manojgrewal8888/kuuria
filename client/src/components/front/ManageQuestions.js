@@ -27,7 +27,9 @@ class ManageQuestions extends Component {
                             <h4 className="meve_headin">Manage Questions For Filling Of Nomination</h4>
 
                             <div className="manage_wrap">
-                                <button className="manage_btnv"><i class="fa fa-plus-circle adicon_v"></i>Add Question</button>
+                                <Link   to='/viewedit_question'> 
+                                    <button className="manage_btnv"><i class="fa fa-plus-circle adicon_v"></i>Add Question</button>
+                                </Link>
 
 
                                 <div className="wrap_txtman">

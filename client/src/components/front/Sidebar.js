@@ -44,7 +44,7 @@ class Sidebar extends Component {
                             </div>
                         </Link> 
                         <Link className="ven_under"  to='/manage_ticket'> 
-                            <div className={this.state.route == '/manage_ticket' ? 'custom_btn1' : 'custom_btn0' }>
+                            <div className={this.state.route == '/manage_ticket' || this.state.route == '/viewedit_ticket' ? 'custom_btn1' : 'custom_btn0' }>
                                 <i className="fa fa-ticket cus_vicon"></i>
                                 <span className='menu_it_em1' > MANAGE TICKET</span>
                             </div>

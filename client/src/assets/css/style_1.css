@@ -4,3 +4,9 @@
     border: none;
     border-bottom: 1px solid #687999; 
 }
+a.ven_under.back_ic {
+    color: white;
+}
+input.man_tickets {
+    color: #f6cf04;
+}
