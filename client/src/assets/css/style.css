@@ -3566,6 +3566,10 @@ button.logout_ven {
   margin-top: 40px;
   padding: 10px 30px;
 }
+i.fa.fa-key {
+  margin-left: 14px;
+  padding-top: 10px;
+}
 .logout_ven1 { 
   float: right;
   font-size: 16px; 
