@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Sidebar from "./Sidebar";
+import Logout from "./Logout";
 import {
     BarChart, Bar, XAxis, YAxis,
     CartesianGrid
@@ -36,10 +37,8 @@ export default class Revenu extends Component {
 
                     <div className="right_vendor">
                         <div className="right_subven">
-                            <button className="logout_ven">
-                                <i class="fa fa-sign-out"></i>
-                                Log Out
-                            </button>
+                            <Logout history={this.props.history}/>
+                       
 
                             <div className="sales_wr">
                                 <p className="sal_pra">SALES</p>
