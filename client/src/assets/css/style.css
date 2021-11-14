@@ -4536,8 +4536,7 @@ button.modlog_btn {
 button.modnew_btn {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
-  color: #ffffff;
-  /* float: right; */
+  color: #ffffff; 
   box-sizing: border-box;
   margin-right: 0px;
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -4546,7 +4545,7 @@ button.modnew_btn {
   display: block;
   position: relative;
   left: 68%;
-  top: 170px;
+  top: 90px;
 }
 
 i.fa.fa-plus.icon_modp {
@@ -4561,12 +4560,11 @@ i.fa.fa-plus.icon_modp {
   top: 6px;
 }
 
-.modser_wrap {
- 
+.modser_wrap { 
   display: flex;
   width: 85%;
   margin: auto;
-  margin-top: 250px;
+  margin-top: 150px;
 }
 
 .sermod_box {
