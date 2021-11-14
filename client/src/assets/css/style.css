@@ -1074,12 +1074,12 @@ span.only_edash {
 }
 
 .open_lin1 {
-  position: absolute;
-  width: 950px;
+  position: relative;
+  width: 90%;
   height: 0px;
-  left: 445px;
-  top: 818px;
+  left: 0%;
   border: 1px solid rgba(207, 207, 207, 0.2);
+  top: 60%;
 }
 
 .open_lin2 {
