@@ -51,7 +51,7 @@ import Eventdelete from './components/front/Eventdelete';
 
 
 import Vendordash from "./components/front/Vendordash";
-import Manageevents from "./components/front/Manageevents";
+import ManageQuestions from "./components/front/ManageQuestions";
 import Manageticket from "./components/front/Manageticket";
 import Vieweditticket from "./components/front/Vieweditticket";
 import Revenu from "./components/front/Revenu";
@@ -128,7 +128,7 @@ class App extends Component {
                   <Route  exact={true} path='/eventdelete' component={Eventdelete} /> 
                   
                   <Route  exact={true} path='/vendor_dashboard' component={Vendordash} />
-                  <Route  exact={true} path='/manage_events' component={Manageevents}  />
+                  <Route  exact={true} path='/manage_questions' component={ManageQuestions}  />
                   <Route  exact={true} path='/manage_ticket' component={Manageticket} />
                   <Route  exact={true} path='/viewedit_ticket' component={Vieweditticket} />
                   <Route  exact={true} path='/revenue' component={Revenu}   /> 

@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-
+import React, { Component } from "react"; 
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions"; 
@@ -38,8 +37,8 @@ class Sidebar extends Component {
                                 <span className='menu_it_em1'>Dashboard</span>
                             </div>
                         </Link> 
-                        <Link className="ven_under"  to='/manage_events'> 
-                            <div className={this.state.route == '/manage_events' ? 'custom_btn1' : 'custom_btn0' }>
+                        <Link className="ven_under"  to='/manage_questions'> 
+                            <div className={this.state.route == '/manage_questions' ? 'custom_btn1' : 'custom_btn0' }>
                                 <i className="fa fa-calendar-check-o cus_vicon"></i>
                                 <span className='menu_it_em1'>Manage Events</span>
                             </div>
@@ -80,9 +79,14 @@ class Sidebar extends Component {
                                 <i className="fa fa-street-view cus_vicon"></i>
                                 <span className='menu_it_em1' >Manage Events</span>
                             </div>
-                        </Link> 
-   
-                        <button
+                        </Link>  
+                        <Link className="ven_under"  onClick={this.onLogoutClick}> 
+                            <div className={this.state.route == '/forms' ? 'custom_btn1' : 'custom_btn0' }>
+                                <i className="fa fa-key"></i>
+                                <span className='menu_it_em1' >Log out</span>
+                            </div>
+                        </Link>  
+                        {/* <button
                             style={{
                                 width: "150px",
                                 borderRadius: "3px",
@@ -93,7 +97,8 @@ class Sidebar extends Component {
                             className="btn btn-large waves-effect waves-light hoverable blue accent-3"
                         >Logout &nbsp;
                             <i className="fa fa-sign-out"></i>
-                        </button>
+                        </button> */}
+                       
                     </div>
                 </div>
             </>

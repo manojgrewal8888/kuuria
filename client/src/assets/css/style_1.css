@@ -1,5 +1,6 @@
-.msg_box {
-    background: #0c2145;
+.msg_box { 
+    border-radius: 2px;
+    background: #0f2650;
     border: none;
-    box-shadow: 2px 2px 2px #00000085;
+    border-bottom: 1px solid #687999; 
 }

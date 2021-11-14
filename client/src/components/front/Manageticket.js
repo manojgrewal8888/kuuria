@@ -1,7 +1,20 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Sidebar from "./Sidebar";
-export default class Manageticket extends Component {
+import { connect } from "react-redux";
+import { logoutUser } from "../../actions/authActions"; 
+import PropTypes from "prop-types";
+class Manageticket extends Component {
+    constructor() {
+        super(); 
+        this.state = {
+            route: ""
+        };
+    }
+    onLogoutClick = e => {
+        e.preventDefault();
+        this.props.logoutUser(this.props.history);
+    };
     render() {
         return (
             <div>
@@ -10,10 +23,10 @@ export default class Manageticket extends Component {
 
                     <div className="right_vendor">
                         <div className="right_subven">
-                            <button className="logout_ven">
-                                <i class="fa fa-sign-out"></i>
+                            <div  className="logout_ven1">
+                                <i  onClick={this.onLogoutClick} class="fa fa-sign-out "></i>
                                 Log Out
-                            </button>
+                            </div>
 
                             <input className="man_tickets" type="search" name="" id="" />
 
@@ -37,3 +50,14 @@ export default class Manageticket extends Component {
         )
     }
 }
+Manageticket.propTypes = {
+    logoutUser: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired
+};
+const mapStateToProps = state => ({
+    auth: state.auth
+});
+export default connect(
+    mapStateToProps,
+    { logoutUser }
+)(Manageticket);

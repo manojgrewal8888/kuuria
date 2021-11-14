@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import Sidebar from "./Sidebar";
 import { Link } from "react-router-dom";
-class Manageevents extends Component {
+class ManageQuestions extends Component {
     onLogoutClick = e => {
         e.preventDefault();
         this.props.logoutUser(this.props.history);
@@ -19,30 +19,25 @@ class Manageevents extends Component {
 
                     <div className="right_vendor">
                         <div className="right_subven"> 
-                           {/*  <button 
-                                onClick={this.onLogoutClick}
-                                className="logout_ven"
-                                >Log out &nbsp;
-                                <i className="fa fa-sign-out"></i> 
-                            </button>  */}
+                            <div  className="logout_ven1">
+                                <i  onClick={this.onLogoutClick} class="fa fa-sign-out "></i>
+                                Log Out
+                            </div>
 
                             <h4 className="meve_headin">Manage Questions For Filling Of Nomination</h4>
 
                             <div className="manage_wrap">
-                                <button className="manage_btnv"><i class="fa fa-plus-circle adicon_v"></i>ADD QUESTIONS</button>
+                                <button className="manage_btnv"><i class="fa fa-plus-circle adicon_v"></i>Add Question</button>
 
 
                                 <div className="wrap_txtman">
-                                    <div className="contain_txtmana">
-                                        <i class="fa fa-circle circ_vicon"></i>
-                                        <p className="txtp_mana">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                                        
-                                       <div className="togfree">
-                                           <input className="check_tog" type="checkbox" name="" id="" />
-                                       </div>
-                                    </div>
 
                                     <div className="contain_txtmana">
+                                        <i class="fa fa-circle circ_vicon"></i>
+                                        <p className="txtp_mana">No question's yet !!!</p> 
+                                    </div>
+
+                                   {/*  <div className="contain_txtmana">
                                         <i class="fa fa-circle circ_vicon"></i>
                                         <p className="txtp_mana">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
                                           <div className="togfree">
@@ -56,7 +51,7 @@ class Manageevents extends Component {
                                           <div className="togfree">
                                            <input className="check_tog" type="checkbox" name="" id="" />
                                        </div>
-                                    </div>
+                                    </div> */}
 
                                 </div>
                             </div>
@@ -70,7 +65,7 @@ class Manageevents extends Component {
     }
 }
 
-Manageevents.propTypes = {
+ManageQuestions.propTypes = {
     logoutUser: PropTypes.func.isRequired,
     auth: PropTypes.object.isRequired
   };
@@ -80,4 +75,4 @@ Manageevents.propTypes = {
   export default connect(
     mapStateToProps,
     { logoutUser }
-  )(Manageevents);
+  )(ManageQuestions);

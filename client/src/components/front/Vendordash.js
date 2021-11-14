@@ -17,8 +17,8 @@ class Vendordash extends Component {
                 <Sidebar history={this.props.history}/>  
 
                     <div className="right_vendor">
-                        <div className="right_subven">
-                            <h2 className="head_vendor">ALL NOTIFICATIONS</h2>
+                        <div className="right_subven"> 
+                            <h2 className="head_vendor">ALL NOTIFICATIONS</h2> 
                             <div className="not_vendor">
                                 <div className="msg_box">
                                     <i className="fa fa-check-square-o icon_vendor" ></i>
