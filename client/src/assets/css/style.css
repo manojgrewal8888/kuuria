@@ -1127,7 +1127,7 @@ input.input_opened {
   height: 180px;
   width: 2px;
   position: absolute;
-  left: 262px;
+  left: 50%;
   top: 10px;
 }
 
@@ -1162,20 +1162,23 @@ span.date_o3 {
   font-size: 16px;
 }
 
-i.fa.fa-calendar-o.cal_right {
-  display: block;
-  width: 49%;
-  float: right;
-  text-align: center;
-  font-size: 30px;
-  margin-top: 35px;
-  background: none;
+i.fa.fa-calendar-o.cal_left {
+  position: absolute;
+  left: 25%;
+  top: 30px;
+  font-size: 20px;
 }
 
+i.fa.fa-calendar-o.cal_right {
+  position: absolute;
+  left: 75%;
+  top: 30px;
+  font-size: 20px;
+}
 span.date_o5 {
   position: absolute;
   top: 105px;
-  left: 345px;
+  left: 63%;
   font-size: 15px;
   background: none;
 }
@@ -1183,7 +1186,7 @@ span.date_o5 {
 span.date_o6 {
   position: absolute;
   top: 130px;
-  left: 374px;
+  left: 70%;
   background: none;
   font-size: 16px;
 }
@@ -1193,7 +1196,7 @@ span.date_o4 {
   top: 75px;
   font-size: 20px;
   background: none;
-  left: 362px;
+  left: 67%;
 }
 
 span.nomi_count {
