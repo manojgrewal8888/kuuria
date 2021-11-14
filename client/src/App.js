@@ -66,7 +66,7 @@ import Eventhome from './components/front/Event-home';
 import License from './components/front/License';
 import Sidebar from "./components/front/Sidebar";
 
-import Modifyevent from "./components/front/Modifyevent";
+import ManageEvents from "./components/front/Manageevent";
 
 
 
@@ -140,7 +140,7 @@ class App extends Component {
                   <Route  exact={true} path='/eventhome' component={Eventhome} />
                   <Route exact={true} path='/sidebar' component={Sidebar} />
 
-                  <Route exact={true} path='/modify' component={Modifyevent} />
+                  <Route exact={true} path='/manage_events' component={ManageEvents} />
 
                 
 
