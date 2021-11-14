@@ -1,45 +1,87 @@
 import React, { Component } from 'react'
-import { Link } from "react-router-dom";
+import { Link,withRouter } from "react-router-dom"; 
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { addevent } from "../../actions/eventActions";
+import classnames from "classnames";
+class Create extends Component {
+    constructor() {
+        super();
+        this.state = { 
+            eventname:'',
+            start_date:'',
+            end_date:'',
+            timezone:'',
+            errors:{}
+        };
+    } 
+    
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.errors) {
+            this.setState({
+                errors: nextProps.errors
+            });
+        }
+    }
+    onChange = e => {
+        this.setState({ [e.target.id]: e.target.value });
+    };
+    onSubmit = e => {
+        this.props.history.push("/eventopened");
+        e.preventDefault();
+        const event = {
+            eventname: this.state.eventname,
+            start_date: this.state.start_date,
+            end_date: this.state.end_date,
+            timezone: this.state.timezone, 
+        };
+        this.props.addevent(event, this.props.history); 
+    };
 
-export default class Create extends Component {
-    render() {
+    componentDidMount() { 
+        // If logged in and user navigates to Register page, should redirect them to dashboard
+        if (!this.props.auth.isAuthenticated) {
+            this.props.history.push("/login");
+        }
+    }
+
+
+render() {
+    const { errors } = this.state;
         return (
             <div>
                 <div className="wrap_wcreate">
                     <img src="./img/kuria-new.png" alt="" className="wcreate_img" />
 
                     <div className="cae_details">
+                        <Link className="ven_under back_ic"  to='/manage_events'> 
+                            <div  className="logout_ven1">
+                                <i   class="fa fa-arrow-left "></i> Back
+                            </div>
+                        </Link>
                         <p className="cae_head">Create Award Event</p>
-
-                        <input className="wtitle_input" type="text" id="wtitle" name="wtitle" placeholder="Title"/>
-
-                        <div className="wrap_span">
-                            <span className="cal1">
-                              {/*   <i className="fa fa-calendar-o cal_1"></i>
-                                <p className="cal_p1">September 27,2021 10:00am</p>
-                            */}
-                             <i className="fa fa-calendar-o cal_1"></i>
-                            <input className="date_inpx" type="datetime-local" type="text" value="01-September-2017 10:00 AM"/>
-                            </span>
-
-                            <span className="cal2">
-                            <i className="fa fa-calendar-o cal_1"></i>
-                            <input className="date_inpx" type="datetime-local" type="text" value="01-October-2017 10:00 AM"/>
-                                {/*
-                                <p className="cal_p1">October 27,2021 10:00am</p> */}
-                            </span>
-                        </div>
-                        
-                        
-
-                        <select className="selector_create" name="cars" id="cars">
-                            <option value="timezone">Timezone</option>
-                            <option value="india">Indian</option>
-                            <option value="europe">European</option>
-                            <option value="aus">Australia</option>
-                        </select>
-
-                        <Link className="link_reset"  to='/eventopened'><button className="create_cae">CREATE</button></Link>
+                        <form noValidate onSubmit={this.onSubmit}> 
+                            <input   onChange={this.onChange}  value={this.state.eventname}  id="eventname"  type="text"  className={'wtitle_input '+classnames("", { invalid: errors.eventname })} placeholder="Title"/> 
+                            <span className="red-text12">{errors.eventname}</span>
+                            <div className="wrap_span">
+                                <span className="cal1"> 
+                                    <input className="date_inpx"  onChange={this.onChange}  value={this.state.start_date}  id="start_date"  type="date"  className={'wtitle_input1 '+classnames("", { invalid: errors.start_date })} />
+                                </span> 
+                                <span className="cal2"> 
+                                    <input className="date_inpx" onChange={this.onChange}  value={this.state.end_date}  id="end_date"  type="date"  className={'wtitle_input1 '+classnames("", { invalid: errors.end_date })} /> 
+                                </span>
+                            </div>  
+                                 <span className="red-text12">{errors.start_date} </span>
+                                <span className="red-text13">{errors.end_date}</span>
+                            <select name="cars" id="cars"  onChange={this.onChange}  value={this.state.timezone}  id="timezone"  type="text"  className={'selector_create '+classnames("", { invalid: errors.timezone })}>
+                                <option value="timezone">Timezone</option>
+                                <option value="india">Indian</option>
+                                <option value="europe">European</option>
+                                <option value="aus">Australia</option>
+                            </select> 
+                            <span className="red-text12">{errors.timezone}</span>
+                          <button  type="submit"  className="create_cae link_reset">CREATE</button>
+                        </form>
                     </div>
 
                     
@@ -48,3 +90,17 @@ export default class Create extends Component {
         )
     }
 }
+
+Create.propTypes = {
+    addevent: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired,
+    errors: PropTypes.object.isRequired
+  };
+  const mapStateToProps = state => ({
+    auth: state.auth,
+    errors: state.errors
+  });
+  export default connect(
+    mapStateToProps,
+    { addevent }
+  )(withRouter(Create));
