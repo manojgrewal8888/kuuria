@@ -39,7 +39,8 @@ class Manageevent extends Component {
                                     <th className="mod_th">Title</th>
                                     <th className="mod_th">Start Date</th>
                                     <th className="mod_th">End Date</th>
-                                    <th className="mod_th">status</th>
+                                    <th className="mod_th">Status</th>
+                                    <th className="mod_th">Actions</th>
                                 </tr>
                                 <tr className="mod_tr2">
                                     <td className="mod_th">
@@ -48,9 +49,10 @@ class Manageevent extends Component {
                                     <td className="mod_th">26/09/21, 10 AM</td>
                                     <td className="mod_th">27/10/21, 10 AM</td>
                                     <td className="mod_th2">Active</td>
-                                   {/*  <span className="del_mode">Action <i className="fa fa-trash icon_datemodp" >
-                                        </i>
-                                        <i className="fa fa-eye icon_datemodp" ></i></span> */}
+                                    <td className='mod_th2'>
+                                        <i className="fa fa-eye icon_datemodp" ></i> 
+                                        <i className="fa fa-trash icon_datemodp" ></i>
+                                    </td>
                                 </tr>
                              
                             </table>
