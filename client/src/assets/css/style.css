@@ -3716,8 +3716,15 @@ button.mantik_btnv {
   margin-right: 20%;
 }
 
+.ticket_form{ 
+    background: #1b3159;
+    border: none;
+    border-bottom: 1px solid yellow;
+    color:white;
+}
+
 input.man_tickets {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgb(0 0 0 / 25%);
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-sizing: border-box;
   box-shadow: 10px 12px 26px 2px rgb(0 0 0 / 20%);
@@ -3753,9 +3760,16 @@ p.mantik_pra {
   margin-top: 25px;
   margin-bottom: 25px;
   margin-left: 2%;
-  font-size: 15px;
-  width: 48%;
+  font-size: 15px; 
   margin-right: 43%;
+}
+
+p.mantik_pra_0 {
+  background: none;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 2%;
+  font-size: 15px;  
 }
 
 .wrapman_tik {
@@ -3781,10 +3795,10 @@ p.mantik_pra {
   
   width: 75%;
   margin: auto;
-  margin-top: 150px;
+  margin-top: 50px;
   display: flex;
   background: none;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
 }
 
 .left_viewt {
@@ -3810,7 +3824,8 @@ p.left_vt1 {
 
 
 select.right_vt4 {
-  background: rgba(46, 45, 63, 0.3);
+  color: white;
+  background: rgb(15 37 78);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   border-radius: 8px;

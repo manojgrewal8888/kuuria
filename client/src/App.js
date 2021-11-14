@@ -54,6 +54,7 @@ import Vendordash from "./components/front/Vendordash";
 import ManageQuestions from "./components/front/ManageQuestions";
 import Manageticket from "./components/front/Manageticket";
 import Vieweditticket from "./components/front/Vieweditticket";
+import VieweditQuestion from "./components/front/VieweditQuestion";
 import Revenu from "./components/front/Revenu";
 
 import Chart from "./components/front/Chart";
@@ -131,6 +132,7 @@ class App extends Component {
                   <Route  exact={true} path='/manage_questions' component={ManageQuestions}  />
                   <Route  exact={true} path='/manage_ticket' component={Manageticket} />
                   <Route  exact={true} path='/viewedit_ticket' component={Vieweditticket} />
+                  <Route  exact={true} path='/viewedit_question' component={VieweditQuestion} />
                   <Route  exact={true} path='/revenue' component={Revenu}   /> 
                   <Route  exact={true} path='/chart'  component={Chart}  />
                   <Route  exact={true} path='/chartreal' component={Chartdeno}   /> 

@@ -28,11 +28,15 @@ class Manageticket extends Component {
                                 Log Out
                             </div>
 
-                            <input className="man_tickets" type="search" name="" id="" />
-
-                            <button className="mantik_btnv"><i class="fa fa-plus-circle adicon_tik"></i>ADD QUESTIONS</button>
+                            <input className="man_tickets" type="search" placeholder="Search Ticket" name="" id="" />
+                            <Link   to='/viewedit_ticket'> 
+                            <button className="mantik_btnv"><i class="fa fa-plus-circle adicon_tik"></i>Add Ticket</button>
+                            </Link>
                             <div className="tick_wraping">
                                 <div className="wrapman_tik">
+                                    <p className="mantik_pra_0">No event found , Go to  <Link className="mantik_pra2" to='/viewedit_ticket'>Manage events</Link> and create one.</p> 
+                                </div>
+                               {/*  <div className="wrapman_tik">
                                     <p className="mantik_pra">Award Event 2021</p>
                                     <Link className="mantik_pra2" to='/viewedit_ticket'>Select to View and Edit</Link>
                                 </div>
@@ -40,7 +44,7 @@ class Manageticket extends Component {
                                 <div className="wrapman_tik">
                                     <p className="mantik_pra">Award Event 2021</p>
                                     <Link className="mantik_pra2" to='/viewedit_ticket'>Select to View and Edit</Link>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
