@@ -156,7 +156,7 @@ return (
                                     <p className="btn-pra">SIGN UP</p>
                                 </button> */}
                                 <button type="submit" className="btn-animatelog">
-                                  <Link className='login_B' to='/Login'>  SIGN UP</Link>
+                                    SIGN UP 
                                 </button>
 
                             </div>

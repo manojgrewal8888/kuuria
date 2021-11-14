@@ -16,3 +16,15 @@ p.left_vt_in {
 textarea.ticket_form {
     width: 100%;
 }
+span.red-text12 { 
+    font-size: 12px;
+    color: #f9d40f;
+    width: 100%;
+    margin-left: 156px;
+}
+span.red-text13 { 
+    font-size: 12px;
+    color: #f9d40f;
+    width: 100%;
+   float:right;
+}

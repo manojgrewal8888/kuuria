@@ -16,9 +16,9 @@ class Manageevent extends Component {
                         <div className="right_subven">
                            <Logout />
 
-                            <Link className="Link_reset" to='/eventopened'><button className="modnew_btn">
+                            <Link className="Link_reset" to='/create'><button className="modnew_btn">
                                 <i className="fa fa-plus icon_modp" ></i>
-                                NEW EVENT
+                                New Event
                             </button></Link>
 
                             <div className="modser_wrap">

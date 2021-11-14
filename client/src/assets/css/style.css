@@ -2051,7 +2051,7 @@ img.wcreate_img {
 p.cae_head {
   background: none;
   text-align: center;
-  margin-top: 35px;
+  margin-top: 85px;
   font-size: 20px;
   font-weight: 800;
   letter-spacing: 2px;
@@ -2071,6 +2071,20 @@ input.wtitle_input {
   padding-left: 25px;
   border-radius: 10px;
   margin-top: 50px;
+}
+input.wtitle_input1 { 
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    box-shadow: 0px 11px 17px 2px rgb(0 0 0 / 15%);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    height: 45px;
+    width: 1000%;
+    display: block;
+    margin: auto;
+    padding-left: 25px;
+    border-radius: 6px; 
 }
 
 .wrap_span {
@@ -2123,7 +2137,7 @@ select.selector_create {
   margin-top: 35px;
   height: 45px;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.02);
+  background: rgb(15 38 80);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   box-shadow: 0px 11px 17px 2px rgb(0 0 0 / 15%);
@@ -3594,7 +3608,6 @@ i.fa.fa-heart.icon_venbottom {
 /* for manage acccouuunnnttt vvveennndddoooorrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr*/
 
 button.logout_ven {
-  /* width: 8%; */
   float: right;
   margin-right: 5%;
   background: rgba(255, 255, 255, 0.05);
@@ -3612,6 +3625,7 @@ i.fa.fa-key {
   padding-top: 10px;
 }
 .logout_ven1 { 
+  margin-right: 50px;
   float: right;
   font-size: 16px; 
   letter-spacing: 2px; 
@@ -4516,7 +4530,7 @@ input.date_inpx {
   background: transparent;
   color: #ffffff;
   border: none;
-  text-align: right;
+  margin-left: 26px;
 }
 
 button.modlog_btn {
@@ -4534,18 +4548,17 @@ button.modlog_btn {
 }
 
 button.modnew_btn {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgb(27 49 89);
   border-radius: 8px;
-  color: #ffffff; 
+  color: #ffffff;
   box-sizing: border-box;
   margin-right: 0px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 10px 12px 26px 2px rgb(0 0 0 / 20%);
+  border: none; 
   padding: 5px 40px;
   display: block;
   position: relative;
-  left: 68%;
-  top: 90px;
+  left: 80%;
+  top: 90px; 
 }
 
 i.fa.fa-plus.icon_modp {
