@@ -2682,7 +2682,7 @@ img.voteimg_resize {
 }
 
 .rightv_browse {
-  width: 70%;
+  width: 100%;
   margin: auto;
   margin-top: 150px;
 }
@@ -3110,8 +3110,9 @@ button.proceed_person {
 }
 
 .resetx {
-  width: 100%;
+  width: 86%;
   margin: auto;
+  margin-top: 35px;
 }
 
 .PhoneInput {
@@ -4881,6 +4882,153 @@ input.send_msgtx {
   font-weight: 100;
   padding-left: 5%;
 }
+
+
+
+/*==============================================Nomination Froms===============================*/
+
+button.formn_btn {
+  background: #FFFFFF;
+  /* position: relative; */
+  float: right;
+  margin-top: 44px;
+  width: 18%;
+  height: 35px;
+  border-radius: 10px;
+}
+
+.wrap_formnom {
+ display: flow-root;
+  width: 80%;
+  height: 115vh;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.cont_btnformn {
+  margin: auto;
+  margin-top: 60vh;
+  
+  width: 25%;
+}
+
+button.save_formno {
+  margin: auto;
+  width: 100%;
+  height: 30px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #273589;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button.save_formno:hover{
+  background-color: #ffd600;
+}
+
+label.title_formn {
+  display: block;
+  margin-top: 35px;
+  margin-left: 5%;
+  font-weight: bold;
+}
+
+input.formn_input {
+  width: 90%;
+  margin: auto;
+  background: none;
+  display: block;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+input.formn_input:focus-visible {
+  width: 90%;
+  margin: auto;
+  background: none;
+  display: block;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+
+.linkdrop {
+  background: none;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  font-size: 15px;
+  border: none;
+}
+.linkdrop:hover{
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.linkdrop:focus-within{
+  border:none;
+}
+
+i.fa.fa-plus-circle.addi_formn {
+  padding: 0px 5px;
+}
+
+
+.dropdown_formn {
+  position: relative;
+
+  left: 5%;
+  top: 50px;
+  width: 90%;
+}
+
+.dropmen {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  top: 0px;
+  pointer-events: none;
+  padding: 0.75rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, tranform 150ms ease-in-out;
+}
+
+p.textf_formn {
+  font-weight: bold;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.wrap_inrdrop {
+ 
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: auto;
+  column-gap: 5%;
+  row-gap: 25px;
+  margin-top: 50px;
+}
+
+.itemdrop_formn {
+  
+  text-align: center;
+}
+
+.dropdown_formn > .linkdrop:focus + .dropmen{
+ opacity: 1;
+ transform: translateY(0px);
+ pointer-events: auto;
+}
+
 
 i.fa.fa-send.cus_send_ic {
   border: 1px solid;
