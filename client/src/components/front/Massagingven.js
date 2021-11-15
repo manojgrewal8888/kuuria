@@ -58,22 +58,27 @@ class Massagingven extends Component {
                                     </div>
                                 </div>
                                 <div className="right_submsg">
-                                    <Scrollbars className="cus_slider">
+                                    {/* <Scrollbars className="cus_slider">
+                                        
+                                    </Scrollbars> */}
+
+                                    <div class="section_scr">
                                         <div className="leftmsg_txt">
                                             <p className="lefttxtmsg">Whats the point in using Lorem Ipsum</p>
 
                                         </div>
 
-                                       
-                                        
+
+
+                                      
 
                                         <div className="rightmsg_txt">
                                             <p className="righttxtmsg">Same here ,bro</p>
                                         </div>
-                                    </Scrollbars>
+                                    </div>
                                     <div className="wrap_sendmsg">
-                                        <input type="text" className="send_msgtx" name="" id="" />
-                                       
+                                        <input type="text" placeholder="Enter Your Massage" className="send_msgtx" name="" id="" />
+
 
 
                                         <i className="fa fa-send cus_send_ic"></i>

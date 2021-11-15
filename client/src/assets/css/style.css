@@ -4774,6 +4774,22 @@ img.user_logim {
   height: 500px !important;
 }
 
+.right_submsg::-webkit-scrollbar {
+  width: 10px;
+}
+
+.right_submsg::-webkit-scrollbar-thumb {
+  background: #008cfe;
+  border-radius: 0px;
+}
+
+.right_submsg::-webkit-scrollbar-thumb:hover {
+  background:  #008cfe; 
+}
+
+
+
+
 .wrtap_msgdummy {
  
   height: 600px;
@@ -4787,15 +4803,16 @@ img.user_logim {
   border-bottom-left-radius: 30px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  float: left;
   margin-left: 5%;
 }
 
 p.lefttxtmsg {
-  width: 80%;
+  /* width: 80%; */
   font-size: 12px;
   font-weight: 100;
-  padding: 10px 0px;
-  padding-left: 15%;
+  padding: 10px 20px;
+  text-align: end;
 }
 
 .rightmsg_txt {
@@ -4814,9 +4831,8 @@ p.righttxtmsg {
   color: #204A6A;
   font-size: 12px;
   font-weight: 100;
-  padding: 10px 0px;
-  padding-left: 15%;
-  width: 80%;
+  padding: 10px 20px;
+  text-align: end;
 }
 
 span.circle_msg {
@@ -4861,6 +4877,9 @@ input.send_msgtx {
   border: 1px solid #ffffff;
   border-radius: 20px;
   height: 35px;
+  font-size: 12px;
+  font-weight: 100;
+  padding-left: 5%;
 }
 
 i.fa.fa-send.cus_send_ic {
@@ -4869,4 +4888,30 @@ i.fa.fa-send.cus_send_ic {
   border-radius: 20px;
   padding: 10px;
   float: right;
+}
+
+.section_scr {
+  height: 120vh;
+  padding: 1rem;
+  overflow-y: auto;
+  direction: ltr;
+  scrollbar-color: #d4aa70 #e4e4e4;
+  scrollbar-width: thin;
+  direction:rtl; 
+}
+
+.section_scr::-webkit-scrollbar {
+  width: 10px;
+}
+
+.section_scr::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.section_scr::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  
+  background-clip: content-box;
+  background-color: #008cff;
 }
