@@ -104,19 +104,7 @@ class Manageevent extends Component {
                                             )
                                         }
                                         )
-                                    }
-                              {/*   <tr className="mod_tr2">
-                                    <td className="mod_th">
-                                        UMB Ghana Tertiary Awards 
-                                    </td>
-                                    <td className="mod_th">26/09/21, 10 AM</td>
-                                    <td className="mod_th">27/10/21, 10 AM</td>
-                                    <td className="mod_th2">Active</td>
-                                    <td className='mod_th2'>
-                                        <i className="fa fa-eye icon_datemodp" ></i> 
-                                        <i className="fa fa-trash icon_datemodp" ></i>
-                                    </td>
-                                </tr> */}
+                                    } 
                              
                             </table>
 
