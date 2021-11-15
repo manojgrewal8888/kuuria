@@ -18,3 +18,6 @@ export const addevent = (userData, history) => dispatch => {
       })
     );
 }; 
+export const getevents = (user_id, history) => dispatch => {
+ 
+}; 

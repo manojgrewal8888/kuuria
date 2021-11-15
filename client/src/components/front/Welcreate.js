@@ -27,6 +27,7 @@ class Create extends Component {
         this.setState({ [e.target.id]: e.target.value });
     };
     onSubmit = e => {
+        var user_id = localStorage.getItem('_id');
         this.props.history.push("/eventopened");
         e.preventDefault();
         const event = {
@@ -34,15 +35,27 @@ class Create extends Component {
             start_date: this.state.start_date,
             end_date: this.state.end_date,
             timezone: this.state.timezone, 
+            user_id: user_id, 
         };
         this.props.addevent(event, this.props.history); 
     };
-
+    
     componentDidMount() { 
         // If logged in and user navigates to Register page, should redirect them to dashboard
+     
         if (!this.props.auth.isAuthenticated) {
             this.props.history.push("/login");
         }
+        
+        /*   axios
+        .post("/api/users/getevents", userData)
+        .then(res => history.push("/manage_events")) // re-direct to login on successful register
+        .catch(err =>
+            dispatch({
+                type: GET_ERRORS,
+                payload: err.response.data
+            })
+        ); */
     }
 
 
@@ -56,7 +69,7 @@ render() {
                     <div className="cae_details">
                         <Link className="ven_under back_ic"  to='/manage_events'> 
                             <div  className="logout_ven1">
-                                <i   class="fa fa-arrow-left "></i> Back
+                                <i   className="fa fa-arrow-left "></i> Back
                             </div>
                         </Link>
                         <p className="cae_head">Create Award Event</p>

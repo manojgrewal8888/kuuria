@@ -80,7 +80,8 @@ router.post("/register", (req, res) => {
             (err, token) => {
               res.json({
                 success: true,
-                token: "Bearer " + token
+                token: "Bearer " + token,
+                user:user
               });
             }
           );
@@ -109,6 +110,7 @@ router.post("/register", (req, res) => {
           start_date: req.body.start_date,
           end_date: req.body.end_date,
           timezone: req.body.timezone,
+          user_id: req.body.user_id,
         }); 
           newEvent
             .save()
@@ -116,6 +118,13 @@ router.post("/register", (req, res) => {
             .catch(err => console.log(err)); 
      /*  }
     }); */
+  });
+
+  router.post("/getevents", (req, res) => {  
+    Event.find({ user_id: req.body.id }).then(events=>{
+      return res.json(events);
+    });
+       
   });
  
 

@@ -2072,6 +2072,33 @@ input.wtitle_input {
   border-radius: 10px;
   margin-top: 50px;
 }
+
+.loading:after {
+  content: ' .';
+  font-size: 60px;
+  color: #7494cd;
+  animation: dots 1s steps(5, end) infinite;}
+
+@keyframes dots {
+  0%, 20% {
+    color: rgba(0,0,0,0);
+    text-shadow:
+      .25em 0 0 rgba(0,0,0,0),
+      .5em 0 0 rgba(0,0,0,0);}
+  40% {
+    color: #7494cd;
+    text-shadow:
+      .25em 0 0 rgba(0,0,0,0),
+      .5em 0 0 rgba(0,0,0,0);}
+  60% {
+    text-shadow:
+      .25em 0 0 #7494cd,
+      .5em 0 0 rgba(0,0,0,0);}
+  80%, 100% {
+    text-shadow:
+      .25em 0 0 #7494cd,
+      .5em 0 0 #7494cd;}}
+
 input.wtitle_input1 { 
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -4636,7 +4663,7 @@ table.mod.table {
   width: 85%;
   margin: auto;
   margin-top: 50px;
-
+  margin-bottom: 100px;
 }
 
 tr.mod_tr {

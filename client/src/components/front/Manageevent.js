@@ -3,10 +3,43 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import Sidebar from "./Sidebar"; 
+import { getevents } from "../../actions/eventActions";
 import Logout from "./Logout"; 
+import axios from "axios";
+const moment= require('moment');
 class Manageevent extends Component {
-
+    constructor() {
+        super();
+        this.state = {
+            events:[]
+        };
+    } 
+    componentWillReceiveProps(nextProps) {
+         
+    }
+    async componentDidMount() { 
+        var user_id = {
+            id:localStorage.getItem('_id')
+        }
+        if(user_id){
+            await axios
+            .post("/api/users/getevents", user_id)
+            .then(res =>  { 
+                if(res){  
+                    this.setState({
+                        events:res.data, 
+                    }) 
+                }
+            }) 
+            .catch(err =>
+                console.log('no events')
+            ); 
+        } 
+    }
     render() {
+
+
+
         return (
             <div>
                 <div className="wrap_vwendor">
@@ -14,8 +47,8 @@ class Manageevent extends Component {
 
                     <div className="right_vendor">
                         <div className="right_subven">
-                           <Logout />
 
+                          {/*  <Logout /> */}
                             <Link className="Link_reset" to='/create'><button className="modnew_btn">
                                 <i className="fa fa-plus icon_modp" ></i>
                                 New Event
@@ -23,26 +56,56 @@ class Manageevent extends Component {
 
                             <div className="modser_wrap">
                                 <div className="sermod_box">
-                                    <input type="search" name="" id="" className="modx_ser" />
+                                    <input type="search" name="" id="" placeholder='Enter event name' className="modx_ser" />
                                     <i className="fa fa-search icon_serchmodp" ></i>
                                 </div>
                                 <select className="mod_sel" name="cars" id="cars">
                                     <option value="volvo">Filter By Status</option>
-                                    <option value="saab">Saab</option>
-                                    <option value="mercedes">Mercedes</option>
-                                    <option value="audi">Audi</option>
+                                    <option value="saab">Active</option>
+                                    <option value="mercedes">In-Active</option> 
                                 </select>
                             </div>
-
                             <table className="mod table">
                                 <tr className="mod_tr">
+                                    <th className="mod_th">#</th>
                                     <th className="mod_th">Title</th>
                                     <th className="mod_th">Start Date</th>
                                     <th className="mod_th">End Date</th>
                                     <th className="mod_th">Status</th>
                                     <th className="mod_th">Actions</th>
                                 </tr>
-                                <tr className="mod_tr2">
+                                
+                                
+                                {this.state.events == '' && <tr>
+                                    <td colspan='6' class='text-center'><p class="loading">Loading Events</p></td>
+                                </tr> }
+                                {
+                                    Object.entries(this.state.events).map( (val,key) => {  
+                                        var start_date = val[1].start_date != '' ? moment(new Date(val[1].start_date)).format('MMMM Do YYYY') : '';  
+                                        var end_date = val[1].end_date != '' ? moment(new Date(val[1].end_date)).format('MMMM Do YYYY') : '';  
+                                            return (	
+                                                <>
+                                                <tr>
+                                                <td>{key+1}</td> 
+                                                <td>{val[1].eventname ? val[1].eventname : ''}</td> 
+                                                    <td className='mod_th2'>{start_date ? start_date : ''}</td>
+                                                    <td className='mod_th2'>{end_date ? end_date : ''}</td>
+                                                    <td className='mod_th2'>
+                                                        {val[1].status ?? ''}
+                                                    </td>
+                                                    <td className='mod_th2'>
+                                                        <Link className="Link_reset" to='/eventopened'>
+                                                         <i className="fa fa-eye icon_datemodp" ></i>
+                                                        </Link> 
+                                                        <i className="fa fa-trash icon_datemodp" ></i>
+                                                    </td>
+                                                </tr>
+                                                </>
+                                            )
+                                        }
+                                        )
+                                    }
+                              {/*   <tr className="mod_tr2">
                                     <td className="mod_th">
                                         UMB Ghana Tertiary Awards 
                                     </td>
@@ -53,7 +116,7 @@ class Manageevent extends Component {
                                         <i className="fa fa-eye icon_datemodp" ></i> 
                                         <i className="fa fa-trash icon_datemodp" ></i>
                                     </td>
-                                </tr>
+                                </tr> */}
                              
                             </table>
 
@@ -66,7 +129,18 @@ class Manageevent extends Component {
 
     }
 }
-
-export default Manageevent;
+Manageevent.propTypes = {
+    getevents: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired,
+    errors: PropTypes.object.isRequired
+  };
+  const mapStateToProps = state => ({
+    auth: state.auth,
+    errors: state.errors
+  });
+  export default connect(
+    mapStateToProps,
+    { getevents }
+  )(Manageevent); 
 
 
