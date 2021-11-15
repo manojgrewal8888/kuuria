@@ -27,8 +27,7 @@ class Create extends Component {
         this.setState({ [e.target.id]: e.target.value });
     };
     onSubmit = e => {
-        var user_id = localStorage.getItem('_id');
-        this.props.history.push("/eventopened");
+        var user_id = localStorage.getItem('_id'); 
         e.preventDefault();
         const event = {
             eventname: this.state.eventname,

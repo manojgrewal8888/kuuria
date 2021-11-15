@@ -11,7 +11,8 @@ class Manageevent extends Component {
     constructor() {
         super();
         this.state = {
-            events:[]
+            events:[],
+            showloader:true
         };
     } 
     componentWillReceiveProps(nextProps) {
@@ -28,11 +29,15 @@ class Manageevent extends Component {
                 if(res){  
                     this.setState({
                         events:res.data, 
+                        showloader:false
                     }) 
                 }
+                
             }) 
             .catch(err =>
-                console.log('no events')
+                this.setState({ 
+                    showloader:false
+                })  
             ); 
         } 
     }
@@ -76,7 +81,7 @@ class Manageevent extends Component {
                                 </tr>
                                 
                                 
-                                {this.state.events == '' && <tr>
+                                {this.state.showloader&& <tr>
                                     <td colspan='6' class='text-center'><p class="loading">Loading Events</p></td>
                                 </tr> }
                                 {
