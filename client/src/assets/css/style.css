@@ -5066,7 +5066,7 @@ i.fa.fa-send.cus_send_ic {
 }
 
 .section_scr {
-  height: 120vh;
+  height: 500px;
   padding: 1rem;
   overflow-y: auto;
   direction: ltr;
