@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { addevent } from "../../actions/eventActions";
 import classnames from "classnames";
+import axios from "axios";
 class Create extends Component {
     constructor() {
         super();
@@ -12,6 +13,7 @@ class Create extends Component {
             start_date:'',
             end_date:'',
             timezone:'',
+            editdata:'',
             errors:{}
         };
     } 
@@ -40,21 +42,22 @@ class Create extends Component {
     };
     
     componentDidMount() { 
-        // If logged in and user navigates to Register page, should redirect them to dashboard
-     
+        
+        if(this.props.location.state.event_id){  
+            axios
+            .post("/api/user/getevent", {
+                id: this.props.location.state.event_id
+            })
+            .then((response) => {
+                if (response.status = 200) {
+                    this.setState({ editdata: response.data}); 
+                }
+            });
+        }    
         if (!this.props.auth.isAuthenticated) {
             this.props.history.push("/login");
         }
         
-        /*   axios
-        .post("/api/users/getevents", userData)
-        .then(res => history.push("/manage_events")) // re-direct to login on successful register
-        .catch(err =>
-            dispatch({
-                type: GET_ERRORS,
-                payload: err.response.data
-            })
-        ); */
     }
 
 

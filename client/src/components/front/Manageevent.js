@@ -101,6 +101,9 @@ class Manageevent extends Component {
                                                     <td className='mod_th2'>
                                                         <Link className="Link_reset" to='/eventopened'>
                                                          <i className="fa fa-eye icon_datemodp" ></i>
+                                                        </Link> &nbsp;&nbsp;
+                                                        <Link className="Link_reset" to={{pathname: `/editevent` ,state: {event_id:val[1]._id} }} >
+                                                         <i className="fa fa-edit icon_datemodp" ></i>
                                                         </Link> 
                                                         <i className="fa fa-trash icon_datemodp" ></i>
                                                     </td>
