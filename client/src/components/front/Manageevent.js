@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import Sidebar from "./Sidebar"; 
-import { getevents } from "../../actions/eventActions";
+import Sidebar from "./Sidebar";  
 import Logout from "./Logout"; 
 import axios from "axios";
 const moment= require('moment');
@@ -125,8 +124,7 @@ class Manageevent extends Component {
 
     }
 }
-Manageevent.propTypes = {
-    getevents: PropTypes.func.isRequired,
+Manageevent.propTypes = { 
     auth: PropTypes.object.isRequired,
     errors: PropTypes.object.isRequired
   };
@@ -136,7 +134,7 @@ Manageevent.propTypes = {
   });
   export default connect(
     mapStateToProps,
-    { getevents }
+    {   }
   )(Manageevent); 
 
 

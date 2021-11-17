@@ -4,7 +4,7 @@ import Sidebar from "./Sidebar";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions"; 
 import PropTypes from "prop-types";
-import { addevent } from "../../actions/eventActions";
+import { create_ticket } from "../../actions/eventActions";
 import classnames from "classnames";
 class Vieweditticket extends Component {
     constructor() {
@@ -16,7 +16,8 @@ class Vieweditticket extends Component {
             time: '',
             price_votes:'',
             venue:'',
-            number:''
+            number:'',
+            errors:{}
         };
     }
         componentWillReceiveProps(nextProps) {
@@ -32,14 +33,16 @@ class Vieweditticket extends Component {
         onSubmit = e => {
             var user_id = localStorage.getItem('_id'); 
             e.preventDefault();
-            const event = {
-                eventname: this.state.eventname,
-                start_date: this.state.start_date,
-                end_date: this.state.end_date,
-                timezone: this.state.timezone, 
-                user_id: user_id, 
+            const ticket = {
+                name: this.state.name,
+                date: this.state.date,
+                time: this.state.time,
+                price_votes: this.state.price_votes, 
+                venue: this.state.venue, 
+                number: this.state.number, 
+                
             };
-            this.props.addevent(event, this.props.history); 
+            this.props.create_ticket(ticket, this.props.history); 
         };
         componentDidMount() { 
         
@@ -61,6 +64,7 @@ class Vieweditticket extends Component {
         }
      
     render() {
+        const { errors } = this.state;
         return (
             <div>
                 <div className="wrap_vwendor">
@@ -74,7 +78,7 @@ class Vieweditticket extends Component {
                         </Link>
                         <h4 className="meve_headin">Add Ticket</h4>
 
-
+                        <form noValidate onSubmit={this.onSubmit}> 
                             <div className="viewt_wrap">
                                 <div className="left_viewt">
                                     <p className="left_vt1">Ticket Name</p>
@@ -89,30 +93,32 @@ class Vieweditticket extends Component {
  
                                 <div className="right_viewt">
                                     <p className="right_vt1">
-                                        <input className="ticket_form" type="text" placeholder="Enter Event Name" name="eventname" id="" />
+                                        <input placeholder="Enter Ticket Name"  onChange={this.onChange}  value={this.state.name}  id="name"  type="text"  className={'ticket_form '+classnames("", { invalid: errors.name })}/>
                                     </p>
+                                    <span className="red-text12">{errors.name} </span>
                                     <p className="right_vt2">
-                                        <input className="ticket_form" type="date" placeholder="Event Start Date" name="" id="" />
+                                        <input   placeholder="Event Start Date" onChange={this.onChange}  value={this.state.date}  id="date"  type="text"  className={'ticket_form '+classnames("", { invalid: errors.date })} />
                                     </p>
                                     <p className="right_vt3">
-                                        <input className="ticket_form" type="time" placeholder="Event Start Time" name="" id="" />
+                                        <input   placeholder="Event Start Time" onChange={this.onChange}  value={this.state.time}  id="time"  type="text"  className={'ticket_form '+classnames("", { invalid: errors.time })}/>
                                     </p>
-                                    <select className="right_vt4" name="" id="" placeholder="Choose Price and Votes">
+                                    <select   id="" onChange={this.onChange}  value={this.state.price_votes}  id="price_votes"     className={'right_vt4 '+classnames("", { invalid: errors.price_votes })} placeholder="Choose Price and Votes">
                                         <option value="">Choose Price and Number of Votes</option>
                                         <option value="">99$ 4 votes</option>
                                         <option value="">99$ 4 votes</option>
                                         <option value="">99$ 4 votes</option>
                                     </select>
                                     <p className="right_vt5"> 
-                                        <input className="ticket_form" type="date" placeholder="Event Venue" name="" id="" />
+                                        <input  placeholder="Event Venue"  onChange={this.onChange}  value={this.state.venue}  id="venue"  type="text"  className={'ticket_form '+classnames("", { invalid: errors.venue })} />
                                         </p>
                                     <p className="right_vt6">
-                                        <input className="ticket_form" type="text" placeholder="Event Number" name="" id="" />
+                                        <input   onChange={this.onChange}  value={this.state.number}  id="number"   className={'ticket_form '+classnames("", { invalid: errors.number })} type="text" placeholder="Event Number" name="number"  />
                                     </p>
                                 </div>
                             </div>
 
-                            <button className="save_vte">Save</button>
+                            <button type='submit' className="save_vte">Save</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -122,6 +128,7 @@ class Vieweditticket extends Component {
     }
 }
 Vieweditticket.propTypes = {
+    create_ticket: PropTypes.func.isRequired,
     logoutUser: PropTypes.func.isRequired,
     auth: PropTypes.object.isRequired
 };
@@ -130,5 +137,5 @@ const mapStateToProps = state => ({
 });
 export default connect(
     mapStateToProps,
-    { logoutUser }
+    { logoutUser,create_ticket }
 )(Vieweditticket);
