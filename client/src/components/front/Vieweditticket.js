@@ -86,7 +86,7 @@ class Vieweditticket extends Component {
                                 </div>
 
                                 <div className="hori_viewt"></div>
-
+ 
                                 <div className="right_viewt">
                                     <p className="right_vt1">
                                         <input className="ticket_form" type="text" placeholder="Enter Event Name" name="eventname" id="" />
