@@ -2029,6 +2029,20 @@ i.fa.fa-trash.ecat_icon {
 
 .cae_details {
   width: 75%;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-sizing: border-box;
+  box-shadow: 10px 12px 26px 2px rgb(0 0 0 / 20%);
+  backdrop-filter: blur(4px);
+  margin: auto;
+  margin-top: 80px;
+  border-radius: 10px;
+  margin-bottom: 150px;
+}
+
+.cae_details2{
+  width: 75%;
   height: 472px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -2164,10 +2178,11 @@ select.selector_create {
   margin-top: 35px;
   height: 45px;
   border-radius: 8px;
-  background: rgb(15 38 80);
+  background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   box-shadow: 0px 11px 17px 2px rgb(0 0 0 / 15%);
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   padding-left: 20px;
   color: #ffffff;
