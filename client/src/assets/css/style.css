@@ -4997,8 +4997,9 @@ input.formn_input:focus-visible {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.linkdrop:focus-within{
-  border:none;
+.linkdrop:focus{
+  border:none !important;
+  outline: none;
 }
 
 i.fa.fa-plus-circle.addi_formn {
