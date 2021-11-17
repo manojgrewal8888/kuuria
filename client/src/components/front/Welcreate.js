@@ -6,15 +6,16 @@ import { addevent } from "../../actions/eventActions";
 import classnames from "classnames";
 import axios from "axios";
 class Create extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = { 
             eventname:'',
             start_date:'',
             end_date:'',
             timezone:'',
             editdata:'',
-            errors:{}
+            errors:{},
+            event_id:''
         };
     } 
     
@@ -43,7 +44,7 @@ class Create extends Component {
     
     componentDidMount() { 
         
-        if(this.props.location.state.event_id){  
+        /* if(this.props.location.state.event_id !=''){  
             axios
             .post("/api/user/getevent", {
                 id: this.props.location.state.event_id
@@ -53,7 +54,7 @@ class Create extends Component {
                     this.setState({ editdata: response.data}); 
                 }
             });
-        }    
+        }  */   
         if (!this.props.auth.isAuthenticated) {
             this.props.history.push("/login");
         }

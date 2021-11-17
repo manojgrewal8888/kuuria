@@ -4,13 +4,62 @@ import Sidebar from "./Sidebar";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions"; 
 import PropTypes from "prop-types";
+import { addevent } from "../../actions/eventActions";
+import classnames from "classnames";
 class Vieweditticket extends Component {
     constructor() {
         super(); 
         this.state = {
-            route: ""
+            route: "",
+            name: '',
+            date: '',
+            time: '',
+            price_votes:'',
+            venue:'',
+            number:''
         };
-    } 
+    }
+        componentWillReceiveProps(nextProps) {
+            if (nextProps.errors) {
+                this.setState({
+                    errors: nextProps.errors
+                });
+            }
+        }
+        onChange = e => {
+            this.setState({ [e.target.id]: e.target.value });
+        };
+        onSubmit = e => {
+            var user_id = localStorage.getItem('_id'); 
+            e.preventDefault();
+            const event = {
+                eventname: this.state.eventname,
+                start_date: this.state.start_date,
+                end_date: this.state.end_date,
+                timezone: this.state.timezone, 
+                user_id: user_id, 
+            };
+            this.props.addevent(event, this.props.history); 
+        };
+        componentDidMount() { 
+        
+           /*  if(this.props.location.state.event_id){  
+                axios
+                .post("/api/user/getevent", {
+                    id: this.props.location.state.event_id
+                })
+                .then((response) => {
+                    if (response.status = 200) {
+                        this.setState({ editdata: response.data}); 
+                    }
+                });
+            }  */   
+            if (!this.props.auth.isAuthenticated) {
+                this.props.history.push("/login");
+            }
+            
+        }
+     
     render() {
         return (
             <div>
