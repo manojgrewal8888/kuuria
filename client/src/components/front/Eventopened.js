@@ -88,7 +88,7 @@ class Opened extends PureComponent {
                                 cx={180}
                                 cy={150}
                                 innerRadius={90}
-                                outerRadius={100}
+                                outerRadius={110}
                                 fill="#8884d8"
                                 paddingAngle={5}
                                 dataKey="value"
