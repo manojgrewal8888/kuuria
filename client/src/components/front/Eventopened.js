@@ -57,10 +57,10 @@ class Opened extends PureComponent {
 
 
 
-                    <div className="right_home">
+                    <div className="right_home1">
 
-                        <div className="open_lin1"></div>
-                        <div className="open_lin2"></div>
+                   
+                        
 
                         <div className="date_format">
                             <div className="devide_opened"></div>
@@ -78,16 +78,17 @@ class Opened extends PureComponent {
                         </div>
 
                         <input className="input_opened" type="text" placeholder="//http karmatech.com" />
+                        <div className="open_lin2"></div>
 
                        
 
-                        <PieChart width={325} height={500} onMouseEnter={this.onPieEnter}>
+                        <PieChart width={400} height={300} onMouseEnter={this.onPieEnter}>
                             <Pie
                                 data={data}
-                                cx={150}
-                                cy={200}
-                                innerRadius={120}
-                                outerRadius={150}
+                                cx={180}
+                                cy={150}
+                                innerRadius={90}
+                                outerRadius={100}
                                 fill="#8884d8"
                                 paddingAngle={5}
                                 dataKey="value"

@@ -1042,8 +1042,8 @@ button.btn-pra:hover {
 
 .recharts-wrapper {
   cursor: default;
-  width: 205px;
-  height: 205px;
+  width: 300px !important;
+  height: 200px;
   float: right;
 }
 
@@ -1091,7 +1091,7 @@ span.only_edash {
   height: 800px;
   width: 0px;
   position: absolute;
-  left: 70%;
+  left: 60%;
   top: 160px;
 }
 
@@ -1908,11 +1908,16 @@ img.event_img {
 }
 
 .right_home {
-  /* border: 2px solid red; */
-  width: 100%;
+  border: 2px solid red;
+  width: 74%;
   margin: auto;
   margin-top: 0px;
   height: 1200px;
+}
+
+.right_home1 {
+  border: 1px solid red;
+  width: 60%;
 }
 
 .contain_home {
