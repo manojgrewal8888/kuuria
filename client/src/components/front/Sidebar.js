@@ -68,7 +68,7 @@ class Sidebar extends Component {
                             </div>
                         </Link>  
                         <Link className="ven_under"  to='/nomination_form'> 
-                            <div className={this.state.route == '/forms' ? 'custom_btn1' : 'custom_btn0' }>
+                            <div className={this.state.route == '/nomination_form' ? 'custom_btn1' : 'custom_btn0' }>
                                 <i className="fa fa-file-text-o cus_vicon"></i>
                                 <span className='menu_it_em1' >Nomination Form</span>
                             </div>

@@ -11,7 +11,13 @@ import 'react-phone-input-2/lib/style.css'
 
 
 class Nominationform extends Component {
-
+    constructor() {
+        super();
+        this.state = {
+            phone: "", 
+        };
+         
+      } 
     render() {
         return (
             <div>
@@ -25,11 +31,7 @@ class Nominationform extends Component {
                             <div className="wrap_formnom">
                                 <label className="title_formn">Enter Nomination Form Name</label>
                                 <input className="formn_input" type="text" name="" id="" />
-                                <PhoneInput
-                                     country={'us'}
-                                        value={this.state.phone}
-                                        onChange={phone => this.setState({ phone })}
-                                /> 
+                           
                                 <div className="dropdown_formn">
                                     <button className="linkdrop"><i className="fa fa-plus-circle addi_formn"></i>Add Form Fields</button>
                                     <div className="dropmen">
