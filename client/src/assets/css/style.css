@@ -1904,8 +1904,8 @@ img.event_img {
 }
 
 .right_home {
-  /*border: 2px solid red;*/
-  width: 70%;
+  /* border: 2px solid red; */
+  width: 100%;
   margin: auto;
   margin-top: 0px;
   height: 1200px;
@@ -1929,20 +1929,6 @@ p.ecat_txt {
   margin-right: 116px;
 }
 
-i.fa.fa-plus.ecat_icon {
-  color: #273589;
-  height: 35px;
-  width: 35px;
-  border: 2px solid;
-  text-align: center;
-  border-radius: 20px;
-  background: #ffb800;
-  font-size: 25px;
-  padding-top: 4px;
-  position: absolute;
-  left: 1120px;
-  top: 100px;
-}
 
 input.evevntcat_search {
   background: rgba(255, 255, 255, 0.05);
@@ -1995,6 +1981,44 @@ p.nom_cat {
   font-size: 18px;
   margin-top: 62px;
   font-weight: bolder;
+  cursor: pointer;
+}
+
+.mar_btncat {
+ 
+  margin-top: 210px;
+}
+
+button.newbtn_cats {
+
+  float: right;
+  width: 25%;
+  height: 35px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #ffd600;
+  font-weight: 600;
+  margin-right: 5%;
+  cursor: pointer;
+}
+
+i.fa.fa-plus-circle.ecat_icon {
+  font-size: 25px;
+  position: relative;
+  left: -10px;
+  top: 2px;
+}
+
+
+p.nom_cat:hover {
+  background: none;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 62px;
+  font-weight: bolder;
+  color: #ffd600;
+  cursor: pointer;
 }
 
 .slider_ecat {
@@ -3238,11 +3262,11 @@ p.pricevote_head {
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 25px;
   line-height: 36px;
   text-align: center;
   color: #FFFFFF;
-  margin-top: 55px;
+  margin-top: 100px;
 }
 
 select.price_select {
@@ -3264,11 +3288,37 @@ select.price_select {
 .wrap2btnx {
   width: 75%;
   margin: auto;
-  /* border: 1
-px
-solid; */
-margin-top: 50px;
+  margin-top: 50px;
+  margin-bottom: 100px;
 }
+
+img.subcon_im1 {
+  display: block;
+  margin: auto;
+  margin-top: 100px;
+  width: 15%;
+}
+
+img.subcon_im2 {
+  margin: auto;
+  display: block;
+}
+
+p.vote_submitconf {
+  font-size: 25px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
 
 button.back_personxx {
   background: rgba(255, 255, 255, 0.05);
@@ -5113,4 +5163,183 @@ i.fa.fa-send.cus_send_ic {
   
   background-clip: content-box;
   background-color: #008cff;
+}
+
+
+/*===============================addon category========================================*/
+
+div#addnewcat {
+  border: 1px solid aqua;
+  width: 100%;
+  margin-top: 25px;
+} 
+
+.wrapaddne {
+
+  width: 85%;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+}
+
+p.headingaddon {
+  margin-top: 50px;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+input.addon_inp1 {
+  display: block;
+  width: 60%;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  height: 35px;
+  padding-left: 15px;
+  font-size: 12px;
+}
+
+textarea#w3review {
+  display: block;
+  width: 60%;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  height: 150px;
+}
+
+label.dis_labeladdon {
+  margin-left: 20%;
+  margin-top: 30px;
+  font-size: 15px;
+}
+
+button.creteaddon_bt {
+  background: #ffd600;
+  margin: auto;
+  width: 20%;
+  height: 35px;
+  border-radius: 10px;
+  margin-top: 25px;
+  position: relative;
+  left: 40%;
+  margin-bottom: 25px;
+  font-weight: bold;
+  color: #0f2650;
+}
+
+
+
+
+/*=======================================delete category======================*/
+
+p.delhead_pop {
+  margin-top: 75px;
+  border: 1px solid;
+  width: 70%;
+  margin: auto;
+  margin-top: 75px;
+  height: 35px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: red;
+  text-align: center;
+  font-size: 20px;
+}
+
+p.warningdel {
+  font-size: 15px;
+  font-weight: 100;
+  text-align: center;
+  
+  letter-spacing: 2px;
+  width: 60%;
+  margin: auto;
+  margin-top: 25px;
+}
+
+button.delwarteen {
+  background: rgba(47, 46, 65, 0.85);
+  color: #ffffff;
+  font-size: 20px;
+  width: 20%;
+  height: 35px;
+  border-radius: 10px;
+}
+
+.demspace {
+  border: 1px solid;
+  height: 250px;
+}
+
+button.delwarteen {
+  background: rgba(47, 46, 65, 0.85);
+  color: #ffffff;
+  font-size: 20px;
+  width: 20%;
+  height: 35px;
+  border-radius: 10px;
+  margin: auto;
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+i.fa.fa-trash.del_colo {
+  position: relative;
+  left: -15px;
+  color: red;
+}
+
+input.inputmod.form-control {
+  background: #1b3159;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  width: 70%;
+  margin: auto;
+  height: 45px;
+  border-radius: 10px;
+  padding-left: 8%;
+  color: #ffffff;
+}
+
+.btnxmod.flag-dropdown {
+  position: absolute;
+  left: 15%;
+  width: 50px;
+  background: rgba(255, 255, 255, 0) !important;
+  border: none !important;
+  padding-left: 1%;
+}
+
+.react-tel-input .selected-flag .arrow {
+  position: relative;
+  top: 50%;
+  margin-top: -2px;
+  left: 25px;
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 4px solid #555;
+}
+
+
+
+
+
+
+/*=================================dashmain=======================*/
+
+i.fa.fa-bell.bell_main {
+  float: right;
+  margin-top: 50px;
+  cursor: pointer;
+  font-size: 20px;
 }

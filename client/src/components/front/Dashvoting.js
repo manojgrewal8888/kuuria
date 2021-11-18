@@ -73,7 +73,7 @@ function Dashvoting() {
                                     <input className="input_person" type="email" name="" id="" placeholder="E_mail" />
                                     <div className="resetx">
                                         <PhoneInput
-                                            defaultCountry="gh"
+                                            defaultCountry="ind"
                                             value={value}
                                             onChange={setValue}
                                             inputClass="inputmod"
@@ -83,14 +83,71 @@ function Dashvoting() {
                                             searchClass="searchxmod"
                                         />
                                     </div>
-
-
-
                                     <div className="wrapx_btnp">
                                         <Link className="link_reset" to='/votebrowse'><button className="back_person">Back</button></Link>
                                         <Link className="link_reset" to='/voteprice'><button className="proceed_person">Proceed</button></Link>
                                     </div>
+
+
+
+                                    <div id="pricenvote">
+                                        <div className="midpopp_browse">
+                                            <p className="pricevote_head">Prices and Votes</p>
+                                            <select className="price_select" name="" id="" placeholder="Choose Price and Number of Votes">
+                                                <option value="">Choose Price and Number of Votes</option>
+                                                <option value="">99$ 4 votes</option>
+                                                <option value="">99$ 4 votes</option>
+                                                <option value="">99$ 4 votes</option>
+                                            </select>
+
+                                            <div className="wrap2btnx">
+                                                <Link className="link_reset" to='/votebrowse'><button className="back_personxx">Back</button></Link>
+                                                <Link className="link_reset" to='/votesubmit'><button className="proceed_personxx">Proceed</button></Link>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
                                 </div>
+
+
+                                <div id="submited_pop">
+                                    <div className="subcon_wrap">
+                                        <img src="./img/conf.png" alt="" className="subcon_im1" />
+                                        <img src="./img/highfive.png" alt="" className="subcon_im2" />
+                                        <p className="vote_submitconf">Vote Submitted</p>
+                                    </div>
+                                </div>
+
+
+
+                                <div id="addnewcat">
+                                    <div className="wrapaddne">
+                                        <p className="headingaddon">Create New Category</p>
+
+                                        <input type="text" name="" id="" className="addon_inp1" placeholder="Title" />
+
+                                        <label className="dis_labeladdon" for="Description">Description</label>
+
+                                        <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
+                                        <div className="wrapbtnaddon_bt">
+                                            <button className="creteaddon_bt">CREATE</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div id="dleteevn">
+                                    <div className="wrap_ddeleteeven">
+                                        <p className="delhead_pop">Delete Event</p>
+
+                                        <p className="warningdel">Are you sure you want to delete this Event “Event name” ? This action is irreversible.</p>
+
+                                        <button className="delwarteen"><i className="fa fa-trash del_colo"></i>Delete</button>
+                                    </div>
+                                </div>
+
+                                <div className="demspace"></div>
                             </Modal>
                         </div>
                         <div className="item_umb"><p className="nom_subumb"> Nominee 2</p></div>

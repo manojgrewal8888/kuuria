@@ -71,6 +71,7 @@ import ManageEvents from "./components/front/Manageevent";
 import Forgetpassword from "./components/front/Forgetpassword";
 import Massagingven from "./components/front/Massagingven";
 import Nominationform from "./components/front/Nominationform";
+import Dashboardmain from "./components/front/Dashboardmain";
 
 
 
@@ -149,6 +150,7 @@ class App extends Component {
                   <Route exact={true} path='/forget_password' component={Forgetpassword} />
                   <Route exact={true} path='/massages' component={Massagingven}  />
                   <Route exact={true} path='/nomination_form' component={Nominationform}  />
+                  <Route exact={true} path='/maindashboard' component={Dashboardmain}    />
 
                 
 
