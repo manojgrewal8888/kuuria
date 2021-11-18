@@ -48,6 +48,7 @@ function Dashvoting() {
                                 nominee 1
                             </button>
                             <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
+                                <div id="voteper">
                                 <div className="one_wraappp">
                                     <div className="one_rightxvc">
 
@@ -65,8 +66,10 @@ function Dashvoting() {
                                     </div>
                                 </div>
 
+                                </div>
 
 
+                                <div id="votepr">
                                 <div className="rightv_browse">
                                     <p className="fill_personal">Fill In Personal Information</p>
                                     <input className="input_person" type="text" name="" id="" placeholder="Name" />
@@ -86,6 +89,8 @@ function Dashvoting() {
                                     <div className="wrapx_btnp">
                                         <Link className="link_reset" to='/votebrowse'><button className="back_person">Back</button></Link>
                                         <Link className="link_reset" to='/voteprice'><button className="proceed_person">Proceed</button></Link>
+                                    </div>
+
                                     </div>
 
 
