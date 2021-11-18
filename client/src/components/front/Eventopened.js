@@ -67,7 +67,7 @@ class Opened extends PureComponent {
 
                             <i className="fa fa-calendar-o cal_left"></i>
                             <span className="date_o1">Start Date</span>
-                            <span className="date_o2">{this.state.event.start_date ?? ''}</span>
+                            <span className="date_o2">October 27th,2021</span>
                             <span className="date_o3">10:00 AM</span>
 
                             <i className="fa fa-calendar-o cal_right"></i>
