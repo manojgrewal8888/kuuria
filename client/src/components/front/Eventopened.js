@@ -2,7 +2,9 @@ import React, { PureComponent } from 'react';
 import { PieChart, Pie, Cell } from 'recharts';
 import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar";
-
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import axios from "axios";
 const data = [
     { name: 'Group A', value: 900 },
     { name: 'Group B', value: 300 },
@@ -11,9 +13,41 @@ const data = [
 ];
 const COLORS = ['#ffffff', '#008cff', '#FFd600'];
 
-export default class Opened extends PureComponent {
+class Opened extends PureComponent {
     static demoUrl = 'https://codesandbox.io/s/pie-chart-with-padding-angle-7ux0o';
-
+    constructor() {
+        super();
+        this.state = {
+            event:[],
+            showloader:true
+        };
+    } 
+    componentWillReceiveProps(nextProps) {
+         
+    }
+    async componentDidMount() { 
+       /*  var user_id = {
+            id:localStorage.getItem('_id')
+        }
+        if(this.props.state.location != ''){
+            await axios
+            .get("/api/event/viewevent", {event_id:event_id})
+            .then(res =>  { 
+                if(res){  
+                    this.setState({
+                        event:res.data, 
+                        showloader:false
+                    },console.log(this.state.event)) 
+                }
+                
+            }) 
+            .catch(err =>
+                this.setState({ 
+                    showloader:false
+                })  
+            ); 
+        }  */
+    }
     render() {
         return (
             <div>
@@ -33,7 +67,7 @@ export default class Opened extends PureComponent {
 
                             <i className="fa fa-calendar-o cal_left"></i>
                             <span className="date_o1">Start Date</span>
-                            <span className="date_o2">September 27th,2021</span>
+                            <span className="date_o2">{this.state.event.start_date ?? ''}</span>
                             <span className="date_o3">10:00 AM</span>
 
                             <i className="fa fa-calendar-o cal_right"></i>
@@ -77,3 +111,17 @@ export default class Opened extends PureComponent {
         );
     }
 }
+
+Opened.propTypes = { 
+    auth: PropTypes.object.isRequired,
+    errors: PropTypes.object.isRequired
+  };
+  const mapStateToProps = state => ({
+    auth: state.auth,
+    errors: state.errors
+  });
+  export default connect(
+    mapStateToProps,
+    {   }
+)(Opened); 
+
