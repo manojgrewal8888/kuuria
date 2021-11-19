@@ -1,13 +1,13 @@
 import React, { PureComponent } from 'react';
-import { PieChart, Pie, Cell } from 'recharts';
+import { ResponsiveContainer, PieChart, Cell, Pie, Legend } from 'recharts';
 import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import axios from "axios";
 const data = [
-    { name: 'Group A', value: 900 },
-    { name: 'Group B', value: 300 },
+    { name: 'Group A', value: 300 },
+    { name: 'Group B', value: 900 },
     { name: 'Group C', value: 300 },
 
 ];
@@ -18,35 +18,35 @@ class Opened extends PureComponent {
     constructor() {
         super();
         this.state = {
-            event:[],
-            showloader:true
+            event: [],
+            showloader: true
         };
-    } 
-    componentWillReceiveProps(nextProps) {
-         
     }
-    async componentDidMount() { 
-       /*  var user_id = {
-            id:localStorage.getItem('_id')
-        }
-        if(this.props.state.location != ''){
-            await axios
-            .get("/api/event/viewevent", {event_id:event_id})
-            .then(res =>  { 
-                if(res){  
-                    this.setState({
-                        event:res.data, 
-                        showloader:false
-                    },console.log(this.state.event)) 
-                }
-                
-            }) 
-            .catch(err =>
-                this.setState({ 
-                    showloader:false
-                })  
-            ); 
-        }  */
+    componentWillReceiveProps(nextProps) {
+
+    }
+    async componentDidMount() {
+        /*  var user_id = {
+             id:localStorage.getItem('_id')
+         }
+         if(this.props.state.location != ''){
+             await axios
+             .get("/api/event/viewevent", {event_id:event_id})
+             .then(res =>  { 
+                 if(res){  
+                     this.setState({
+                         event:res.data, 
+                         showloader:false
+                     },console.log(this.state.event)) 
+                 }
+                 
+             }) 
+             .catch(err =>
+                 this.setState({ 
+                     showloader:false
+                 })  
+             ); 
+         }  */
     }
     render() {
         return (
@@ -59,8 +59,8 @@ class Opened extends PureComponent {
 
                     <div className="right_home1">
 
-                   
-                        
+
+
 
                         <div className="date_format">
                             <div className="devide_opened"></div>
@@ -80,30 +80,33 @@ class Opened extends PureComponent {
                         <input className="input_opened" type="text" placeholder="//http karmatech.com" />
                         <div className="open_lin2"></div>
 
-                       
 
-                        <PieChart width={400} height={300} onMouseEnter={this.onPieEnter}>
-                            <Pie
-                                data={data}
-                                cx={180}
-                                cy={150}
-                                innerRadius={90}
-                                outerRadius={110}
-                                fill="#8884d8"
-                                paddingAngle={5}
-                                dataKey="value"
-                            >
-                                {data.map((entry, index) => (
-                                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                                ))}
-                            </Pie>
-                        </PieChart>
+                        <div style={{ width: '100%', height: 300 }}>
+                            <ResponsiveContainer>
+                                <PieChart width={600} height={500} onMouseEnter={this.onPieEnter}>
+                                    <Pie
+                                        data={data}
+                                        cx={300}
+                                        cy={150}
+                                        innerRadius={120}
+                                        outerRadius={150}
+                                        fill="#8884d8"
+                                        paddingAngle={5}
+                                        dataKey="value"
+                                    >
+                                        {data.map((entry, index) => (
+                                            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                                        ))}
+                                    </Pie>
+                                </PieChart>
+                            </ResponsiveContainer>
+                        </div>
 
-                     <div className="spans_ope">
-                         <div className="one_op1"><span className="open_spv"><i className="fa fa-circle white_cop"></i>Votes</span> </div>
-                         <div className="one_op2"><span className="open_spv2"><i className="fa fa-circle blue_cop"></i>Nominee</span> </div>
-                         <div className="one_op3"><span className="open_spv3"><i className="fa fa-circle yellow_cop"></i>Category</span> </div>
-                     </div>
+                        <div className="spans_ope">
+                            <div className="one_op1"><span className="open_spv"><i className="fa fa-circle white_cop"></i>Votes</span> </div>
+                            <div className="one_op2"><span className="open_spv2"><i className="fa fa-circle blue_cop"></i>Nominee</span> </div>
+                            <div className="one_op3"><span className="open_spv3"><i className="fa fa-circle yellow_cop"></i>Category</span> </div>
+                        </div>
 
 
                     </div>
@@ -113,16 +116,16 @@ class Opened extends PureComponent {
     }
 }
 
-Opened.propTypes = { 
+Opened.propTypes = {
     auth: PropTypes.object.isRequired,
     errors: PropTypes.object.isRequired
-  };
-  const mapStateToProps = state => ({
+};
+const mapStateToProps = state => ({
     auth: state.auth,
     errors: state.errors
-  });
-  export default connect(
+});
+export default connect(
     mapStateToProps,
-    {   }
-)(Opened); 
+    {}
+)(Opened);
 

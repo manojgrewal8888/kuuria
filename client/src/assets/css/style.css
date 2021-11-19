@@ -1040,10 +1040,10 @@ button.btn-pra:hover {
 
 /*for the eventopen dashboardddddddddddddddddddddddddddddddddddddddddddddd/*/
 
-.recharts-wrapper {
-  cursor: default;
-  width: 300px !important;
-  height: 200px;
+svg.recharts-surface {
+  
+  width: 40%;
+  height: 250px;
   float: right;
 }
 
@@ -1144,7 +1144,7 @@ i.fa.fa-calendar-o.cal_1 {
 
 span.date_o1 {
   position: absolute;
-  left: 80px;
+  left: 15%;
   font-size: 20px;
   top: 75px;
   background: none;
@@ -1152,7 +1152,7 @@ span.date_o1 {
 
 span.date_o2 {
   position: absolute;
-  left: 53px;
+  left: 10%;
   top: 105px;
   background: none;
   font-size: 15px;
@@ -1161,7 +1161,7 @@ span.date_o2 {
 span.date_o3 {
   position: absolute;
   top: 130px;
-  left: 98px;
+  left: 19%;
   background: none;
   font-size: 16px;
 }
@@ -1279,8 +1279,8 @@ span.count_x3 {
 .spans_ope {
   display: flex;
   position: relative;
-  top: 30%;
-  left: 65%;
+  top: 0px;
+  left: 60%;
 }
 
 i.fa.fa-circle.white_cop {
