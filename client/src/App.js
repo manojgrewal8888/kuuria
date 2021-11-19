@@ -73,6 +73,7 @@ import Forgetpassword from "./components/front/Forgetpassword";
 import Massagingven from "./components/front/Massagingven";
 import Nominationform from "./components/front/Nominationform";
 import Dashboardmain from "./components/front/Dashboardmain";
+import Varificationven from "./components/front/Varificationven";
 
 
 
@@ -152,6 +153,7 @@ class App extends Component {
                   <Route exact={true} path='/massages' component={Massagingven}  />
                   <Route exact={true} path='/nomination_form' component={Nominationform}  />
                   <Route exact={true} path='/maindashboard' component={Dashboardmain}    />
+                  <Route exact={true} path='/ven_verification' component={Varificationven}  />
 
                 
 

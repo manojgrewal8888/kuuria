@@ -55,14 +55,14 @@ class Sidebar extends Component {
                                 <span className='menu_it_em1' > Payments</span>
                             </div>
                         </Link>  
-                        <Link className="ven_under"  to='./massages'> 
-                            <div className={this.state.route == '/comments' ? 'custom_btn1' : 'custom_btn0' }>
+                        <Link className="ven_under"  to='/massages'> 
+                            <div className={this.state.route == '/massages' ? 'custom_btn1' : 'custom_btn0' }>
                                 <i className="fa fa-comment cus_vicon"></i>
                                 <span className='menu_it_em1' > Messages</span>
                             </div>
                         </Link>  
-                        <Link className="ven_under" to='/verification'> 
-                            <div className={this.state.route == '/verification' ? 'custom_btn1' : 'custom_btn0' }>
+                        <Link className="ven_under" to='/ven_verification'> 
+                            <div className={this.state.route == '/ven_verification' ? 'custom_btn1' : 'custom_btn0' }>
                                 <i className="fa fa-bar-chart cus_vicon"></i>
                                 <span className='menu_it_em1' > Verification</span>
                             </div>
