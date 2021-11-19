@@ -20,8 +20,9 @@ class Varificationven extends Component {
                             <Logout history={this.props.history} />
 
                            <div className="btnwrapvarv">
-                               <button className="venverbtn">Approved Events</button>
-                               <button className="venverbtn">Pending Events</button>
+                           <Link className="link_resetvar" to='/apprived_var'><button className="venverbtn">Approved Events</button></Link>
+                           <Link className="link_resetvar" to='/process_var'><button className="venverbtn">Pending Events</button></Link>
+                          
                            </div>
 
                            <div className="even1_var">

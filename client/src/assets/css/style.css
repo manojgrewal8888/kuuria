@@ -5537,6 +5537,15 @@ button.venverbtn {
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  width: 100%;
+}
+
+i.fa.fa-check-circle-o.tikspan_var {
+  font-size: 40px;
+  background: green;
+  border-radius: 60px;
+  border: 1px solid green;
+  margin-left: 48%;
 }
 
 p.ev1_vendorvar {

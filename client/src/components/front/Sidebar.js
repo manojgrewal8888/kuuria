@@ -61,8 +61,8 @@ class Sidebar extends Component {
                                 <span className='menu_it_em1' > Messages</span>
                             </div>
                         </Link>  
-                        <Link className="ven_under" to='/ven_verification'> 
-                            <div className={this.state.route == '/ven_verification' ? 'custom_btn1' : 'custom_btn0' }>
+                        <Link className="ven_under" to='/process_var'> 
+                            <div className={this.state.route == '/process_var' ? 'custom_btn1' : 'custom_btn0' }>
                                 <i className="fa fa-bar-chart cus_vicon"></i>
                                 <span className='menu_it_em1' > Verification</span>
                             </div>
