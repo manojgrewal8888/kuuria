@@ -49,7 +49,7 @@ export default class Revenu extends Component {
                             <div className="btn_salewr">
                                 <Link className="lix_btx" exact to='/'><button className="vote_sal">Votes</button></Link>
                                 <Link className="lix_btx" exact to='/'><button className="vote_sal">Tickets</button></Link>
-                            </div>
+                            </div>  
 
                             <p className="vote_datasal">Votes Data for the period. Each Bar represents a single day.</p>
 

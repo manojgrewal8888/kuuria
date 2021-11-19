@@ -83,13 +83,13 @@ class Opened extends PureComponent {
 
                         <div style={{ width: '100%', height: 300 }}>
                             <ResponsiveContainer>
-                                <PieChart width={600} height={500} onMouseEnter={this.onPieEnter}>
+                                <PieChart width={100} height={100} onMouseEnter={this.onPieEnter}>
                                     <Pie
                                         data={data}
-                                        cx={300}
-                                        cy={150}
-                                        innerRadius={120}
-                                        outerRadius={150}
+                                        cx={120}
+                                        cy={120}
+                                        innerRadius={80}
+                                        outerRadius={100}
                                         fill="#8884d8"
                                         paddingAngle={5}
                                         dataKey="value"

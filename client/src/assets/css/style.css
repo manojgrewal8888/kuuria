@@ -1040,12 +1040,12 @@ button.btn-pra:hover {
 
 /*for the eventopen dashboardddddddddddddddddddddddddddddddddddddddddddddd/*/
 
-svg.recharts-surface {
+/*svg.recharts-surface {
   
   width: 40%;
   height: 250px;
   float: right;
-}
+}*/
 
 .home_icon1 {
   background: none;
@@ -5403,6 +5403,13 @@ i.fa.fa-circle.circlemain_sdesh {
 
 i.fa.fa-bell.bell_main:hover ~ .dropcontan_maindeshb {
   display: block;
+}
+
+.recharts-responsive-container {
+  float: right;
+  border: 1px solid;
+  width: 40% !important;
+  height: 100%;
 }
 
 .numbertym_main {
