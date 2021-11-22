@@ -1,0 +1,38 @@
+ React HTML
+
+1 Event manager
+2 Modals For voting
+3 Categories and nominees pages for frontend
+4 Super admin Dashboard
+5 Templates for vendor event pages
+6 Email Templates
+7 Charts 
+8 Setting Page for admin for website configuration
+9 Google analytics and Seo mata tags
+10  Manage events (Create, edit ,delete list)
+    a General setting pages
+    b Categories (Add, edit,delete)
+    c SMS 
+    d organisation
+    e Apperance 
+
+
+React And Node apis
+1  Manage events (Create, edit ,delete list)
+    a General setting pages
+    b Categories (Add, edit,delete)
+    c SMS 
+    d organisation
+    e Apperance 
+2  Manage award tickets (Create, edit ,delete list)
+3  Manage award questions (Create, edit ,delete list)
+4  Start and end event nominationa / voting
+5  Manage nominees (Create, edit ,delete ) from event organiser
+6 Messages chat with vendor and admin (Bulk Msg APi)
+7 Show Event Revenue Details against events
+8 Setting Page for admin for website configuration
+9 Google analytics and Seo mata tags
+
+1 Show award events with nominees for voting
+2 Vote to a nominee with payment integration
+3 Add Search Filter on awards,categories,nominees, tickets,
