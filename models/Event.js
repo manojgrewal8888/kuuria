@@ -8,7 +8,11 @@ const EventSchema = new Schema({
   },
   status: {
     type: String,
-    default: 'In-active'
+    default: 1
+  },
+  published: {
+    type: String,
+    default: 1
   },
   eventname: {
     type: String,

@@ -7,6 +7,8 @@ const keys = require("../../config/keys");
 const validateEventInput = require("../../validation/events");
 const validateViewEventInput = require("../../validation/viewevents");
 const validateEditEventInput = require("../../validation/editevents");
+const validateFilterEventInput = require("../../validation/eventFilterByStatus");
+const validateSearchEventInput = require("../../validation/events/eventSearchByName");
 // Load User model
 const Event = require("../../models/Event");
 
@@ -28,7 +30,11 @@ router.post("/addevent", (req, res) => {
         const newEvent = new Event({
           eventname: req.body.eventname,
           start_date: req.body.start_date,
-          end_date: req.body.end_date
+          end_date: req.body.end_date,
+          status: req.body.status || 1,
+          published: req.body.published || 1,
+          timezone: req.body.timezone,
+          user_id: req.body.user_id,
         }); 
           newEvent
             .save()
@@ -62,6 +68,8 @@ router.post("/addevent", (req, res) => {
         eventname: req.body.eventname,
         start_date: req.body.start_date,
         end_date: req.body.end_date,
+        status: req.body.status || 1,
+        published: req.body.published || 1,
         timezone: req.body.timezone,
       };
       Event.updateOne({_id: req.body.event_id}, {$set:event},{upsert: true }, function(err, result) {
@@ -86,6 +94,31 @@ router.post("/addevent", (req, res) => {
       }
     });
   });
- 
+  router.get('/filter_by_status', function(req, res) {
+        const { errors, isValid } = validateFilterEventInput(req.body)
+        if (!isValid) {
+          return res.status(400).json(errors);
+        }
+        Event.find({status: req.body.status}).then(event=>{
+          if (event.length > 0) {
+            return res.json(event);
+          } else {
+            return res.json('event not found');
+          }
+        });
+  });
+  router.get('/search_by_name', async function(req, res) {
+    const { errors, isValid } = validateSearchEventInput(req.body)
+    if (!isValid) {
+      return res.status(400).json(errors);
+    }
+    Event.find({eventname: {'$regex': req.body.event_name}}).then(event=>{
+      if (event.length > 0) {
+        return res.json(event);
+      } else {
+        return res.json('event not found');
+      }
+    });
+  });  
 
 module.exports = router;

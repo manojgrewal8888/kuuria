@@ -109,6 +109,8 @@ router.post("/register", (req, res) => {
           eventname: req.body.eventname,
           start_date: req.body.start_date,
           end_date: req.body.end_date,
+          status: req.body.status || 1,
+          published: req.body.published || 1,
           timezone: req.body.timezone,
           user_id: req.body.user_id,
         }); 

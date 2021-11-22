@@ -8,6 +8,7 @@ module.exports = function validateEditEventInput(data) {
   data.start_date = !isEmpty(data.start_date) ? data.start_date : "";
   data.end_date = !isEmpty(data.end_date) ? data.end_date : "";
   data.timezone = !isEmpty(data.timezone) ? data.timezone : "";
+  data.user_id = !isEmpty(data.user_id) ? data.user_id : "";
   
     if (Validator.isEmpty(data.event_id)) {
         errors.event_id = "Event ID is required";
@@ -24,8 +25,11 @@ module.exports = function validateEditEventInput(data) {
     if (Validator.isEmpty(data.timezone)) {
         errors.timezone = "Timezone  is required";
     }
-return {
-    errors,
-    isValid: isEmpty(errors)
-  };
+    if (Validator.isEmpty(data.user_id)) {
+      errors.user_id = "user `id  is required";
+    }
+    return {
+        errors,
+        isValid: isEmpty(errors)
+    };
 };
