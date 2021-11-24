@@ -12,6 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import "./assets/css/style.css";
 import "./assets/css/forphone.css";
+import "./assets/css/smallscreen.css";
 
 import Menu from "./Menu";
 import Index from './components/front/Index';

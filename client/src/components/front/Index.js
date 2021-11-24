@@ -26,7 +26,11 @@ export default class Index extends Component {
 
 
                 <div className="section_two">
+
+                    <div className="btn_indexbrs">
                     <button className="brs_btn"><Link className="link_reset"   to='/ticket'>Browse</Link></button>
+
+                    </div>
 
                     <div className="cat-box">
                         <div className="cat-item"><h1 className="award_items"><Link className="link_reset"  to='/awardevent'>AWARD EVENT 1</Link></h1> </div>

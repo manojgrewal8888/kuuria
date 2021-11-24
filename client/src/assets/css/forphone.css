@@ -1,4 +1,4 @@
-@media screen and (min-device-width: 600px) and (max-device-width: 990px) {
+@media screen and (min-device-width: 601px) and (max-device-width: 990px) {
 
     .first_search {
         background-color: #ffffff;
@@ -55,12 +55,16 @@
         border: 1px solid white;
         border-radius: 10px;
         box-shadow: 2px 2px cyan;
-        margin-top: 50px;
-        margin-bottom: 20px;
+     
         font-size: 25px;
         transition: width 1s, height 1s, transform 3s;
-        margin-left: 30%;
+       
     }
+
+    .btn_indexbrs {
+        margin: auto;
+        width: 85%;
+      }
 
     .cat-box {
         width: 70%;
@@ -409,6 +413,48 @@
         padding-right: 5px;
         padding-left: 7%;
     }
+
+
+
+    .dropbtn_mainz {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .dropdown_downmainz {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-contentmainz {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+      .dropdown-contentmainz a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-contentmainz a:hover {background-color: #f1f1f1}
+
+      .dropdown_downmainz:hover .dropdown-contentmainz {
+        display: block;
+      }
+
+      .dropdown_downmainz .dropbtn_downmainz {
+        background-color: #3e8e41;
+      }
 
   
 }
