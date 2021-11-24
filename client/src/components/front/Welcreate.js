@@ -89,11 +89,11 @@ render() {
                             </div>  
                                  <span className="red-text12">{errors.start_date} </span>
                                 <span className="red-text13">{errors.end_date}</span>
-                            <select name="cars" id="cars"  onChange={this.onChange}  value={this.state.timezone}  id="timezone"  type="text"  className={'selector_create '+classnames("", { invalid: errors.timezone })}>
-                                <option value="timezone">Timezone</option>
-                                <option value="india">Indian</option>
-                                <option value="europe">European</option>
-                                <option value="aus">Australia</option>
+                            <select className="select_welcreate" name="cars" id="cars"  onChange={this.onChange}  value={this.state.timezone}  id="timezone"  type="text"  className={'selector_create '+classnames("", { invalid: errors.timezone })}>
+                                <option className="option_welcreate" value="timezone">Timezone</option>
+                                <option className="option_welcreate" value="india">Indian</option>
+                                <option className="option_welcreate" value="europe">European</option>
+                                <option className="option_welcreate" value="aus">Australia</option>
                             </select> 
                             <span className="red-text12">{errors.timezone}</span>
                           <button  type="submit"  className="create_cae link_reset">CREATE</button>

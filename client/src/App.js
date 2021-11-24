@@ -75,6 +75,8 @@ import Nominationform from "./components/front/Nominationform";
 import Dashboardmain from "./components/front/Dashboardmain";
 import Varificationven from "./components/front/Varificationven";
 import Varapproved from "./components/front/Varapproved";
+import Createform from "./components/front/Createform";
+import Seeforms from "./components/front/Seeforms";
 
 
 
@@ -125,7 +127,7 @@ class App extends Component {
                   <Route  exact={true} path='/votesubmit' component={Votesubmit} /> 
                   <Route  exact={true} path='/welcome' component={Welcome} />
                   <Route  exact={true} path='/create' component={Create} />
-                  <Route  exact={true} path='/editevent' component={Create} />
+                
                   <Route  exact={true} path='/eventdash' component={Eventdash} />
                   <Route  exact={true} path='/eventopened' component={Opened} />
                   <Route  exact={true} path='/eventsetting' component={Eventsetting} />
@@ -156,6 +158,8 @@ class App extends Component {
                   <Route exact={true} path='/maindashboard' component={Dashboardmain}    />
                   <Route exact={true} path='/process_var' component={Varificationven}  />
                   <Route exact={true} path='/apprived_var' component={Varapproved}  />
+                  <Route exact={true} path='/create_form' component={Createform}  />
+                  <Route exact={true} path='/see_forms'  component={Seeforms}    />
 
                 
 
