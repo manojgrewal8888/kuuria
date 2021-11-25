@@ -8,6 +8,7 @@ module.exports = function validateTicketInput(data) {
   data.price_votes = !isEmpty(data.price_votes) ? data.price_votes : "";
   data.venue = !isEmpty(data.venue) ? data.venue : "";
   data.number = !isEmpty(data.number) ? data.number : "";
+  data.user_id = !isEmpty(data.user_id) ? data.user_id : "";
 
   if (Validator.isEmpty(data.name)) {
     errors.name = "name field is required";
@@ -26,6 +27,9 @@ module.exports = function validateTicketInput(data) {
   }
   if (Validator.isEmpty(data.number)) {
     errors.number = "number field is required";
+  }
+  if (Validator.isEmpty(data.user_id)) {
+    errors.user_id = "user_id field is required";
   }
 
   return {

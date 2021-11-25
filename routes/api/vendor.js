@@ -112,7 +112,14 @@ router.get('/delete_ticket', function(req, res) {
   });
 });
 router.get('/ticket_list', async function(req,res) {
-  Ticket.find({}).then(ticket=>{
+  let errors = {};
+    if (!req.body.user_id) {
+      errors.user_id = "user_id id is required";
+    }
+    if (!_.isEmpty(errors)) {
+      return res.status(400).json(errors);
+    }
+  Ticket.find({user_id: req.body.user_id}).then(ticket=>{
       return res.json(ticket);
   });
 });
@@ -139,9 +146,9 @@ router.get('/get_all_question', function(req, res) {
     if (!_.isEmpty(errors)) {
       return res.status(400).json(errors);
     }
-    Question.findOne({user_id: req.body.user_id}).then(event=>{
-      if (event) {
-        return res.json(event);
+    Question.find({user_id: req.body.user_id}).then(question=>{
+      if (question.length > 0) {
+        return res.json(question);
       } else {
         return res.json('question not found');
       }
@@ -155,9 +162,9 @@ router.get('/view_question', function(req, res) {
     if (!_.isEmpty(errors)) {
       return res.status(400).json(errors);
     }
-    Question.find({_id: req.body.question_id}).then(event=>{
-      if (event.length > 0) {
-        return res.json(event);
+    Question.findOne({_id: req.body.question_id}).then(question=>{
+      if (question) {
+        return res.json(question);
       } else {
         return res.json('question not found');
       }
