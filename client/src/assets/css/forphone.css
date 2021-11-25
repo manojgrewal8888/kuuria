@@ -415,46 +415,92 @@
     }
 
 
+/*=============================dropdown menu--==================================*/
 
-    .dropbtn_mainz {
-        background-color: #4CAF50;
-        color: white;
-        padding: 16px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-      }
+.dropbtnzx {
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+}
+  
+ 
+.dropdownzx {
+    position: relative;
+    display: inline-block;
+    float: right;
+    margin-right: 25px;
+    width: 55%;
+}
+  
+  
+.dropdown-contentzx {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    z-index: 1;
+    width: 100%;
+    left: 0%;
+    color: white;
+}
 
-      .dropdown_downmainz {
-        position: relative;
-        display: inline-block;
-      }
+.wrapmenu {
+    display: inline-flex;
+    width: 100%;
+    height: 125px;
+    border-bottom: none;
+    background: #0F2650;
+}
 
-      .dropdown-contentmainz {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-      }
+.menu {
+    width: 50%;
+}
 
-      .dropdown-contentmainz a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
+.dropmenu_mai {
+    
+    width: 100%;
+    margin-top: 50px;
+}
+  
 
-      .dropdown-contentmainz a:hover {background-color: #f1f1f1}
+  .link_resetmen {
+    color:#ffffff;
+    padding: 15px 15px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .link_resetmen:hover {
+      background-color: #ffd600;
+      color: #0F2650;
+  }
+  
+  
+  .dropdownzx:hover .dropdown-contentzx {
+    display: block;
+  }
+  
+ 
+  .dropdownzx:hover .dropbtnzx {
+    background-color: #ffd600;
+    color: #0F2650;
+  }
 
-      .dropdown_downmainz:hover .dropdown-contentmainz {
-        display: block;
-      }
-
-      .dropdown_downmainz .dropbtn_downmainz {
-        background-color: #3e8e41;
-      }
-
+  .event_btn {
+    width: 25%;
+    margin-left: 8%;
+    height: 45px;
+    text-align: center;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 2px 2px cyan;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: width 1s, height 1s, transform 3s;
+}
   
 }

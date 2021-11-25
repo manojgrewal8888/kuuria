@@ -5504,7 +5504,23 @@ tr.table_1strowmainb {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 15px;
+  height: 35px;
 }
+
+
+input.searc_superaddesh {
+  background: #273c61;
+  border: none;
+  width: 90%;
+  margin: auto;
+  display: block;
+  border-radius: 25px;
+  height: 40px;
+  margin-top: 100px;
+  margin-bottom: 25px;
+  padding-left: 5%;
+}
+
 
 tr.table_1strowmainb2 {
   text-align: center;
@@ -5676,4 +5692,54 @@ option.option_welcreate {
 option.option_welcreate:hover {
   background: black;
   color: #ffd600;
+}
+
+.dropdownzx {
+  display: none;
+}
+
+option.option_event {
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+option.option_event:hover {
+  background: #ffd600;
+  color: #0F2650;
+}
+
+.numbertym_mainsup {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  width: 80%;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 10px 12px 26px 2px #00000033 inset;
+  display: grid;
+  grid-template-columns: 30% 30% 40%;
+  height: 150px;
+  margin-top: 115px;
+  border-radius: 8px;
+}
+
+button.doublebtn_maindsup {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  width: 100%;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+button.doublebtn_maindsup:hover {
+  background: #ffd600;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  width: 100%;
+  color: #0F2650;
+}
+
+.btnwrap_maindsup {
+  
+  width: 20%;
+  margin: auto;
 }

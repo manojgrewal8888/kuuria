@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 
 export default class Menu extends Component {
@@ -14,14 +15,18 @@ export default class Menu extends Component {
                     </div>
                     <div className="menu">
 
-
-                        <div class="dropdown_mainz">
-                            <button class="dropbtn_downmainz">Dropdown</button>
-                            <div class="dropdown-contentmainz">
-                                <a href="#">Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
+                        <div className="dropmenu_mai">
+                        <div class="dropdownzx">
+                            <button class="dropbtnzx">MENU</button>
+                            <div class="dropdown-contentzx">
+                            <Link className="link_resetmen"  to='/ticket'>Ticketing</Link>
+                            <Link className="link_resetmen"  to='/dashvote'>File Nomination</Link>
+                            <Link className="link_resetmen"  to='/signup'>Sign Up</Link>
+                            <Link className="link_resetmen"  to='/login'>Log In</Link>
+                            <Link className="link_resetmen"  to='/license'>Buy Licence</Link>
                             </div>
+                        </div>
+
                         </div>
 
 

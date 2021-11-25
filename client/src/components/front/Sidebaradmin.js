@@ -39,8 +39,8 @@ class Sidebaradmin extends Component {
                         </Link> 
                         <Link className="ven_under"  to='/manage_questions'> 
                             <div className={this.state.route == '/manage_questions' ? 'custom_btn1' : 'custom_btn0' }>
-                                <i className="fa fa-calendar-check-o cus_vicon"></i>
-                                <span className='menu_it_em1'>Manage Questions</span>
+                                <i className="fa fa-money cus_vicon"></i>
+                                <span className='menu_it_em1'>Revenue</span>
                             </div>
                         </Link> 
                         <Link className="ven_under"  to='/manage_ticket'> 

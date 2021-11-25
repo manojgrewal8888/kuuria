@@ -39,8 +39,10 @@ export default class Awardevent extends Component {
 
                         <select className="selector_eventz" name="ccode" id="ccode">
                             <option className="option_event" value="cides">VIP [90 CEDIS]</option>
-                            <option className="option_event" value="cides">bla bla</option>
-                            <option className="option_event" value="cides">bla bla</option>
+                            <option className="option_event" value="cides">VIP [90 CEDIS]</option>
+                            <option className="option_event" value="cides">VIP [90 CEDIS]</option>
+                            <option className="option_event" value="cides">VIP [90 CEDIS]</option>
+                            <option className="option_event" value="cides">VIP [90 CEDIS]</option>
                             
                         </select>   
                         <div className="radio_eventrez">

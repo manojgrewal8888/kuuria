@@ -337,4 +337,301 @@
         width: 60%;
         margin: auto;
     }
+
+    /*============================================for menu===============================*/
+
+    .dropbtnzx {
+        background-color: transparent;
+        color: #ffffff;
+        font-size: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        border-radius: 8px;
+        width: 100%;
+    }
+
+    img.img-headlogo {
+        height: auto;
+        width: 100px;
+        margin-left: 0px;
+        margin-top: 25px;
+    }
+      
+     
+    .dropdownzx {
+        position: relative;
+        display: inline-block;
+        float: right;
+        margin-right: 25px;
+        width: 85%;
+    }
+      
+      
+    .dropdown-contentzx {
+        display: none;
+        position: absolute;
+        background-color: #000000;
+        z-index: 1;
+        width: 100%;
+        left: 0%;
+        color: white;
+    }
+    
+    .wrapmenu {
+        display: inline-flex;
+        width: 100%;
+        height: 100px;
+        border-bottom: none;
+        background: #0F2650;
+    }
+    
+    .menu {
+        width: 50%;
+    }
+    
+    .dropmenu_mai {
+        width: 100%;
+        margin-top: 25px;
+    }
+      
+    
+    .link_resetmen {
+        color: #ffffff;
+        padding: 15px 10px;
+        text-decoration: none;
+        display: block;
+        font-size: 12px;
+    }
+      
+      .link_resetmen:hover {
+          background-color: #ffd600;
+          color: #0F2650;
+      }
+      
+      
+      .dropdownzx:hover .dropdown-contentzx {
+        display: block;
+      }
+      
+     
+      .dropdownzx:hover .dropbtnzx {
+        background-color: #ffd600;
+        color: #0F2650;
+      }
+
+      .wrap-ticketbox {
+        background: transparent;
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        grid-column-gap: 10px;
+        column-gap: 10px;
+        grid-row-gap: 20px;
+        row-gap: 20px;
+        place-items: center;
+        height: auto;
+    }
+
+    i.fa.fa-search.ticket-search {
+        background: none;
+        font-size: 20px;
+        color: grey;
+        position: absolute;
+        margin-left: 75%;
+        top: 220px;
+    }
+
+    input.search-input {
+        margin: auto;
+        display: block;
+        width: 70%;
+        height: 35px;
+        border-radius: 20px;
+        padding-left: 20px;
+        font-size: 20px;
+        color: grey;
+        background: #ffffff;
+    }
+
+    .browse-btn {
+        width: 40%;
+        margin-left: 6%;
+        height: 25px;
+        text-align: center;
+        background: transparent;
+        border: 1px solid white;
+        border-radius: 10px;
+        box-shadow: 2px 2px cyan;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        transition: width 1s, height 1s, transform 3s;
+    }
+
+    a.browse-a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        font-size: 15px;
+        font-family: "Poppins";
+        display: block;
+        margin-top: 0PX;
+        background: none;
+    }
+
+    h1.event_heading {
+        background: none;
+        text-align: center;
+        margin-top: 50px;
+        font-size: 25px;
+    }
+
+    p.hostp {
+        background: none;
+        color: #008cff;
+        text-align: center;
+        font-size: 20px;
+        letter-spacing: 10px;
+        margin-top: 15PX;
+        margin-bottom: 25px;
+    }
+
+    .wrap_host {
+        display: block;
+        background: none;
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    p.lefthost {
+        background: none;
+        font-size: 15px;
+        font-weight: 600;
+        text-align: center;
+        width: 100%;
+    }
+
+    .vlx {
+        border-bottom: 3px solid #ffffff;
+        height: 0px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    p.righthost {
+        background: none;
+        font-size: 15px;
+        font-weight: 600;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    p.abs_year {
+        color: #008cff;
+        background: none;
+        font-size: 30px;
+        display: block;
+        margin: auto;
+        width: 100%;
+        text-align: center;
+        position: static;
+    }
+
+    p.abs_date {
+        background: none;
+        color: #008cff;
+        font-size: 20px;
+        font-weight: bolder;
+        display: block;
+        width: 100%;
+        text-align: center;
+        position: static;
+    }
+
+    p.vanue {
+        background: none;
+        color: #ffd600;
+        width: 44%;
+        text-align: end;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    p.sub_vanue {
+        background: none;
+        font-size: 15px;
+        margin-left: 5px;
+        font-weight: 600;
+    }
+
+    .selector_eventz {
+        display: block;
+        width: 75%;
+        margin: auto;
+        height: 45px;
+        margin-top: 40px;
+        background: rgba(254, 254, 254, 0.6);
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        border-radius: 10px;
+        color: black;
+        font-size: 10px;
+        font-weight: 800;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    label.label_evevnts {
+        background: none;
+        font-size: 15px;
+        font-weight: 400;
+        color: #ffffff;
+        margin-left: 10px;
+    }
+
+    .event_btn {
+        width: 50%;
+        margin-left: 8%;
+        height: 25px;
+        text-align: center;
+        background: transparent;
+        border: 1px solid white;
+        border-radius: 10px;
+        box-shadow: 2px 2px cyan;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        transition: width 1s, height 1s, transform 3s;
+    }
+
+    .wrap_eventlog {
+        background: rgba(255, 255, 255, 0.2);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        width: 85%;
+        margin: auto;
+        height: 895px;
+        display: flow-root;
+        border-radius: 25px;
+        margin-top: 45px;
+    }
+
+    .radio_evevnt1 {
+        margin-left: 15px;
+    }
+
+
+
+    button.buybtn {
+        background: #273589;
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        border-radius: 10px;
+        height: 45px;
+        width: 55%;
+        display: block;
+        margin: auto;
+        margin-top: 50px;
+    }
 }

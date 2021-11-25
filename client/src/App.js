@@ -78,6 +78,7 @@ import Varificationven from "./components/front/Varificationven";
 import Varapproved from "./components/front/Varapproved";
 import Createform from "./components/front/Createform";
 import Seeforms from "./components/front/Seeforms";
+import Superadmin from "./components/front/Superadmin";
 
 
 
@@ -158,9 +159,10 @@ class App extends Component {
                   <Route exact={true} path='/nomination_form' component={Nominationform}  />
                   <Route exact={true} path='/maindashboard' component={Dashboardmain}    />
                   <Route exact={true} path='/process_var' component={Varificationven}  />
-                  <Route exact={true} path='/apprived_var' component={Varapproved}  />
+                  <Route exact={true} path='/approved_var' component={Varapproved}  />
                   <Route exact={true} path='/create_form' component={Createform}  />
                   <Route exact={true} path='/see_forms'  component={Seeforms}    />
+                  <Route exact={true} path='/super_admin' component={Superadmin}    />
 
                 
 
