@@ -79,6 +79,7 @@ import Varapproved from "./components/front/Varapproved";
 import Createform from "./components/front/Createform";
 import Seeforms from "./components/front/Seeforms";
 import Superadmin from "./components/front/Superadmin";
+import Organisationsa from "./components/front/Organisationsa";
 
 
 
@@ -163,6 +164,7 @@ class App extends Component {
                   <Route exact={true} path='/create_form' component={Createform}  />
                   <Route exact={true} path='/see_forms'  component={Seeforms}    />
                   <Route exact={true} path='/super_admin' component={Superadmin}    />
+                  <Route exact={true} path='/org_superadmin' component={Organisationsa}  />
 
                 
 
