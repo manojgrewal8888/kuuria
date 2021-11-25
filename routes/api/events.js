@@ -142,15 +142,31 @@ router.post("/addevent", (req, res) => {
         if (!isValid) {
           return res.status(400).json(errors);
         }
-        const newEventOrganisation = new EventOrganisation({
-          event_id: req.body.event_id,
-          name: req.body.name,
-          subdomain: req.body.subdomain
-        }); 
-        newEventOrganisation
-            .save()
-            .then(organisation => res.json(organisation))
-            .catch(err => console.log(err)); 
+        EventOrganisation.findOne({event_id: req.body.event_id}).then(event=>{
+          if (event) {
+            let organisation = {
+              name: req.body.name,
+              subdomain: req.body.subdomain
+             };
+             EventOrganisation.updateOne({event_id: req.body.event_id}, {$set:organisation},{upsert: true }, function(err, result) {
+                 if (err) {
+                     console.log(err);
+                 } else {
+                     return res.status(200).json('organisation updated successfully');
+                 }
+             });
+          } else {
+            const newEventOrganisation = new EventOrganisation({
+              event_id: req.body.event_id,
+              name: req.body.name,
+              subdomain: req.body.subdomain
+            }); 
+            newEventOrganisation
+                .save()
+                .then(organisation => res.json(organisation))
+                .catch(err => console.log(err)); 
+          }
+        });
   });
   router.get('/get_organisation', function(req, res) {
     const {errors, isValid} = validateGetOrganisationInput(req.body);
