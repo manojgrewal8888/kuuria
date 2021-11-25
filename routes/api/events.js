@@ -189,15 +189,32 @@ router.post("/addevent", (req, res) => {
         }
         let logo = req.files.logo[0].path;
         let banner = req.files.banner[0].path;
-        const newEventAppearance = new EventAppearance({
-          event_id: req.body.event_id,
-          logo: logo,
-          banner: banner,
-          color: req.body.color
-        }); 
-        newEventAppearance
-            .save()
-            .then(appearance => res.json(appearance))
-            .catch(err => console.log(err));
+        EventAppearance.findOne({event_id: req.body.event_id}).then(event=>{
+          if (event) {
+            let appearance = {
+              logo: logo,
+              banner: banner,
+              color: req.body.color
+             };
+             EventAppearance.updateOne({event_id: req.body.event_id}, {$set:appearance},{upsert: true }, function(err, result) {
+                 if (err) {
+                     console.log(err);
+                 } else {
+                     return res.status(200).json('appearance updated successfully');
+                 }
+             });
+          } else {
+            const newEventAppearance = new EventAppearance({
+              event_id: req.body.event_id,
+              logo: logo,
+              banner: banner,
+              color: req.body.color
+            }); 
+            newEventAppearance
+                .save()
+                .then(appearance => res.json(appearance))
+                .catch(err => console.log(err));
+          }
+        });
   });
 module.exports = router;

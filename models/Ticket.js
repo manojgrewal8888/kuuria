@@ -25,6 +25,10 @@ const TicketSchema = new Schema({
   number: {
     type: String,
     required: true
+  },
+  user_id: {
+    type: String,
+    required: true
   }
 });
 module.exports = Ticket = mongoose.model("ticket", TicketSchema);

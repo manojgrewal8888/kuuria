@@ -3,7 +3,10 @@ const router = express.Router();
 const validateCategoryInput = require("../../validation/eventcategory");
 const EventCategory = require("../../models/EventCategory");
 const Ticket = require("../../models/Ticket");
+const Question = require("../../models/vendor/Question");
 const validateTicketInput = require("../../validation/createTicket");
+const validateQuestionInput = require("../../validation/vendor/question");
+const validateUpdateQuestionInput = require("../../validation/vendor/updatequestion");
 const _ = require('lodash');
 const {ObjectId} = require('mongodb');
 
@@ -108,10 +111,90 @@ router.get('/delete_ticket', function(req, res) {
       }
   });
 });
-router.get('/ticket_list', async function(err,res) {
+router.get('/ticket_list', async function(req,res) {
   Ticket.find({}).then(ticket=>{
       return res.json(ticket);
   });
 });
+router.post('/add_question', function(req, res) {
+   const { errors, isValid } = validateQuestionInput(req.body);
+   // Check validation
+    if (!isValid) {
+      return res.status(400).json(errors);
+    }
 
+    let question = new Question({
+      user_id: req.body.user_id,
+      question: req.body.question,
+      status: req.body.status 
+    });
+
+    question.save().then(question => res.json(question)).catch(err => console.log(err));
+});
+router.get('/get_all_question', function(req, res) {
+  let errors = {};
+    if (!req.body.user_id) {
+      errors.user_id = "user_id id is required";
+    }
+    if (!_.isEmpty(errors)) {
+      return res.status(400).json(errors);
+    }
+    Question.findOne({user_id: req.body.user_id}).then(event=>{
+      if (event) {
+        return res.json(event);
+      } else {
+        return res.json('question not found');
+      }
+  });
+});
+router.get('/view_question', function(req, res) {
+  let errors = {};
+    if (!req.body.question_id) {
+      errors.question_id = "question_id is required";
+    }
+    if (!_.isEmpty(errors)) {
+      return res.status(400).json(errors);
+    }
+    Question.find({_id: req.body.question_id}).then(event=>{
+      if (event.length > 0) {
+        return res.json(event);
+      } else {
+        return res.json('question not found');
+      }
+   });
+});
+router.get('/delete_question', function(req, res) {
+  let errors = {};
+    if (!req.body.question_id) {
+      errors.question_id = "question id is required";
+    }
+    if (!_.isEmpty(errors)) {
+      return res.status(400).json(errors);
+    }
+    Question.deleteOne({ _id: ObjectId(req.body.question_id) }, function (err, results) {
+      if (err) {
+          console.log(err);
+      } else {
+          return res.status(200).json('question deleted successfully');
+      }
+  });
+});
+router.post('/update_question', function(req, res) {
+  const { errors, isValid } = validateUpdateQuestionInput(req.body);
+  // Check validation
+   if (!isValid) {
+     return res.status(400).json(errors);
+   }
+   let question = {
+     question: req.body.question,
+     status: req.body.status
+    };
+    Question.updateOne({_id: ObjectId(req.body.question_id)}, {$set:question},{upsert: true }, function(err, result) {
+        if (err) {
+            console.log(err);
+        } else {
+            return res.status(200).json('question updated successfully');
+        }
+    });
+});
 module.exports = router;
