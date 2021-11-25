@@ -67,6 +67,7 @@ import Chartdeno from "./components/front/Chartdeno";
 import Eventhome from './components/front/Event-home';
 import License from './components/front/License';
 import Sidebar from "./components/front/Sidebar";
+import AdminSidebar from "./components/front/AdminSidebar";
 
 import ManageEvents from "./components/front/Manageevent";
 
@@ -79,7 +80,7 @@ import Varapproved from "./components/front/Varapproved";
 import Createform from "./components/front/Createform";
 import Seeforms from "./components/front/Seeforms";
 import Superadmin from "./components/front/Superadmin";
-import Organisationsa from "./components/front/Organisationsa";
+//import Organisationsa from "./components/front/Organisationsa";
 
 
 
@@ -152,7 +153,8 @@ class App extends Component {
                   <Route  exact={true} path='/chartreal' component={Chartdeno}   /> 
                   <Route  exact={true} path='/license' component={License} />
                   <Route  exact={true} path='/eventhome' component={Eventhome} />
-                  <Route exact={true} path='/sidebar' component={Sidebar} />
+                  <Route exact={true} path='/sidebar' component={Sidebar} /> 
+                  <Route exact={true} path='/adminSidebar' component={AdminSidebar} /> 
 
                   <Route exact={true} path='/manage_events' component={ManageEvents} />
                   <Route exact={true} path='/forget_password' component={Forgetpassword} />
@@ -164,7 +166,7 @@ class App extends Component {
                   <Route exact={true} path='/create_form' component={Createform}  />
                   <Route exact={true} path='/see_forms'  component={Seeforms}    />
                   <Route exact={true} path='/super_admin' component={Superadmin}    />
-                  <Route exact={true} path='/org_superadmin' component={Organisationsa}  />
+                  {/* <Route exact={true} path='/org_superadmin' component={Organisationsa}  /> */}
 
                 
 
