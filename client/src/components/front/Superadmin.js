@@ -52,8 +52,9 @@ class Superadmin extends Component {
 
 
                                 <div className="btnwrap_maindsup">
-                                    <button className="doublebtn_maindsup">Organisation</button>
-
+                                    <Link to="/org_superadmin">
+                                        <button className="doublebtn_maindsup">Organisation</button>
+                                    </Link>
                                 </div>
 
                                 <Link to='/viewedit_question'>

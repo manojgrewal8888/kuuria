@@ -6,6 +6,7 @@ import { logoutUser } from "../../actions/authActions";
 import Sidebar from "./Sidebar";
 import Logout from "./Logout";
 import { Link } from "react-router-dom";
+import AdminSidebar from "./AdminSidebar";
 class Organisationsa extends Component {
 
     render() {
@@ -13,7 +14,7 @@ class Organisationsa extends Component {
         return (
             <div>
                 <div className="wrap_vwendor">
-                    <Sidebar history={this.props.history} />
+                    <AdminSidebar history={this.props.history} />
 
                     <div className="right_vendor">
                         <div className="right_subven">
