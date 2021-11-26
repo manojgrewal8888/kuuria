@@ -80,7 +80,7 @@ import Varapproved from "./components/front/Varapproved";
 import Createform from "./components/front/Createform";
 import Seeforms from "./components/front/Seeforms";
 import Superadmin from "./components/front/Superadmin";
-//import Organisationsa from "./components/front/Organisationsa";
+import Organisationsa from "./components/front/Orgsuperadmin";
 
 
 
@@ -109,75 +109,75 @@ class App extends Component {
       <>
         <Provider store={store}>
           <Router>
-                <Switch>
-                  <Route  exact={true} path='/' component={Index} /> 
-                  <Route  exact={true} path='/menu' component={Menu} />
-                  <Route  exact={true} path='/dashboard' component={Vendordash} />
-                  <Route  exact={true} path='/ticket' component={Tiket} />
-                  <Route  exact={true} path='/ticketevent' component={Awardevent} /> 
-                  <Route  exact={true} path='/signup' component={Signup} />
-                  <Route  exact={true} path='/login' component={Login} />
-                  <Route  exact={true} path='/mailhead' component={Emailhead} />
-                  <Route  exact={true} path='/forgetpassword' component={Forget}  />
-                  <Route  exact={true} path='/varification' component={Varification}  />
-                  <Route  exact={true} path='/login_confirmation' component={Justloged}  /> 
-                  <Route  exact={true} path='/dashnominee' component={Dashnom} />
-                  <Route  exact={true} path='/dashvote' component={Dashvoting} />
-                  <Route  exact={true} path='/votecheck' component={ Votecheck} />
-                  <Route  exact={true} path='/votebrowse' component={Votebrowse} />
-                  <Route  exact={true} path='/votenominee' component={Votenominee} />
-                  <Route  exact={true} path='/votepersonal' component={Votepersonal} />
-                  <Route  exact={true} path='/voteprices' component={Voteprices} />
-                  <Route  exact={true} path='/votesubmit' component={Votesubmit} /> 
-                  <Route  exact={true} path='/welcome' component={Welcome} />
-                  <Route  exact={true} path='/create' component={Create} />
-                
-                  <Route  exact={true} path='/eventdash' component={Eventdash} />
-                  <Route  exact={true} path='/eventopened' component={Opened} />
-                  <Route  exact={true} path='/eventsetting' component={Eventsetting} />
-                  <Route  exact={true} path='/settinggen' component={Settinggen} />
-                  <Route  exact={true} path='/settingorg' component={Settingorg} />
-                  <Route  exact={true} path='/settingapp' component={Settingapp} />
-                  <Route  exact={true} path='/category' component={Eventcategory} />
-                  <Route  exact={true} path='/eventnominee' component={Eventnominee} />
-                  <Route  exact={true} path='/nomineeinfo' component={Eventnominfo} />
-                  <Route  exact={true} path='/eventdelete' component={Eventdelete} /> 
-                  
-                  <Route  exact={true} path='/vendor_dashboard' component={Vendordash} />
-                  <Route  exact={true} path='/manage_questions' component={ManageQuestions}  />
-                  <Route  exact={true} path='/manage_ticket' component={Manageticket} />
-                  <Route  exact={true} path='/viewedit_ticket' component={Vieweditticket} />
-                  <Route  exact={true} path='/viewedit_question' component={VieweditQuestion} />
-                  <Route  exact={true} path='/revenue' component={Revenu}   /> 
-                  <Route  exact={true} path='/chart'  component={Chart}  />
-                  <Route  exact={true} path='/chartreal' component={Chartdeno}   /> 
-                  <Route  exact={true} path='/license' component={License} />
-                  <Route  exact={true} path='/eventhome' component={Eventhome} />
-                  <Route exact={true} path='/sidebar' component={Sidebar} /> 
-                  <Route exact={true} path='/adminSidebar' component={AdminSidebar} /> 
+            <Switch>
+              <Route exact={true} path='/' component={Index} />
+              <Route exact={true} path='/menu' component={Menu} />
+              <Route exact={true} path='/dashboard' component={Vendordash} />
+              <Route exact={true} path='/ticket' component={Tiket} />
+              <Route exact={true} path='/ticketevent' component={Awardevent} />
+              <Route exact={true} path='/signup' component={Signup} />
+              <Route exact={true} path='/login' component={Login} />
+              <Route exact={true} path='/mailhead' component={Emailhead} />
+              <Route exact={true} path='/forgetpassword' component={Forget} />
+              <Route exact={true} path='/varification' component={Varification} />
+              <Route exact={true} path='/login_confirmation' component={Justloged} />
+              <Route exact={true} path='/dashnominee' component={Dashnom} />
+              <Route exact={true} path='/dashvote' component={Dashvoting} />
+              <Route exact={true} path='/votecheck' component={Votecheck} />
+              <Route exact={true} path='/votebrowse' component={Votebrowse} />
+              <Route exact={true} path='/votenominee' component={Votenominee} />
+              <Route exact={true} path='/votepersonal' component={Votepersonal} />
+              <Route exact={true} path='/voteprices' component={Voteprices} />
+              <Route exact={true} path='/votesubmit' component={Votesubmit} />
+              <Route exact={true} path='/welcome' component={Welcome} />
+              <Route exact={true} path='/create' component={Create} />
 
-                  <Route exact={true} path='/manage_events' component={ManageEvents} />
-                  <Route exact={true} path='/forget_password' component={Forgetpassword} />
-                  <Route exact={true} path='/massages' component={Massagingven}  />
-                  <Route exact={true} path='/nomination_form' component={Nominationform}  />
-                  <Route exact={true} path='/maindashboard' component={Dashboardmain}    />
-                  <Route exact={true} path='/process_var' component={Varificationven}  />
-                  <Route exact={true} path='/approved_var' component={Varapproved}  />
-                  <Route exact={true} path='/create_form' component={Createform}  />
-                  <Route exact={true} path='/see_forms'  component={Seeforms}    />
-                  <Route exact={true} path='/super_admin' component={Superadmin}    />
-                  {/* <Route exact={true} path='/org_superadmin' component={Organisationsa}  /> */}
+              <Route exact={true} path='/eventdash' component={Eventdash} />
+              <Route exact={true} path='/eventopened' component={Opened} />
+              <Route exact={true} path='/eventsetting' component={Eventsetting} />
+              <Route exact={true} path='/settinggen' component={Settinggen} />
+              <Route exact={true} path='/settingorg' component={Settingorg} />
+              <Route exact={true} path='/settingapp' component={Settingapp} />
+              <Route exact={true} path='/category' component={Eventcategory} />
+              <Route exact={true} path='/eventnominee' component={Eventnominee} />
+              <Route exact={true} path='/nomineeinfo' component={Eventnominfo} />
+              <Route exact={true} path='/eventdelete' component={Eventdelete} />
 
-                
+              <Route exact={true} path='/vendor_dashboard' component={Vendordash} />
+              <Route exact={true} path='/manage_questions' component={ManageQuestions} />
+              <Route exact={true} path='/manage_ticket' component={Manageticket} />
+              <Route exact={true} path='/viewedit_ticket' component={Vieweditticket} />
+              <Route exact={true} path='/viewedit_question' component={VieweditQuestion} />
+              <Route exact={true} path='/revenue' component={Revenu} />
+              <Route exact={true} path='/chart' component={Chart} />
+              <Route exact={true} path='/chartreal' component={Chartdeno} />
+              <Route exact={true} path='/license' component={License} />
+              <Route exact={true} path='/eventhome' component={Eventhome} />
+              <Route exact={true} path='/sidebar' component={Sidebar} />
+              <Route exact={true} path='/adminSidebar' component={AdminSidebar} />
 
-                </Switch>
-                </Router>
-                </Provider>
-               
-               
-         
-        </>
-            );
+              <Route exact={true} path='/manage_events' component={ManageEvents} />
+              <Route exact={true} path='/forget_password' component={Forgetpassword} />
+              <Route exact={true} path='/massages' component={Massagingven} />
+              <Route exact={true} path='/nomination_form' component={Nominationform} />
+              <Route exact={true} path='/maindashboard' component={Dashboardmain} />
+              <Route exact={true} path='/process_var' component={Varificationven} />
+              <Route exact={true} path='/approved_var' component={Varapproved} />
+              <Route exact={true} path='/create_form' component={Createform} />
+              <Route exact={true} path='/see_forms' component={Seeforms} />
+              <Route exact={true} path='/super_admin' component={Superadmin} />
+              <Route exact={true} path='/org_superadmin' component={Organisationsa} />
+
+
+
+            </Switch>
+          </Router>
+        </Provider>
+
+
+
+      </>
+    );
   }
 }
-            export default App;
+export default App;
