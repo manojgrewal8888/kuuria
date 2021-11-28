@@ -873,6 +873,7 @@
         width: 100%;
         float: none;
         display: flow-root;
+        height: 500px;
     }
 
     .onestar {
