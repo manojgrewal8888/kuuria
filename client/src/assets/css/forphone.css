@@ -1033,10 +1033,10 @@
 
     .onestar3 {
         display: flex;
-        width: 70%;
+        width: 83%;
         background: #1D537F;
         border-radius: 10px;
-        margin-left: 15%;
+        margin-left: 0%;
     }
 
     .wrapright_sign {
