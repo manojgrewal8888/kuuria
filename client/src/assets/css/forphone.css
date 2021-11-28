@@ -961,4 +961,92 @@
         margin-bottom: 50px;
     }
 
+
+    .wrap_login {
+        display: block;
+        background: #0F2650;
+    }
+
+    .left_alisi {
+        width: 100%;
+        float: right;
+
+        height: 895px;
+    }
+
+    .wrapleft_sign {
+        width: 100%;
+    }
+
+    .left_alisi {
+        width: 100%;
+        float: none;
+        height: 500px;
+        display: flow-root;
+    }
+
+    .onestar {
+        display: flex;
+        width: 70%;
+        background: #1D537F;
+        border-radius: 10px;
+        float: none;
+        margin-top: 100px;
+        margin-left: 15%;
+    }
+
+    img.star_rese {
+        width: 30px;
+        height: 30px;
+        margin-left: 15px;
+        margin-top: 10px;
+    }
+
+    .onestar2 {
+        display: flex;
+        width: 70%;
+        background: #1D537F;
+        border-radius: 10px;
+        margin: auto;
+        margin-left: 15%;
+    }
+
+    .onestar3 {
+        display: flex;
+        width: 70%;
+        background: #1D537F;
+        border-radius: 10px;
+        margin-left: 15%;
+    }
+
+    .wrapright_sign {
+        width: 100%;
+    }
+
+    p.login_para1 {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        margin-top: 25px;
+        text-align: center;
+        color: #FFFFFF;
+        background: none;
+        letter-spacing: 5px;
+    }
+
+    .para_swrap {
+        background: #ffffff;
+        border-radius: 10px;
+        margin-left: 4%;
+        color: black;
+        border: 1px solid red;
+        width: 80%;
+    }
+
+    .space_sig2 {
+        margin-top: 50px;
+    }
+
+
 }
