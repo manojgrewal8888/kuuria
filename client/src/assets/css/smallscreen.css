@@ -859,4 +859,84 @@
         width: 100%;
     }
 
+    .wrap_login {
+        display: block;
+        background: #0F2650;
+    }
+
+    .wrapleft_sign {
+        width: 100%;
+        display: flow-root;
+    }
+
+    .left_alisi {
+        width: 100%;
+        float: none;
+        display: flow-root;
+    }
+
+    .onestar {
+        display: flex;
+        width: 70%;
+        background: #1D537F;
+        border-radius: 10px;
+        float: none;
+        margin-top: 50px;
+        margin-left: 15%;
+    }
+
+    .space_sig2 {
+        margin-top: 50px;
+    }
+
+    .onestar2 {
+        display: flex;
+        width: 70%;
+        background: #1D537F;
+        border-radius: 10px;
+        margin: auto;
+    }
+
+    .space_sig {
+        margin-top: 50px;
+        display: block;
+        margin-left: 15%;
+    }
+
+    .onestar3 {
+        display: flex;
+        width: 83%;
+        background: #1D537F;
+        border-radius: 10px;
+        border: 1px solid red;
+    }
+
+    p.para_str {
+        font-size: 12px;
+        width: 65%;
+        text-align: center;
+        margin: auto;
+        padding: 10px 0px;
+    }
+
+    .box1_login {
+        display: none;
+    }
+
+    .box2_login {
+        display: none;
+    }
+
+    .box3_login {
+        display: none;
+    }
+
+    .box4_login {
+        display: none;
+    }
+
+    .box1_sign {
+        display: none;
+    }
+
 }

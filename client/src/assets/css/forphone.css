@@ -1002,6 +1002,26 @@
         margin-top: 10px;
     }
 
+    .box1_login {
+        display: none;
+    }
+
+    .box2_login {
+        display: none;
+    }
+
+    .box3_login {
+        display: none;
+    }
+
+    .box4_login {
+        display: none;
+    }
+
+    .box1_sign {
+        display: none;
+    }
+
     .onestar2 {
         display: flex;
         width: 70%;
