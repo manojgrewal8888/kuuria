@@ -5834,7 +5834,7 @@ button.addbtn_orgsa {
   height: 35px;
   width: 20%;
   float: right;
-
+  cursor: pointer;
   margin-top: 25px;
   color: #ffd600;
   font-weight: 500;
@@ -6000,4 +6000,18 @@ span.lil_doubp2 {
   top: -100px;
   font-size: 10px;
   left: 43%;
+}
+
+.wrapitsear {
+  position: relative;
+}
+
+i.far.fa-question-circle.seariorg {
+  position: absolute;
+  top: 0%;
+  left: 90%;
+  background: #c4c4c4;
+  font-size: 35px;
+  border-radius: 20px;
+  cursor: pointer;
 }

@@ -6,6 +6,7 @@ import { logoutUser } from "../../actions/authActions";
 import Sidebar from "./Sidebar";
 import Logout from "./Logout";
 import { Link } from "react-router-dom";
+import AdminSidebar from "./AdminSidebar";
 class Superadmin extends Component {
 
     render() {
@@ -13,7 +14,7 @@ class Superadmin extends Component {
         return (
             <div>
                 <div className="wrap_vwendor">
-                    <Sidebar history={this.props.history} />
+                    <AdminSidebar history={this.props.history} />
 
                     <div className="right_vendor">
                         <div className="right_subven">
@@ -61,8 +62,11 @@ class Superadmin extends Component {
                                     <button className="manage_btnv"><i class="fa fa-plus-circle adicon_v"></i>Add To List</button>
                                 </Link>
 
-                                <input type="search" name="" id="" placeholder="Search Organisation" className="searc_superaddesh" />
 
+                                <div className="wrapitsear">
+                                    <input type="search" name="" id="" placeholder="Search Organisation" className="searc_superaddesh" />
+                                    <i className='far fa-question-circle seariorg'></i>
+                                </div>
 
 
                                 <div className="tablewrapformain">

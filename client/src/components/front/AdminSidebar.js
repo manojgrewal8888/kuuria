@@ -40,7 +40,7 @@ class AdminSidebar extends Component {
 
                         <Link className="ven_under" to='/dashboard'>
                             <div className={this.state.route == '/dashboard' ? 'custom_btn1' : 'custom_btn0'}>
-                                <i className="fa fa-money cus_vicon"></i>
+                                <i className="fas fa-hand-holding-usd cus_vicon"></i>
                                 <span className='menu_it_em1'>Revenue</span>
                             </div>
                         </Link>
@@ -61,28 +61,28 @@ class AdminSidebar extends Component {
 
                         <Link className="ven_under" to='/dashboard'>
                             <div className={this.state.route == '/dashboard' ? 'custom_btn1' : 'custom_btn0'}>
-                                <i className="fa fa-comments-o cus_vicon"></i>
+                                <i className="far fa-comment-alt cus_vicon"></i>
                                 <span className='menu_it_em1'>Massages</span>
                             </div>
                         </Link>
 
                         <Link className="ven_under" to='/dashboard'>
                             <div className={this.state.route == '/dashboard' ? 'custom_btn1' : 'custom_btn0'}>
-                                <i className="fa fa-file-photo-o cus_vicon"></i>
+                                <i className="fas fa-edit cus_vicon"></i>
                                 <span className='menu_it_em1'>Templates</span>
                             </div>
                         </Link>
 
                         <Link className="ven_under" to='/dashboard'>
                             <div className={this.state.route == '/dashboard' ? 'custom_btn1' : 'custom_btn0'}>
-                                <i className="fa fa-bar-chart cus_vicon"></i>
+                                <i className="	fab fa-sellsy cus_vicon"></i>
                                 <span className='menu_it_em1'>Google Analytics</span>
                             </div>
                         </Link>
 
                         <Link className="ven_under" to='/dashboard'>
                             <div className={this.state.route == '/dashboard' ? 'custom_btn1' : 'custom_btn0'}>
-                                <i className="fa fa-scribd cus_vicon"></i>
+                                <i className="	fas fa-user-secret cus_vicon"></i>
                                 <span className='menu_it_em1'>SEO Meta Tag</span>
                             </div>
                         </Link>

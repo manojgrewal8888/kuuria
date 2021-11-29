@@ -25,7 +25,10 @@ class Organisationsa extends Component {
                                 </button>
                             </div>
 
-                            <input type="search" id="" name="" className="orgsa_searxh" />
+                            <div className="wrapitsear">
+                                <input type="search" id="" name="" className="orgsa_searxh" />
+                                <i className='far fa-question-circle seariorg'></i>
+                            </div>
 
                             <div className="addorgsa">
                                 <button className="addbtn_orgsa">

@@ -1,11 +1,11 @@
-import React, { Component } from "react"; 
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { logoutUser } from "../../actions/authActions"; 
-import { Link } from "react-router-dom"; 
+import { logoutUser } from "../../actions/authActions";
+import { Link } from "react-router-dom";
 class Sidebar extends Component {
     constructor() {
-        super(); 
+        super();
         this.state = {
             route: ""
         };
@@ -15,77 +15,77 @@ class Sidebar extends Component {
         this.props.logoutUser(this.props.history);
     };
 
-    componentDidMount(){
-        if(this.props.history.location.pathname){
+    componentDidMount() {
+        if (this.props.history.location.pathname) {
             this.setState({
                 route: this.props.history.location.pathname
             });
         }
     }
-    
-    render() {  
+
+    render() {
         const { user } = this.props.auth;
-        
+
         return (
             <>
                 <div className="left_vendor">
                     <div className="left_subven">
-                    <Link className="linx_ven" to="/"><img src="./img/kuria-new.png" alt="" className="res_venlogo" /></Link> 
+                        <Link className="linx_ven" to="/"><img src="./img/kuria-new.png" alt="" className="res_venlogo" /></Link>
                         <Link className="ven_under" to='/dashboard'>
-                            <div className={this.state.route == '/dashboard' ? 'custom_btn1' : 'custom_btn0' }>
+                            <div className={this.state.route == '/dashboard' ? 'custom_btn1' : 'custom_btn0'}>
                                 <i className="fa fa-home cus_vicon"></i>
                                 <span className='menu_it_em1'>Dashboard</span>
                             </div>
-                        </Link> 
-                        <Link className="ven_under"  to='/manage_questions'> 
-                            <div className={this.state.route == '/manage_questions' ? 'custom_btn1' : 'custom_btn0' }>
+                        </Link>
+                        <Link className="ven_under" to='/manage_questions'>
+                            <div className={this.state.route == '/manage_questions' ? 'custom_btn1' : 'custom_btn0'}>
                                 <i className="fa fa-calendar-check-o cus_vicon"></i>
                                 <span className='menu_it_em1'>Manage Questions</span>
                             </div>
-                        </Link> 
-                        <Link className="ven_under"  to='/manage_ticket'> 
-                            <div className={this.state.route == '/manage_ticket' || this.state.route == '/viewedit_ticket' ? 'custom_btn1' : 'custom_btn0' }>
-                                <i className="fa fa-ticket cus_vicon"></i>
+                        </Link>
+                        <Link className="ven_under" to='/manage_ticket'>
+                            <div className={this.state.route == '/manage_ticket' || this.state.route == '/viewedit_ticket' ? 'custom_btn1' : 'custom_btn0'}>
+                                <i className="fas fa-ticket-alt cus_vicon"></i>
                                 <span className='menu_it_em1' > MANAGE TICKET</span>
                             </div>
-                        </Link>  
-                        <Link className="ven_under"  to='/revenue'> 
-                            <div className={this.state.route == '/revenue' ? 'custom_btn1' : 'custom_btn0' }>
-                                <i className="fa fa-money cus_vicon"></i>
+                        </Link>
+                        <Link className="ven_under" to='/revenue'>
+                            <div className={this.state.route == '/revenue' ? 'custom_btn1' : 'custom_btn0'}>
+                                <i className="fas fa-hand-holding-usd  cus_vicon"></i>
                                 <span className='menu_it_em1' > Payments</span>
                             </div>
-                        </Link>  
-                        <Link className="ven_under"  to='/massages'> 
-                            <div className={this.state.route == '/massages' ? 'custom_btn1' : 'custom_btn0' }>
-                                <i className="fa fa-comment cus_vicon"></i>
+                        </Link>
+                        <Link className="ven_under" to='/massages'>
+                            <div className={this.state.route == '/massages' ? 'custom_btn1' : 'custom_btn0'}>
+                                <i className="far fa-comment-alt  cus_vicon"></i>
                                 <span className='menu_it_em1' > Messages</span>
                             </div>
-                        </Link>  
-                        <Link className="ven_under" to='/process_var'> 
-                            <div className={this.state.route == '/process_var' ? 'custom_btn1' : 'custom_btn0' }>
+                        </Link>
+                        <Link className="ven_under" to='/process_var'>
+                            <div className={this.state.route == '/process_var' ? 'custom_btn1' : 'custom_btn0'}>
                                 <i className="fa fa-bar-chart cus_vicon"></i>
                                 <span className='menu_it_em1' > Verification</span>
                             </div>
-                        </Link>  
-                        <Link className="ven_under"  to='/nomination_form'> 
-                            <div className={this.state.route == '/nomination_form' ? 'custom_btn1' : 'custom_btn0' }>
-                                <i className="fa fa-file-text-o cus_vicon"></i>
+                        </Link>
+                        <Link className="ven_under" to='/nomination_form'>
+                            <div className={this.state.route == '/nomination_form' ? 'custom_btn1' : 'custom_btn0'}>
+                                <i className="fas fa-pen-alt cus_vicon"></i>
                                 <span className='menu_it_em1' >Nomination Form</span>
                             </div>
                         </Link>
-                        
-                        <Link className="ven_under"  to='/manage_events'> 
-                            <div className={this.state.route == '/manage_events' || this.state.route == '/eventopened' ? 'custom_btn1' : 'custom_btn0' }>
+
+                        <Link className="ven_under" to='/manage_events'>
+                            <div className={this.state.route == '/manage_events' || this.state.route == '/eventopened' ? 'custom_btn1' : 'custom_btn0'}>
                                 <i className="fa fa-street-view cus_vicon"></i>
                                 <span className='menu_it_em1' >Manage Events</span>
                             </div>
-                        </Link>  
-                        <Link className="ven_under"  onClick={this.onLogoutClick}> 
-                            <div className={this.state.route == '/forms' ? 'custom_btn1' : 'custom_btn0' }>
+                        </Link>
+                        <Link className="ven_under" onClick={this.onLogoutClick}>
+                            <div className={this.state.route == '/forms' ? 'custom_btn1' : 'custom_btn0'}>
                                 <i className="fa fa-key"></i>
                                 <span className='menu_it_em1' >Log out</span>
                             </div>
-                        </Link>  
+                        </Link>
                         {/* <button
                             style={{
                                 width: "150px",
@@ -98,7 +98,7 @@ class Sidebar extends Component {
                         >Logout &nbsp;
                             <i className="fa fa-sign-out"></i>
                         </button> */}
-                       
+
                     </div>
                 </div>
             </>
