@@ -81,6 +81,8 @@ import Createform from "./components/front/Createform";
 import Seeforms from "./components/front/Seeforms";
 import Superadmin from "./components/front/Superadmin";
 import Organisationsa from "./components/front/Orgsuperadmin";
+import Googleana from "./components/front/Googleana";
+import Supermsg from "./components/front/Supermsg";
 
 
 
@@ -167,6 +169,8 @@ class App extends Component {
               <Route exact={true} path='/see_forms' component={Seeforms} />
               <Route exact={true} path='/super_admin' component={Superadmin} />
               <Route exact={true} path='/org_superadmin' component={Organisationsa} />
+              <Route exact={true} path='/google_analytic' component={Googleana} />
+              <Route exact={true} path='/super_ad_msg' component={Supermsg} />
 
 
 

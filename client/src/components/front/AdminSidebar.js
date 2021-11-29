@@ -59,7 +59,7 @@ class AdminSidebar extends Component {
                             </div>
                         </Link>
 
-                        <Link className="ven_under" to='/dashboard'>
+                        <Link className="ven_under" to='/super_ad_msg'>
                             <div className={this.state.route == '/dashboard' ? 'custom_btn1' : 'custom_btn0'}>
                                 <i className="far fa-comment-alt cus_vicon"></i>
                                 <span className='menu_it_em1'>Massages</span>
@@ -73,7 +73,7 @@ class AdminSidebar extends Component {
                             </div>
                         </Link>
 
-                        <Link className="ven_under" to='/dashboard'>
+                        <Link className="ven_under" to='/google_analytic'>
                             <div className={this.state.route == '/dashboard' ? 'custom_btn1' : 'custom_btn0'}>
                                 <i className="	fab fa-sellsy cus_vicon"></i>
                                 <span className='menu_it_em1'>Google Analytics</span>

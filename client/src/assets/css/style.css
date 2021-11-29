@@ -6015,3 +6015,47 @@ i.far.fa-question-circle.seariorg {
   border-radius: 20px;
   cursor: pointer;
 }
+
+p.anal_h {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+input.uianaly {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  height: 40px;
+  width: 60%;
+  border-radius: 15px;
+  margin: auto;
+  display: block;
+  color: #ffffff;
+  font-size: 15px;
+  padding-left: 15px;
+}
+
+button.anabtnsub {
+  background: rgba(0, 140, 255, 0.44);
+  border: none;
+  border-radius: 10px;
+  height: 35px;
+  width: 100%;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+button.anabtnsub:hover {
+  background-color: #ffd600;
+  color: #0F2650;
+
+}
+
+.wrapana_btn {
+  width: 20%;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 250px;
+
+}
