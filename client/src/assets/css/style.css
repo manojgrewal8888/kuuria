@@ -4217,6 +4217,7 @@ p.vote_datasal {
 table.table_rev {
   width: 90%;
   margin: auto;
+
 }
 
 td.datetab {
@@ -5881,4 +5882,122 @@ td.table_orgsupsa3 {
   float: right;
   margin-right: 10%;
   margin-top: 10px;
+}
+
+.double_prog {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flow-root;
+}
+
+.evenbtn_doublep {
+
+  width: 20%;
+  margin: auto;
+  margin-top: 125px;
+}
+
+button.btn_doublep {
+  background: #0F2650;
+  border-radius: 10px;
+  height: 35px;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+
+button.btn_doublep:hover {
+  background: #ffd600;
+  border-radius: 8px;
+  height: 35px;
+  width: 100%;
+  border: 1px solid #ffffff;
+  color: #0F2650;
+  font-weight: 600;
+}
+
+.double_prog1 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 100px;
+}
+
+.item_doublep {
+
+  width: 80%;
+  margin: auto;
+}
+
+table.table_doup {
+  background: #0F2650;
+
+  border-radius: 8px;
+  width: 30%;
+  margin-left: 10%;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.dot-resizedpro {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+svg.CircularProgressbar.mod_doublep1 {
+  width: 60%;
+  margin: auto;
+  display: block;
+}
+
+svg.CircularProgressbar.mod_doublep2 {
+  width: 60%;
+  margin: auto;
+  display: block;
+}
+
+td.tabledouprow1 {
+
+  width: 50%;
+  text-align: center;
+  padding: 10px 5px;
+}
+
+tr.tabledouprow {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  display: block;
+  width: 80%;
+  margin: auto;
+}
+
+td.tabledouprow1 {
+  width: 70%;
+  text-align: start;
+  padding: 10px 5px;
+  font-size: 10px;
+}
+
+td.tabledouprow2 {
+  width: 70%;
+  text-align: end;
+  padding: 10px 5px;
+  font-size: 10px;
+}
+
+span.lil_doubp {
+  position: relative;
+  top: -100px;
+  left: 43%;
+  font-size: 10px;
+}
+
+span.lil_doubp2 {
+  position: relative;
+  top: -100px;
+  font-size: 10px;
+  left: 43%;
 }

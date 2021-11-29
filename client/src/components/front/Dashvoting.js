@@ -7,9 +7,15 @@ import { Link } from "react-router-dom";
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+
 function Dashvoting() {
     const [value, setValue] = useState()
-    const [modalIsOpen, setModalIsOpen] = useState(false)
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    const percentage = 1200;
+    const percentage1 = 1800;
     return (
         <div>
 
@@ -49,47 +55,47 @@ function Dashvoting() {
                             </button>
                             <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
                                 <div id="voteper">
-                                <div className="one_wraappp">
-                                    <div className="one_rightxvc">
+                                    <div className="one_wraappp">
+                                        <div className="one_rightxvc">
 
-                                        <img src="./img/user.png" alt="" className="resize_uservote" />
-                                        <p className="Nom1_check">Nominee 1 Name</p>
-                                        <p className="check_votep">Category Name</p>
-                                        <p className="about_check">About</p>
-                                        <p className="dummy_txtvote">Kuuria is the best voting platfortm which proviodes u a huge range of functionality so you can manage your events easly and professionally</p>
-                                    </div>
-                                    <div className="check_vertical"></div>
+                                            <img src="./img/user.png" alt="" className="resize_uservote" />
+                                            <p className="Nom1_check">Nominee 1 Name</p>
+                                            <p className="check_votep">Category Name</p>
+                                            <p className="about_check">About</p>
+                                            <p className="dummy_txtvote">Kuuria is the best voting platfortm which proviodes u a huge range of functionality so you can manage your events easly and professionally</p>
+                                        </div>
+                                        <div className="check_vertical"></div>
 
-                                    <div className="one_rightxvc2">
-                                        <Link to="/votesubmit"><button className="vote_check">VOTE</button></Link>
-                                        <Link to='/dashnpminee'><button className="back_check">Back To Nominee</button> </Link>
+                                        <div className="one_rightxvc2">
+                                            <Link to="/votesubmit"><button className="vote_check">VOTE</button></Link>
+                                            <Link to='/dashnpminee'><button className="back_check">Back To Nominee</button> </Link>
+                                        </div>
                                     </div>
-                                </div>
 
                                 </div>
 
 
                                 <div id="votepr">
-                                <div className="rightv_browse">
-                                    <p className="fill_personal">Fill In Personal Information</p>
-                                    <input className="input_person" type="text" name="" id="" placeholder="Name" />
-                                    <input className="input_person" type="email" name="" id="" placeholder="E_mail" />
-                                    <div className="resetx">
-                                        <PhoneInput
-                                            defaultCountry="ind"
-                                            value={value}
-                                            onChange={setValue}
-                                            inputClass="inputmod"
-                                            buttonClass="btnxmod"
-                                            containerClass="lcontainxmod"
-                                            dropdownClass="dropxmod"
-                                            searchClass="searchxmod"
-                                        />
-                                    </div>
-                                    <div className="wrapx_btnp">
-                                        <Link className="link_reset" to='/votebrowse'><button className="back_person">Back</button></Link>
-                                        <Link className="link_reset" to='/voteprice'><button className="proceed_person">Proceed</button></Link>
-                                    </div>
+                                    <div className="rightv_browse">
+                                        <p className="fill_personal">Fill In Personal Information</p>
+                                        <input className="input_person" type="text" name="" id="" placeholder="Name" />
+                                        <input className="input_person" type="email" name="" id="" placeholder="E_mail" />
+                                        <div className="resetx">
+                                            <PhoneInput
+                                                defaultCountry="ind"
+                                                value={value}
+                                                onChange={setValue}
+                                                inputClass="inputmod"
+                                                buttonClass="btnxmod"
+                                                containerClass="lcontainxmod"
+                                                dropdownClass="dropxmod"
+                                                searchClass="searchxmod"
+                                            />
+                                        </div>
+                                        <div className="wrapx_btnp">
+                                            <Link className="link_reset" to='/votebrowse'><button className="back_person">Back</button></Link>
+                                            <Link className="link_reset" to='/voteprice'><button className="proceed_person">Proceed</button></Link>
+                                        </div>
 
                                     </div>
 
@@ -152,7 +158,109 @@ function Dashvoting() {
                                     </div>
                                 </div>
 
+
+
+                                <div className="double_prog">
+
+                                    <div className="evenbtn_doublep">
+                                        <button className="btn_doublep">EVENTS</button>
+                                    </div>
+
+
+                                    <div className="double_prog1">
+                                        <div className="item_doublep">
+                                            <CircularProgressbar
+                                                className="mod_doublep1"
+                                                value={4000}
+                                                text={`${percentage}votes`}
+                                                styles={buildStyles({
+
+
+                                                    textSize: '10px',
+                                                    pathTransitionDuration: 0.5,
+                                                    textColor: '#ffd600',
+                                                    trailColor: '#ffd600',
+                                                    backgroundColor: '#ffd600',
+                                                    pathColor: '#ffd600',
+                                                })}
+                                            />
+                                            <span className="lil_doubp">GHS 12000</span>
+                                        </div>
+
+
+
+                                        <div className="item_doublep">
+                                            <CircularProgressbar
+                                                className="mod_doublep1"
+                                                value={700}
+                                                text={`${percentage}Ticket`}
+                                                styles={buildStyles({
+
+
+                                                    textSize: '10px',
+                                                    pathTransitionDuration: 0.5,
+                                                    textColor: '#008CFF',
+                                                    trailColor: '#008cff',
+                                                    backgroundColor: '#008cff',
+                                                    pathColor: '#008cff',
+                                                    strokeLinecap: "butt",
+                                                })}
+                                            />
+
+                                            <span className="lil_doubp2">GHS 12000</span>
+                                        </div>
+
+                                    </div>
+
+                                    <table className="table_doup">
+
+                                        <tr className="tabledouprow">
+                                            <td className="tabledouprow1">Category 1</td>
+                                            <td className="tabledouprow2">GHS 1000</td>
+
+                                        </tr>
+
+                                        <tr className="tabledouprow">
+                                            <td className="tabledouprow1">Category 1</td>
+                                            <td className="tabledouprow2">GHS 1000</td>
+
+                                        </tr>
+
+                                        <tr className="tabledouprow">
+                                            <td className="tabledouprow1">Category 1</td>
+                                            <td className="tabledouprow2">GHS 1000</td>
+
+                                        </tr>
+
+                                        <tr className="tabledouprow">
+                                            <td className="tabledouprow1">Category 1</td>
+                                            <td className="tabledouprow2">GHS 1000</td>
+
+                                        </tr>
+
+                                        <tr className="tabledouprow">
+                                            <td className="tabledouprow1">Category 1</td>
+                                            <td className="tabledouprow2">GHS 1000</td>
+
+                                        </tr>
+                                        <div className="dot-resizedpro">
+                                            <span className="dot" onClick="currentSlide(1)"></span>
+                                            <span className="dot" onClick="currentSlide(2)"></span>
+                                            <span className="dot" onClick="currentSlide(3)"></span>
+
+                                        </div>
+                                    </table>
+
+                                </div>
+
+
+
                                 <div className="demspace"></div>
+
+
+
+
+
                             </Modal>
                         </div>
                         <div className="item_umb"><p className="nom_subumb"> Nominee 2</p></div>
