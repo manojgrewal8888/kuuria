@@ -3,12 +3,17 @@ import { Link } from 'react-router-dom'
 import Sidebar from "./Sidebar";
 import Logout from "./Logout";
 import { connect } from "react-redux";
-import { logoutUser } from "../../actions/authActions"; 
+import { logoutUser } from "../../actions/authActions";
 import PropTypes from "prop-types";
 class Manageticket extends Component {
     constructor() {
         super();
+<<<<<<< HEAD
+        this.state = {
+            route: ""
+=======
         this.state = { 
+>>>>>>> a6f3d43c918ebf68e9aac981faecf822bd1b76d4
         };
       }
     componentWillReceiveProps(nextProps) { 
@@ -27,21 +32,36 @@ class Manageticket extends Component {
         return (
             <div>
                 <div className="wrap_vwendor">
-                <Sidebar history={this.props.history}/>  
+                    <Sidebar history={this.props.history} />
 
                     <div className="right_vendor">
+                        <div className="dropmenu_sidebar">
+                            <div class="menusidebar">
+                                <button class="dropbtnzsidebar"><i class='fas fa-list'></i></button>
+                                <div class="dropdown-contentside">
+                                    <Link className="link_resetmen" to='/dashboard'>Dashboard</Link>
+                                    <Link className="link_resetmen" to='/manage_questions'>Manage Questions</Link>
+                                    <Link className="link_resetmen" to='/manage_ticket'>Manage Tickets</Link>
+                                    <Link className="link_resetmen" to='/massages'>Massages</Link>
+                                    <Link className="link_resetmen" to='/process_var'>Varification</Link>
+                                    <Link className="link_resetmen" to='/nomination_form'>Nomination Form</Link>
+                                    <Link className="link_resetmen" to='/manage_events'>Manage Events</Link>
+                                </div>
+                            </div>
+
+                        </div>
                         <div className="right_subven">
-                        <Logout history={this.props.history}/>
+                            <Logout history={this.props.history} />
 
                             <input className="man_tickets" type="search" placeholder="Search Ticket" name="" id="" />
-                            <Link   to='/viewedit_ticket'> 
-                            <button className="mantik_btnv"><i class="fa fa-plus-circle adicon_tik"></i>Add Ticket</button>
+                            <Link to='/viewedit_ticket'>
+                                <button className="mantik_btnv"><i class="fa fa-plus-circle adicon_tik"></i>Add Ticket</button>
                             </Link>
                             <div className="tick_wraping">
                                 <div className="wrapman_tik">
-                                    <p className="mantik_pra_0">No event found , Go to  <Link className="mantik_pra2" to='/viewedit_ticket'>Manage events</Link> and create one.</p> 
+                                    <p className="mantik_pra_0">No event found , Go to  <Link className="mantik_pra2" to='/viewedit_ticket'>Manage events</Link> and create one.</p>
                                 </div>
-                               {/*  <div className="wrapman_tik">
+                                {/*  <div className="wrapman_tik">
                                     <p className="mantik_pra">Award Event 2021</p>
                                     <Link className="mantik_pra2" to='/viewedit_ticket'>Select to View and Edit</Link>
                                 </div>

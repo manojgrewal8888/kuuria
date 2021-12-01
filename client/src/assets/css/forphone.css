@@ -1070,3 +1070,58 @@
 
 
 }
+
+button.dropbtnzsidebar {
+    width: 40%;
+    margin-top: 50px;
+}
+
+.menusidebar:hover .dropdown-contentside {
+    display: block;
+}
+
+.menusidebar:hover .dropbtnzsidebar {
+    background-color: #ffd600;
+    color: #0F2650;
+}
+
+.dropbtnzsidebar {
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.dropdownzx {
+    position: relative;
+    display: inline-block;
+    float: right;
+    margin-right: 25px;
+    width: 55%;
+}
+
+.menusidebar {
+    position: relative;
+    display: inline-block;
+    float: none;
+    margin-left: 25px;
+    width: 55%;
+}
+
+
+.dropdown-contentside {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    z-index: 1;
+    width: 100%;
+    left: 0%;
+    color: white;
+}
+
+.dropmenu_sidebar {
+    display: block;
+}

@@ -6052,6 +6052,10 @@ button.anabtnsub:hover {
 
 }
 
+.dropmenu_sidebar {
+  display: none;
+}
+
 .wrapana_btn {
   width: 20%;
   margin: auto;
