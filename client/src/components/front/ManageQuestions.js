@@ -7,10 +7,23 @@ import Sidebar from "./Sidebar";
 import Logout from "./Logout";
 import { Link } from "react-router-dom";
 class ManageQuestions extends Component {
-    onLogoutClick = e => {
-        e.preventDefault();
-        this.props.logoutUser(this.props.history);
-      };
+    constructor() {
+        super();
+        this.state = { 
+        };
+      }
+    componentWillReceiveProps(nextProps) { 
+        if (nextProps.errors) {
+          this.setState({
+            errors: nextProps.errors
+          });
+        }
+      }
+    componentDidMount() { 
+        if (this.props.auth.isAuthenticated == false) {
+        this.props.history.push("/login");
+        }
+    }
     render() {
         const { user } = this.props.auth;
         return (
@@ -65,14 +78,13 @@ class ManageQuestions extends Component {
     }
 }
 
-ManageQuestions.propTypes = {
-    logoutUser: PropTypes.func.isRequired,
-    auth: PropTypes.object.isRequired
-  };
-  const mapStateToProps = state => ({
-    auth: state.auth
-  });
-  export default connect(
-    mapStateToProps,
-    { logoutUser }
-  )(ManageQuestions);
+    ManageQuestions.propTypes = { 
+        auth: PropTypes.object.isRequired
+    };
+    const mapStateToProps = state => ({
+        auth: state.auth
+    });
+    export default connect(
+        mapStateToProps,
+        {   }
+    )(ManageQuestions);

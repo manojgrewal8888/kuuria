@@ -5,11 +5,24 @@ import { connect } from "react-redux";
 import Sidebar from "./Sidebar";
 import Logout from "./Logout";
 
-
-
-
 class Massagingven extends Component {
-
+    constructor() {
+        super();
+        this.state = { 
+        };
+      }
+    componentWillReceiveProps(nextProps) { 
+        if (nextProps.errors) {
+          this.setState({
+            errors: nextProps.errors
+          });
+        }
+      }
+    componentDidMount() { 
+        if (this.props.auth.isAuthenticated == false) {
+        this.props.history.push("/login");
+        }
+    }
     render() {
         return (
             <div>
@@ -83,7 +96,17 @@ class Massagingven extends Component {
     }
 }
 
-export default Massagingven;
+Massagingven.propTypes = { 
+    auth: PropTypes.object.isRequired
+  };
+  const mapStateToProps = state => ({
+    auth: state.auth
+  });
+  export default connect(
+    mapStateToProps,
+    {   }
+  )(Massagingven);
+ 
 
 
 

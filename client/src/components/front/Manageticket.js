@@ -7,15 +7,22 @@ import { logoutUser } from "../../actions/authActions";
 import PropTypes from "prop-types";
 class Manageticket extends Component {
     constructor() {
-        super(); 
-        this.state = {
-            route: ""
+        super();
+        this.state = { 
         };
+      }
+    componentWillReceiveProps(nextProps) { 
+        if (nextProps.errors) {
+          this.setState({
+            errors: nextProps.errors
+          });
+        }
+      }
+    componentDidMount() { 
+        if (this.props.auth.isAuthenticated == false) {
+        this.props.history.push("/login");
+        }
     }
-    onLogoutClick = e => {
-        e.preventDefault();
-        this.props.logoutUser(this.props.history);
-    };
     render() {
         return (
             <div>

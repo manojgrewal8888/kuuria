@@ -1,8 +1,29 @@
 import React, { Component } from 'react'
 import Menu from './Menu';
-
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-export default class Index extends Component {
+class Index extends Component {
+
+    constructor() {
+        super();
+        this.state = { 
+        };
+      }
+    componentWillReceiveProps(nextProps) { 
+        if (nextProps.errors) {
+          this.setState({
+            errors: nextProps.errors
+          });
+        }
+      }
+  componentDidMount() {
+      
+   
+  }
+
+
+
     render() {
         return (
             <div>
@@ -112,3 +133,17 @@ export default class Index extends Component {
         )
     }
 }
+
+
+Index.propTypes = { 
+    auth: PropTypes.object.isRequired,
+    errors: PropTypes.object.isRequired
+  };
+  const mapStateToProps = state => ({
+    auth: state.auth,
+    errors: state.errors
+  });
+  export default connect(
+    mapStateToProps,
+    {  }
+  )(Index);

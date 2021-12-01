@@ -18,6 +18,9 @@ class Manageevent extends Component {
          
     }
     async componentDidMount() { 
+        if (this.props.auth.isAuthenticated == false) {
+            this.props.history.push("/login");
+        }
         var user_id = {
             id:localStorage.getItem('_id')
         }
@@ -60,7 +63,7 @@ class Manageevent extends Component {
 
                             <div className="modser_wrap">
                                 <div className="sermod_box">
-                                    <input type="search" name="" id="" placeholder='Enter event name' className="modx_ser" />
+                                    <input type="search" name=""  id="" placeholder='Enter event name' className="modx_ser" />
                                     <i className="fa fa-search icon_serchmodp" ></i>
                                 </div>
                                 <select className="mod_sel" name="cars" id="cars">
@@ -80,7 +83,7 @@ class Manageevent extends Component {
                                 </tr>
                                 
                                 
-                                {this.state.showloader&& <tr>
+                                {this.state.showloader && <tr>
                                     <td colspan='6' class='text-center'><p class="loading">Loading Events</p></td>
                                 </tr> }
                                 {
