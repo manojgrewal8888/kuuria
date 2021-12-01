@@ -62,9 +62,12 @@ export const logoutUser = (history) => dispatch => {
   
   // Remove token from local storage
   localStorage.removeItem("jwtToken");
+  localStorage.removeItem("_id");
+  localStorage.removeItem("name");
+  localStorage.removeItem("email");
   // Remove auth header for future requests
   setAuthToken(false);
   // Set current user to empty object {} which will set isAuthenticated to false
   dispatch(setCurrentUser({}));
-  history.push("/");
+  history.push("/login");
 };

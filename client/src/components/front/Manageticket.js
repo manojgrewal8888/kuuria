@@ -8,14 +8,26 @@ import PropTypes from "prop-types";
 class Manageticket extends Component {
     constructor() {
         super();
+<<<<<<< HEAD
         this.state = {
             route: ""
+=======
+        this.state = { 
+>>>>>>> a6f3d43c918ebf68e9aac981faecf822bd1b76d4
         };
+      }
+    componentWillReceiveProps(nextProps) { 
+        if (nextProps.errors) {
+          this.setState({
+            errors: nextProps.errors
+          });
+        }
+      }
+    componentDidMount() { 
+        if (this.props.auth.isAuthenticated == false) {
+        this.props.history.push("/login");
+        }
     }
-    onLogoutClick = e => {
-        e.preventDefault();
-        this.props.logoutUser(this.props.history);
-    };
     render() {
         return (
             <div>

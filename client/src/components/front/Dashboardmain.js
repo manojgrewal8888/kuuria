@@ -7,7 +7,23 @@ import Sidebar from "./Sidebar";
 import Logout from "./Logout";
 import { Link } from "react-router-dom";
 class Dashboardmain extends Component {
-
+  constructor() {
+    super();
+    this.state = { 
+    };
+  }
+componentWillReceiveProps(nextProps) { 
+    if (nextProps.errors) {
+      this.setState({
+        errors: nextProps.errors
+      });
+    }
+  }
+componentDidMount() { 
+if (this.props.auth.isAuthenticated == false) {
+  this.props.history.push("/login");
+}
+}
   render() {
 
     return (
@@ -33,19 +49,19 @@ class Dashboardmain extends Component {
               <div className="toptymmain">
                 <div className="numbertym_main">
                   <div className="onetymmain">
-                    <p className="numtym">2</p>
+                    <p className="numtym">0</p>
                     <p className="fistoneword">Award Events</p>
                   </div>
                   <div className="onetymmain">
-                    <p className="numtym">78</p>
+                    <p className="numtym">0</p>
                     <p className="fistoneword">Approved Nominees</p>
                   </div>
                   <div className="onetymmain">
-                    <p className="numtym">2,300</p>
+                    <p className="numtym">0</p>
                     <p className="fistoneword">Total Votes</p>
                   </div>
                   <div className="onetymmain">
-                    <p className="numtym">1,206</p>
+                    <p className="numtym">0</p>
                     <p className="fistoneword">Tickets Sold</p>
                   </div>
                 </div>
@@ -122,5 +138,16 @@ class Dashboardmain extends Component {
     )
   }
 }
-
-export default Dashboardmain
+ 
+Dashboardmain.propTypes = { 
+    auth: PropTypes.object.isRequired,
+    errors: PropTypes.object.isRequired
+  };
+  const mapStateToProps = state => ({
+    auth: state.auth,
+    errors: state.errors
+  });
+  export default connect(
+    mapStateToProps,
+    {  }
+  )(Dashboardmain);

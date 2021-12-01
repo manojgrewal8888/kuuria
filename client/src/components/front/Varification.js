@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Emailhead from './Emailhead';
-
-export default class Varification extends Component {
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+class Varification extends Component {
     render() {
         return (
             <div>
@@ -37,3 +38,14 @@ export default class Varification extends Component {
         )
     }
 }
+
+Varification.propTypes = {
+    auth: PropTypes.object.isRequired
+  };
+  const mapStateToProps = state => ({
+    auth: state.auth
+  });
+  export default connect(
+    mapStateToProps,
+    {  }
+  )(Varification);

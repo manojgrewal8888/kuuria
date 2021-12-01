@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Sidebar from "./Sidebar";
 import Logout from "./Logout";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import {
     BarChart, Bar, XAxis, YAxis,
     CartesianGrid
@@ -28,7 +30,24 @@ const data = [
     { name: 'I', x: 50, y: 50, z: 0 },
 ];
 
-export default class Revenu extends Component {
+class Revenu extends Component {
+    constructor() {
+        super();
+        this.state = { 
+        };
+      }
+    componentWillReceiveProps(nextProps) { 
+        if (nextProps.errors) {
+          this.setState({
+            errors: nextProps.errors
+          });
+        }
+      }
+    componentDidMount() { 
+        if (this.props.auth.isAuthenticated == false) {
+        this.props.history.push("/login");
+        }
+    }
     render() {
         return (
             <div>
@@ -128,3 +147,14 @@ export default class Revenu extends Component {
         )
     }
 }
+
+Revenu.propTypes = { 
+    auth: PropTypes.object.isRequired
+};
+const mapStateToProps = state => ({
+    auth: state.auth
+});
+export default connect(
+    mapStateToProps,
+    {  }
+)(Revenu);

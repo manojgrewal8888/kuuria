@@ -7,7 +7,23 @@ import Sidebar from "./Sidebar";
 import Logout from "./Logout";
 import { Link } from "react-router-dom";
 class Varificationven extends Component {
-
+    constructor() {
+        super();
+        this.state = { 
+        };
+      }
+    componentWillReceiveProps(nextProps) { 
+        if (nextProps.errors) {
+          this.setState({
+            errors: nextProps.errors
+          });
+        }
+      }
+    componentDidMount() { 
+        if (this.props.auth.isAuthenticated == false) {
+        this.props.history.push("/login");
+        }
+    }
     render() {
 
         return (
@@ -66,5 +82,14 @@ class Varificationven extends Component {
         )
     }
 }
-
-export default Varificationven
+ 
+Varificationven.propTypes = {
+    auth: PropTypes.object.isRequired
+  };
+  const mapStateToProps = state => ({
+    auth: state.auth
+  });
+  export default connect(
+    mapStateToProps,
+    {  }
+  )(Varificationven);

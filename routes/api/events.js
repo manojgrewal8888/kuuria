@@ -60,7 +60,7 @@ router.post("/addevent", (req, res) => {
       }
     });
   });
-  router.get('/viewevent', (req, res) => {
+  router.post('/viewevent', (req, res) => { 
     const { errors, isValid } = validateViewEventInput(req.body);
     // Check validation
     if (!isValid) {
@@ -68,7 +68,7 @@ router.post("/addevent", (req, res) => {
     }
     Event.findOne({_id: req.body.event_id}).then(event=>{
       if (event) {
-        return res.json(event);
+        return res.status(200).json(event);
       } else {
         return res.json('event not found');
       }
