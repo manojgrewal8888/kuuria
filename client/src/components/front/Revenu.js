@@ -33,12 +33,27 @@ export default class Revenu extends Component {
         return (
             <div>
                 <div className="wrap_vwendor">
-                <Sidebar history={this.props.history}/>  
+                    <Sidebar history={this.props.history} />
 
                     <div className="right_vendor">
+                        <div className="dropmenu_sidebar">
+                            <div class="menusidebar">
+                                <button class="dropbtnzsidebar"><i class='fas fa-list'></i></button>
+                                <div class="dropdown-contentside">
+                                    <Link className="link_resetmen" to='/dashboard'>Dashboard</Link>
+                                    <Link className="link_resetmen" to='/manage_questions'>Manage Questions</Link>
+                                    <Link className="link_resetmen" to='/manage_ticket'>Manage Tickets</Link>
+                                    <Link className="link_resetmen" to='/massages'>Massages</Link>
+                                    <Link className="link_resetmen" to='/process_var'>Varification</Link>
+                                    <Link className="link_resetmen" to='/nomination_form'>Nomination Form</Link>
+                                    <Link className="link_resetmen" to='/manage_events'>Manage Events</Link>
+                                </div>
+                            </div>
+
+                        </div>
                         <div className="right_subven">
-                            <Logout history={this.props.history}/>
-                       
+                            <Logout history={this.props.history} />
+
 
                             <div className="sales_wr">
                                 <p className="sal_pra">SALES</p>
@@ -49,7 +64,7 @@ export default class Revenu extends Component {
                             <div className="btn_salewr">
                                 <Link className="lix_btx" exact to='/'><button className="vote_sal">Votes</button></Link>
                                 <Link className="lix_btx" exact to='/'><button className="vote_sal">Tickets</button></Link>
-                            </div>  
+                            </div>
 
                             <p className="vote_datasal">Votes Data for the period. Each Bar represents a single day.</p>
 
@@ -68,41 +83,41 @@ export default class Revenu extends Component {
 
                                 <div className="stat_chart">
                                     <div className="wrap_tbx">
-                                    <table className="table_rev" >
-                                        <tr>
-                                            <th>Votes<i class="fa fa-caret-down crt_tb" aria-hidden="true"></i></th>
+                                        <table className="table_rev" >
+                                            <tr>
+                                                <th>Votes<i class="fa fa-caret-down crt_tb" aria-hidden="true"></i></th>
 
-                                        </tr>
-                                        <tr className="trtabdat">
-                                            <td className="datetab">01 Sep</td>
-                                            <td className="pricxetab">70 Cedis</td>
-                                            
-                                        </tr>
-                                        <tr className="trtabdat">
-                                            <td className="datetab">01 Sep</td>
-                                            <td className="pricxetab">70 Cedis</td>
-                                            
-                                        </tr>
+                                            </tr>
+                                            <tr className="trtabdat">
+                                                <td className="datetab">01 Sep</td>
+                                                <td className="pricxetab">70 Cedis</td>
 
-                                        <tr className="trtabdat">
-                                            <td className="datetab">01 Sep</td>
-                                            <td className="pricxetab">70 Cedis</td>
-                                            
-                                        </tr>
+                                            </tr>
+                                            <tr className="trtabdat">
+                                                <td className="datetab">01 Sep</td>
+                                                <td className="pricxetab">70 Cedis</td>
 
-                                        <tr className="trtabdat">
-                                            <td className="datetab">01 Sep</td>
-                                            <td className="pricxetab">70 Cedis</td>
-                                            
-                                        </tr>
+                                            </tr>
 
-                                        <tr className="trtabdat">
-                                            <td className="datetab">01 Sep</td>
-                                            <td className="pricxetab">70 Cedis</td>
-                                            
-                                        </tr>
-                                       
-                                    </table>
+                                            <tr className="trtabdat">
+                                                <td className="datetab">01 Sep</td>
+                                                <td className="pricxetab">70 Cedis</td>
+
+                                            </tr>
+
+                                            <tr className="trtabdat">
+                                                <td className="datetab">01 Sep</td>
+                                                <td className="pricxetab">70 Cedis</td>
+
+                                            </tr>
+
+                                            <tr className="trtabdat">
+                                                <td className="datetab">01 Sep</td>
+                                                <td className="pricxetab">70 Cedis</td>
+
+                                            </tr>
+
+                                        </table>
                                     </div>
                                 </div>
                             </div>

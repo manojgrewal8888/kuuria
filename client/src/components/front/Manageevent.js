@@ -2,43 +2,43 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import Sidebar from "./Sidebar";  
-import Logout from "./Logout"; 
+import Sidebar from "./Sidebar";
+import Logout from "./Logout";
 import axios from "axios";
-const moment= require('moment');
+const moment = require('moment');
 class Manageevent extends Component {
     constructor() {
         super();
         this.state = {
-            events:[],
-            showloader:true
+            events: [],
+            showloader: true
         };
-    } 
-    componentWillReceiveProps(nextProps) {
-         
     }
-    async componentDidMount() { 
+    componentWillReceiveProps(nextProps) {
+
+    }
+    async componentDidMount() {
         var user_id = {
-            id:localStorage.getItem('_id')
+            id: localStorage.getItem('_id')
         }
-        if(user_id){
+        if (user_id) {
             await axios
-            .post("/api/users/getevents", user_id)
-            .then(res =>  { 
-                if(res){  
+                .post("/api/users/getevents", user_id)
+                .then(res => {
+                    if (res) {
+                        this.setState({
+                            events: res.data,
+                            showloader: false
+                        })
+                    }
+
+                })
+                .catch(err =>
                     this.setState({
-                        events:res.data, 
-                        showloader:false
-                    }) 
-                }
-                
-            }) 
-            .catch(err =>
-                this.setState({ 
-                    showloader:false
-                })  
-            ); 
-        } 
+                        showloader: false
+                    })
+                );
+        }
     }
     render() {
 
@@ -50,9 +50,24 @@ class Manageevent extends Component {
                     <Sidebar history={this.props.history} />
 
                     <div className="right_vendor">
+                        <div className="dropmenu_sidebar">
+                            <div class="menusidebar">
+                                <button class="dropbtnzsidebar"><i class='fas fa-list'></i></button>
+                                <div class="dropdown-contentside">
+                                    <Link className="link_resetmen" to='/dashboard'>Dashboard</Link>
+                                    <Link className="link_resetmen" to='/manage_questions'>Manage Questions</Link>
+                                    <Link className="link_resetmen" to='/manage_ticket'>Manage Tickets</Link>
+                                    <Link className="link_resetmen" to='/massages'>Massages</Link>
+                                    <Link className="link_resetmen" to='/process_var'>Varification</Link>
+                                    <Link className="link_resetmen" to='/nomination_form'>Nomination Form</Link>
+                                    <Link className="link_resetmen" to='/manage_events'>Manage Events</Link>
+                                </div>
+                            </div>
+
+                        </div>
                         <div className="right_subven">
 
-                          {/*  <Logout /> */}
+                            {/*  <Logout /> */}
                             <Link className="Link_reset" to='/create'><button className="modnew_btn">
                                 <i className="fa fa-plus icon_modp" ></i>
                                 New Event
@@ -66,7 +81,7 @@ class Manageevent extends Component {
                                 <select className="mod_sel" name="cars" id="cars">
                                     <option value="volvo">Filter By Status</option>
                                     <option value="saab">Active</option>
-                                    <option value="mercedes">In-Active</option> 
+                                    <option value="mercedes">In-Active</option>
                                 </select>
                             </div>
                             <table className="mod table">
@@ -78,20 +93,20 @@ class Manageevent extends Component {
                                     <th className="mod_th">Status</th>
                                     <th className="mod_th">Actions</th>
                                 </tr>
-                                
-                                
-                                {this.state.showloader&& <tr>
+
+
+                                {this.state.showloader && <tr>
                                     <td colspan='6' class='text-center'><p class="loading">Loading Events</p></td>
-                                </tr> }
+                                </tr>}
                                 {
-                                    Object.entries(this.state.events).map( (val,key) => {  
-                                        var start_date = val[1].start_date != '' ? moment(new Date(val[1].start_date)).format('MMMM Do YYYY') : '';  
-                                        var end_date = val[1].end_date != '' ? moment(new Date(val[1].end_date)).format('MMMM Do YYYY') : '';  
-                                            return (	
-                                                <>
+                                    Object.entries(this.state.events).map((val, key) => {
+                                        var start_date = val[1].start_date != '' ? moment(new Date(val[1].start_date)).format('MMMM Do YYYY') : '';
+                                        var end_date = val[1].end_date != '' ? moment(new Date(val[1].end_date)).format('MMMM Do YYYY') : '';
+                                        return (
+                                            <>
                                                 <tr>
-                                                <td>{key+1}</td> 
-                                                <td>{val[1].eventname ? val[1].eventname : ''}</td> 
+                                                    <td>{key + 1}</td>
+                                                    <td>{val[1].eventname ? val[1].eventname : ''}</td>
                                                     <td className='mod_th2'>{start_date ? start_date : ''}</td>
                                                     <td className='mod_th2'>{end_date ? end_date : ''}</td>
                                                     <td className='mod_th2'>
@@ -99,20 +114,20 @@ class Manageevent extends Component {
                                                     </td>
                                                     <td className='mod_th2'>
                                                         <Link className="Link_reset" to='/eventopened'>
-                                                         <i className="fa fa-eye icon_datemodp" ></i>
+                                                            <i className="fa fa-eye icon_datemodp" ></i>
                                                         </Link> &nbsp;&nbsp;
-                                                        <Link className="Link_reset" to={{pathname: `/editevent` ,state: {event_id:val[1]._id} }} >
-                                                         <i className="fa fa-edit icon_datemodp" ></i>
-                                                        </Link> 
+                                                        <Link className="Link_reset" to={{ pathname: `/editevent`, state: { event_id: val[1]._id } }} >
+                                                            <i className="fa fa-edit icon_datemodp" ></i>
+                                                        </Link>
                                                         <i className="fa fa-trash icon_datemodp" ></i>
                                                     </td>
                                                 </tr>
-                                                </>
-                                            )
-                                        }
+                                            </>
                                         )
-                                    } 
-                             
+                                    }
+                                    )
+                                }
+
                             </table>
 
                         </div>
@@ -124,17 +139,17 @@ class Manageevent extends Component {
 
     }
 }
-Manageevent.propTypes = { 
+Manageevent.propTypes = {
     auth: PropTypes.object.isRequired,
     errors: PropTypes.object.isRequired
-  };
-  const mapStateToProps = state => ({
+};
+const mapStateToProps = state => ({
     auth: state.auth,
     errors: state.errors
-  });
-  export default connect(
+});
+export default connect(
     mapStateToProps,
-    {   }
-  )(Manageevent); 
+    {}
+)(Manageevent);
 
 
