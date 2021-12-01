@@ -95,7 +95,7 @@ router.post("/addevent", (req, res) => {
         } else {
             return res.status(200).json('event updated successfully');
         }
-    });
+      });
   });
   router.get('/delete', function(req, res) {
     const { errors, isValid } = validateViewEventInput(req.body);

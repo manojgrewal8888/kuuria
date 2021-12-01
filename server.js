@@ -8,6 +8,8 @@ const users = require("./routes/api/users");
 const event = require("./routes/api/events");
 const vendor = require("./routes/api/vendor");
 const nominee = require("./routes/api/nominee");
+const admin = require("./routes/api/admin");
+const front = require("./routes/api/front");
 // Bodyparser middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -30,6 +32,8 @@ mongoose
     app.use("/api/event", event);
     app.use("/api/vendor", vendor);
     app.use("/api/nominee", nominee);
+    app.use("/api/admin", admin);
+    app.use("/api/front", front);
     const port = 5000;
 /* const port = process.env.PORT || 8080; // process.env.port is Heroku's port if you choose to deploy the app there
  */

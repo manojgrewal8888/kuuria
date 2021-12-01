@@ -33,6 +33,10 @@ const EventSchema = new Schema({
   date: {
     type: Date,
     default: Date.now
+  },
+  is_approved: {
+    type: String,
+    default: 1,   //1-pending, 2- approved, 3- disapproved
   }
 });
 module.exports = Event = mongoose.model("events", EventSchema);
