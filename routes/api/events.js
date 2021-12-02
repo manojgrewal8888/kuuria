@@ -206,7 +206,7 @@ router.post("/addevent", (req, res) => {
         let logo = req.files.logo[0].path;
         let banner = req.files.banner[0].path;
         EventAppearance.findOne({event_id: req.body.event_id}).then(event=>{
-          if (event) {
+          if (event) { 
             let appearance = {
               logo: logo,
               banner: banner,

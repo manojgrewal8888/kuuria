@@ -5507,6 +5507,11 @@ button.doublebtn_maind {
   cursor: pointer;
 }
 
+button.doublebtn_maind.active {
+  background: #ffd600;
+  color: rgb(15 38 80);
+}
+
 button.doublebtn_maind:hover {
   background: #ffd600;
   border: 2px solid rgba(0, 0, 0, 0.25);

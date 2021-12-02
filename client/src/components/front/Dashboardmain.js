@@ -6,10 +6,13 @@ import { logoutUser } from "../../actions/authActions";
 import Sidebar from "./Sidebar";
 import Logout from "./Logout";
 import { Link } from "react-router-dom";
+import axios from "axios";
 class Dashboardmain extends Component {
   constructor() {
     super();
     this.state = { 
+      countevents: 0,
+      showloader: true
     };
   }
 componentWillReceiveProps(nextProps) { 
@@ -19,10 +22,31 @@ componentWillReceiveProps(nextProps) {
       });
     }
   }
-componentDidMount() { 
-if (this.props.auth.isAuthenticated == false) {
-  this.props.history.push("/login");
-}
+  async componentDidMount() { 
+    if (this.props.auth.isAuthenticated == false) {
+        this.props.history.push("/login");
+    }
+    var user_id = {
+        id: localStorage.getItem('_id')
+    }
+    if (user_id) {
+        await axios
+            .post("/api/users/getevents", user_id)
+            .then(res => {
+                if (res) {
+                    this.setState({
+                        countevents: res.data.length,
+                        showloader: false
+                    })
+                }
+
+            })
+            .catch(err =>
+                this.setState({
+                    showloader: false
+                })
+            );
+    }
 }
   render() {
 
@@ -49,7 +73,7 @@ if (this.props.auth.isAuthenticated == false) {
               <div className="toptymmain">
                 <div className="numbertym_main">
                   <div className="onetymmain">
-                    <p className="numtym">0</p>
+                    <p className="numtym">{this.state.countevents}</p>
                     <p className="fistoneword">Award Events</p>
                   </div>
                   <div className="onetymmain">
@@ -72,10 +96,10 @@ if (this.props.auth.isAuthenticated == false) {
 
                 <div className="btnwrap_maind">
                   <button className="doublebtn_maind">Nomination Status</button>
-                  <button className="doublebtn_maind">Leader Board</button>
+                  <button className="doublebtn_maind active">Leader Board</button>
                 </div>
 
-                <p className="leaderbo_mainhead">LEADER BOARD</p>
+                <p className="leaderbo_mainhead ">LEADER BOARD</p>
 
                 <div className="tablewrapformain">
                   <table className="table_maindeshb">
@@ -84,7 +108,10 @@ if (this.props.auth.isAuthenticated == false) {
                       <th className="table_1stlinemain">Nominee Name</th>
                       <th className="table_1stlinemain">Number Of Votes</th>
                     </tr>
-                    <tr className="table_1strowmainb2">
+                    <tr >
+                      <td colspan='3' class='text-center'>No data yet !!!</td>
+                    </tr>
+                   {/*  <tr className="table_1strowmainb2">
                       <td className="table_1stlinemain2">1</td>
                       <td className="table_1stlinemain2">Maria Anders</td>
                       <td className="table_1stlinemain2">150</td>
@@ -112,7 +139,7 @@ if (this.props.auth.isAuthenticated == false) {
                       <td className="table_1stlinemain2">1</td>
                       <td className="table_1stlinemain2">Maria Anders</td>
                       <td className="table_1stlinemain2">150</td>
-                    </tr>
+                    </tr> */}
 
 
 
