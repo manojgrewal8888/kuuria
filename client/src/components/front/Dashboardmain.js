@@ -12,7 +12,8 @@ class Dashboardmain extends Component {
     super();
     this.state = { 
       countevents: 0,
-      showloader: true
+      showloader: true,
+      showtab: 'leaders'
     };
   }
 componentWillReceiveProps(nextProps) { 
@@ -47,6 +48,17 @@ componentWillReceiveProps(nextProps) {
                 })
             );
     }
+}
+openTab = e => {
+  if(this.state.showtab == 'leaders'){
+    this.setState({
+      showtab: 'nominee'
+    });
+  }else{
+    this.setState({
+      showtab: 'leaders'
+    });
+  }
 }
   render() {
 
@@ -95,62 +107,53 @@ componentWillReceiveProps(nextProps) {
 
 
                 <div className="btnwrap_maind">
-                  <button className="doublebtn_maind">Nomination Status</button>
-                  <button className="doublebtn_maind active">Leader Board</button>
+                  <button className={this.state.showtab == 'nominee' ? 'active doublebtn_maind':'doublebtn_maind'}  onClick={this.openTab}>Nomination Status</button>
+                  <button className={this.state.showtab == 'leaders' ? 'active doublebtn_maind':'doublebtn_maind'} onClick={this.openTab}>Leader Board</button>
                 </div>
 
-                <p className="leaderbo_mainhead ">LEADER BOARD</p>
+                {(this.state.showtab == 'leaders') && <>
+                  <p className="leaderbo_mainhead ">LEADER BOARD</p>
+                  <div className="tablewrapformain">
+                    <table className="table_maindeshb table">
+                      <tr className="table_1strowmainb">
+                        <th className="table_1stlinemain">Position</th>
+                        <th className="table_1stlinemain">Nominee Name</th>
+                        <th className="table_1stlinemain">Number Of Votes</th>
+                      </tr>
+                      <tr >
+                        <td colspan='3' class='text-center'>No data yet !!!</td>
+                      </tr>  
+                    </table> 
+                    <div className="aligndot_maind">
+                      <span className="dot dot_rezmaind" onclick="currentSlide(1)"></span>
+                      <span className="dot dot_rezmaind" onclick="currentSlide(2)"></span>
+                      <span className="dot dot_rezmaind" onclick="currentSlide(3)"></span>
+                    </div>
+                  </div> </>
+                  }
+                {(this.state.showtab == 'nominee') && <>
+                  <p className="leaderbo_mainhead ">Nominee's</p>
+                  <div className="tablewrapformain">
+                    <table className="table_maindeshb table">
+                      <tr className="table_1strowmainb"> 
+                        <th className="table_1stlinemain">Nominee Name</th>
+                        <th className="table_1stlinemain">Category</th>
+                        <th className="table_1stlinemain">Action</th>
+                        <th className="table_1stlinemain">Code</th>
+                        <th className="table_1stlinemain">Status</th>
+                      </tr>
+                      <tr >
+                        <td colspan='5' class='text-center'>No data yet !!!</td>
+                      </tr>  
+                    </table> 
+                    <div className="aligndot_maind">
+                      <span className="dot dot_rezmaind" onclick="currentSlide(1)"></span>
+                      <span className="dot dot_rezmaind" onclick="currentSlide(2)"></span>
+                      <span className="dot dot_rezmaind" onclick="currentSlide(3)"></span>
+                    </div>
+                  </div> </>
+                  }
 
-                <div className="tablewrapformain">
-                  <table className="table_maindeshb">
-                    <tr className="table_1strowmainb">
-                      <th className="table_1stlinemain">Position</th>
-                      <th className="table_1stlinemain">Nominee Name</th>
-                      <th className="table_1stlinemain">Number Of Votes</th>
-                    </tr>
-                    <tr >
-                      <td colspan='3' class='text-center'>No data yet !!!</td>
-                    </tr>
-                   {/*  <tr className="table_1strowmainb2">
-                      <td className="table_1stlinemain2">1</td>
-                      <td className="table_1stlinemain2">Maria Anders</td>
-                      <td className="table_1stlinemain2">150</td>
-                    </tr>
-
-                    <tr className="table_1strowmainb2">
-                      <td className="table_1stlinemain2">1</td>
-                      <td className="table_1stlinemain2">Maria Anders</td>
-                      <td className="table_1stlinemain2">150</td>
-                    </tr>
-
-                    <tr className="table_1strowmainb2">
-                      <td className="table_1stlinemain2">1</td>
-                      <td className="table_1stlinemain2">Maria Anders</td>
-                      <td className="table_1stlinemain2">150</td>
-                    </tr>
-
-                    <tr className="table_1strowmainb2">
-                      <td className="table_1stlinemain2">1</td>
-                      <td className="table_1stlinemain2">Maria Anders</td>
-                      <td className="table_1stlinemain2">150</td>
-                    </tr>
-
-                    <tr className="table_1strowmainb2">
-                      <td className="table_1stlinemain2">1</td>
-                      <td className="table_1stlinemain2">Maria Anders</td>
-                      <td className="table_1stlinemain2">150</td>
-                    </tr> */}
-
-
-
-                  </table>
-
-                  <div className="aligndot_maind">
-                    <span className="dot dot_rezmaind" onclick="currentSlide(1)"></span>
-                    <span className="dot dot_rezmaind" onclick="currentSlide(2)"></span>
-                    <span className="dot dot_rezmaind" onclick="currentSlide(3)"></span>
-                  </div>
-                </div>
               </div>
 
             </div>

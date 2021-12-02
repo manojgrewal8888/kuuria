@@ -5,14 +5,17 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import Sidebar from "./Sidebar";
 import { Link } from "react-router-dom";
+import classnames from "classnames"
 class ManageQuestions extends Component {
-    constructor() {
-        super(); 
-        this.state = {
-            route: ""
+    constructor(props) {
+        super(props);
+        this.state = {  
+            errors:{},
+            event_id:'', 
         };
     } 
     render() {
+        const { errors } = this.state;
         return (
             <div>
                 <div className="wrap_vwendor">
@@ -26,7 +29,7 @@ class ManageQuestions extends Component {
                         </Link>
                         <h4 className="meve_headin">Add Question</h4>
 
-
+                        <form noValidate onSubmit={this.onSubmit}> 
                             <div className="viewt_wrap">
                                 <div className="left_viewt"> 
                                     <p className="left_vt_in">Question</p> 
@@ -37,15 +40,16 @@ class ManageQuestions extends Component {
 
                                 <div className="right_viewt">
                                     <p className="left_vt_in">
-                                        <textarea className="ticket_form" type="text" placeholder="Enter Question" name="eventname" id="" ></textarea>
+                                        <textarea className={'ticket_form' +classnames("", { invalid: errors.question })} onChange={this.onChange} type="text" placeholder="Enter Question" name="question" id="" ></textarea>
                                     </p>
                                     <p className="left_vt_in">
                                         <div className="togfree">
-                                           <input className="check_tog" type="checkbox" name="" id="" />
+                                           <input className={'check_tog '+classnames("", { invalid: errors.status })} onChange={this.onChange} type="checkbox" name="status" id="" />
                                         </div>
                                     </p> 
                                 </div>
                             </div>
+                            </form>
 
                             <button className="save_vte">Save</button>
                         </div>
