@@ -8,12 +8,7 @@ import PropTypes from "prop-types";
 class Manageticket extends Component {
     constructor() {
         super();
-<<<<<<< HEAD
-        this.state = {
-            route: ""
-=======
         this.state = { 
->>>>>>> a6f3d43c918ebf68e9aac981faecf822bd1b76d4
         };
       }
     componentWillReceiveProps(nextProps) { 
