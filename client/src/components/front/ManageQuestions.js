@@ -1,15 +1,18 @@
 import React, { Component } from "react";
 
 import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { logoutUser } from "../../actions/authActions";
+import { connect } from "react-redux"; 
 import Sidebar from "./Sidebar";
 import Logout from "./Logout";
 import { Link } from "react-router-dom";
+import axios from "axios";
 class ManageQuestions extends Component {
     constructor() {
         super();
         this.state = { 
+            questions: [],
+            showloader: true
+            
         };
       }
     componentWillReceiveProps(nextProps) { 
@@ -18,7 +21,33 @@ class ManageQuestions extends Component {
             errors: nextProps.errors
           });
         }
-      }
+    }
+    async componentDidMount() { 
+        if (this.props.auth.isAuthenticated == false) {
+            this.props.history.push("/login");
+        }
+        var user_id = {
+            id: localStorage.getItem('_id')
+        }
+        if (user_id) {
+            await axios
+                .post("/api/vendor/get_all_question", user_id)
+                .then(res => {
+                    if (res) {
+                        this.setState({
+                            questions: res.data,
+                            showloader: false
+                        })
+                    }
+
+                })
+                .catch(err =>
+                    this.setState({
+                        showloader: false
+                    })
+                );
+        }
+    }
     componentDidMount() { 
         if (this.props.auth.isAuthenticated == false) {
         this.props.history.push("/login");
@@ -59,11 +88,38 @@ class ManageQuestions extends Component {
 
 
                                 <div className="wrap_txtman">
-
-                                    <div className="contain_txtmana">
+                                {this.state.showloader && <tr>
+                                    <td colspan='6' class='text-center'><p class="loading">Loading Events</p></td>
+                                </tr>}
+                                {
+                                    Object.entries(this.state.questions).map((val, key) => { 
+                                        return (
+                                            <>
+                                                <tr>
+                                                    <td>{key + 1}</td>
+                                                    <td>{val[1].question ? val[1].question : ''}</td> 
+                                                    <td className='mod_th2'>
+                                                        {val[1].status ?? ''}
+                                                    </td>
+                                                    <td className='mod_th2'>
+                                                        <Link className="Link_reset" to='/eventopened'>
+                                                            <i className="fa fa-eye icon_datemodp" ></i>
+                                                        </Link> &nbsp;&nbsp;
+                                                        <Link className="Link_reset" to={{ pathname: `/editevent`, state: { event_id: val[1]._id } }} >
+                                                            <i className="fa fa-edit icon_datemodp" ></i>
+                                                        </Link>
+                                                        <i className="fa fa-trash icon_datemodp" ></i>
+                                                    </td>
+                                                </tr>
+                                            </>
+                                        )
+                                    }
+                                    )
+                                }
+                                    {/* <div className="contain_txtmana">
                                         <i class="fa fa-circle circ_vicon"></i>
                                         <p className="txtp_mana">No question's yet !!!</p>
-                                    </div>
+                                    </div> */}
 
                                     {/*  <div className="contain_txtmana">
                                         <i class="fa fa-circle circ_vicon"></i>

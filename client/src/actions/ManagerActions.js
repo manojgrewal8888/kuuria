@@ -7,15 +7,25 @@ import {
   USER_LOADING
 } from "./types";
 // Register User
-export const onNext = (userData, history) => dispatch => {
-    console.log(userData)
-  /* axios
-    .post("/api/users/register", userData)
-    .then(res => history.push("/login")) // re-direct to login on successful register
+export const addQuestion = (userData, history) => dispatch => {
+  axios
+    .post("/api/vendor/add_question", userData)
+    .then(res => history.push("/manage_questions")) // re-direct to login on successful register
     .catch(err =>
       dispatch({
         type: GET_ERRORS,
         payload: err.response.data
       })
-    ); */
+    );
+}; 
+export const editQuestion = (userData, history) => dispatch => {
+  axios
+    .post("/api/event/update_question", userData)
+    .then(res => history.push("/manage_questions")) // re-direct to login on successful register
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
 }; 

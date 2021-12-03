@@ -2,18 +2,49 @@ import React, { Component } from "react";
 
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { logoutUser } from "../../actions/authActions";
+import { addQuestion,editQuestion } from "../../actions/ManagerActions";
 import Sidebar from "./Sidebar";
 import { Link } from "react-router-dom";
 import classnames from "classnames"
 class ManageQuestions extends Component {
     constructor(props) {
         super(props);
-        this.state = {  
-            errors:{},
-            event_id:'', 
+        this.state = { 
+            question:'',
+            status:'', 
+            update: false
         };
     } 
+    
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.errors) {
+            this.setState({
+                errors: nextProps.errors
+            });
+        }
+    }
+    onChange = e => {
+        this.setState({ [e.target.id]: e.target.value });
+    };
+    onSubmit = e => {
+        var user_id = localStorage.getItem('_id'); 
+        e.preventDefault();
+        const event = {
+            user_id: this.state.user_id,
+            question: this.state.question, 
+            status: this.state.status, 
+        };
+        if(this.props.location.state && this.props.location.state.q_id !=''){
+            this.props.addQuestion(event, this.props.history); 
+        }else{
+            const event = {
+                user_id: this.state.user_id,
+                question: this.state.question, 
+                status: this.state.status, 
+            };
+            this.props.editQuestion(event, this.props.history); 
+        }
+    }; 
     render() {
         const { errors } = this.state;
         return (
@@ -61,11 +92,14 @@ class ManageQuestions extends Component {
     }
 }
 ManageQuestions.propTypes = { 
-    auth: PropTypes.object.isRequired
+    auth: PropTypes.object.isRequired,
+    addQuestion: PropTypes.object.isRequired,
 };
 const mapStateToProps = state => ({
-    auth: state.auth
+    auth: state.auth,
+    errors:state.errors
 });
 export default connect(
     mapStateToProps, 
+    {addQuestion,editQuestion}
 )(ManageQuestions);

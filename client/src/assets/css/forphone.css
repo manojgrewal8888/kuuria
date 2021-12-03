@@ -1072,6 +1072,7 @@
 }
 
 button.dropbtnzsidebar {
+    display:none;
     width: 40%;
     margin-top: 50px;
 }
@@ -1101,6 +1102,7 @@ button.dropbtnzsidebar {
     float: right;
     margin-right: 25px;
     width: 55%;
+    display: none;
 }
 
 .menusidebar {
