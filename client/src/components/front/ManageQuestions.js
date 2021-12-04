@@ -23,6 +23,7 @@ class ManageQuestions extends Component {
         }
     }
     async componentDidMount() { 
+        console.log(user_id)
         if (this.props.auth.isAuthenticated == false) {
             this.props.history.push("/login");
         }
@@ -62,9 +63,9 @@ class ManageQuestions extends Component {
 
                     <div className="right_vendor">
                         <div className="dropmenu_sidebar">
-                            <div class="menusidebar">
-                                <button class="dropbtnzsidebar"><i class='fas fa-list'></i></button>
-                                <div class="dropdown-contentside">
+                            <div className="menusidebar">
+                                <button className="dropbtnzsidebar"><i class='fas fa-list'></i></button>
+                                <div className="dropdown-contentside">
                                     <Link className="link_resetmen" to='/dashboard'>Dashboard</Link>
                                     <Link className="link_resetmen" to='/manage_questions'>Manage Questions</Link>
                                     <Link className="link_resetmen" to='/manage_ticket'>Manage Tickets</Link>
@@ -83,13 +84,14 @@ class ManageQuestions extends Component {
 
                             <div className="manage_wrap">
                                 <Link to='/viewedit_question'>
-                                    <button className="manage_btnv"><i class="fa fa-plus-circle adicon_v"></i>Add Question</button>
+                                    <button className="manage_btnv"><i className="fa fa-plus-circle adicon_v"></i>Add Question</button>
                                 </Link>
 
 
-                                <div className="wrap_txtman">
+                                <table className="wrap_txtman">
+                                    <tbody>
                                 {this.state.showloader && <tr>
-                                    <td colspan='6' class='text-center'><p class="loading">Loading Events</p></td>
+                                    <td colSpan='6' className='text-center'><p className="loading">Loading Events</p></td>
                                 </tr>}
                                 {
                                     Object.entries(this.state.questions).map((val, key) => { 
@@ -136,8 +138,8 @@ class ManageQuestions extends Component {
                                            <input className="check_tog" type="checkbox" name="" id="" />
                                        </div>
                                     </div> */}
-
-                                </div>
+    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
