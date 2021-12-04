@@ -11,27 +11,28 @@ class ManageQuestions extends Component {
         super();
         this.state = { 
             questions: [],
-            showloader: true
+            showloader: false
             
         };
+        
       }
     componentWillReceiveProps(nextProps) { 
+        
         if (nextProps.errors) {
           this.setState({
             errors: nextProps.errors
           });
         }
     }
-    async componentDidMount() { 
-        console.log(user_id)
+      async componentDidMount() { 
         if (this.props.auth.isAuthenticated == false) {
             this.props.history.push("/login");
         }
         var user_id = {
-            id: localStorage.getItem('_id')
-        }
+            user_id: localStorage.getItem('_id')
+        } 
         if (user_id) {
-            await axios
+              await axios
                 .post("/api/vendor/get_all_question", user_id)
                 .then(res => {
                     if (res) {
@@ -49,11 +50,7 @@ class ManageQuestions extends Component {
                 );
         }
     }
-    componentDidMount() { 
-        if (this.props.auth.isAuthenticated == false) {
-        this.props.history.push("/login");
-        }
-    }
+     
     render() {
         const { user } = this.props.auth;
         return (

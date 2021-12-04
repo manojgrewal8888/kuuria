@@ -138,7 +138,7 @@ router.post('/add_question', function(req, res) {
 
     question.save().then(question => res.json(question)).catch(err => console.log(err));
 });
-router.get('/get_all_question', function(req, res) {
+router.post('/get_all_question', function(req, res) {
   let errors = {};
     if (!req.body.user_id) {
       errors.user_id = "user_id id is required";
