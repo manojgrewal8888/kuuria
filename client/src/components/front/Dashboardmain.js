@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 
 import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { logoutUser } from "../../actions/authActions";
+import { connect } from "react-redux"; 
 import Sidebar from "./Sidebar";
 import Logout from "./Logout";
 import { Link } from "react-router-dom";
@@ -72,9 +71,9 @@ openTab = e => {
               <Logout history={this.props.history} />
 
 
-              <div class="dropdown_maindeshb">
+              <div className="dropdown_maindeshb">
                 <i className="fa fa-bell bell_main" ></i>
-                <div class="dropcontan_maindeshb">
+                <div className="dropcontan_maindeshb">
                   <a className="linkforamindesh" href="#"><i className="fa fa-circle circlemain_sdesh" ></i>Link 1</a>
                   <a className="linkforamindesh" href="#"><i className="fa fa-circle circlemain_sdesh" ></i>Link 2</a>
                   <a className="linkforamindesh" href="#"><i className="fa fa-circle circlemain_sdesh" ></i>Link 3</a>
@@ -121,7 +120,7 @@ openTab = e => {
                         <th className="table_1stlinemain">Number Of Votes</th>
                       </tr>
                       <tr >
-                        <td colspan='3' class='text-center'>No data yet !!!</td>
+                        <td colspan='3' className='text-center'>No data yet !!!</td>
                       </tr>  
                     </table> 
                     <div className="aligndot_maind">
@@ -143,7 +142,7 @@ openTab = e => {
                         <th className="table_1stlinemain">Status</th>
                       </tr>
                       <tr >
-                        <td colspan='5' class='text-center'>No data yet !!!</td>
+                        <td colspan='5' className='text-center'>No data yet !!!</td>
                       </tr>  
                     </table> 
                     <div className="aligndot_maind">

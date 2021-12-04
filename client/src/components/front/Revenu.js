@@ -56,9 +56,9 @@ class Revenu extends Component {
 
                     <div className="right_vendor">
                         <div className="dropmenu_sidebar">
-                            <div class="menusidebar">
-                                <button class="dropbtnzsidebar"><i class='fas fa-list'></i></button>
-                                <div class="dropdown-contentside">
+                            <div className="menusidebar">
+                                <button className="dropbtnzsidebar"><i className='fas fa-list'></i></button>
+                                <div className="dropdown-contentside">
                                     <Link className="link_resetmen" to='/dashboard'>Dashboard</Link>
                                     <Link className="link_resetmen" to='/manage_questions'>Manage Questions</Link>
                                     <Link className="link_resetmen" to='/manage_ticket'>Manage Tickets</Link>
@@ -104,7 +104,7 @@ class Revenu extends Component {
                                     <div className="wrap_tbx">
                                         <table className="table_rev" >
                                             <tr>
-                                                <th>Votes<i class="fa fa-caret-down crt_tb" aria-hidden="true"></i></th>
+                                                <th>Votes<i className="fa fa-caret-down crt_tb" aria-hidden="true"></i></th>
 
                                             </tr>
                                             <tr className="trtabdat">

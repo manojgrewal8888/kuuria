@@ -16,9 +16,9 @@ export default class Menu extends Component {
                     <div className="menu">
 
                         <div className="dropmenu_mai">
-                        <div class="dropdownzx">
-                            <button class="dropbtnzx">MENU</button>
-                            <div class="dropdown-contentzx">
+                        <div className="dropdownzx">
+                            <button className="dropbtnzx">MENU</button>
+                            <div className="dropdown-contentzx">
                             <Link className="link_resetmen"  to='/ticket'>Ticketing</Link>
                             <Link className="link_resetmen"  to='/dashvote'>File Nomination</Link>
                             <Link className="link_resetmen"  to='/signup'>Sign Up</Link>

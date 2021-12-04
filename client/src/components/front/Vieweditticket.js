@@ -73,7 +73,7 @@ class Vieweditticket extends Component {
                         <div className="right_subven">
                         <Link className="ven_under back_ic"  to='/manage_ticket'> 
                             <div  className="logout_ven1">
-                                <i   class="fa fa-arrow-left "></i> Back
+                                <i   className="fa fa-arrow-left "></i> Back
                             </div>
                         </Link>
                         <h4 className="meve_headin">Add Ticket</h4>

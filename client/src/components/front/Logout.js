@@ -19,12 +19,12 @@ class Logout extends Component {
         
         return (
             <>
-                <Link onClick={this.onLogoutClick} className='text-white'>
+                <a onClick={this.onLogoutClick} className='text-white'>
                     <div  className="logout_ven1"> 
-                        <i  class="fa fa-sign-out "></i>
+                        <i  className="fa fa-sign-out "></i>
                     Log Out
                     </div>
-                </Link>
+                </a>
             </>
         )
     }

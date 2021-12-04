@@ -80,12 +80,12 @@ class Sidebar extends Component {
                                 <span className='menu_it_em1' >Manage Events</span>
                             </div>
                         </Link>
-                        <Link className="ven_under" onClick={this.onLogoutClick}>
+                        <a className="ven_under" onClick={this.onLogoutClick}>
                             <div className={this.state.route == '/forms' ? 'custom_btn1' : 'custom_btn0'}>
                                 <i className="fa fa-key"></i>
                                 <span className='menu_it_em1' >Log out</span>
                             </div>
-                        </Link>
+                        </a>
                         {/* <button
                             style={{
                                 width: "150px",

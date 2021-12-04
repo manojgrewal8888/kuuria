@@ -99,7 +99,7 @@ render() {
                         </Link>
                         <p className="cae_head">{this.state.update == true ? 'Update' : 'Create'} Award Event</p>
                         {this.state.showloader && 
-                        <div class='text-center'><p class="loading">Loading Event Data</p></div>
+                        <div className='text-center'><p className="loading">Loading Event Data</p></div>
                         }
                         <form noValidate onSubmit={this.onSubmit}> 
                             <input   onChange={this.onChange}  value={this.state.eventname}  id="eventname"  type="text"  className={'text-white wtitle_input '+classnames("", { invalid: errors.eventname })} placeholder="Title"/> 

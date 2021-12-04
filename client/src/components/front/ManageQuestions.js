@@ -64,7 +64,7 @@ class ManageQuestions extends Component {
                     <div className="right_vendor">
                         <div className="dropmenu_sidebar">
                             <div className="menusidebar">
-                                <button className="dropbtnzsidebar"><i class='fas fa-list'></i></button>
+                                <button className="dropbtnzsidebar"><i className='fas fa-list'></i></button>
                                 <div className="dropdown-contentside">
                                     <Link className="link_resetmen" to='/dashboard'>Dashboard</Link>
                                     <Link className="link_resetmen" to='/manage_questions'>Manage Questions</Link>
@@ -118,26 +118,7 @@ class ManageQuestions extends Component {
                                     }
                                     )
                                 }
-                                    {/* <div className="contain_txtmana">
-                                        <i class="fa fa-circle circ_vicon"></i>
-                                        <p className="txtp_mana">No question's yet !!!</p>
-                                    </div> */}
-
-                                    {/*  <div className="contain_txtmana">
-                                        <i class="fa fa-circle circ_vicon"></i>
-                                        <p className="txtp_mana">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                                          <div className="togfree">
-                                           <input className="check_tog" type="checkbox" name="" id="" />
-                                       </div>
-                                    </div>
-
-                                    <div className="contain_txtmana">
-                                        <i class="fa fa-circle circ_vicon"></i>
-                                        <p className="txtp_mana">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                                          <div className="togfree">
-                                           <input className="check_tog" type="checkbox" name="" id="" />
-                                       </div>
-                                    </div> */}
+                                
     </tbody>
                                 </table>
                             </div>

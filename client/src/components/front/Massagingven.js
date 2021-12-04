@@ -31,9 +31,9 @@ class Massagingven extends Component {
                     <Sidebar history={this.props.history} />
                     <div className="right_vendor">
                         <div className="dropmenu_sidebar">
-                            <div class="menusidebar">
-                                <button class="dropbtnzsidebar"><i class='fas fa-list'></i></button>
-                                <div class="dropdown-contentside">
+                            <div className="menusidebar">
+                                <button className="dropbtnzsidebar"><i className='fas fa-list'></i></button>
+                                <div className="dropdown-contentside">
                                     <Link className="link_resetmen" to='/dashboard'>Dashboard</Link>
                                     <Link className="link_resetmen" to='/manage_questions'>Manage Questions</Link>
                                     <Link className="link_resetmen" to='/manage_ticket'>Manage Tickets</Link>
@@ -73,7 +73,7 @@ class Massagingven extends Component {
                                         
                                     </Scrollbars> */}
 
-                                    <div class="section_scr">
+                                    <div className="section_scr">
                                         <div className="leftmsg_txt">
                                             <p className="lefttxtmsg">Whats the point in using Lorem Ipsum</p>
 

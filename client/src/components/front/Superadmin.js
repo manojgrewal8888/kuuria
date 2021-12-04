@@ -21,9 +21,9 @@ class Superadmin extends Component {
                             <Logout history={this.props.history} />
 
 
-                            <div class="dropdown_maindeshb">
+                            <div className="dropdown_maindeshb">
                                 <i className="fa fa-bell bell_main" ></i>
-                                <div class="dropcontan_maindeshb">
+                                <div className="dropcontan_maindeshb">
                                     <a className="linkforamindesh" href="#"><i className="fa fa-circle circlemain_sdesh" ></i>Link 1</a>
                                     <a className="linkforamindesh" href="#"><i className="fa fa-circle circlemain_sdesh" ></i>Link 2</a>
                                     <a className="linkforamindesh" href="#"><i className="fa fa-circle circlemain_sdesh" ></i>Link 3</a>
@@ -59,7 +59,7 @@ class Superadmin extends Component {
                                 </div>
 
                                 <Link to='/viewedit_question'>
-                                    <button className="manage_btnv"><i class="fa fa-plus-circle adicon_v"></i>Add To List</button>
+                                    <button className="manage_btnv"><i className="fa fa-plus-circle adicon_v"></i>Add To List</button>
                                 </Link>
 
 

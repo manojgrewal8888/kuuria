@@ -26,7 +26,7 @@ class Varapproved extends Component {
 
                             <div className="even1_var">
                                 <p className="ev1_vendorvar">Event 1</p>
-                                <i class="fa fa-check-circle-o tikspan_var"></i>
+                                <i className="fa fa-check-circle-o tikspan_var"></i>
                                 <p className="evvar_progress">Event Approved</p>
 
                                 <div className="prog_var">
@@ -36,7 +36,7 @@ class Varapproved extends Component {
 
                             <div className="even1_var">
                                 <p className="ev1_vendorvar">Event 4</p>
-                                <i class="fa fa-check-circle-o tikspan_var"></i>
+                                <i className="fa fa-check-circle-o tikspan_var"></i>
                                 <p className="evvar_progress">Event Approved</p>
 
                                 <div className="prog_var">

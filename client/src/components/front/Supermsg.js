@@ -45,7 +45,7 @@ class Supermsg extends Component {
                                         
                                     </Scrollbars> */}
 
-                                    <div class="section_scr">
+                                    <div className="section_scr">
                                         <div className="leftmsg_txt">
                                             <p className="lefttxtmsg">Whats the point in using Lorem Ipsum</p>
 

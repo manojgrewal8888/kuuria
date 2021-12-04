@@ -32,13 +32,13 @@ class Seeforms extends Component {
                             <div className="wrap_seeform">
                            <div className="seeformdiv">
                                <p className="see_formno1">Form Name 1</p>
-                               <i class="	fa fa-pencil-square-o see_pencil"></i>
-                               <i class="fa fa-eye see_eye"></i>
+                               <i className="	fa fa-pencil-square-o see_pencil"></i>
+                               <i className="fa fa-eye see_eye"></i>
                            </div>
                            <div className="seeformdiv">
                                <p className="see_formno1">Form Name 1</p>
-                               <i class="	fa fa-pencil-square-o see_pencil"></i>
-                               <i class="fa fa-eye see_eye"></i>
+                               <i className="	fa fa-pencil-square-o see_pencil"></i>
+                               <i className="fa fa-eye see_eye"></i>
                            </div>
                            </div>
                         </div>
