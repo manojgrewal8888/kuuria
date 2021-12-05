@@ -30,15 +30,21 @@ class ManageQuestions extends Component {
     };
     onSubmit = e => {
         e.preventDefault(); 
-        var event = {
-            user_id: this.state.user_id,
-            question: this.state.question, 
-            status: this.state.status, 
-        }; 
-        if(this.props.location.state && this.props.location.state.q_id !=''){
-            this.props.editQuestion(event, this.props.history); 
+        if(this.props.location.state && this.props.location.state.question_id !=''){
+            var postdata = {
+                user_id: this.state.user_id,
+                question: this.state.question, 
+                status: this.state.status, 
+                question_id:this.props.location.state.question_id
+            };  
+            this.props.editQuestion(postdata, this.props.history); 
         }else{ 
-            this.props.addQuestion(event, this.props.history); 
+            var postdata = {
+                user_id: this.state.user_id,
+                question: this.state.question, 
+                status: this.state.status, 
+            }; 
+            this.props.addQuestion(postdata, this.props.history); 
         }
     }; 
 
@@ -53,7 +59,7 @@ class ManageQuestions extends Component {
             });
         }
     }
-    componentDidMount(){
+    async componentDidMount(){
         var user_id = localStorage.getItem('_id');
         if (user_id) {
             this.setState({
@@ -63,13 +69,13 @@ class ManageQuestions extends Component {
         if (!this.props.auth.isAuthenticated) {
             this.props.history.push("/login");
         }
-        if(this.props.location.state && this.props.location.state.view_question !=''){  
+        if(this.props.location.state && this.props.location.state.question_id !=''){  
             this.setState({  
                 showloader:true
             }); 
-            axios
-            .post("/api/event/view_question", {
-                view_question: this.props.location.state.view_question
+            await axios
+            .post("/api/vendor/view_question", {
+                question_id: this.props.location.state.question_id
             })
             .then((response) => { 
                 if (response.status = 200) {
@@ -113,7 +119,7 @@ class ManageQuestions extends Component {
                                     </p>
                                     <p className="left_vt_in">
                                         <div className="togfree">
-                                           <input className={'check_tog '+classnames("", { invalid: errors.status })} onChange={this.setstatus} type="checkbox" name="status" value={this.state.status} id="status" />
+                                           <input className={'check_tog '+classnames("", { invalid: errors.status })} onChange={this.setstatus} type="checkbox" checked={this.state.status && this.state.status == 1 ? 'checked' : ''} name="status" value={this.state.status} id="status" />
                                         </div>
                                     </p> 
                                 </div>
@@ -130,9 +136,7 @@ class ManageQuestions extends Component {
     }
 }
 ManageQuestions.propTypes = { 
-    auth: PropTypes.object.isRequired,
-    addQuestion: PropTypes.object.isRequired,
-    editQuestion: PropTypes.object.isRequired,
+    auth: PropTypes.object.isRequired, 
     errors: PropTypes.object.isRequired
 };
 const mapStateToProps = state => ({

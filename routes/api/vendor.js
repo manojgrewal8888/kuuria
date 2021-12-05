@@ -155,8 +155,8 @@ router.post('/get_all_question', function(req, res) {
       }
   });
 });
-router.get('/view_question', function(req, res) {
-  let errors = {};
+router.post('/view_question', function(req, res) {
+  let errors = {};  
     if (!req.body.question_id) {
       errors.question_id = "question_id is required";
     }

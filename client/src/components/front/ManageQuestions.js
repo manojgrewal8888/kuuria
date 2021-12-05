@@ -97,7 +97,7 @@ class ManageQuestions extends Component {
                                                 <i className="fa fa-circle circ_vicon"></i>
                                                 <p className="txtp_mana">{val[1].question ? val[1].question : ''}</p>
                                                 <div className="togfree"> 
-                                                    <input className='check_tog '  type="checkbox"   value={val[1].status ? val[1].status : ''} id="status" />
+                                                    <input className='check_tog '  type="checkbox"  checked={val[1].status && val[1].status == 1 ? 'checked' : ''}  value={val[1].status ? val[1].status : 0} id="status" />&nbsp;&nbsp;
                                                     <Link className="Link_reset" to={{ pathname: `/editquestion`, state: { question_id: val[1]._id } }} >
                                                         <i className="fa fa-edit icon_datemodp" ></i>
                                                     </Link>
