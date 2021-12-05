@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import Sidebar from "./Sidebar";
+
 import Logout from "./Logout";
+import AdminSidebar from "./AdminSidebar";
 
 
 
@@ -15,7 +16,7 @@ class Supermsg extends Component {
             <div>
 
                 <div className="wrap_vwendor">
-                    <Sidebar history={this.props.history} />
+                    <AdminSidebar history={this.props.history} />
                     <div className="right_vendor">
                         <div className="right_subven">
                             <Logout />
@@ -70,7 +71,8 @@ class Supermsg extends Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>4
+                <p className="endtxt">  Made with<i className="fa fa-heart last_heart"></i>In Trasacco valley, Ghana</p>
             </div>
 
 

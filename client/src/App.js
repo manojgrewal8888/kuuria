@@ -88,6 +88,7 @@ import Supermsg from "./components/front/Supermsg";
 
 import Extramenu from "./components/front/Extramenu";
 import Smssub from "./components/front/Smssub";
+import Revanuesup from "./components/front/Revanuesup";
 
 
 
@@ -175,6 +176,7 @@ class App extends Component {
               <Route exact={true} path='/approved_var' component={Varapproved} />
               <Route exact={true} path='/create_form' component={Createform} />
               <Route exact={true} path='/see_forms' component={Seeforms} />
+
               <Route exact={true} path='/super_admin' component={Superadmin} />
               <Route exact={true} path='/org_superadmin' component={Organisationsa} />
               <Route exact={true} path='/google_analytic' component={Googleana} />
@@ -182,6 +184,8 @@ class App extends Component {
 
               <Route exact={true} path='/extramenu' component={Extramenu} />
               <Route exact={true} path='/smsven' component={Smssub} />
+
+              <Route exact={true} path='/revsuper' component={Revanuesup} />
 
 
 

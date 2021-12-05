@@ -76,6 +76,7 @@ class Organisationsa extends Component {
                         </div>
                     </div>
                 </div>
+                <p className="endtxt">  Made with<i className="fa fa-heart last_heart"></i>In Trasacco valley, Ghana</p>
             </div>
         )
     }
