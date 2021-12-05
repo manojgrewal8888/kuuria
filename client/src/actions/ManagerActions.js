@@ -7,9 +7,9 @@ import {
   USER_LOADING
 } from "./types";
 // Register User
-export const addQuestion = (userData, history) => dispatch => {
+export const addQuestion = (postdata, history) => dispatch => {
   axios
-    .post("/api/vendor/add_question", userData)
+    .post("/api/vendor/add_question", postdata)
     .then(res => history.push("/manage_questions")) // re-direct to login on successful register
     .catch(err =>
       dispatch({
@@ -18,9 +18,9 @@ export const addQuestion = (userData, history) => dispatch => {
       })
     );
 }; 
-export const editQuestion = (userData, history) => dispatch => {
+export const editQuestion = (postdata, history) => dispatch => {
   axios
-    .post("/api/event/update_question", userData)
+    .post("/api/vendor/update_question", postdata)
     .then(res => history.push("/manage_questions")) // re-direct to login on successful register
     .catch(err =>
       dispatch({

@@ -123,7 +123,7 @@ router.get('/ticket_list', async function(req,res) {
       return res.json(ticket);
   });
 });
-router.post('/add_question', function(req, res) {
+router.post('/add_question', function(req, res) { 
    const { errors, isValid } = validateQuestionInput(req.body);
    // Check validation
     if (!isValid) {
@@ -140,17 +140,18 @@ router.post('/add_question', function(req, res) {
 });
 router.post('/get_all_question', function(req, res) {
   let errors = {};
+  
     if (!req.body.user_id) {
-      errors.user_id = "user_id id is required";
+      errors.user_id = "user_id is required";
     }
     if (!_.isEmpty(errors)) {
       return res.status(400).json(errors);
     }
     Question.find({user_id: req.body.user_id}).then(question=>{
       if (question.length > 0) {
-        return res.json(question);
+        return res.status(200).json(question);
       } else {
-        return res.json('question not found');
+        return res.status(200).json('');
       }
   });
 });

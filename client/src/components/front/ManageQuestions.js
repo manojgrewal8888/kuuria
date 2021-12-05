@@ -11,7 +11,7 @@ class ManageQuestions extends Component {
         super();
         this.state = { 
             questions: [],
-            showloader: false
+            showloader: true
             
         };
         
@@ -85,11 +85,11 @@ class ManageQuestions extends Component {
                                 </Link>
 
 
+                                {this.state.showloader && <tr>
+                                    <div   className='ml-3 text-center'><p className="loading">Loading Questions</p></div>
+                                </tr>}
                                 <table className="wrap_txtman">
                                     <tbody>
-                                {this.state.showloader && <tr>
-                                    <td colSpan='6' className='text-center'><p className="loading">Loading Events</p></td>
-                                </tr>}
                                 {
                                     Object.entries(this.state.questions).map((val, key) => { 
                                         return (

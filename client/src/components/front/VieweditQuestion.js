@@ -12,7 +12,8 @@ class ManageQuestions extends Component {
         this.state = { 
             question:'',
             status:'', 
-            update: false
+            update: false,
+            errors:{}
         };
     } 
     
@@ -27,22 +28,18 @@ class ManageQuestions extends Component {
         this.setState({ [e.target.id]: e.target.value });
     };
     onSubmit = e => {
-        var user_id = localStorage.getItem('_id'); 
         e.preventDefault();
-        const event = {
+        var user_id = localStorage.getItem('_id'); 
+        var event = {
             user_id: this.state.user_id,
             question: this.state.question, 
             status: this.state.status, 
         };
+        console.log(event)
         if(this.props.location.state && this.props.location.state.q_id !=''){
-            this.props.addQuestion(event, this.props.history); 
-        }else{
-            const event = {
-                user_id: this.state.user_id,
-                question: this.state.question, 
-                status: this.state.status, 
-            };
             this.props.editQuestion(event, this.props.history); 
+        }else{ 
+            this.props.addQuestion(event, this.props.history); 
         }
     }; 
     render() {
@@ -80,9 +77,9 @@ class ManageQuestions extends Component {
                                     </p> 
                                 </div>
                             </div>
+                            <button type='submit' className="save_vte">Save</button>
                             </form>
 
-                            <button className="save_vte">Save</button>
                         </div>
                     </div>
                 </div>
@@ -94,6 +91,8 @@ class ManageQuestions extends Component {
 ManageQuestions.propTypes = { 
     auth: PropTypes.object.isRequired,
     addQuestion: PropTypes.object.isRequired,
+    editQuestion: PropTypes.object.isRequired,
+    errors: PropTypes.object.isRequired
 };
 const mapStateToProps = state => ({
     auth: state.auth,
