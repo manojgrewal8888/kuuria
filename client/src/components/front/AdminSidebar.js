@@ -38,7 +38,7 @@ class AdminSidebar extends Component {
                             </div>
                         </Link>
 
-                        <Link className="ven_under" to='/dashboard'>
+                        <Link className="ven_under" to='/revsuper'>
                             <div className={this.state.route == '/dashboard' ? 'custom_btn1' : 'custom_btn0'}>
                                 <i className="fas fa-hand-holding-usd cus_vicon"></i>
                                 <span className='menu_it_em1'>Revenue</span>

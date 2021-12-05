@@ -33,7 +33,7 @@ class Googleana extends Component {
 
                 </div>
 
-                <p className="foot-slogan">Made With <i className="fa fa-heart heartfoot"></i> In Trasacco Valley, Ghana </p>
+                <p className="endtxt">  Made with<i className="fa fa-heart last_heart"></i>In Trasacco valley, Ghana</p>
             </div>
         )
     }

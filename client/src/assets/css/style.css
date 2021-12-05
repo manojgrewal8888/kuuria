@@ -6188,3 +6188,122 @@ option.opt_newsm {
   padding: 10px 5px;
   margin: 10px 2px;
 }
+
+.fbtn_rs {
+  width: 20%;
+
+  margin: auto;
+  height: 35px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+button.toprevs {
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+p.org_rs {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+button.toprevs:hover {
+  background-color: #ffd600;
+  color: #0F2650;
+}
+
+table.tb_rvsup {
+  width: 80%;
+  margin: auto;
+}
+
+.tr_rvsup {
+  text-align: end;
+}
+
+.tr2_rvsup {
+  text-align: center;
+}
+
+tr.tr_und {
+
+  height: 50px;
+  border-bottom: 2px solid rgba(196, 196, 196, 0.2);
+}
+
+tr.tr_und2 {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  height: 45px;
+  border-radius: 10px;
+}
+
+th {
+  padding: 5px 10px;
+
+}
+
+p.endtxt {
+  text-align: center;
+  font-size: 15px;
+}
+
+i.fa.fa-heart.last_heart {
+  color: red;
+  margin: 0px 15px;
+  font-size: 20px;
+}
+
+input.sear_nerev {
+  width: 80%;
+  display: block;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  padding-left: 2%;
+  height: 40px;
+  border-radius: 20px;
+}
+
+i.fa.fa-search.last_serrev {
+  position: relative;
+  top: -30px;
+  left: 85%;
+  font-size: 20px;
+  color: grey;
+}
+
+button#revsup {
+  background: transparent;
+  color: #ffd600;
+  width: 25%;
+  float: right;
+  margin-right: 10%;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  border: 1px solid #ffffff;
+  height: 35px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button#revsup:hover {
+  background-color: #ffd600;
+  color: #0F2650;
+}
+
+p.endtxt {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
