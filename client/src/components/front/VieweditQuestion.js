@@ -1,17 +1,18 @@
 import React, { Component } from "react";
-
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { addQuestion,editQuestion } from "../../actions/ManagerActions";
 import Sidebar from "./Sidebar";
 import { Link } from "react-router-dom";
 import classnames from "classnames"
+import axios from "axios";
 class ManageQuestions extends Component {
     constructor(props) {
         super(props);
         this.state = { 
             question:'',
-            status:'', 
+            status:0, 
+            user_id:'', 
             update: false,
             errors:{}
         };
@@ -28,20 +29,60 @@ class ManageQuestions extends Component {
         this.setState({ [e.target.id]: e.target.value });
     };
     onSubmit = e => {
-        e.preventDefault();
-        var user_id = localStorage.getItem('_id'); 
+        e.preventDefault(); 
         var event = {
             user_id: this.state.user_id,
             question: this.state.question, 
             status: this.state.status, 
-        };
-        console.log(event)
+        }; 
         if(this.props.location.state && this.props.location.state.q_id !=''){
             this.props.editQuestion(event, this.props.history); 
         }else{ 
             this.props.addQuestion(event, this.props.history); 
         }
     }; 
+
+    setstatus = e => {
+        if(this.state.status == 0){
+            this.setState({
+                status: 1
+            });
+        }else{
+            this.setState({
+                status: 0
+            });
+        }
+    }
+    componentDidMount(){
+        var user_id = localStorage.getItem('_id');
+        if (user_id) {
+            this.setState({
+                user_id: user_id
+            });
+        }
+        if (!this.props.auth.isAuthenticated) {
+            this.props.history.push("/login");
+        }
+        if(this.props.location.state && this.props.location.state.view_question !=''){  
+            this.setState({  
+                showloader:true
+            }); 
+            axios
+            .post("/api/event/view_question", {
+                view_question: this.props.location.state.view_question
+            })
+            .then((response) => { 
+                if (response.status = 200) {
+                    this.setState({ 
+                        status: response.data.status,
+                        question: response.data.question, 
+                        update: true, 
+                        showloader:false
+                    }); 
+                }
+            });
+        }    
+    }
     render() {
         const { errors } = this.state;
         return (
@@ -68,11 +109,11 @@ class ManageQuestions extends Component {
 
                                 <div className="right_viewt">
                                     <p className="left_vt_in">
-                                        <textarea className={'ticket_form' +classnames("", { invalid: errors.question })} onChange={this.onChange} type="text" placeholder="Enter Question" name="question" id="" ></textarea>
+                                        <textarea className={'ticket_form' +classnames("", { invalid: errors.question })} onChange={this.onChange} type="text" placeholder="Enter Question" value={this.state.question} name="question" id="question" ></textarea>
                                     </p>
                                     <p className="left_vt_in">
                                         <div className="togfree">
-                                           <input className={'check_tog '+classnames("", { invalid: errors.status })} onChange={this.onChange} type="checkbox" name="status" id="" />
+                                           <input className={'check_tog '+classnames("", { invalid: errors.status })} onChange={this.setstatus} type="checkbox" name="status" value={this.state.status} id="status" />
                                         </div>
                                     </p> 
                                 </div>

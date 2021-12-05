@@ -165,9 +165,9 @@ router.get('/view_question', function(req, res) {
     }
     Question.findOne({_id: req.body.question_id}).then(question=>{
       if (question) {
-        return res.json(question);
+        return res.status(200).json(question);
       } else {
-        return res.json('question not found');
+        return res.status(200).json('question not found');
       }
    });
 });

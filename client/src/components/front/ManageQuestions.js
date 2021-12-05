@@ -84,21 +84,29 @@ class ManageQuestions extends Component {
                                     <button className="manage_btnv"><i className="fa fa-plus-circle adicon_v"></i>Add Question</button>
                                 </Link>
 
-
-                                {this.state.showloader && <tr>
+                            
+                                
+                                {this.state.showloader && <>
                                     <div   className='ml-3 text-center'><p className="loading">Loading Questions</p></div>
-                                </tr>}
-                                <table className="wrap_txtman">
-                                    <tbody>
+                              </>}
                                 {
                                     Object.entries(this.state.questions).map((val, key) => { 
                                         return (
                                             <>
-                                                <tr>
-                                                    <td>{key + 1}</td>
+                                            <div className="contain_txtmana">
+                                                <i className="fa fa-circle circ_vicon"></i>
+                                                <p className="txtp_mana">{val[1].question ? val[1].question : ''}</p>
+                                                <div className="togfree"> 
+                                                    <input className='check_tog '  type="checkbox"   value={val[1].status ? val[1].status : ''} id="status" />
+                                                    <Link className="Link_reset" to={{ pathname: `/editquestion`, state: { question_id: val[1]._id } }} >
+                                                        <i className="fa fa-edit icon_datemodp" ></i>
+                                                    </Link>
+                                                </div>
+                                            </div>
+                                               {/*  <tr> 
                                                     <td>{val[1].question ? val[1].question : ''}</td> 
                                                     <td className='mod_th2'>
-                                                        {val[1].status ?? ''}
+                                                        {val[1].status && val[1].status == 1 ? 'Active' :'In-active'}
                                                     </td>
                                                     <td className='mod_th2'>
                                                         <Link className="Link_reset" to='/eventopened'>
@@ -109,15 +117,13 @@ class ManageQuestions extends Component {
                                                         </Link>
                                                         <i className="fa fa-trash icon_datemodp" ></i>
                                                     </td>
-                                                </tr>
+                                                </tr> */}
                                             </>
                                         )
                                     }
                                     )
                                 }
-                                
-    </tbody>
-                                </table>
+                                  
                             </div>
                         </div>
                     </div>

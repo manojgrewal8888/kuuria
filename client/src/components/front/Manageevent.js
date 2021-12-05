@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import Sidebar from "./Sidebar";
-import Logout from "./Logout";
+import Sidebar from "./Sidebar"; 
 import axios from "axios";
 const moment = require('moment');
 class Manageevent extends Component {

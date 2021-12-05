@@ -156,6 +156,7 @@ class App extends Component {
               <Route exact={true} path='/manage_ticket' component={Manageticket} />
               <Route exact={true} path='/viewedit_ticket' component={Vieweditticket} />
               <Route exact={true} path='/viewedit_question' component={VieweditQuestion} />
+              <Route exact={true} path='/editquestion' component={VieweditQuestion} />
               <Route exact={true} path='/revenue' component={Revenu} />
               <Route exact={true} path='/chart' component={Chart} />
               <Route exact={true} path='/chartreal' component={Chartdeno} />
