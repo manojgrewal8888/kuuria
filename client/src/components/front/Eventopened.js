@@ -5,6 +5,7 @@ import Sidebar from "./Sidebar";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import axios from "axios";
+import Extramenu from './Extramenu';
 const data = [
     { name: 'Group A', value: 300 },
     { name: 'Group B', value: 900 },
@@ -59,7 +60,7 @@ class Opened extends PureComponent {
 
                     <div className="right_home1">
 
-
+                        <Extramenu history={this.props.history} />
 
 
                         <div className="date_format">
@@ -81,8 +82,8 @@ class Opened extends PureComponent {
                         <div className="open_lin2"></div>
 
 
-                        <div style={{ width: '100%', height: 300 }}>
-                            <ResponsiveContainer>
+                        <div className="Open_daz" style={{ width: '100%', height: 250 }}>
+                            <ResponsiveContainer calssName="Open_daz">
                                 <PieChart width={100} height={100} onMouseEnter={this.onPieEnter}>
                                     <Pie
                                         data={data}

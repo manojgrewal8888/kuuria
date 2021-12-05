@@ -1098,11 +1098,11 @@ span.only_edash {
 
 .open_lin2 {
   border-left: 2px solid rgba(207, 207, 207, 0.2);
-  height: 800px;
+  height: 600px;
   width: 0px;
   position: absolute;
   left: 60%;
-  top: 160px;
+  top: 215px;
 }
 
 .date_format {
@@ -1110,7 +1110,7 @@ span.only_edash {
   width: 55%;
   height: 200px;
   left: 0px;
-  top: 275px;
+  top: 80px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-sizing: border-box;
@@ -1118,6 +1118,11 @@ span.only_edash {
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   border-radius: 10px;
+}
+
+.Open_daz {
+  position: relative;
+  top: -200px;
 }
 
 input.input_opened {
@@ -1942,16 +1947,18 @@ img.event_img {
 
 /*for evevnt-categoryyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy/*/
 
-p.ecat_txt {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 25px;
-  color: #FFB800;
-  text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-  float: right;
-  margin-top: 100px;
-  margin-right: 116px;
+button.ecat_txtnw {
+  display: block;
+  margin-top: 150px;
+  margin-left: 60%;
+  width: 25%;
+  height: 35px;
+  font-size: 20px;
+  color: #ffd600;
+  background: transparent;
+  border: 1px solid #ffd600;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 
@@ -1977,12 +1984,14 @@ i.fa.fa-search.catsearch_icon {
 
 .ecat_box {
   margin: auto;
-  margin-left: 100px;
+  margin-left: 0px;
   width: 765px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  grid-row-gap: 40px;
   row-gap: 40px;
+  grid-column-gap: 10px;
   column-gap: 10px;
   margin-top: 75px;
 }
@@ -2048,17 +2057,17 @@ p.nom_cat:hover {
 
 .slider_ecat {
   margin-top: 50px;
-  margin-left: 441px;
+  margin-left: 35%;
 }
 
 /*for delete categoryyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy*/
 
 i.fa.fa-trash.ecat_icon {
   color: #ff0000;
-  position: absolute;
-  top: 100px;
-  left: 1125px;
-  font-size: 35px;
+  position: relative;
+  top: 150px;
+  left: 65%;
+  font-size: 25px;
 }
 
 .ecat_item2 {
@@ -2360,9 +2369,9 @@ a.set_linxg {
 /*for right*/
 
 .right_gen {
-  width: 63%;
+  width: 75%;
   position: absolute;
-  left: 395px;
+  left: 25%;
   top: 80px;
   height: 600px;
   background: none;
@@ -2454,11 +2463,12 @@ button.genset_btn {
   position: absolute;
   width: 150px;
   height: 150px;
-  left: 1320px;
+  left: 80%;
   top: 286px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-sizing: border-box;
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   border-radius: 5px;
 }
@@ -5463,7 +5473,7 @@ i.fa.fa-bell.bell_main:hover~.dropcontan_maindeshb {
 
 .recharts-responsive-container {
   float: right;
-  border: 1px solid;
+
   width: 40% !important;
   height: 100%;
 }
@@ -6067,4 +6077,38 @@ button.anabtnsub:hover {
   margin-top: 100px;
   margin-bottom: 250px;
 
+}
+
+
+
+/* =====================================extramenu==================================*/
+
+li.emenli {
+  /*border: 1px solid green;*/
+  padding: 10px 20px;
+}
+
+ul.emenul {
+  list-style: none;
+  /* border: 1px solid;*/
+  display: flex;
+}
+
+.wrapemen {
+
+  width: 100%;
+  /* float: right; */
+  margin-top: 150px;
+}
+
+a.setemlink {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a.setemlink:hover {
+  color: #ffd600;
+  text-decoration: none;
+  cursor: pointer;
 }

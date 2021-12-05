@@ -48,6 +48,7 @@ import Settingorg from './components/front/Settingorg';
 import Settingapp from './components/front/Settingapp';
 import Eventcategory from './components/front/Eventcategory';
 import Eventnominee from './components/front/Eventnominee';
+import Eventnominee2 from "./components/front/Eventnominee2";
 import Eventnominfo from './components/front/Eventnominfo';
 import Eventdelete from './components/front/Eventdelete';
 
@@ -83,6 +84,9 @@ import Superadmin from "./components/front/Superadmin";
 import Organisationsa from "./components/front/Orgsuperadmin";
 import Googleana from "./components/front/Googleana";
 import Supermsg from "./components/front/Supermsg";
+
+
+import Extramenu from "./components/front/Extramenu";
 
 
 
@@ -127,7 +131,7 @@ class App extends Component {
               <Route exact={true} path='/dashvote' component={Dashvoting} />
               <Route exact={true} path='/votecheck' component={Votecheck} />
               <Route exact={true} path='/votebrowse' component={Votebrowse} />
-              <Route exact={true} path='/votenominee' component={Votenominee} />
+              {/*} <Route exact={true} path='/votenominee' component={Votenominee} />*/}
               <Route exact={true} path='/votepersonal' component={Votepersonal} />
               <Route exact={true} path='/voteprices' component={Voteprices} />
               <Route exact={true} path='/votesubmit' component={Votesubmit} />
@@ -143,6 +147,7 @@ class App extends Component {
               <Route exact={true} path='/settingapp' component={Settingapp} />
               <Route exact={true} path='/category' component={Eventcategory} />
               <Route exact={true} path='/eventnominee' component={Eventnominee} />
+              <Route exact={true} path='/eventnominee2' component={Eventnominee2} />
               <Route exact={true} path='/nomineeinfo' component={Eventnominfo} />
               <Route exact={true} path='/eventdelete' component={Eventdelete} />
 
@@ -172,6 +177,8 @@ class App extends Component {
               <Route exact={true} path='/org_superadmin' component={Organisationsa} />
               <Route exact={true} path='/google_analytic' component={Googleana} />
               <Route exact={true} path='/super_ad_msg' component={Supermsg} />
+
+              <Route exact={true} path='/extramenu' component={Extramenu} />
 
 
 

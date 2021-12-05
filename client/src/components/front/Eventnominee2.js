@@ -8,7 +8,7 @@ import axios from "axios";
 import Extramenu from './Extramenu';
 
 
-class Eventnominee extends PureComponent {
+class Eventnominee2 extends PureComponent {
     render() {
         return (
             <div>
@@ -30,18 +30,18 @@ class Eventnominee extends PureComponent {
 
 
                             <div className="ecat_box">
-                                <div className="ecat_item2"><p className="nom_cat">Category 1</p></div>
-                                <div className="ecat_item2"><p className="nom_cat">Category 2</p></div>
-                                <div className="ecat_item2"><p className="nom_cat">Category 3</p></div>
-                                <div className="ecat_item2"><p className="nom_cat">Category 4</p></div>
-                                <div className="ecat_item2"><p className="nom_cat">Category 5</p></div>
-                                <div className="ecat_item2"><p className="nom_cat">Category 6</p></div>
-                                <div className="ecat_item2"><p className="nom_cat">Category 7</p></div>
-                                <div className="ecat_item2"><p className="nom_cat">Category 8</p></div>
-                                <div className="ecat_item2"><p className="nom_cat">Category 9</p></div>
-                                <div className="ecat_item2"><p className="nom_cat">Category 10</p></div>
-                                <div className="ecat_item2"><p className="nom_cat">Category 11</p></div>
-                                <div className="ecat_item2"><p className="nom_cat">Category 12</p></div>
+                                <div className="ecat_item2"><p className="nom_cat">Nominee 1</p></div>
+                                <div className="ecat_item2"><p className="nom_cat">Nominee 2</p></div>
+                                <div className="ecat_item2"><p className="nom_cat">Nominee 3</p></div>
+                                <div className="ecat_item2"><p className="nom_cat">Nominee 4</p></div>
+                                <div className="ecat_item2"><p className="nom_cat">Nominee 5</p></div>
+                                <div className="ecat_item2"><p className="nom_cat">Nominee 6</p></div>
+                                <div className="ecat_item2"><p className="nom_cat">Nominee 7</p></div>
+                                <div className="ecat_item2"><p className="nom_cat">Nominee 8</p></div>
+                                <div className="ecat_item2"><p className="nom_cat">Nominee 9</p></div>
+                                <div className="ecat_item2"><p className="nom_cat">Nominee 10</p></div>
+                                <div className="ecat_item2"><p className="nom_cat">Nominee 11</p></div>
+                                <div className="ecat_item2"><p className="nom_cat">Nominee 12</p></div>
                             </div>
                             <div className="slider_ecat">
                                 <span className="dot ecat_dot" onclick="currentSlide(1)"></span>
@@ -56,4 +56,4 @@ class Eventnominee extends PureComponent {
     }
 }
 
-export default Eventnominee;
+export default Eventnominee2;

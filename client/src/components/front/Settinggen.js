@@ -1,30 +1,26 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
-import Menu from './Menu';
+import React, { PureComponent } from 'react';
+import { ResponsiveContainer, PieChart, Cell, Pie, Legend } from 'recharts';
+import { Link } from "react-router-dom";
+import Sidebar from "./Sidebar";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import axios from "axios";
+import Extramenu from './Extramenu';
 
-export default class Settinggen extends Component {
+
+class Settinggen extends PureComponent {
     render() {
         return (
             <div>
-                <Menu/>
-                <div className="setgen_main">
-                    <div className="wrapgen_set">
-                        <h1 className="acc_set">Account Setting</h1>
-                        <div className="left_gen">
 
-                            <img src="./img/kuria-new.png" alt="" className="genset_img" />
-                            <Link className="set_linx"  to='/settinggen'>General</Link>
-                            <Link className="set_linx"  to='/settingorg'>Organisation</Link>
-                            <Link className="set_linx"  to='/settingapp'>Appearance</Link>
-                            <Link className="set_linx"  to='/empty'>Mobile App</Link>
-                            <Link className="set_linx"  to='/empty'>Billing</Link>
-                            <Link className="set_linx"  to='/empty'>Security</Link>
-                            <Link className="set_linxg"  to='/settinggen'>General</Link>
+                <div className="wrap_vwendor">
+                    <Sidebar history={this.props.history} />
 
 
-                        </div>
 
-                        <div className="lineh_gen"></div>
+                    <div className="right_home1">
+
+                        <Extramenu history={this.props.history} />
 
                         <div className="right_gen">
                             <i className="fa fa-user-o"></i><p className="fa_user">Profile Settings</p>
@@ -47,3 +43,4 @@ export default class Settinggen extends Component {
         )
     }
 }
+export default Settinggen;
