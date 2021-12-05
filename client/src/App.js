@@ -131,7 +131,7 @@ class App extends Component {
               <Route exact={true} path='/dashvote' component={Dashvoting} />
               <Route exact={true} path='/votecheck' component={Votecheck} />
               <Route exact={true} path='/votebrowse' component={Votebrowse} />
-              {/*} <Route exact={true} path='/votenominee' component={Votenominee} />*/}
+              <Route exact={true} path='/votenominee' component={Votenominee} />
               <Route exact={true} path='/votepersonal' component={Votepersonal} />
               <Route exact={true} path='/voteprices' component={Voteprices} />
               <Route exact={true} path='/votesubmit' component={Votesubmit} />
