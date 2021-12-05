@@ -18,7 +18,7 @@ class Extramenu extends Component {
                     <ul className="emenul">
                         <li className="emenli"> <Link to="/settinggen" className="setemlink" >General</Link></li>
                         <li className="emenli"><Link to="/eventnominee" className="setemlink" >Categories</Link></li>
-                        <li className="emenli"><Link to="" className="setemlink" >Sms</Link></li>
+                        <li className="emenli"><Link to="/smsven" className="setemlink" >Sms</Link></li>
                         <li className="emenli"><Link to="/settingorg" className="setemlink" >Organisation</Link></li>
                         <li className="emenli"><Link to="/settingapp" className="setemlink" >Appearance</Link></li>
                     </ul>

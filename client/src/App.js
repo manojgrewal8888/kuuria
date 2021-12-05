@@ -87,6 +87,7 @@ import Supermsg from "./components/front/Supermsg";
 
 
 import Extramenu from "./components/front/Extramenu";
+import Smssub from "./components/front/Smssub";
 
 
 
@@ -148,7 +149,7 @@ class App extends Component {
               <Route exact={true} path='/category' component={Eventcategory} />
               <Route exact={true} path='/eventnominee' component={Eventnominee} />
               <Route exact={true} path='/eventnominee2' component={Eventnominee2} />
-              <Route exact={true} path='/nomineeinfo' component={Eventnominfo} />
+              {/*} <Route exact={true} path='/nomineeinfo' component={Eventnominfo} />*/}
               <Route exact={true} path='/eventdelete' component={Eventdelete} />
 
               <Route exact={true} path='/vendor_dashboard' component={Vendordash} />
@@ -180,6 +181,7 @@ class App extends Component {
               <Route exact={true} path='/super_ad_msg' component={Supermsg} />
 
               <Route exact={true} path='/extramenu' component={Extramenu} />
+              <Route exact={true} path='/smsven' component={Smssub} />
 
 
 
