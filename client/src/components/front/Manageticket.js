@@ -55,7 +55,7 @@ class Manageticket extends Component {
                             <div className="tick_wraping">
                                 <div className="wrapman_tik">
                                     <p className="mantik_pra_0">No event found , Go to  <Link className="mantik_pra2" to='/viewedit_ticket'>Manage events</Link> and create one.</p>
-                                </div>
+                                </div> 
                                 {/*  <div className="wrapman_tik">
                                     <p className="mantik_pra">Award Event 2021</p>
                                     <Link className="mantik_pra2" to='/viewedit_ticket'>Select to View and Edit</Link>
