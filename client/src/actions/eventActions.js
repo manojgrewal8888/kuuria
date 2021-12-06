@@ -29,14 +29,3 @@ export const editevent = (userData, history) => dispatch => {
       })
     );
 }; 
-export const create_ticket = (ticket, history) => dispatch => {
-  axios
-    .post("/api/vendor/create_ticket", ticket)
-    .then(res => console.log(res)/* history.push("/manage_ticket") */) // re-direct to login on successful register
-    .catch(err =>
-      dispatch({
-        type: GET_ERRORS,
-        payload: err.response.data
-      })
-    );
-}; 

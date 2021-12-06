@@ -90,7 +90,8 @@ router.post('/create_ticket', function(req, res) {
       time: req.body.time,
       price_votes: req.body.price_votes,
       venue: req.body.venue,
-      number: req.body.number
+      number: req.body.number,
+      user_id: req.body.user_id,
     });
     ticket.save().then(ticket => res.json(ticket)).catch(err => console.log(err));
 });
@@ -111,7 +112,7 @@ router.get('/delete_ticket', function(req, res) {
       }
   });
 });
-router.get('/ticket_list', async function(req,res) {
+router.post('/ticket_list', async function(req,res) {
   let errors = {};
     if (!req.body.user_id) {
       errors.user_id = "user_id id is required";
