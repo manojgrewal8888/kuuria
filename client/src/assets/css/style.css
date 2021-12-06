@@ -1130,7 +1130,7 @@ input.input_opened {
   width: 55%;
   height: 47px;
   left: 0px;
-  top: 350px;
+  top: 120px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-sizing: border-box;
@@ -1295,9 +1295,9 @@ span.count_x3 {
 
 .spans_ope {
   display: flex;
-  position: relative;
-  top: 0px;
-  left: 60%;
+  top: -81px;
+  float: right;
+  margin-right: 26px;
 }
 
 i.fa.fa-circle.white_cop {

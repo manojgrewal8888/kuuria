@@ -85,19 +85,7 @@ class Sidebar extends Component {
                                 <i className="fa fa-key"></i>
                                 <span className='menu_it_em1' >Log out</span>
                             </div>
-                        </a>
-                        {/* <button
-                            style={{
-                                width: "150px",
-                                borderRadius: "3px",
-                                letterSpacing: "1.5px",
-                                marginTop: "1rem"
-                            }}
-                            onClick={this.onLogoutClick}
-                            className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-                        >Logout &nbsp;
-                            <i className="fa fa-sign-out"></i>
-                        </button> */}
+                        </a> 
 
                     </div>
                 </div>
