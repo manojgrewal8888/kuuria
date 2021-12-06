@@ -27,6 +27,9 @@ class Opened extends PureComponent {
 
     }
     async componentDidMount() {
+        if (this.props.auth.isAuthenticated == false) {
+            this.props.history.push("/login");
+        }
         /*  var user_id = {
              id:localStorage.getItem('_id')
          }

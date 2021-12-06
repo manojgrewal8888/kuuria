@@ -1293,6 +1293,10 @@ span.count_x3 {
   color: #FFD600;
 }
 
+a.custom_b0.setemlink {
+  color: #fbd402;
+}
+
 .spans_ope {
   display: flex;
   top: -81px;
@@ -1949,7 +1953,7 @@ img.event_img {
 
 button.ecat_txtnw {
   display: block;
-  margin-top: 150px;
+  margin-top: 50px;
   margin-left: 60%;
   width: 25%;
   height: 35px;
@@ -2372,7 +2376,7 @@ a.set_linxg {
   width: 75%;
   position: absolute;
   left: 25%;
-  top: 80px;
+  top: 181px;
   height: 600px;
   background: none;
 }

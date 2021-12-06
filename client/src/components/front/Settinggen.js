@@ -9,6 +9,22 @@ import Extramenu from './Extramenu';
 
 
 class Settinggen extends PureComponent {
+
+    constructor() {
+        super();
+        this.state = {
+            event: [],
+            showloader: true
+        };
+    }
+    componentWillReceiveProps(nextProps) {
+
+    }
+    async componentDidMount() {
+        if (this.props.auth.isAuthenticated == false) {
+            this.props.history.push("/login");
+        }
+    }
     render() {
         return (
             <div>
@@ -43,4 +59,18 @@ class Settinggen extends PureComponent {
         )
     }
 }
-export default Settinggen;
+
+
+Settinggen.propTypes = {
+    auth: PropTypes.object.isRequired,
+    errors: PropTypes.object.isRequired
+};
+const mapStateToProps = state => ({
+    auth: state.auth,
+    errors: state.errors
+});
+export default connect(
+    mapStateToProps,
+    {}
+)(Settinggen);
+ 
