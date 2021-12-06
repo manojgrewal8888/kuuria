@@ -111,10 +111,10 @@ class Manageevent extends Component {
                                                     <td>{val[1].eventname ? val[1].eventname : ''}</td>
                                                     <td className='mod_th2'>{start_date ? start_date : ''}</td>
                                                     <td className='mod_th2'>{end_date ? end_date : ''}</td>
-                                                    <td className='mod_th2'>
-                                                        {val[1].status ?? ''}
+                                                    <td className='mod_th2'> 
+                                                        <input className='check_tog '  type="checkbox"  checked={val[1].status && val[1].status == 1 ? 'checked' : ''}   id="status" />
                                                     </td>
-                                                    <td className='mod_th2'>
+                                                    <td className='mod_th2 d-flex'>
                                                         <Link className="Link_reset" to='/eventopened'>
                                                             <i className="fa fa-eye icon_datemodp" ></i>
                                                         </Link> &nbsp;&nbsp;
