@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const validateCategoryInput = require("../../validation/eventcategory");
+const Event = require("../../models/Event");
+const Voter = require("../../models/Voter");
 const EventCategory = require("../../models/EventCategory");
 const Ticket = require("../../models/Ticket");
 const Question = require("../../models/vendor/Question");
@@ -221,5 +223,28 @@ router.post('/update_question', function(req, res) {
             return res.status(200).json('question updated successfully');
         }
     });
+});
+router.get('/total_votes', async function(req, res) {
+  const err = {};
+    if (!(req.body && req.body.vendor_id)) {
+        err.vendor_id = 'vendor_id is required';
+    }
+    if (err.hasOwnProperty('vendor_id')) {
+        return res.status(400).json(err);
+    }
+    let event_id = [];
+    await Event.find({user_id: req.body.vendor_id}).select('_id').then(event => {
+      if (event.length > 0) {
+        for (let i=0; i < event.length; i++) {
+          event_id.push(event[i]._id);
+        }
+      } else {
+        return res.status(400).json('no event found');
+      }
+    });
+    if (event_id.length > 0) {
+      let total_voters = await Voter.find({event_id: {$in : event_id}}).count();
+      return res.status(200).json({'total_voters': total_voters});
+    }
 });
 module.exports = router;

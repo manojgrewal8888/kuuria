@@ -99,5 +99,55 @@ router.post('/update_nominee', imageUpload.single('image'), function (req, res) 
         }
     });
 });
+router.get('/event_nominee', function(req, res) {
+    const err = {};
+    if (!(req.body && req.body.event_id)) {
+        err.event_id = 'event_id is required';
+    }
+    if (err.hasOwnProperty('event_id')) {
+        return res.status(400).json(err);
+    }
+    Nominee.find({event_id: req.body.event_id}).then(nominee => {
+        if (nominee.length > 0) {
+            return res.status(200).json(nominee)
+        } else {
+            return res.status(404).json('nominees not found');
+        }
+    });
+});
+router.post('/approve', function(req, res) {
+    const err = {};
+    if (!(req.body && req.body.nominee_id)) {
+        err.nominee_id = 'nominee_id is required';
+    }
+    if (!(req.body && req.body.is_approve)) {
+        err.is_approve = 'is_approve is required';
+    }
+    if (err.hasOwnProperty('nominee_id') || err.hasOwnProperty('is_approve')) {
+        return res.status(400).json(err);
+    }
+    if (req.body.is_approve == 2) {
+        Nominee.updateOne({_id: req.body.nominee_id}, {$set:{is_approve: req.body.is_approve}},{upsert: true}, function(err, result) {
+            if (err) {
+                console.log(err);
+            } else {
+                return res.status(200).json('nominee approved successfully');
+            }
+        });
+    } else {
+        if (req.body.is_approve == 1) {
+            Nominee.updateOne({_id: req.body.nominee_id}, {$set:{is_approve: req.body.is_approve}},{upsert: true}, function(err, result) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    return res.status(200).json('nominee disapproved successfully');
+                }
+            });
+        } else {
+            return res.status(200).json('allowed value for is_approve is 1 or 2');
+        }
+    }
+
+});
 
 module.exports = router;

@@ -17,6 +17,7 @@ const validateAppearanceInput = require("../../validation/events/appearance");
 const Event = require("../../models/Event");
 const EventOrganisation = require("../../models/EventOrganisation");
 const EventAppearance = require("../../models/EventAppearance");
+const Nominee = require("../../models/Nominee");
 var storage = multer.diskStorage({
   destination: function(req, file, callback) {
       callback(null, 'uploads/events');
@@ -232,5 +233,15 @@ router.post("/addevent", (req, res) => {
                 .catch(err => console.log(err));
           }
         });
+  });
+
+  router.get('/total_votes', async function(req, res) {
+    const err = {};
+    if (!(req.body && req.body.event_id)) {
+        err.event_id = 'event_id is required';
+    }
+    if (err.hasOwnProperty('event_id')) {
+        return res.status(400).json(err);
+    }
   });
 module.exports = router;

@@ -21,6 +21,10 @@ const NomineeSchema = new Schema({
   image: {
     type: String,
     required: true
+  },
+  is_approve: {
+    type: Number,
+    default: 1
   }
 });
 module.exports = Event = mongoose.model("nominee", NomineeSchema);
