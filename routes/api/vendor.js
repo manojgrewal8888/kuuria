@@ -124,6 +124,22 @@ router.post('/ticket_list', async function(req,res) {
       return res.json(ticket);
   });
 });
+router.get('/get_ticket', function(req, res) {
+  let errors = {};
+  if (!(req.body && req.body.ticket_id)) {
+      errors.ticket_id = 'ticket_id is required !';
+  }
+  if (!_.isEmpty(errors)) {
+    return res.status(400).json(errors);
+  }
+  Ticket.findOne({_id: req.body.ticket_id}).then(ticket=> {
+    if (ticket) {
+      return res.json(ticket);
+    } else {
+      return res.status(200).json('ticket not found');
+    }
+  });
+});
 router.post('/add_question', function(req, res) { 
    const { errors, isValid } = validateQuestionInput(req.body);
    // Check validation
