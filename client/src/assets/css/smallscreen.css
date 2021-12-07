@@ -340,14 +340,10 @@
 
     /*============================================for menu===============================*/
 
-    .dropbtnzx {
-        background-color: transparent;
-        color: #ffffff;
+    .dropdownzx {
+        display: block;
+        width: 60%;
         font-size: 15px;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        cursor: pointer;
-        border-radius: 8px;
-        width: 100%;
     }
 
     img.img-headlogo {
@@ -357,14 +353,17 @@
         margin-top: 25px;
     }
 
-
-    .dropdownzx {
-        position: relative;
-        display: inline-block;
-        float: right;
-        margin-right: 25px;
-        width: 85%;
+    button.dropbtnzx {
+        background: transparent;
+        color: #ffffff;
+        width: 100%;
+        border: 1px solid;
+        border-radius: 8px;
+        font-size: 15px;
     }
+
+
+
 
 
     .dropdown-contentzx {
@@ -372,9 +371,9 @@
         position: absolute;
         background-color: #000000;
         z-index: 1;
-        width: 100%;
-        left: 0%;
+        width: 50%;
         color: white;
+        right: 0%;
     }
 
     .wrapmenu {
@@ -970,13 +969,13 @@
         background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.15);
         box-sizing: border-box;
-        box-shadow: 10px 12px 26px 2px rgba(0, 0, 0, 0.2);
+        box-shadow: 10px 12px 26px 2px rgb(0 0 0 / 20%);
         -webkit-backdrop-filter: blur(4px);
         backdrop-filter: blur(4px);
         border-radius: 8px;
-        padding: 5px 5px;
+        padding: 2px 2px;
         color: #ffd600;
-        font-size: 20px;
+        font-size: 15px;
         float: left;
         margin-left: 5%;
         margin-top: 35px;
@@ -984,11 +983,63 @@
 
     h4.meve_headin {
         text-align: center;
-        margin-top: 100px;
+        margin-top: 20px;
         margin-bottom: 50px;
         background: none;
         margin-bottom: 26px;
         font-size: 10px;
+    }
+
+    .numbertym_main {
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        width: 80%;
+        margin: auto;
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 10px 12px 26px 2px #00000033 inset;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        height: auto;
+        margin-top: 115px;
+        border-radius: 8px;
+    }
+
+    i.fa.fa-bell.bell_main {
+        float: left;
+        margin-top: 50px;
+        color: white;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+        margin-left: 15%;
+    }
+
+    .dropcontan_maindeshb {
+        display: none;
+        position: absolute;
+        min-width: 150px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        margin-top: 75px;
+        right: 0%;
+        left: 15%;
+        width: 40%;
+        border: 1px solid #33466a;
+        border-radius: 8px;
+        height: 300px;
+        background: #0f2650;
+    }
+
+    p.numtym {
+        font-size: 20px;
+    }
+
+    p.fistoneword {
+        font-size: 10px;
+    }
+
+    button.doublebtn_maind {
+        font-size: 10px;
+        height: 35px;
     }
 
     h2.msg_heading {
@@ -1038,11 +1089,16 @@
         width: 90%;
         margin: auto;
         margin-top: 50px;
-        height: 600px;
+        height: auto;
     }
 
     button.venverbtn {
         font-size: 10px;
+    }
+
+    span.dot.dot_rezmaind {
+        height: 10px;
+        width: 10px;
     }
 
     button.formn_btn {
@@ -1109,4 +1165,30 @@
         font-size: 8px;
     }
 
+    .check_tog {
+        height: 15px;
+    }
+
+    .check_tog::before {
+        width: 15px;
+        height: 15px;
+    }
+
+    .check_tog:checked::before {
+        left: 25px;
+    }
+
+    p.bottom_vendash {
+        font-size: 10px;
+    }
+
+    .logout_ven1 {
+        float: right;
+        font-size: 15px;
+        letter-spacing: 2px;
+        box-sizing: border-box;
+        margin-top: 40px;
+        padding: 5px 0px;
+        text-align: center;
+    }
 }

@@ -608,11 +608,7 @@ input.search-input:hover {
   background: #ffffff;
 }
 
-.ticket-search {
-  position: absolute;
-  margin-left: 930px;
-  margin-top: 8px;
-}
+
 
 .search-container {
   display: flex;
@@ -717,12 +713,14 @@ p.award {
 }
 
 i.fa.fa-search.ticket-search {
+
   background: none;
   font-size: 25px;
   color: grey;
   position: absolute;
   margin-left: 77%;
-  top: 120px;
+  top: 67%;
+
 }
 
 /*for event awawrddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd tixittttttttttttttt*/

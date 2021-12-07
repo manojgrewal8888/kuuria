@@ -425,16 +425,10 @@
         cursor: pointer;
         border-radius: 8px;
         width: 100%;
+        display: block;
     }
 
 
-    .dropdownzx {
-        position: relative;
-        display: inline-block;
-        float: right;
-        margin-right: 25px;
-        width: 55%;
-    }
 
 
     .dropdown-contentzx {
@@ -1069,61 +1063,100 @@
     }
 
 
-}
 
-button.dropbtnzsidebar {
-    display:none;
-    width: 40%;
-    margin-top: 50px;
-}
+    button.dropbtnzsidebar {
+        display: none;
+        width: 40%;
+        margin-top: 50px;
+    }
 
-.menusidebar:hover .dropdown-contentside {
-    display: block;
-}
+    .menusidebar:hover .dropdown-contentside {
+        display: block;
+    }
 
-.menusidebar:hover .dropbtnzsidebar {
-    background-color: #ffd600;
-    color: #0F2650;
-}
+    .menusidebar:hover .dropbtnzsidebar {
+        background-color: #ffd600;
+        color: #0F2650;
+    }
 
-.dropbtnzsidebar {
-    background-color: transparent;
-    color: #ffffff;
-    font-size: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    cursor: pointer;
-    border-radius: 8px;
-    width: 100%;
-}
+    .dropbtnzsidebar {
+        background-color: transparent;
+        color: #ffffff;
+        font-size: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        border-radius: 8px;
+        width: 100%;
+    }
 
-.dropdownzx {
-    position: relative;
-    display: inline-block;
-    float: right;
-    margin-right: 25px;
-    width: 55%;
-    display: none;
-}
+    .dropdownzx {
+        position: relative;
 
-.menusidebar {
-    position: relative;
-    display: inline-block;
-    float: none;
-    margin-left: 25px;
-    width: 55%;
-}
+        display: block;
+        position: relative;
+        display: inline-block;
+        float: right;
+        margin-right: 25px;
+        width: 85%;
+        position: relative;
+
+    }
+
+    .menusidebar {
+        position: relative;
+        display: inline-block;
+        float: none;
+        margin-left: 25px;
+        width: 55%;
+    }
 
 
-.dropdown-contentside {
-    display: none;
-    position: absolute;
-    background-color: #000000;
-    z-index: 1;
-    width: 100%;
-    left: 0%;
-    color: white;
-}
+    .dropdown-contentside {
+        display: none;
+        position: absolute;
+        background-color: #000000;
+        z-index: 1;
+        width: 100%;
+        left: 0%;
+        color: white;
+    }
 
-.dropmenu_sidebar {
-    display: block;
+    .dropmenu_sidebar {
+        display: block;
+    }
+
+    button.manage_btnv {
+
+        font-size: 15px;
+        float: right;
+        margin-right: 5%;
+        margin-top: 35px;
+    }
+
+    i.fa.fa-plus-circle.adicon_v {
+        padding-right: 15px;
+        font-size: 15px;
+        color: #ffd600;
+        background: none;
+    }
+
+    p.bottom_vendash {
+        font-size: 15px;
+    }
+
+    p.numtym {
+        font-size: 20px;
+    }
+
+    p.fistoneword {
+        font-size: 10px;
+    }
+
+    .btnwrap_maind {
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 40% 40%;
+        column-gap: 20%;
+    }
 }
