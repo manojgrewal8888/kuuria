@@ -30,6 +30,7 @@ export const loginUser = userData => dispatch => {
       localStorage.setItem("_id", res.data.user._id);
       localStorage.setItem("name", res.data.user.name);
       localStorage.setItem("email", res.data.user.email); 
+      localStorage.setItem("role", res.data.user.role); 
       // Set token to Auth header
       setAuthToken(token);
       // Decode token to get user data
