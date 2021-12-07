@@ -22,9 +22,12 @@ componentWillReceiveProps(nextProps) {
       });
     }
   }
-  async componentDidMount() { 
+  async componentDidMount() {  
     if (this.props.auth.isAuthenticated == false) {
         this.props.history.push("/login");
+    }
+    if (localStorage.getItem('role') == 'admin') {
+        this.props.history.push("/super_admin");
     }
     var user_id = {
         id: localStorage.getItem('_id')
