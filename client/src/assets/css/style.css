@@ -616,6 +616,11 @@ input.search-input:hover {
   margin-top: 25px;
 }
 
+
+.d-flex.mb-6 {
+  margin-bottom: 40px;
+}
+
 .wrap-ticketbox {
   background: transparent;
   width: 90%;
@@ -713,13 +718,12 @@ p.award {
 }
 
 i.fa.fa-search.ticket-search {
-
+  margin-top: 12px;
   background: none;
   font-size: 25px;
   color: grey;
   position: absolute;
-  margin-left: 77%;
-  top: 67%;
+  margin-left: 77%; 
 
 }
 
