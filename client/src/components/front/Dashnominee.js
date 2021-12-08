@@ -34,11 +34,8 @@ export default class Dashnom extends Component {
 
                         <div className="flex_umb">
                             <div className="item_umb"><Link className="link_reset" to='/dashvote' ><p className="nom_subumb"> Category 1 </p></Link></div>
-                            <div className="item_umb"><Link className="link_reset" to='/dashvote' ><p className="nom_subumb"> Category 2</p></Link></div>
-                            <div className="item_umb"><Link className="link_reset" to='/dashvote' ><p className="nom_subumb"> Category 3</p></Link></div>
-                            <div className="item_umb"><Link className="link_reset" to='/dashvote' ><p className="nom_subumb"> Category 4</p></Link></div>
-                            <div className="item_umb"><Link className="link_reset" to='/dashvote' ><p className="nom_subumb"> Category 5</p></Link></div>
-                            <div className="item_umb"><Link className="link_reset" to='/dashvote' ><p className="nom_subumb"> Category 6</p></Link></div>
+                         {/*    <div className="item_umb"><Link className="link_reset" to='/dashvote' ><p className="nom_subumb"> Category 2</p></Link></div> */}
+                          
                         </div>
 
                     </div>

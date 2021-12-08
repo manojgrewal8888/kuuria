@@ -1,22 +1,97 @@
-import React, { useState } from 'react';
+import React, { useState,Component } from 'react';
 import Modal from 'react-modal';
 import { Link } from "react-router-dom";
-
-
-
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
-
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+const percentage = 1200;
+const percentage1 = 1800;
+ 
+class Dashvoting extends Component {
+/*     const [value, setValue] = useState()
+    const [modalIsOpen, setModalIsOpen] = useState(false); */
+    constructor() {
+        super();
+        this.state = {
+            showPopup: false,
+            showloader: true,
+            openvote:true
+        };
+    }
+    componentWillReceiveProps(nextProps) {
 
-function Dashvoting() {
-    const [value, setValue] = useState()
-    const [modalIsOpen, setModalIsOpen] = useState(false);
+    }
+    setValue = e => {
+        this.setState({
+            value: e.target.value, 
+        });
+    }
+    setpersonal = e => {
+        this.setState({
+            personal: true, 
+            openvote: false, 
+            pricenvote: false, 
+            votesubmit: false
+        });
+    }
+    gotoVote = e => {
+        this.setState({
+            personal: false, 
+            openvote: true, 
+            pricenvote: false, 
+            votesubmit: false
+        });
+    }
+    proceedVote = e => {
+        this.setState({
+            pricenvote: true, 
+            personal: false, 
+            openvote: false, 
+            votesubmit: false
+        });
+    }
+    gotoPersonal = e => {
+        this.setState({
+            pricenvote: false, 
+            personal: true, 
+            openvote: false, 
+            votesubmit: false
+        });
+    }
+    vote_sub = e => {
+        this.setState({
+            votesubmit: true, 
+            pricenvote: false, 
+            personal: false, 
+            openvote: false, 
+        });
+    }
+    setModalIsOpen = e => {
+        if(this.state.showPopup == true){
+            this.setState({
+                showPopup: false,
+                openvote:true ,
+                personal: false, 
+                pricenvote: false, 
+                votesubmit: false, 
+            });
+        }else{
+            this.setState({
+                showPopup: true,  
+            });
+        }
+    }
+    async componentDidMount() { 
 
-    const percentage = 1200;
-    const percentage1 = 1800;
-    return (
+    }
+    render() {
+
+
+
+        return (
         <div>
 
             <div className="nav_umb">
@@ -40,9 +115,9 @@ function Dashvoting() {
                         </div>
 
                         <div className="wrsearchdv">
-                            <Link className='link_reset' to='/votecheck'>
+                            <div className='link_reset' >
                                 <button className="umb_check">Check Vote</button>
-                            </Link>
+                            </div>
                         </div>
                     </div>
 
@@ -50,10 +125,11 @@ function Dashvoting() {
 
                     <div className="flex_umb">
                         <div className="item_umb">
-                            <button className="nom_subumb" onClick={() => setModalIsOpen(true)} >
+                            <button className="nom_subumb" onClick={this.setModalIsOpen} >
                                 nominee 1
                             </button>
-                            <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
+                            <Modal isOpen={this.state.showPopup} onRequestClose={this.setModalIsOpen}>
+                            {this.state.openvote &&
                                 <div id="voteper">
                                     <div className="one_wraappp">
                                         <div className="one_rightxvc">
@@ -67,15 +143,15 @@ function Dashvoting() {
                                         <div className="check_vertical"></div>
 
                                         <div className="one_rightxvc2">
-                                            <Link to="/votesubmit"><button className="vote_check">VOTE</button></Link>
-                                            <Link to='/dashnpminee'><button className="back_check">Back To Nominee</button> </Link>
+                                            <button  onClick={this.setpersonal} className="vote_check">VOTE</button>
+                                            <button onClick={this.setModalIsOpen} className="back_check">Back To Nominee</button>
                                         </div>
                                     </div>
 
-                                </div>
-
+                                </div>}
 
                                 <div id="votepr">
+                                {this.state.personal &&
                                     <div className="rightv_browse">
                                         <p className="fill_personal">Fill In Personal Information</p>
                                         <input className="input_person" type="text" name="" id="" placeholder="Name" />
@@ -83,8 +159,8 @@ function Dashvoting() {
                                         <div className="resetx">
                                             <PhoneInput
                                                 defaultCountry="ind"
-                                                value={value}
-                                                onChange={setValue}
+                                                value={this.state.value}
+                                                onChange={this.setValue}
                                                 inputClass="inputmod"
                                                 buttonClass="btnxmod"
                                                 containerClass="lcontainxmod"
@@ -93,17 +169,17 @@ function Dashvoting() {
                                             />
                                         </div>
                                         <div className="wrapx_btnp">
-                                            <Link className="link_reset" to='/votebrowse'><button className="back_person">Back</button></Link>
-                                            <Link className="link_reset" to='/voteprice'><button className="proceed_person">Proceed</button></Link>
+                                            <button onClick={this.gotoVote} className="back_person">Back</button>
+                                            <button onClick={this.proceedVote} className="proceed_person">Proceed</button>
                                         </div>
 
-                                    </div>
+                                    </div>}
 
 
-
+                                    {this.state.pricenvote &&
                                     <div id="pricenvote">
                                         <div className="midpopp_browse">
-                                            <p className="pricevote_head">Prices and Votes</p>
+                                            <p className="pricevote_head">Prices & Votes</p>
                                             <select className="price_select" name="" id="" placeholder="Choose Price and Number of Votes">
                                                 <option value="">Choose Price and Number of Votes</option>
                                                 <option value="">99$ 4 votes</option>
@@ -112,26 +188,26 @@ function Dashvoting() {
                                             </select>
 
                                             <div className="wrap2btnx">
-                                                <Link className="link_reset" to='/votebrowse'><button className="back_personxx">Back</button></Link>
-                                                <Link className="link_reset" to='/votesubmit'><button className="proceed_personxx">Proceed</button></Link>
+                                                <button onClick={this.gotoPersonal}  className="back_personxx">Back</button>
+                                                <button onClick={this.vote_sub}  className="proceed_personxx">Proceed</button>
 
                                             </div>
 
                                         </div>
-                                    </div>
+                                    </div>}
                                 </div>
 
-
+                                {this.state.votesubmit &&
                                 <div id="submited_pop">
                                     <div className="subcon_wrap">
                                         <img src="./img/conf.png" alt="" className="subcon_im1" />
                                         <img src="./img/highfive.png" alt="" className="subcon_im2" />
                                         <p className="vote_submitconf">Vote Submitted</p>
                                     </div>
-                                </div>
+                                </div>}
 
 
-
+                                {this.state.createcat &&
                                 <div id="addnewcat">
                                     <div className="wrapaddne">
                                         <p className="headingaddon">Create New Category</p>
@@ -145,9 +221,9 @@ function Dashvoting() {
                                             <button className="creteaddon_bt">CREATE</button>
                                         </div>
                                     </div>
-                                </div>
+                                </div>}
 
-
+                                {this.state.deleteevent &&
                                 <div id="dleteevn">
                                     <div className="wrap_ddeleteeven">
                                         <p className="delhead_pop">Delete Event</p>
@@ -156,10 +232,10 @@ function Dashvoting() {
 
                                         <button className="delwarteen"><i className="fa fa-trash del_colo"></i>Delete</button>
                                     </div>
-                                </div>
+                                </div>}
 
 
-
+                                {this.state.eventdetail &&
                                 <div className="double_prog">
 
                                     <div className="evenbtn_doublep">
@@ -252,22 +328,18 @@ function Dashvoting() {
                                     </table>
 
                                 </div>
+                                }
 
 
 
-                                <div className="demspace"></div>
-
-
-
-
-
+                                {/* <div className="demspace"></div>  */}
                             </Modal>
                         </div>
-                        <div className="item_umb"><p className="nom_subumb"> Nominee 2</p></div>
+                       {/*  <div className="item_umb"><p className="nom_subumb"> Nominee 2</p></div>
                         <div className="item_umb"><p className="nom_subumb"> Nominee 3</p></div>
                         <div className="item_umb"><p className="nom_subumb"> Nominee 1</p></div>
                         <div className="item_umb"><p className="nom_subumb"> Nominee 2</p></div>
-                        <div className="item_umb"><p className="nom_subumb"> Nominee 3</p></div>
+                        <div className="item_umb"><p className="nom_subumb"> Nominee 3</p></div> */}
                     </div>
                     <Link className="link_reset" to='/dashnominee'><button className="umb_back"> Back To Category</button></Link>
                 </div>
@@ -275,5 +347,16 @@ function Dashvoting() {
         </div>
     )
 }
-
-export default Dashvoting
+}
+Dashvoting.propTypes = {
+    auth: PropTypes.object.isRequired,
+    errors: PropTypes.object.isRequired
+};
+const mapStateToProps = state => ({
+    auth: state.auth,
+    errors: state.errors
+});
+export default connect(
+    mapStateToProps,
+    {}
+)(Dashvoting); 
