@@ -150,7 +150,7 @@ class App extends Component {
               <Route exact={true} path='/category' component={Eventcategory} />
               <Route exact={true} path='/eventnominee' component={Eventnominee} />
               <Route exact={true} path='/eventnominee2' component={Eventnominee2} />
-              {/*} <Route exact={true} path='/nomineeinfo' component={Eventnominfo} />*/}
+               
               <Route exact={true} path='/eventdelete' component={Eventdelete} />
 
               <Route exact={true} path='/vendor_dashboard' component={Vendordash} />
