@@ -1027,10 +1027,10 @@
 
     .onestar3 {
         display: flex;
-        width: 83%;
+        width: 70%;
         background: #1D537F;
         border-radius: 10px;
-        margin-left: 0%;
+        margin-left: 15%;
     }
 
     .wrapright_sign {
@@ -1125,6 +1125,19 @@
         display: block;
     }
 
+    button.mantik_btnv {
+        font-size: 10px;
+    }
+
+    input.man_tickets {
+        font-size: 10px;
+        width: 80%;
+    }
+
+    p.mantik_pra {
+        font-size: 15px;
+    }
+
     button.manage_btnv {
 
         font-size: 15px;
@@ -1159,4 +1172,10 @@
         grid-template-columns: 40% 40%;
         column-gap: 20%;
     }
+
+    h4.meve_headin {
+        font-size: 15px;
+    }
+
+
 }
