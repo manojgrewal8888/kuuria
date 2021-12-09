@@ -71,8 +71,8 @@
         background: transparent;
         color: grey;
         position: absolute;
-        left: 80%;
-        top: -90px;
+        left: 79%;
+        top: -68px;
     }
 
     .cat-item {
@@ -330,7 +330,7 @@
     p.foot-slogan {
         font-family: "Poppins";
         font-weight: 200;
-        font-size: 15px;
+        font-size: 10px;
         color: #ffffff;
         text-align: center;
         margin-top: 60px;
@@ -439,7 +439,12 @@
         color: grey;
         position: absolute;
         margin-left: 75%;
-        top: 220px;
+        top: 230px;
+    }
+
+    input.man_tickets {
+        height: 30px;
+        font-size: 10px;
     }
 
     input.search-input {
@@ -1006,9 +1011,40 @@
     }
 
     .left_viewt {
-        width: 35%;
+        width: 30%;
         background: none;
         font-size: 10px;
+    }
+
+    .hori_viewt {
+        position: relative;
+        border-left: 2px solid rgba(196, 196, 196, 0.2);
+        left: 0%;
+    }
+
+    p.right_vt1 {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 10px;
+        color: #FFFFFF;
+        padding: 5px 0px;
+        background: none;
+    }
+
+    p.right_vt5 {
+        font-size: 10px;
+    }
+
+    p.right_vt6 {
+        font-size: 10px;
+    }
+
+    p.right_vt2 {
+        color: #FFFFFF;
+        opacity: 0.18;
+        font-size: 11px;
+        background: none;
     }
 
     .right_viewt {
@@ -1227,5 +1263,12 @@
 
     .wrapright_sign {
         width: 100%;
+    }
+
+    p.left_vt1 {
+        background: none;
+        font-size: 10px;
+        padding: 5px 0px;
+        background: none;
     }
 }
