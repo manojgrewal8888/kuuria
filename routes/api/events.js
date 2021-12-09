@@ -235,7 +235,7 @@ router.post("/addevent", (req, res) => {
         });
   });
 
-  router.get('/total_votes', async function(req, res) {
+  router.post('/total_votes', async function(req, res) {
     const err = {};
     if (!(req.body && req.body.event_id)) {
         err.event_id = 'event_id is required';
@@ -244,7 +244,7 @@ router.post("/addevent", (req, res) => {
         return res.status(400).json(err);
     }
   });
-  router.get('/all_approve_events', function(req, res) {
+  router.post('/all_approve_events', function(req, res) {
     Event.find({is_approved: 2}).sort({date:-1}).then(events => {
       if (events.length > 0) {
         return res.status(200).json(events);

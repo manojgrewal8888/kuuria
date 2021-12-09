@@ -2,12 +2,15 @@ import React, { Component } from 'react'
 import Menu from './Menu';
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import axios from "axios";
 import { Link } from "react-router-dom";
 class Index extends Component {
 
     constructor() {
         super();
         this.state = { 
+            events:'',
+            showloader:true,
         };
       }
     componentWillReceiveProps(nextProps) { 
@@ -17,10 +20,24 @@ class Index extends Component {
           });
         }
       }
-  componentDidMount() {
-      
-   
-  }
+  async componentDidMount() {
+        await axios
+            .get("/api/event/all_approve_events")
+            .then(res => {
+                if (res) {
+                    this.setState({
+                        events: res.data,
+                        showloader: false
+                    })
+                } 
+            })
+            .catch(err =>
+                this.setState({
+                    showloader: false
+                })
+            );
+    }
+
 
 
 
@@ -53,8 +70,18 @@ class Index extends Component {
 
                     </div>
 
+                    {this.state.showloader &&  
+                        <div className='text-center'><p className="loading">Loading Events</p></div>
+                    }
                     <div className="cat-box">
-                        <div className="cat-item"><h1 className="award_items"><Link className="link_reset"  to='/dashnominee'>AWARD EVENT 1</Link></h1> </div>
+                    {Object.entries(this.state.events).map((val, key) => {
+                         return (
+                            <>
+                                <div className="cat-item"><h1 className="award_items"><Link className="link_reset"  to={{ pathname: `/dashnominee`, state: { event_id: val[1]._id } }}  >AWARD EVENT 1</Link></h1> </div>
+                            </>
+                         )
+                    })}
+                        
                        {/*  <div className="cat-item"><h1 className="award_items"><Link className="link_reset"  to='/awardevent'>AWARD EVENT 2</Link></h1> </div>  */}
                     </div>
                 </div>

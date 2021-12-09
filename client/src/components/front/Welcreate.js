@@ -40,6 +40,7 @@ class Create extends Component {
                 end_date: this.state.end_date,
                 timezone: this.state.timezone, 
                 user_id: user_id, 
+                is_approved:2,
                 event_id:this.props.location.state.event_id
             };
             this.props.editevent(event, this.props.history); 
@@ -50,6 +51,7 @@ class Create extends Component {
                 end_date: this.state.end_date,
                 timezone: this.state.timezone, 
                 user_id: user_id, 
+                is_approved:2,
             };
             this.props.addevent(event, this.props.history); 
         }

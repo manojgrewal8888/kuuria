@@ -1,20 +1,73 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
-
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import axios from "axios";
 
 
 const percentage = 66;
 
-export default class Dashnom extends Component {
+class Dashnom extends Component {
+    constructor() {
+        super();
+        this.state = {
+            categories: [],
+            event: [],
+            showloader: true
+        };
+    }
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.errors) {
+            this.setState({
+                errors: nextProps.errors
+            });
+        }
+    }
+    async componentDidMount() {  
+        if(this.props.location.state && this.props.location.state.event_id !=''){  
+            var event_id = this.props.location.state.event_id;
+            await axios
+                .post("/api/front/event_category", event_id)
+                .then(response => {
+                    if (response) {
+                        this.setState({
+                            categories: response.data,
+                            showloader: false
+                        })
+                    } 
+                })
+                .catch(err =>
+                    this.setState({
+                        showloader: false
+                    })
+                );
+
+            await axios
+                .post("/api/front/event", event_id)
+                .then(res => {
+                    if (res) {
+                        console.log(res.data)
+                        this.setState({
+                            event: res.data,
+                            showloader: false
+                        })
+                    } 
+                })
+                .catch(err =>
+                    this.setState({
+                        showloader: false
+                    })
+                );
+        }
+    }
     render() {
         return (
             <div>
 
                 <div className="nav_umb">
-                    <img src="./img/dashlogo.jpg" alt="" className="umb_logo" />
+                    <img src="./img/kuria-new.png" alt="" className="umb_logo" />
                     <h1 className="umb_heading">UMB GHANA TERTIARY AWARDS</h1>
                 </div>
                 <div className="umb_contain">
@@ -31,23 +84,39 @@ export default class Dashnom extends Component {
 
 
                         <p className="select_umbp">Select Category To File For Nomination</p>
-
+                        {this.state.showloader &&  
+                            <div className='text-center'><p className="loading">Loading Events</p></div>
+                        }
+                        <div className="cat-box">
+                        {Object.entries(this.state.categories).map((val, key) => {
+                            return (
+                                <>
                         <div className="flex_umb">
-                            <div className="item_umb"><Link className="link_reset" to='/dashvote' ><p className="nom_subumb"> Category 1 </p></Link></div>
-                         {/*    <div className="item_umb"><Link className="link_reset" to='/dashvote' ><p className="nom_subumb"> Category 2</p></Link></div> */}
-                          
+                            <div className="item_umb"><Link className="link_reset" to={{ pathname: `/dashvote`, state: { cate_id: val[1]._id } }}><p className="nom_subumb"> {val[1].title ?? ''} </p></Link></div>
+                             {/*    <div className="item_umb"><Link className="link_reset" to='/dashvote' ><p className="nom_subumb"> Category 2</p></Link></div> */} 
                         </div>
+                        </>
+                        )})}
 
                     </div>
                 </div>
+                </div>
 
 
-                <div className="umb_3rdsec">
+               {/*  <div className="umb_3rdsec">
                 <CircularProgressbar value={percentage} text={`${percentage}%`} />;
                    
                     <p className="umbchart_2">Accepted Nomination</p>
-                </div>
+                </div> */}
             </div>
         )
     }
 }
+Dashnom.propTypes = {   
+  };
+  const mapStateToProps = state => ({ 
+  });
+  export default connect(
+    mapStateToProps,
+    {  }
+  )(Dashnom);
