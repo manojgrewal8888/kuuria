@@ -616,6 +616,11 @@ input.search-input:hover {
   margin-top: 25px;
 }
 
+
+.d-flex.mb-6 {
+  margin-bottom: 40px;
+}
+
 .wrap-ticketbox {
   background: transparent;
   width: 90%;
@@ -713,13 +718,12 @@ p.award {
 }
 
 i.fa.fa-search.ticket-search {
-
+  margin-top: 12px;
   background: none;
   font-size: 25px;
   color: grey;
   position: absolute;
-  margin-left: 77%;
-  top: 67%;
+  margin-left: 77%; 
 
 }
 
@@ -2801,7 +2805,7 @@ img.voteimg_resize {
 .rightv_browse {
   width: 100%;
   margin: auto;
-  margin-top: 150px;
+  margin-top: 20px;
 }
 
 img.resize_uservote {
@@ -2829,7 +2833,7 @@ img.resize_uservote {
 
 .check_vertical {
   border-left: 3px solid rgba(207, 207, 207, 0.3);
-  height: 607px;
+  height: 390px;
   width: 5px;
   position: relative;
   background: none;
@@ -3100,6 +3104,7 @@ button.back_person {
   width: 45%;
   height: 45px;
   margin-right: 5%;
+  color:white;
 }
 
 button.proceed_person {
@@ -3321,7 +3326,7 @@ p.pricevote_head {
 }
 
 select.price_select {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgb(29 59 112);
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-sizing: border-box;
   box-shadow: 10px 12px 26px 2px rgb(0 0 0 / 20%);
@@ -3346,20 +3351,21 @@ select.price_select {
 img.subcon_im1 {
   display: block;
   margin: auto;
-  margin-top: 100px;
-  width: 15%;
+  margin-top: 50px;
+  width: 8%;
 }
 
 img.subcon_im2 {
   margin: auto;
   display: block;
+  height: 220px;
 }
 
 p.vote_submitconf {
   font-size: 25px;
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   font-weight: bold;
 }
 
@@ -3380,6 +3386,7 @@ button.back_personxx {
   border-radius: 8px;
   height: 40px;
   width: 46%;
+  color: white;
   margin-right: 50px;
 }
 

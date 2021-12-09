@@ -244,4 +244,13 @@ router.post("/addevent", (req, res) => {
         return res.status(400).json(err);
     }
   });
+  router.get('/all_approve_events', function(req, res) {
+    Event.find({is_approved: 2}).sort({date:-1}).then(events => {
+      if (events.length > 0) {
+        return res.status(200).json(events);
+      } else {
+        return res.status(404).json('no event found !');
+      }
+    });
+  });
 module.exports = router;

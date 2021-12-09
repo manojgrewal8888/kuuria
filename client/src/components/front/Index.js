@@ -54,12 +54,8 @@ class Index extends Component {
                     </div>
 
                     <div className="cat-box">
-                        <div className="cat-item"><h1 className="award_items"><Link className="link_reset"  to='/awardevent'>AWARD EVENT 1</Link></h1> </div>
-                        <div className="cat-item"><h1 className="award_items"><Link className="link_reset"  to='/awardevent'>AWARD EVENT 2</Link></h1> </div>
-                        <div className="cat-item"><h1 className="award_items"><Link className="link_reset"  to='/awardevent'>AWARD EVENT 3</Link></h1> </div>
-                        <div className="cat-item"><h1 className="award_items"><Link className="link_reset"  to='/awardevent'>AWARD EVENT 1</Link></h1> </div>
-                        <div className="cat-item"><h1 className="award_items"><Link className="link_reset"  to='/awardevent'>AWARD EVENT 2</Link></h1> </div>
-                        <div className="cat-item"><h1 className="award_items"><Link className="link_reset"  to='/awardevent'>AWARD EVENT 3</Link></h1> </div>
+                        <div className="cat-item"><h1 className="award_items"><Link className="link_reset"  to='/dashnominee'>AWARD EVENT 1</Link></h1> </div>
+                       {/*  <div className="cat-item"><h1 className="award_items"><Link className="link_reset"  to='/awardevent'>AWARD EVENT 2</Link></h1> </div>  */}
                     </div>
                 </div>
 
