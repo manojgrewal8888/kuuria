@@ -17,6 +17,7 @@ class Dashvoting extends Component {
     constructor() {
         super();
         this.state = {
+            event:'',
             showPopup: false,
             showloader: true,
             openvote:true,
@@ -89,12 +90,29 @@ class Dashvoting extends Component {
     async componentDidMount() { 
         if(this.props.location.state && this.props.location.state.cat_id !=''){  
             var cat_id = this.props.location.state.cat_id; 
+            var event_id = this.props.location.state.event_id; 
             await axios
                 .post("/api/nominee/category_nominee", {cat_id:cat_id})
                 .then(response => {
                     if (response) {
                         this.setState({
                             nominee: response.data,
+                            showloader: false
+                        })
+                    } 
+                })
+                .catch(err =>
+                    this.setState({
+                        showloader: false
+                    })
+                );
+                await axios
+                .post("/api/event/viewevent", {event_id:event_id})
+                .then(res => {
+                    if (res) {
+                        console.log(res.data)
+                        this.setState({
+                            event: res.data,
                             showloader: false
                         })
                     } 
@@ -114,13 +132,25 @@ class Dashvoting extends Component {
         <div>
 
             <div className="nav_umb">
-                <img src="./img/dashlogo.jpg" alt="" className="umb_logo" />
-                <h1 className="umb_heading">UMB GHANA TERTIARY AWARDS</h1>
+            <Link to='/'><img src="./img/kuria-new.png" alt="" className="nomin" /></Link>
+                <h1 className="umb_heading"> 
+                 {this.state.showloader &&  
+                            <div className='text-center'><p className="loading">Loading Events</p></div>
+                        }
+                        {this.state.event.eventname ?? ''}</h1>
             </div>
             <div className="umb_contain">
                 <div className="umb_title">
-                    <p className="progress_umb">Nomination In Progress</p>
-                    <p className="date_umb">24 September-20 October</p>
+                    <p className="progress_umb">
+                    {this.state.showloader &&  
+                            <div className='text-center'><p className="loading">Loading Events</p></div>
+                        }
+                        {this.state.event.eventname == 2 ? 'Nomination' : 'Voting'} In Progress</p>
+                    <p className="date_umb">
+                    {this.state.showloader &&  
+                            <div className='text-center'><p className="loading">Loading Events</p></div>
+                        }
+                        {this.state.event.start_date ?? ''} - {this.state.event.end_date ?? ''}</p>
                 </div>
             </div>
 

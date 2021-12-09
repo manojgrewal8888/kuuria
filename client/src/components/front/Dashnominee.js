@@ -67,13 +67,20 @@ class Dashnom extends Component {
             <div>
 
                 <div className="nav_umb">
-                    <img src="./img/kuria-new.png" alt="" className="nomin" />
-                    <h1 className="umb_heading">{this.state.event.eventname ?? ''}</h1>
+                <Link to='/'> <img src="./img/kuria-new.png" alt="" className="nomin" /></Link>
+                    <h1 className="umb_heading">{this.state.event.eventname ?? ''} 
+                     {this.state.showloader &&  
+                            <div className='text-center'><p className="loading">Loading</p></div>
+                        }</h1>
                 </div>
                 <div className="umb_contain">
                     <div className="umb_title">
                         <p className="progress_umb">{this.state.event.eventname == 2 ? 'Nomination' : 'Voting'} In Progress</p>
-                        <p className="date_umb">{this.state.event.start_date ?? ''} - {this.state.event.end_date ?? ''}</p>
+                        <p className="date_umb">  
+                        {this.state.showloader &&  
+                            <div className='text-center'><p className="loading">Loading</p></div>
+                        }
+                        {this.state.event.start_date ?? ''} - {this.state.event.end_date ?? ''}</p>
                     </div>
                 </div>
 
@@ -85,14 +92,14 @@ class Dashnom extends Component {
 
                         <p className="select_umbp">Select Category {this.state.event.eventname == 2 ? 'To File For Nomination' : 'To Vote'} </p>
                         {this.state.showloader &&  
-                            <div className='text-center'><p className="loading">Loading Events</p></div>
+                            <div className='text-center'><p className="loading">Loading</p></div>
                         }
                         <div className="cat-box">
                         {Object.entries(this.state.categories).map((val, key) => {
                             return (
                                 <>
                         <div className="fle x_umb">
-                            <div className="item_umb"><Link className="link_reset" to={{ pathname: `/dashvote`, state: { cate_id: val[1]._id } }}><p className="nom_subumb"> {val[1].title ?? ''} </p></Link></div>
+                            <div className="item_umb"><Link className="link_reset" to={{ pathname: `/dashvote`, state: { cate_id: val[1]._id,event_id:this.state.event._id } }}><p className="nom_subumb"> {val[1].title ?? ''} </p></Link></div>
                              {/*    <div className="item_umb"><Link className="link_reset" to='/dashvote' ><p className="nom_subumb"> Category 2</p></Link></div> */} 
                         </div>
                         </>

@@ -116,7 +116,7 @@ class Index extends Component {
 
                 <div className="footer">
                     <div className="foot-flex">
-                        <Link to='/index'><img src="./img/kuria-new.png" alt="" className="foot-logo" /></Link>
+                        <Link to='/'><img src="./img/kuria-new.png" alt="" className="foot-logo" /></Link>
 
                         <p className="foot_agend">Kuuria is the most powerful online Event setup and E-voting software in Africa.You don't believe us? Checkout for yourself.</p>
 
