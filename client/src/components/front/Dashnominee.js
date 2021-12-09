@@ -27,9 +27,9 @@ class Dashnom extends Component {
     }
     async componentDidMount() {  
         if(this.props.location.state && this.props.location.state.event_id !=''){  
-            var event_id = this.props.location.state.event_id;
+            var event_id = this.props.location.state.event_id; 
             await axios
-                .post("/api/front/event_category", event_id)
+                .post("/api/front/event_category", {event_id:event_id})
                 .then(response => {
                     if (response) {
                         this.setState({
@@ -45,7 +45,7 @@ class Dashnom extends Component {
                 );
 
             await axios
-                .post("/api/front/event", event_id)
+                .post("/api/event/viewevent", {event_id:event_id})
                 .then(res => {
                     if (res) {
                         console.log(res.data)
@@ -67,13 +67,13 @@ class Dashnom extends Component {
             <div>
 
                 <div className="nav_umb">
-                    <img src="./img/kuria-new.png" alt="" className="umb_logo" />
-                    <h1 className="umb_heading">UMB GHANA TERTIARY AWARDS</h1>
+                    <img src="./img/kuria-new.png" alt="" className="nomin" />
+                    <h1 className="umb_heading">{this.state.event.eventname ?? ''}</h1>
                 </div>
                 <div className="umb_contain">
                     <div className="umb_title">
-                        <p className="progress_umb">Nomination In Progress</p>
-                        <p className="date_umb">24 September-20 October</p>
+                        <p className="progress_umb">{this.state.event.eventname == 2 ? 'Nomination' : 'Voting'} In Progress</p>
+                        <p className="date_umb">{this.state.event.start_date ?? ''} - {this.state.event.end_date ?? ''}</p>
                     </div>
                 </div>
 
@@ -83,7 +83,7 @@ class Dashnom extends Component {
                         <i className="fa fa-search umb2-search"></i>
 
 
-                        <p className="select_umbp">Select Category To File For Nomination</p>
+                        <p className="select_umbp">Select Category {this.state.event.eventname == 2 ? 'To File For Nomination' : 'To Vote'} </p>
                         {this.state.showloader &&  
                             <div className='text-center'><p className="loading">Loading Events</p></div>
                         }
@@ -91,7 +91,7 @@ class Dashnom extends Component {
                         {Object.entries(this.state.categories).map((val, key) => {
                             return (
                                 <>
-                        <div className="flex_umb">
+                        <div className="fle x_umb">
                             <div className="item_umb"><Link className="link_reset" to={{ pathname: `/dashvote`, state: { cate_id: val[1]._id } }}><p className="nom_subumb"> {val[1].title ?? ''} </p></Link></div>
                              {/*    <div className="item_umb"><Link className="link_reset" to='/dashvote' ><p className="nom_subumb"> Category 2</p></Link></div> */} 
                         </div>

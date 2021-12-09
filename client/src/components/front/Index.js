@@ -66,7 +66,7 @@ class Index extends Component {
                 <div className="section_two">
 
                     <div className="btn_indexbrs">
-                    <button className="brs_btn"><Link className="link_reset"   to='/ticket'>Browse</Link></button>
+                    <button className="brs_btn"><Link className="link_reset"   to='/'>Browse</Link></button>
 
                     </div>
 

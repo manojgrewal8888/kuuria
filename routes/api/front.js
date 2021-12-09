@@ -4,7 +4,7 @@ const Event = require("../../models/Event");
 const EventCategory = require("../../models/EventCategory");
 const Nominee = require("../../models/Nominee");
 
-router.get('/event', function(req, res) {
+router.post('/event', function(req, res) {
     Event.find({is_approved: 2}).then(event => {
         if (event.length > 0) {
             return res.json(event);
@@ -13,7 +13,7 @@ router.get('/event', function(req, res) {
         }
     });
 });
-router.get('/event_category', function(req, res) {
+router.post('/event_category', function(req, res) {
     let err = {};
     if (!(req.body && req.body.event_id)) {
         err.event_id = 'event_id is required';
