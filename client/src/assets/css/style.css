@@ -1763,6 +1763,10 @@ p.select_umbp {
   row-gap: 50px;
 }
 
+.item.ticket_ {
+  width: 320px;
+}
+
 .nomin {
   margin-top: 20px;
   height: 82px;

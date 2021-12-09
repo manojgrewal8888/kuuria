@@ -77,7 +77,7 @@ class Index extends Component {
                     {Object.entries(this.state.events).map((val, key) => {
                          return (
                             <>
-                                <div className="cat-item"><h1 className="award_items"><Link className="link_reset"  to={{ pathname: `/dashnominee`, state: { event_id: val[1]._id } }}  >AWARD EVENT 1</Link></h1> </div>
+                                <div className="cat-item"><h1 className="award_items"><Link className="link_reset"  to={{ pathname: `/dashnominee`, state: { event_id: val[1]._id } }}  >{val[1].eventname ?? ''}</Link></h1> </div>
                             </>
                          )
                     })}

@@ -134,22 +134,17 @@ class Dashvoting extends Component {
             <div className="nav_umb">
             <Link to='/'><img src="./img/kuria-new.png" alt="" className="nomin" /></Link>
                 <h1 className="umb_heading"> 
-                 {this.state.showloader &&  
-                            <div className='text-center'><p className="loading">Loading Events</p></div>
-                        }
+                 
                         {this.state.event.eventname ?? ''}</h1>
+                        {this.state.showloader &&  
+                            <div className='text-center'><h4 className="loading">Loading Event</h4></div>
+                        }
             </div>
             <div className="umb_contain">
                 <div className="umb_title">
-                    <p className="progress_umb">
-                    {this.state.showloader &&  
-                            <div className='text-center'><p className="loading">Loading Events</p></div>
-                        }
+                    <p className="progress_umb"> 
                         {this.state.event.eventname == 2 ? 'Nomination' : 'Voting'} In Progress</p>
-                    <p className="date_umb">
-                    {this.state.showloader &&  
-                            <div className='text-center'><p className="loading">Loading Events</p></div>
-                        }
+                    <p className="date_umb"> 
                         {this.state.event.start_date ?? ''} - {this.state.event.end_date ?? ''}</p>
                 </div>
             </div>
