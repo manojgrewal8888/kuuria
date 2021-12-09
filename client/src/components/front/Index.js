@@ -22,7 +22,7 @@ class Index extends Component {
       }
   async componentDidMount() {
         await axios
-            .get("/api/event/all_approve_events")
+            .post("/api/event/all_approve_events")
             .then(res => {
                 if (res) {
                     this.setState({

@@ -7,6 +7,7 @@ import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import axios from "axios";
 const percentage = 1200;
 const percentage1 = 1800;
  
@@ -18,7 +19,8 @@ class Dashvoting extends Component {
         this.state = {
             showPopup: false,
             showloader: true,
-            openvote:true
+            openvote:true,
+            nominee:[]
         };
     }
     componentWillReceiveProps(nextProps) {
@@ -85,7 +87,24 @@ class Dashvoting extends Component {
         }
     }
     async componentDidMount() { 
-
+        if(this.props.location.state && this.props.location.state.cat_id !=''){  
+            var cat_id = this.props.location.state.cat_id; 
+            await axios
+                .post("/api/nominee/category_nominee", {cat_id:cat_id})
+                .then(response => {
+                    if (response) {
+                        this.setState({
+                            nominee: response.data,
+                            showloader: false
+                        })
+                    } 
+                })
+                .catch(err =>
+                    this.setState({
+                        showloader: false
+                    })
+                );
+        }
     }
     render() {
 

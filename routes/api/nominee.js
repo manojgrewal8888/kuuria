@@ -99,7 +99,7 @@ router.post('/update_nominee', imageUpload.single('image'), function (req, res) 
         }
     });
 });
-router.get('/event_nominee', function(req, res) {
+router.post('/event_nominee', function(req, res) {
     const err = {};
     if (!(req.body && req.body.event_id)) {
         err.event_id = 'event_id is required';
