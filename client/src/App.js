@@ -19,6 +19,7 @@ import Index from './components/front/Index';
 
 import Tiket from './components/front/Tiket';
 import Awardevent from './components/front/Awardevent';
+import TicketEve from './components/front/TicketEve';
 
 
 import Signup from './components/front/Signup';
@@ -123,6 +124,7 @@ class App extends Component {
               <Route exact={true} path='/dashboard' component={Dashboardmain} />
               <Route exact={true} path='/ticket' component={Tiket} />
               <Route exact={true} path='/ticketevent' component={Awardevent} />
+              <Route exact={true} path='/ticketEve' component={TicketEve} />
               <Route exact={true} path='/signup' component={Signup} />
               <Route exact={true} path='/login' component={Login} />
               <Route exact={true} path='/mailhead' component={Emailhead} />

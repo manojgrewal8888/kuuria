@@ -65,7 +65,7 @@ class Tiket extends Component {
                     {Object.entries(this.state.events).map((val, key) => {
                          return (
                             <>
-                        <div className="item ticket_"><p className="award"> <Link className="link_reset browse-a"  to="/ticketevent" >AWARD EVENT 1</Link></p></div>
+                        <div className="item ticket_"><p className="award"> <Link className="link_reset browse-a"  to="/ticketEve" >{val[1].eventname ?? ''}</Link></p></div>
                         </>
                          )
                     })} 
