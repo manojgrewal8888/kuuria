@@ -6,22 +6,24 @@ import { logoutUser } from "../../actions/authActions";
 import Sidebar from "./Sidebar";
 import Logout from "./Logout";
 import { Link } from "react-router-dom";
+import Hamburgerone from "./ham1";
+import Hamburgertwo from "./hemtwo";
 class Varificationven extends Component {
     constructor() {
         super();
-        this.state = { 
+        this.state = {
         };
-      }
-    componentWillReceiveProps(nextProps) { 
+    }
+    componentWillReceiveProps(nextProps) {
         if (nextProps.errors) {
-          this.setState({
-            errors: nextProps.errors
-          });
+            this.setState({
+                errors: nextProps.errors
+            });
         }
-      }
-    componentDidMount() { 
+    }
+    componentDidMount() {
         if (this.props.auth.isAuthenticated == false) {
-        this.props.history.push("/login");
+            this.props.history.push("/login");
         }
     }
     render() {
@@ -30,6 +32,7 @@ class Varificationven extends Component {
             <div>
                 <div className="wrap_vwendor">
                     <Sidebar history={this.props.history} />
+
 
                     <div className="right_vendor">
                         <div className="dropmenu_sidebar">
@@ -49,6 +52,8 @@ class Varificationven extends Component {
                         </div>
                         <div className="right_subven">
                             <Logout history={this.props.history} />
+                            <Hamburgerone />
+                            <Hamburgertwo />
 
                             <div className="btnwrapvarv">
                                 <Link className="link_resetvar" to='/apprived_var'><button className="venverbtn">Approved Events</button></Link>
@@ -82,14 +87,14 @@ class Varificationven extends Component {
         )
     }
 }
- 
+
 Varificationven.propTypes = {
     auth: PropTypes.object.isRequired
-  };
-  const mapStateToProps = state => ({
+};
+const mapStateToProps = state => ({
     auth: state.auth
-  });
-  export default connect(
+});
+export default connect(
     mapStateToProps,
-    {  }
-  )(Varificationven);
+    {}
+)(Varificationven);

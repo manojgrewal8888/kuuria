@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import Sidebar from "./Sidebar"; 
+import Sidebar from "./Sidebar";
+import Hamburgerone from "./ham1";
+import Hamburgertwo from "./hemtwo";
 import axios from "axios";
 const moment = require('moment');
 class Manageevent extends Component {
@@ -16,7 +18,7 @@ class Manageevent extends Component {
     componentWillReceiveProps(nextProps) {
 
     }
-    async componentDidMount() { 
+    async componentDidMount() {
         if (this.props.auth.isAuthenticated == false) {
             this.props.history.push("/login");
         }
@@ -70,6 +72,8 @@ class Manageevent extends Component {
                         <div className="right_subven">
 
                             {/*  <Logout /> */}
+                            <Hamburgerone />
+                            <Hamburgertwo />
                             <Link className="Link_reset" to='/create'><button className="modnew_btn">
                                 <i className="fa fa-plus icon_modp" ></i>
                                 New Event
@@ -77,7 +81,7 @@ class Manageevent extends Component {
 
                             <div className="modser_wrap">
                                 <div className="sermod_box">
-                                    <input type="search" name=""  id="" placeholder='Enter event name' className="modx_ser" />
+                                    <input type="search" name="" id="" placeholder='Enter event name' className="modx_ser" />
                                     <i className="fa fa-search icon_serchmodp" ></i>
                                 </div>
                                 <select className="mod_sel" name="cars" id="cars">
@@ -95,8 +99,8 @@ class Manageevent extends Component {
                                     <th className="mod_th">Status</th>
                                     <th className="mod_th">Actions</th>
                                 </tr>
-                                
-                                
+
+
                                 {this.state.showloader && <tr>
                                     <td colspan='6' className='text-center'><p className="loading">Loading Events</p></td>
                                 </tr>}
@@ -111,8 +115,8 @@ class Manageevent extends Component {
                                                     <td>{val[1].eventname ? val[1].eventname : ''}</td>
                                                     <td className='mod_th2'>{start_date ? start_date : ''}</td>
                                                     <td className='mod_th2'>{end_date ? end_date : ''}</td>
-                                                    <td className='mod_th2'> 
-                                                        <input className='check_tog '  type="checkbox"  checked={val[1].status && val[1].status == 1 ? 'checked' : ''}   id="status" />
+                                                    <td className='mod_th2'>
+                                                        <input className='check_tog ' type="checkbox" checked={val[1].status && val[1].status == 1 ? 'checked' : ''} id="status" />
                                                     </td>
                                                     <td className='mod_th2 d-flex'>
                                                         <Link className="Link_reset" to='/eventopened'>

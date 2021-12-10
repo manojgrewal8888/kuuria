@@ -8,6 +8,8 @@ import {
     BarChart, Bar, XAxis, YAxis,
     CartesianGrid
 } from 'recharts';
+import Hamburgerone from './ham1';
+import Hamburgertwo from './hemtwo';
 
 
 
@@ -33,19 +35,19 @@ const data = [
 class Revenu extends Component {
     constructor() {
         super();
-        this.state = { 
+        this.state = {
         };
-      }
-    componentWillReceiveProps(nextProps) { 
+    }
+    componentWillReceiveProps(nextProps) {
         if (nextProps.errors) {
-          this.setState({
-            errors: nextProps.errors
-          });
+            this.setState({
+                errors: nextProps.errors
+            });
         }
-      }
-    componentDidMount() { 
+    }
+    componentDidMount() {
         if (this.props.auth.isAuthenticated == false) {
-        this.props.history.push("/login");
+            this.props.history.push("/login");
         }
     }
     render() {
@@ -53,6 +55,8 @@ class Revenu extends Component {
             <div>
                 <div className="wrap_vwendor">
                     <Sidebar history={this.props.history} />
+                    <Hamburgerone />
+                    <Hamburgertwo />
 
                     <div className="right_vendor">
                         <div className="dropmenu_sidebar">
@@ -148,7 +152,7 @@ class Revenu extends Component {
     }
 }
 
-Revenu.propTypes = { 
+Revenu.propTypes = {
     auth: PropTypes.object.isRequired
 };
 const mapStateToProps = state => ({
@@ -156,5 +160,5 @@ const mapStateToProps = state => ({
 });
 export default connect(
     mapStateToProps,
-    {  }
+    {}
 )(Revenu);

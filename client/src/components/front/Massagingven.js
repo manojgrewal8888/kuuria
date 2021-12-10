@@ -4,23 +4,25 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import Sidebar from "./Sidebar";
 import Logout from "./Logout";
+import Hamburgerone from './ham1';
+import Hamburgertwo from './hemtwo';
 
 class Massagingven extends Component {
     constructor() {
         super();
-        this.state = { 
+        this.state = {
         };
-      }
-    componentWillReceiveProps(nextProps) { 
+    }
+    componentWillReceiveProps(nextProps) {
         if (nextProps.errors) {
-          this.setState({
-            errors: nextProps.errors
-          });
+            this.setState({
+                errors: nextProps.errors
+            });
         }
-      }
-    componentDidMount() { 
+    }
+    componentDidMount() {
         if (this.props.auth.isAuthenticated == false) {
-        this.props.history.push("/login");
+            this.props.history.push("/login");
         }
     }
     render() {
@@ -47,6 +49,8 @@ class Massagingven extends Component {
                         </div>
                         <div className="right_subven">
                             <Logout />
+                            <Hamburgerone />
+                            <Hamburgertwo />
 
                             <h2 className="msg_heading">Messages <span className="circle_msg">4</span></h2>
                             <div className="wrtap_msgdummy">
@@ -111,17 +115,17 @@ class Massagingven extends Component {
     }
 }
 
-Massagingven.propTypes = { 
+Massagingven.propTypes = {
     auth: PropTypes.object.isRequired
-  };
-  const mapStateToProps = state => ({
+};
+const mapStateToProps = state => ({
     auth: state.auth
-  });
-  export default connect(
+});
+export default connect(
     mapStateToProps,
-    {   }
-  )(Massagingven);
- 
+    {}
+)(Massagingven);
+
 
 
 

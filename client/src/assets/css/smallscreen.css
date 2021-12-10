@@ -1104,13 +1104,21 @@
     }
 
     i.fa.fa-bell.bell_main {
-        float: left;
-        margin-top: 50px;
+        float: right;
+        margin-top: -20px;
         color: white;
         font-size: 20px;
         border: none;
         cursor: pointer;
-        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    i.fa.fa-bell.bell_main:hover {
+        float: right;
+        margin-top: -20px;
+        cursor: pointer;
+        font-size: 20px;
+        color: #ffd600;
     }
 
     .dropcontan_maindeshb {
@@ -1119,9 +1127,9 @@
         min-width: 150px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
-        margin-top: 75px;
+        margin-top: 0px;
         right: 0%;
-        left: 15%;
+        left: 38%;
         width: 40%;
         border: 1px solid #33466a;
         border-radius: 8px;
@@ -1475,12 +1483,13 @@
 
     .logout_ven1 {
         float: right;
-        font-size: 10px;
+        font-size: 15px;
         letter-spacing: 2px;
         box-sizing: border-box;
-        margin-top: 40px;
+        margin-top: 15px;
         padding: 5px 0px;
         text-align: center;
+        margin-right: 10%;
     }
 
     .wrtap_msgdummy {
@@ -1497,5 +1506,98 @@
         font-size: 10px;
         padding: 5px 0px;
         background: none;
+    }
+
+
+
+    .hammen1 {
+        display: block;
+
+        width: 50%;
+    }
+
+    button.btnham1 {
+        background: transparent;
+        color: #ffffff;
+        width: 30%;
+        margin-left: 20%;
+        margin-top: 25px;
+        border: 1px solid #ffffff;
+        border-radius: 10px;
+    }
+
+    ul.ham1list {
+        display: none;
+
+        /*java here*/
+        width: 80%;
+        margin: auto;
+        list-style: none;
+        background-color: rgba(255, 255, 255, 0.15);
+        border: 1px solid #ffffff;
+        border-radius: 15px;
+    }
+
+    li.ham1li {
+        color: #ffffff;
+        font-size: 15px;
+        margin: 10px 0px;
+        cursor: pointer;
+
+        margin-left: -40px;
+        padding: 5px 10px;
+    }
+
+    li.ham1li:hover {
+        color: #000000;
+        background-color: #ffd600;
+        font-size: 15px;
+        border: 1px solid;
+    }
+
+    .hammen2 {
+        width: 50%;
+        display: block;
+
+    }
+
+    button.btnham2 {
+        background: transparent;
+        color: #ffffff;
+        width: 30%;
+        margin-left: 20%;
+        margin-top: 25px;
+        border: 1px solid #ffffff;
+        border-radius: 10px;
+    }
+
+
+    ul.emenul2 {
+        display: none;
+
+        /*java here*/
+        width: 80%;
+        margin: auto;
+        list-style: none;
+        background-color: rgba(255, 255, 255, 0.15);
+        border: 1px solid #ffffff;
+        border-radius: 15px;
+    }
+
+    li.emenli2 {
+        color: #ffffff;
+        font-size: 15px;
+        margin: 10px 0px;
+        cursor: pointer;
+
+        margin-left: -40px;
+        padding: 5px 10px;
+    }
+
+    li.emenli2:hover {
+        color: #000000;
+        background-color: #ffd600;
+        font-size: 15px;
+        border: 1px solid;
     }
 }

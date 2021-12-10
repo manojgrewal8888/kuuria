@@ -8,6 +8,8 @@ import { useState } from 'react'
 
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
+import Hamburgertwo from "./hemtwo";
+import Hamburgerone from "./ham1";
 
 
 class Nominationform extends Component {
@@ -42,6 +44,8 @@ class Nominationform extends Component {
                         </div>
                         <div className="right_subven">
                             <Logout />
+                            <Hamburgerone />
+                            <Hamburgertwo />
                             <button className="formn_btn">FORMS</button>
                             <div className="wrap_formnom">
                                 <label className="title_formn">Enter Nomination Form Name</label>
