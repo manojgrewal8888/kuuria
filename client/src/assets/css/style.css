@@ -4878,6 +4878,7 @@ i.fa.fa-eye.icon_datemodp {
   color: #ffd600;
   font-size: 20px;
   cursor: pointer;
+  padding-bottom: 25px;
 }
 
 i.fa.fa-eye.icon_datemodp:hover {
