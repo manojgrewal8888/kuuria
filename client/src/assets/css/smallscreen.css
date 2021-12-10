@@ -442,7 +442,7 @@
         top: 230px;
     }
 
-    input.man_tickets {
+    input_tickets {
         height: 30px;
         font-size: 10px;
     }
@@ -970,7 +970,7 @@
         color: #ffd600;
     }
 
-    button.manage_btnv {
+    buttonage_btnv {
         background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.15);
         box-sizing: border-box;
@@ -980,10 +980,17 @@
         border-radius: 8px;
         padding: 2px 2px;
         color: #ffd600;
-        font-size: 15px;
+        font-size: 10px;
         float: left;
         margin-left: 5%;
-        margin-top: 35px;
+        margin-top: 25px;
+    }
+
+    i.fa.fa-plus-circle.adicon_v {
+        padding-right: 5px;
+        font-size: 10px;
+        color: #ffd600;
+        background: none;
     }
 
     h4.meve_headin {
@@ -1045,6 +1052,12 @@
         opacity: 0.18;
         font-size: 11px;
         background: none;
+    }
+
+    th.table_1stlinemain {
+        text-align: start;
+        font-size: 10px;
+        font-weight: 100;
     }
 
     .right_viewt {
@@ -1253,7 +1266,7 @@
 
     .logout_ven1 {
         float: right;
-        font-size: 15px;
+        font-size: 10px;
         letter-spacing: 2px;
         box-sizing: border-box;
         margin-top: 40px;
