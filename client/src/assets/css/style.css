@@ -5461,6 +5461,10 @@ i.fa.fa-bell.bell_main:hover {
   color: #ffd600;
 }
 
+.hammen2 {
+  display: none;
+}
+
 .dropcontan_maindeshb {
   display: none;
   position: absolute;
