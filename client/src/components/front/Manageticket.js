@@ -86,15 +86,19 @@ class Manageticket extends Component {
                                     <p className="mantik_pra_0">No event found , Go to  <Link className="mantik_pra2" to='/viewedit_ticket'>Manage events</Link> and create one.</p>
                                 </div>  */}
                                 {this.state.showloader && <>
-                                    <div className='ml-3 text-center'><p className="loading">Loading Questions</p></div>
+                                    <div className='ml-3 text-center'><p className="loading">Loading Tickets</p></div>
                                 </>}
                                 {
                                     Object.entries(this.state.ticket).map((val, key) => {
                                         return (
                                             <>
                                                 <div className="wrapman_tik">
-                                                    <p className="mantik_pra">{val[1].name ? val[1].name : ''}</p>
-                                                    <Link className="mantik_pra2" to={{ pathname: `/viewedit_ticket`, state: { ticket_id: val[1]._id } }}>Select to View and Edit</Link>
+                                                <div className="row">
+                                                    <p className=" col-6">{val[1].name ? val[1].name : ''}</p>
+                                                    <div className='text-right col-6'>
+                                                        <Link className="mantik_pra2" to={{ pathname: `/viewedit_ticket`, state: { ticket_id: val[1]._id } }}>View / Edit</Link>
+                                                    </div>
+                                                    </div>
                                                 </div>
                                             </>
                                         )

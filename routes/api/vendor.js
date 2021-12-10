@@ -126,7 +126,7 @@ router.post('/ticket_list', async function(req,res) {
       return res.json(ticket);
   });
 });
-router.get('/get_ticket', function(req, res) {
+router.post('/get_ticket', function(req, res) {
   let errors = {};
   if (!(req.body && req.body.ticket_id)) {
       errors.ticket_id = 'ticket_id is required !';

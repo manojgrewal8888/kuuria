@@ -4,7 +4,7 @@ import Sidebar from "./Sidebar";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions"; 
 import PropTypes from "prop-types";
-import { create_ticket } from "../../actions/ManagerActions";
+import { create_ticket,editTicket } from "../../actions/ManagerActions";
 import classnames from "classnames";
 import axios from "axios";
 class Vieweditticket extends Component {
@@ -34,28 +34,49 @@ class Vieweditticket extends Component {
         onSubmit = e => {
             var user_id = localStorage.getItem('_id'); 
             e.preventDefault();
-            const ticket = {
-                user_id: user_id,
-                name: this.state.name,
-                date: this.state.date,
-                time: this.state.time,
-                price_votes: this.state.price_votes, 
-                venue: this.state.venue, 
-                number: this.state.number, 
-                
-            }; 
-            this.props.create_ticket(ticket, this.props.history); 
+            if(this.props.location.state && this.props.location.state.ticket_id !=''){ 
+                var ticket = {
+                    user_id: user_id,
+                    name: this.state.name,
+                    date: this.state.date,
+                    time: this.state.time,
+                    price_votes: this.state.price_votes, 
+                    venue: this.state.venue, 
+                    number: this.state.number,  
+                    ticket_id:this.props.location.state.ticket_id
+                };  
+                this.props.editTicket(ticket, this.props.history); 
+            }else{
+                const ticket = {
+                    user_id: user_id,
+                    name: this.state.name,
+                    date: this.state.date,
+                    time: this.state.time,
+                    price_votes: this.state.price_votes, 
+                    venue: this.state.venue, 
+                    number: this.state.number,  
+                }; 
+                this.props.create_ticket(ticket, this.props.history); 
+            }
+            
         };
         componentDidMount() { 
         
             if(this.props.location.state && this.props.location.state.ticket_id != ''){  
                 axios
-                .post("/api/user/editticket", {
-                    id: this.props.location.state.ticket_id
+                .post("/api/vendor/get_ticket", {
+                    ticket_id: this.props.location.state.ticket_id
                 })
                 .then((response) => {
-                    if (response.status = 200) {
-                        this.setState({ editdata: response.data}); 
+                    if (response.status = 200) { 
+                        this.setState({  
+                            name: response.data.name,
+                            date: response.data.date,
+                            time: response.data.time,
+                            price_votes: response.data.price_votes, 
+                            venue: response.data.venue, 
+                            number: response.data.number, 
+                        }); 
                     }
                 });
             }    
@@ -137,7 +158,7 @@ class Vieweditticket extends Component {
 }
 Vieweditticket.propTypes = {
     create_ticket: PropTypes.func.isRequired,
-    logoutUser: PropTypes.func.isRequired,
+    editTicket: PropTypes.func.isRequired, 
     auth: PropTypes.object.isRequired
 };
 const mapStateToProps = state => ({
@@ -145,5 +166,5 @@ const mapStateToProps = state => ({
 });
 export default connect(
     mapStateToProps,
-    { logoutUser,create_ticket }
+    { editTicket,create_ticket }
 )(Vieweditticket);
