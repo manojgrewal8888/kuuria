@@ -1321,4 +1321,127 @@
     }
 
 
+    .hammen1 {
+        display: block;
+
+        width: 50%;
+    }
+
+    button.btnham1 {
+        background: transparent;
+        color: #ffffff;
+        width: 20%;
+        margin-left: 20%;
+        margin-top: 25px;
+        border: 1px solid #ffffff;
+        border-radius: 10px;
+    }
+
+    ul.ham1list {
+        display: none;
+
+        /*java here*/
+        width: 80%;
+        margin: auto;
+        list-style: none;
+        background-color: rgba(255, 255, 255, 0.15);
+        border: 1px solid #ffffff;
+        border-radius: 15px;
+    }
+
+    li.ham1li {
+        color: #ffffff;
+        font-size: 15px;
+        margin: 10px 0px;
+        cursor: pointer;
+
+        margin-left: -40px;
+        padding: 5px 10px;
+    }
+
+    li.ham1li:hover {
+        color: #000000;
+        background-color: #ffd600;
+        font-size: 15px;
+        border: 1px solid;
+    }
+
+    .hammen2 {
+        width: 50%;
+
+    }
+
+    button.btnham2 {
+        background: transparent;
+        color: #ffffff;
+        width: 20%;
+        margin-left: 20%;
+        margin-top: 25px;
+        border: 1px solid #ffffff;
+        border-radius: 10px;
+    }
+
+
+    ul.emenul2 {
+        display: none;
+
+        /*java here*/
+        width: 80%;
+        margin: auto;
+        list-style: none;
+        background-color: rgba(255, 255, 255, 0.15);
+        border: 1px solid #ffffff;
+        border-radius: 15px;
+    }
+
+    li.emenli2 {
+        color: #ffffff;
+        font-size: 15px;
+        margin: 10px 0px;
+        cursor: pointer;
+
+        margin-left: -40px;
+        padding: 5px 10px;
+    }
+
+    li.emenli2:hover {
+        color: #000000;
+        background-color: #ffd600;
+        font-size: 15px;
+        border: 1px solid;
+    }
+
+    .logout_ven1 {
+        margin-right: 50px;
+        float: right;
+        font-size: 16px;
+        letter-spacing: 2px;
+        box-sizing: border-box;
+        margin-top: 15px;
+        padding: 10px 30px;
+    }
+
+    i.fa.fa-bell.bell_main {
+        float: right;
+        margin-top: -25px;
+        color: white;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+        margin-right: 15%;
+    }
+
+    i.fa.fa-bell.bell_main:hover {
+        float: right;
+        margin-top: -25px;
+        cursor: pointer;
+        font-size: 20px;
+        color: #ffd600;
+    }
+
+    .dropcontan_maindeshb {
+        margin-top: 0px;
+    }
+
+
 }

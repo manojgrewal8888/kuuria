@@ -6120,6 +6120,10 @@ li.emenli {
   padding: 10px 15px;
 }
 
+.hammen1 {
+  display: none;
+}
+
 ul.emenul {
   list-style: none;
   /* border: 1px solid;*/

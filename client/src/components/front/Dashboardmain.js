@@ -1,67 +1,69 @@
 import React, { Component } from "react";
 
 import PropTypes from "prop-types";
-import { connect } from "react-redux"; 
+import { connect } from "react-redux";
 import Sidebar from "./Sidebar";
 import Logout from "./Logout";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Hamburgerone from "./ham1";
+import Hamburgertwo from "./hemtwo";
 class Dashboardmain extends Component {
   constructor() {
     super();
-    this.state = { 
+    this.state = {
       countevents: 0,
       showloader: true,
       showtab: 'leaders'
     };
   }
-componentWillReceiveProps(nextProps) { 
+  componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({
         errors: nextProps.errors
       });
     }
   }
-  async componentDidMount() {  
+  async componentDidMount() {
     if (this.props.auth.isAuthenticated == false) {
-        this.props.history.push("/login");
+      this.props.history.push("/login");
     }
     if (localStorage.getItem('role') == 'admin') {
-        this.props.history.push("/super_admin");
+      this.props.history.push("/super_admin");
     }
     var user_id = {
-        id: localStorage.getItem('_id')
+      id: localStorage.getItem('_id')
     }
     if (user_id) {
-        await axios
-            .post("/api/users/getevents", user_id)
-            .then(res => {
-                if (res) {
-                    this.setState({
-                        countevents: res.data.length,
-                        showloader: false
-                    })
-                }
-
+      await axios
+        .post("/api/users/getevents", user_id)
+        .then(res => {
+          if (res) {
+            this.setState({
+              countevents: res.data.length,
+              showloader: false
             })
-            .catch(err =>
-                this.setState({
-                    showloader: false
-                })
-            );
+          }
+
+        })
+        .catch(err =>
+          this.setState({
+            showloader: false
+          })
+        );
     }
-}
-openTab = e => {
-  if(this.state.showtab == 'leaders'){
-    this.setState({
-      showtab: 'nominee'
-    });
-  }else{
-    this.setState({
-      showtab: 'leaders'
-    });
   }
-}
+  openTab = e => {
+    if (this.state.showtab == 'leaders') {
+      this.setState({
+        showtab: 'nominee'
+      });
+    } else {
+      this.setState({
+        showtab: 'leaders'
+      });
+    }
+  }
   render() {
 
     return (
@@ -72,6 +74,8 @@ openTab = e => {
           <div className="right_vendor">
             <div className="right_subven">
               <Logout history={this.props.history} />
+              <Hamburgerone />
+              <Hamburgertwo />
 
 
               <div className="dropdown_maindeshb">
@@ -109,8 +113,8 @@ openTab = e => {
 
 
                 <div className="btnwrap_maind">
-                  <button className={this.state.showtab == 'nominee' ? 'active doublebtn_maind':'doublebtn_maind'}  onClick={this.openTab}>Nomination Status</button>
-                  <button className={this.state.showtab == 'leaders' ? 'active doublebtn_maind':'doublebtn_maind'} onClick={this.openTab}>Leader Board</button>
+                  <button className={this.state.showtab == 'nominee' ? 'active doublebtn_maind' : 'doublebtn_maind'} onClick={this.openTab}>Nomination Status</button>
+                  <button className={this.state.showtab == 'leaders' ? 'active doublebtn_maind' : 'doublebtn_maind'} onClick={this.openTab}>Leader Board</button>
                 </div>
 
                 {(this.state.showtab == 'leaders') && <>
@@ -124,20 +128,20 @@ openTab = e => {
                       </tr>
                       <tr >
                         <td colspan='3' className='text-center'>No data yet !!!</td>
-                      </tr>  
-                    </table> 
+                      </tr>
+                    </table>
                     <div className="aligndot_maind">
                       <span className="dot dot_rezmaind" onclick="currentSlide(1)"></span>
                       <span className="dot dot_rezmaind" onclick="currentSlide(2)"></span>
                       <span className="dot dot_rezmaind" onclick="currentSlide(3)"></span>
                     </div>
                   </div> </>
-                  }
+                }
                 {(this.state.showtab == 'nominee') && <>
                   <p className="leaderbo_mainhead ">Nominee's</p>
                   <div className="tablewrapformain">
                     <table className="table_maindeshb table">
-                      <tr className="table_1strowmainb"> 
+                      <tr className="table_1strowmainb">
                         <th className="table_1stlinemain">Nominee Name</th>
                         <th className="table_1stlinemain">Category</th>
                         <th className="table_1stlinemain">Action</th>
@@ -146,23 +150,23 @@ openTab = e => {
                       </tr>
                       <tr >
                         <td colspan='5' className='text-center'>No data yet !!!</td>
-                      </tr>  
-                    </table> 
+                      </tr>
+                    </table>
                     <div className="aligndot_maind">
                       <span className="dot dot_rezmaind" onclick="currentSlide(1)"></span>
                       <span className="dot dot_rezmaind" onclick="currentSlide(2)"></span>
                       <span className="dot dot_rezmaind" onclick="currentSlide(3)"></span>
                     </div>
                   </div> </>
-                  }
+                }
 
               </div>
 
             </div>
 
-            
+
           </div>
-         
+
         </div>
 
         <p className="foot-slogan">Made With <i className="fa fa-heart heartfoot"></i> In Trasacco Valley, Ghana </p>
@@ -170,16 +174,16 @@ openTab = e => {
     )
   }
 }
- 
-Dashboardmain.propTypes = { 
-    auth: PropTypes.object.isRequired,
-    errors: PropTypes.object.isRequired
-  };
-  const mapStateToProps = state => ({
-    auth: state.auth,
-    errors: state.errors
-  });
-  export default connect(
-    mapStateToProps,
-    {  }
-  )(Dashboardmain);
+
+Dashboardmain.propTypes = {
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
+};
+const mapStateToProps = state => ({
+  auth: state.auth,
+  errors: state.errors
+});
+export default connect(
+  mapStateToProps,
+  {}
+)(Dashboardmain);

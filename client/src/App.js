@@ -91,6 +91,9 @@ import Extramenu from "./components/front/Extramenu";
 import Smssub from "./components/front/Smssub";
 import Revanuesup from "./components/front/Revanuesup";
 
+import Hamburgerone from "./components/front/ham1";
+import Hamburgertwo from "./components/front/hemtwo";
+
 
 
 
@@ -152,7 +155,7 @@ class App extends Component {
               <Route exact={true} path='/category' component={Eventcategory} />
               <Route exact={true} path='/eventnominee' component={Eventnominee} />
               <Route exact={true} path='/eventnominee2' component={Eventnominee2} />
-               
+
               <Route exact={true} path='/eventdelete' component={Eventdelete} />
 
               <Route exact={true} path='/vendor_dashboard' component={Vendordash} />
@@ -188,6 +191,9 @@ class App extends Component {
               <Route exact={true} path='/smsven' component={Smssub} />
 
               <Route exact={true} path='/revsuper' component={Revanuesup} />
+
+              <Route exact={true} path='/hamone' component={Hamburgerone} />
+              <Route exact={true} path='/hamtwo' component={Hamburgertwo} />
 
 
 
