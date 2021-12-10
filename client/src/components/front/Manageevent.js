@@ -111,8 +111,8 @@ class Manageevent extends Component {
                                         return (
                                             <>
                                                 <tr>
-                                                    <td>{key + 1}</td>
-                                                    <td>{val[1].eventname ? val[1].eventname : ''}</td>
+                                                    <td className='mod_th2'>{key + 1}</td>
+                                                    <td className='mod_th2'>{val[1].eventname ? val[1].eventname : ''}</td>
                                                     <td className='mod_th2'>{start_date ? start_date : ''}</td>
                                                     <td className='mod_th2'>{end_date ? end_date : ''}</td>
                                                     <td className='mod_th2'>
@@ -140,7 +140,7 @@ class Manageevent extends Component {
                     </div>
                 </div>
 
-            </div>
+            </div >
         )
 
     }

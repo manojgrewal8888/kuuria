@@ -1440,6 +1440,26 @@
         color: #ffd600;
     }
 
+    th.mod_th {
+        border: none;
+        font-size: 10px;
+        font-weight: 100;
+    }
+
+    button.modnew_btn {
+        background: rgb(27 49 89);
+        border-radius: 8px;
+        color: #ffffff;
+        box-sizing: border-box;
+        margin-right: 0px;
+        border: none;
+        padding: 5px 40px;
+        display: block;
+        position: relative;
+        left: 70%;
+        top: 90px;
+    }
+
     .dropcontan_maindeshb {
         margin-top: 0px;
     }
