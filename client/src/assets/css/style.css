@@ -723,7 +723,7 @@ i.fa.fa-search.ticket-search {
   font-size: 25px;
   color: grey;
   position: absolute;
-  margin-left: 77%; 
+  margin-left: 77%;
 
 }
 
@@ -2212,12 +2212,17 @@ input.wtitle_input1 {
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   height: 45px;
-  width: 1000%;
+  width: 100%;
   display: block;
   margin: auto;
   padding-left: 25px;
   border-radius: 6px;
   color: #ffffff;
+}
+
+input#end_date {
+  height: 35px;
+  font-size: 10px;
 }
 
 
@@ -3122,7 +3127,7 @@ button.back_person {
   width: 45%;
   height: 45px;
   margin-right: 5%;
-  color:white;
+  color: white;
 }
 
 button.proceed_person {
@@ -6112,7 +6117,7 @@ button.anabtnsub:hover {
 
 li.emenli {
   /*border: 1px solid green;*/
-  padding: 10px 20px;
+  padding: 10px 15px;
 }
 
 ul.emenul {

@@ -442,7 +442,7 @@
         top: 230px;
     }
 
-    input_tickets {
+    input.man_tickets {
         height: 30px;
         font-size: 10px;
     }
@@ -970,7 +970,7 @@
         color: #ffd600;
     }
 
-    buttonage_btnv {
+    button.manage_btnv {
         background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.15);
         box-sizing: border-box;
@@ -1128,7 +1128,191 @@
         font-size: 10px;
         font-weight: 600;
         margin-top: 50px;
-        margin-left: 5%;
+        margin-left: 15%;
+    }
+
+    progress.progres_varven1 {
+        width: 100%;
+        height: 15px;
+        border-radius: 7px;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    input#eventname {
+        height: 35px;
+        font-size: 10px;
+    }
+
+    .wrap_span {
+        display: block;
+        background: none;
+    }
+
+    button.create_cae.link_reset {
+        height: 35px;
+        font-size: 15px;
+    }
+
+    img.wcreate_img {
+        margin: auto;
+        display: block;
+        width: 45%;
+        margin-top: 80px;
+    }
+
+    .right_home1 {
+        width: 100%;
+    }
+
+    .Open_daz {
+        position: static;
+        top: 0px;
+        display: block;
+    }
+
+    .spans_ope {
+        display: block;
+        top: -81px;
+        float: left;
+        margin-left: 15%;
+    }
+
+    i.fa.fa-circle.white_cop {
+        color: white;
+        padding-right: 5px;
+        margin-left: 10%;
+    }
+
+    .open_lin2 {
+        display: none;
+    }
+
+    .date_format {
+        position: relative;
+        width: 80%;
+        height: 200px;
+        left: 10%;
+        top: 25px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-sizing: border-box;
+        box-shadow: 10px 12px 26px 2px rgb(0 0 0 / 20%);
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+        border-radius: 10px;
+    }
+
+    i.fa.fa-calendar-o.cal_left {
+        position: absolute;
+        left: 25%;
+        top: 30px;
+        font-size: 15px;
+    }
+
+    i.fa.fa-calendar-o.cal_right {
+        position: absolute;
+        left: 73%;
+        top: 30px;
+        font-size: 15px;
+    }
+
+    span.date_o1 {
+        position: absolute;
+        left: 13%;
+        font-size: 15px;
+        top: 60px;
+        background: none;
+    }
+
+    span.date_o4 {
+        position: absolute;
+        top: 60px;
+        font-size: 15px;
+        background: none;
+        left: 63%;
+    }
+
+    span.date_o2 {
+        position: absolute;
+        left: 11%;
+        top: 90px;
+        background: none;
+        font-size: 10px;
+    }
+
+    span.date_o5 {
+        position: absolute;
+        top: 90px;
+        left: 60%;
+        font-size: 10px;
+        background: none;
+    }
+
+    span.date_o3 {
+        position: absolute;
+        top: 110px;
+        left: 15%;
+        background: none;
+        font-size: 15px;
+    }
+
+    span.date_o6 {
+        position: absolute;
+        top: 110px;
+        left: 63%;
+        background: none;
+        font-size: 15px;
+    }
+
+    input.input_opened {
+        display: block;
+        margin: auto;
+        position: static;
+        width: 75%;
+        height: 35px;
+        margin-top: 100px;
+    }
+
+    .recharts-responsive-container {
+        float: none;
+        width: 100% !important;
+        height: 100%;
+    }
+
+    select#timezone {
+        height: 35px;
+        font-size: 10px;
+    }
+
+    span.cal1 {
+        display: flex;
+        width: 70%;
+        height: 35px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-sizing: border-box;
+        box-shadow: 0px 11px 17px 2px rgb(0 0 0 / 15%);
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+        border-radius: 8px;
+        margin-top: 35px;
+        margin-left: 15%;
+    }
+
+    input#start_date {
+        height: 35px;
+        font-size: 10px;
+    }
+
+    span.cal2 {
+        width: 70%;
+        height: 35px;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    p.cae_head {
+        font-size: 15px;
     }
 
     span.circle_msg {
@@ -1260,6 +1444,13 @@
         left: 25px;
     }
 
+    input.man_tickets {
+        width: 80%;
+        height: 25px;
+        font-size: 10px;
+        margin-top: 100px;
+    }
+
     p.bottom_vendash {
         font-size: 10px;
     }
@@ -1272,6 +1463,11 @@
         margin-top: 40px;
         padding: 5px 0px;
         text-align: center;
+    }
+
+    .wrtap_msgdummy {
+        height: 150px;
+        border-radius: 20px;
     }
 
     .wrapright_sign {
