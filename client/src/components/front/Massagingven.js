@@ -6,6 +6,7 @@ import Sidebar from "./Sidebar";
 import Logout from "./Logout";
 import Hamburgerone from './ham1';
 import Hamburgertwo from './hemtwo';
+import Extramenu from './Extramenu';
 
 class Massagingven extends Component {
     constructor() {
@@ -32,6 +33,7 @@ class Massagingven extends Component {
                 <div className="wrap_vwendor">
                     <Sidebar history={this.props.history} />
                     <div className="right_vendor">
+                    <Extramenu history={this.props.history} />
                         <div className="dropmenu_sidebar">
                             <div className="menusidebar">
                                 <button className="dropbtnzsidebar"><i className='fas fa-list'></i></button>

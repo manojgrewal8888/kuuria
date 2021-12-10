@@ -1328,6 +1328,7 @@
     }
 
     button.btnham1 {
+        display: block;
         background: transparent;
         color: #ffffff;
         width: 20%;
@@ -1337,8 +1338,7 @@
         border-radius: 10px;
     }
 
-    ul.ham1list {
-        display: none;
+    ul.ham1list { 
 
         /*java here*/
         width: 80%;

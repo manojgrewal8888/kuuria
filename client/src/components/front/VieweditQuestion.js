@@ -6,6 +6,7 @@ import Sidebar from "./Sidebar";
 import { Link } from "react-router-dom";
 import classnames from "classnames"
 import axios from "axios";
+import Extramenu from "./Extramenu";
 class ManageQuestions extends Component {
     constructor(props) {
         super(props);
@@ -96,6 +97,7 @@ class ManageQuestions extends Component {
                 <div className="wrap_vwendor">
                     <Sidebar history={this.props.history}/>   
                     <div className="right_vendor">
+                    <Extramenu history={this.props.history} />
                         <div className="right_subven">
                         <Link className="ven_under back_ic"  to='/manage_questions'> 
                             <div  className="logout_ven1">

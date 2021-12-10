@@ -10,6 +10,7 @@ import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 import Hamburgertwo from "./hemtwo";
 import Hamburgerone from "./ham1";
+import Extramenu from "./Extramenu";
 
 
 class Nominationform extends Component {
@@ -27,6 +28,7 @@ class Nominationform extends Component {
                 <div className="wrap_vwendor">
                     <Sidebar history={this.props.history} />
                     <div className="right_vendor">
+                    <Extramenu history={this.props.history} />
                         <div className="dropmenu_sidebar">
                             <div className="menusidebar">
                                 <button className="dropbtnzsidebar"><i className='fas fa-list'></i></button>

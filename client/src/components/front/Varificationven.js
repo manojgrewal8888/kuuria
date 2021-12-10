@@ -8,6 +8,7 @@ import Logout from "./Logout";
 import { Link } from "react-router-dom";
 import Hamburgerone from "./ham1";
 import Hamburgertwo from "./hemtwo";
+import Extramenu from "./Extramenu";
 class Varificationven extends Component {
     constructor() {
         super();
@@ -35,6 +36,7 @@ class Varificationven extends Component {
 
 
                     <div className="right_vendor">
+                    <Extramenu history={this.props.history} />
                         <div className="dropmenu_sidebar">
                             <div className="menusidebar">
                                 <button className="dropbtnzsidebar">MENU</button>

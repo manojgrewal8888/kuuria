@@ -10,6 +10,7 @@ import {
 } from 'recharts';
 import Hamburgerone from './ham1';
 import Hamburgertwo from './hemtwo';
+import Extramenu from './Extramenu';
 
 
 
@@ -59,6 +60,7 @@ class Revenu extends Component {
                     <Hamburgertwo />
 
                     <div className="right_vendor">
+                    <Extramenu history={this.props.history} />
                         <div className="dropmenu_sidebar">
                             <div className="menusidebar">
                                 <button className="dropbtnzsidebar"><i className='fas fa-list'></i></button>
@@ -75,7 +77,7 @@ class Revenu extends Component {
 
                         </div>
                         <div className="right_subven">
-                            <Logout history={this.props.history} />
+                           {/*  <Logout history={this.props.history} /> */}
 
 
                             <div className="sales_wr">

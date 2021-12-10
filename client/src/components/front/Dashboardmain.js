@@ -8,15 +8,28 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Hamburgerone from "./ham1";
 import Hamburgertwo from "./hemtwo";
+import Extramenu from "./Extramenu";
 class Dashboardmain extends Component {
   constructor() {
     super();
     this.state = {
+      menu: false, 
       countevents: 0,
       showloader: true,
       showtab: 'leaders'
     };
   }
+  showmenu = e => {
+    if(this.state.menu == false){
+        this.setState({ 
+            menu: true
+        })
+    }else{
+        this.setState({ 
+            menu: false
+        })
+    }
+}
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({
@@ -70,21 +83,23 @@ class Dashboardmain extends Component {
       <div>
         <div className="wrap_vwendor">
           <Sidebar history={this.props.history} />
-
           <div className="right_vendor">
+          <Extramenu history={this.props.history} />
             <div className="right_subven">
-              <Logout history={this.props.history} />
+          {/*     <Logout history={this.props.history} /> */}
+          <div className='d-flex'>
               <Hamburgerone />
-              <Hamburgertwo />
-
-
+              <Hamburgertwo /> 
+            </div>
               <div className="dropdown_maindeshb">
-                <i className="fa fa-bell bell_main" ></i>
+                <i className="fa fa-bell bell_main" onClick={this.showmenu}></i>
+                {this.state.menu && 
                 <div className="dropcontan_maindeshb">
                   <a className="linkforamindesh" href="#"><i className="fa fa-circle circlemain_sdesh" ></i>Link 1</a>
                   <a className="linkforamindesh" href="#"><i className="fa fa-circle circlemain_sdesh" ></i>Link 2</a>
                   <a className="linkforamindesh" href="#"><i className="fa fa-circle circlemain_sdesh" ></i>Link 3</a>
                 </div>
+                }
               </div>
 
 

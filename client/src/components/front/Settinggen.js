@@ -39,7 +39,7 @@ class Settinggen extends PureComponent {
                         <Extramenu history={this.props.history} />
 
                         <div className="right_gen">
-                            <i className="fa fa-user-o"></i><p className="fa_user">Profile Settings</p>
+                            <p className="fa_user">Profile Settings</p>
                             <div className="fauser_vl"></div>
                             <p className="genset_name">Name</p>
                             <p className="gen_spara">Your Name Or The Name Of The Primary Contact Of The Account, Visit The <Link className="genset_link">Organisation Setting</Link> To Change Name Of The Organisation</p>

@@ -7,6 +7,7 @@ import PropTypes from "prop-types";
 import { create_ticket,editTicket } from "../../actions/ManagerActions";
 import classnames from "classnames";
 import axios from "axios";
+import Extramenu from "./Extramenu";
 class Vieweditticket extends Component {
     constructor() {
         super(); 
@@ -93,6 +94,7 @@ class Vieweditticket extends Component {
                 <div className="wrap_vwendor">
                     <Sidebar history={this.props.history}/>   
                     <div className="right_vendor">
+                    <Extramenu history={this.props.history} />
                         <div className="right_subven">
                         <Link className="ven_under back_ic"  to='/manage_ticket'> 
                             <div  className="logout_ven1">

@@ -8,6 +8,7 @@ import PropTypes from "prop-types";
 import axios from "axios";
 import Hamburgerone from "./ham1";
 import Hamburgertwo from "./hemtwo";
+import Extramenu from "./Extramenu";
 class Manageticket extends Component {
     constructor() {
         super();
@@ -56,7 +57,7 @@ class Manageticket extends Component {
                     <Sidebar history={this.props.history} />
 
                     <div className="right_vendor">
-
+                    <Extramenu history={this.props.history} />
                         <div className="dropmenu_sidebar">
                             <div className="menusidebar">
                                 <button className="dropbtnzsidebar"><i className='fas fa-list'></i></button>

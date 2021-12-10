@@ -6,6 +6,7 @@ import Sidebar from "./Sidebar";
 import Hamburgerone from "./ham1";
 import Hamburgertwo from "./hemtwo";
 import axios from "axios";
+import Extramenu from "./Extramenu";
 const moment = require('moment');
 class Manageevent extends Component {
     constructor() {
@@ -54,6 +55,7 @@ class Manageevent extends Component {
                     <Sidebar history={this.props.history} />
 
                     <div className="right_vendor">
+                    <Extramenu history={this.props.history} />
                         <div className="dropmenu_sidebar">
                             <div className="menusidebar">
                                 <button className="dropbtnzsidebar"><i className='fas fa-list'></i></button>

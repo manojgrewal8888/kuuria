@@ -34,7 +34,6 @@ class Extramenu extends Component {
                         <li className="emenli"><Link to="/smsven" className={this.state.route == '/smsven' ? 'custom_b0 setemlink' : 'custom_b1 setemlink'}  >Sms</Link></li>
                         <li className="emenli"><Link to="/settingorg" className={this.state.route == '/settingorg' ? 'custom_b0 setemlink' : 'custom_b1 setemlink'}  >Organisation</Link></li>
                         <li className="emenli"><Link to="/settingapp" className={this.state.route == '/settingapp' ? 'custom_b0 setemlink' : 'custom_b1 setemlink'}  >Appearance</Link></li>
-                        <li className="emenli"> <Link to="/manage_events" className={this.state.route == '/manage_events' ? 'custom_b0 setemlink' : 'custom_b1 setemlink'} >Go Back</Link></li>
                     </ul>
                 </div>
             </div>

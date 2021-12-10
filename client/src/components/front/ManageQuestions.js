@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Hamburgerone from "./ham1";
 import Hamburgertwo from "./hemtwo";
+import Extramenu from "./Extramenu";
 class ManageQuestions extends Component {
     constructor() {
         super();
@@ -61,6 +62,7 @@ class ManageQuestions extends Component {
                     <Sidebar history={this.props.history} />
 
                     <div className="right_vendor">
+                    <Extramenu history={this.props.history} />
                         <div className="dropmenu_sidebar">
                             <div className="menusidebar">
                                 <button className="dropbtnzsidebar"><i className='fas fa-list'></i></button>

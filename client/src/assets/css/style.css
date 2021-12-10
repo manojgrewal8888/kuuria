@@ -561,8 +561,8 @@ p.foot-slogan {
   font-family: "Poppins";
   font-weight: 200;
   font-size: 20px;
-  color: #ffffff;
-  text-align: center;
+  color: #ffffff; 
+  margin-left: 350px;
   margin-top: 60px;
 }
 
@@ -1972,9 +1972,8 @@ img.event_img {
 /*for evevnt-categoryyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy/*/
 
 button.ecat_txtnw {
-  display: block;
-  margin-top: 50px;
-  margin-left: 60%;
+  display: block; 
+  margin-left: 50%;
   width: 25%;
   height: 35px;
   font-size: 20px;
@@ -2413,8 +2412,7 @@ i.fa.fa-user-o {
   background: none;
 }
 
-p.fa_user {
-  position: absolute;
+p.fa_user { 
   top: 125px;
   font-size: 20px;
   margin-left: 80px;
@@ -2432,6 +2430,7 @@ p.fa_user {
 p.genset_name {
   margin-left: 45px;
   background: none;
+  margin-top: 88px;
 }
 
 p.gen_spara {
@@ -2444,11 +2443,10 @@ p.gen_spara {
 }
 
 input.input_genset1 {
-  position: absolute;
+  position: absolute; 
   width: 63%;
-  height: 42px;
-  left: 42px;
-  top: 294px;
+  height: 42px; 
+  margin-left: 48px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 8px;
 }
@@ -2562,8 +2560,7 @@ button.genset_btn {
   margin-bottom: 100px;
 }
 
-img.seticon_resize {
-  margin-top: 123px;
+img.seticon_resize { 
   margin-left: 45px;
   background: none;
   height: 25px;
@@ -2573,7 +2570,7 @@ img.seticon_resize {
 p.subdomain_p {
   background: none;
   margin-left: 45px;
-  margin-top: 100px;
+  margin-top: 90px;
 }
 
 p.subdomain_p2 {
@@ -2581,7 +2578,7 @@ p.subdomain_p2 {
   font-size: 13px;
   width: 65%;
   font-weight: 100;
-  margin-top: 10px;
+  margin-top: 60px;
   background: none;
 }
 
@@ -3611,7 +3608,7 @@ p.lastp_forget {
   width: 45%;
   height: 650px;
   margin-left: 42%;
-  margin-top: 150px;
+  margin-top: 158px;
   display: flow-root;
 }
 
@@ -3624,7 +3621,7 @@ p.lastp_forget {
   border-radius: 8px;
   width: 90%;
 
-  margin-top: 150px;
+  margin-top: 50px;
 
 }
 
@@ -3821,6 +3818,7 @@ h4.meve_headin {
   margin-bottom: 50px;
   background: none;
   margin-bottom: 25px;
+  font-size: 20px;
 }
 
 i.fa.fa-sign-out {
@@ -3946,7 +3944,7 @@ button.mantik_btnv {
   margin-top: 25px;
   padding: 8px 20px;
   color: #ffd600;
-  font-size: 10px;
+  font-size: 14px;
   float: right;
   margin-right: 20%;
 }
@@ -4304,9 +4302,8 @@ td.pricxetab {
 .sales_wr {
   display: flex;
   background: none;
-  width: 100%;
-
-  margin-top: 173px;
+  width: 100%; 
+  margin-top: 88px;
 }
 
 button.vote_sal {
@@ -5446,7 +5443,7 @@ input.inputmod.form-control {
 
 i.fa.fa-bell.bell_main {
   float: right;
-  margin-top: 50px;
+  margin-top: -80px;
   color: white;
   font-size: 20px;
   border: none;
@@ -5454,8 +5451,7 @@ i.fa.fa-bell.bell_main {
 }
 
 i.fa.fa-bell.bell_main:hover {
-  float: right;
-  margin-top: 50px;
+  float: right; 
   cursor: pointer;
   font-size: 20px;
   color: #ffd600;
@@ -5465,19 +5461,18 @@ i.fa.fa-bell.bell_main:hover {
   display: none;
 }
 
-.dropcontan_maindeshb {
-  display: none;
+.dropcontan_maindeshb { 
   position: absolute;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  margin-top: 75px;
-  right: 10%;
+  margin-top: -30px;
+  right: 4%;
   color: #ffffff;
   width: 40%;
   border: 1px solid #33466a;
   border-radius: 8px;
-  height: 500px;
+  height: 300px;
   background: #0f2650;
 }
 
@@ -5502,10 +5497,7 @@ i.fa.fa-circle.circlemain_sdesh {
   padding-right: 5px;
   font-size: 15px;
 }
-
-i.fa.fa-bell.bell_main:hover~.dropcontan_maindeshb {
-  display: block;
-}
+ 
 
 .recharts-responsive-container {
   float: right;
@@ -6122,9 +6114,8 @@ button.anabtnsub:hover {
 li.emenli {
   /*border: 1px solid green;*/
   padding: 10px 15px;
-}
-
-.hammen1 {
+} 
+button.btnham1 {
   display: none;
 }
 
@@ -6138,7 +6129,7 @@ ul.emenul {
 
   width: 100%;
   /* float: right; */
-  margin-top: 150px;
+  margin-top: 50px;
 }
 
 a.setemlink {
@@ -6153,9 +6144,7 @@ a.setemlink:hover {
   cursor: pointer;
 }
 
-.mtsmssub {
-  margin-top: 150px;
-
+.mtsmssub { 
   width: 80%;
 }
 
