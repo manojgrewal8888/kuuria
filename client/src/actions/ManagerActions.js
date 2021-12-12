@@ -52,3 +52,14 @@ export const editTicket = (ticket, history) => dispatch => {
       })
     );
 }; 
+export const addcategory = (userdata, history) => dispatch => {
+  axios
+    .post("/api/vendor/add_category", userdata)
+    .then(res => window.location = "/categories") // re-direct to login on successful register
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
+}; 

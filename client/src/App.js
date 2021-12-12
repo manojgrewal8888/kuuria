@@ -47,8 +47,7 @@ import Eventsetting from './components/front/Eventsetting';
 import Settinggen from './components/front/Settinggen';
 import Settingorg from './components/front/Settingorg';
 import Settingapp from './components/front/Settingapp';
-import Eventcategory from './components/front/Eventcategory';
-import Eventnominee from './components/front/Eventnominee';
+import Eventcategory from './components/front/Eventcategory'; 
 import Eventnominee2 from "./components/front/Eventnominee2";
 import Eventnominfo from './components/front/Eventnominfo';
 import Eventdelete from './components/front/Eventdelete';
@@ -152,8 +151,8 @@ class App extends Component {
               <Route exact={true} path='/settinggen' component={Settinggen} />
               <Route exact={true} path='/settingorg' component={Settingorg} />
               <Route exact={true} path='/settingapp' component={Settingapp} />
-              <Route exact={true} path='/category' component={Eventcategory} />
-              <Route exact={true} path='/eventnominee' component={Eventnominee} />
+             {/*  <Route exact={true} path='/category' component={Eventcategory} /> */}
+              <Route exact={true} path='/categories' component={Eventcategory} />
               <Route exact={true} path='/eventnominee2' component={Eventnominee2} />
 
               <Route exact={true} path='/eventdelete' component={Eventdelete} />

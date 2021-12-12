@@ -2,7 +2,7 @@ const Validator = require("validator");
 const isEmpty = require("is-empty");
 module.exports = function validateEventInput(data) {
   let errors = {};
-  data.event_id = !isEmpty(data.event_id) ? data.event_id : "";
+  data.user_id = !isEmpty(data.user_id) ? data.user_id : "";
   data.title = !isEmpty(data.title) ? data.title : "";
   data.description = !isEmpty(data.description) ? data.description : "";
 
@@ -12,8 +12,8 @@ module.exports = function validateEventInput(data) {
   if (Validator.isEmpty(data.description)) {
     errors.description = "description field is required";
   }
-  if (Validator.isEmpty(data.event_id)) {
-    errors.event_id = "event_id field is required";
+  if (Validator.isEmpty(data.user_id)) {
+    errors.user_id = "user_id field is required";
   }
 
   return {

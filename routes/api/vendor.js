@@ -12,8 +12,8 @@ const validateUpdateQuestionInput = require("../../validation/vendor/updatequest
 const _ = require('lodash');
 const {ObjectId} = require('mongodb');
 
-router.get('/category_list', async function(err,res) {
-    EventCategory.find({}).then(category=>{
+router.post('/category_list', async function(req,res) {
+    EventCategory.find({user_id:req.body.user_id}).then(category=>{
         return res.json(category);
     });
 });
@@ -25,7 +25,7 @@ router.post('/add_category', function(req, res) {
     }
 
     let category = new EventCategory({
-        event_id: req.body.event_id,
+        user_id: req.body.user_id,
         title: req.body.title,
         description: req.body.description
     });
@@ -42,15 +42,15 @@ router.post('/edit_category', function(req, res) {
       if (!req.body.description) {
         errors.description = "description field is required";
       }
-      if (!req.body.event_id) {
-        errors.event_id = "event_id field is required";
+      if (!req.body.user_id) {
+        errors.user_id = "user_id field is required";
       }
       if (!_.isEmpty(errors)) {
         return res.status(400).json(errors);
       }
 
     let category = {
-        event_id: req.body.event_id,
+        user_id: req.body.user_id,
         title: req.body.title,
         description: req.body.description
     };

@@ -30,7 +30,7 @@ class Extramenu extends Component {
                 <div className="wrapemen">
                     <ul className="emenul">
                         <li className="emenli"> <Link to="/settinggen" className={this.state.route == '/settinggen' ? 'custom_b0 setemlink' : 'custom_b1 setemlink'} >General</Link></li>
-                        <li className="emenli"><Link to="/eventnominee" className={this.state.route == '/eventnominee' ? 'custom_b0 setemlink' : 'custom_b1 setemlink'}  >Categories</Link></li>
+                        <li className="emenli"><Link to="/categories" className={this.state.route == '/categories' ? 'custom_b0 setemlink' : 'custom_b1 setemlink'}  >Categories</Link></li>
                         <li className="emenli"><Link to="/smsven" className={this.state.route == '/smsven' ? 'custom_b0 setemlink' : 'custom_b1 setemlink'}  >Sms</Link></li>
                         <li className="emenli"><Link to="/settingorg" className={this.state.route == '/settingorg' ? 'custom_b0 setemlink' : 'custom_b1 setemlink'}  >Organisation</Link></li>
                         <li className="emenli"><Link to="/settingapp" className={this.state.route == '/settingapp' ? 'custom_b0 setemlink' : 'custom_b1 setemlink'}  >Appearance</Link></li>

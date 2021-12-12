@@ -87,8 +87,7 @@ class Settinggen extends PureComponent {
 }
 
 
-Settinggen.propTypes = {
-    updateuser: PropTypes.object.isRequired,
+Settinggen.propTypes = { 
     auth: PropTypes.object.isRequired,
     errors: PropTypes.object.isRequired
 };

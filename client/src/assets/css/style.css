@@ -1974,7 +1974,7 @@ img.event_img {
 button.ecat_txtnw {
   display: block; 
   margin-left: 50%;
-  width: 25%;
+  width: 20%;
   height: 35px;
   font-size: 20px;
   color: #ffd600;
@@ -2007,7 +2007,7 @@ i.fa.fa-search.catsearch_icon {
 
 .ecat_box {
   margin: auto;
-  margin-left: 0px;
+  margin-left: 50px;
   width: 765px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -5274,8 +5274,7 @@ i.fa.fa-send.cus_send_ic {
 
 /*===============================addon category========================================*/
 
-div#addnewcat {
-  border: 1px solid aqua;
+div#addnewcat { 
   width: 100%;
   margin-top: 25px;
 }
@@ -5310,7 +5309,7 @@ input.addon_inp1 {
   font-size: 12px;
 }
 
-textarea#w3review {
+.w3review {
   display: block;
   width: 60%;
   margin: auto;
