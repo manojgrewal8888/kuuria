@@ -560,7 +560,7 @@ img.mcseq {
 p.foot-slogan {
   font-family: "Poppins";
   font-weight: 200;
-  font-size: 20px;
+  font-size: 12px;
   color: #ffffff; 
   margin-left: 350px;
   margin-top: 60px;
@@ -5680,12 +5680,12 @@ i.fa.fa-check-circle-o.tikspan_var {
 p.ev1_vendorvar {
   width: 80%;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 p.evvar_progress {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .prog_var {
@@ -5719,7 +5719,7 @@ progress.progres_varven1 {
 
 }
 
-button.venverbtn:hover {
+button.venverbtn.active {
   color: #0f2650;
   background-color: #ffd600;
 

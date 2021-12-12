@@ -13,6 +13,7 @@ class Varificationven extends Component {
     constructor() {
         super();
         this.state = {
+            approved:false
         };
     }
     componentWillReceiveProps(nextProps) {
@@ -26,6 +27,16 @@ class Varificationven extends Component {
         if (this.props.auth.isAuthenticated == false) {
             this.props.history.push("/login");
         }
+    }
+    showEvent = e => { 
+            this.setState({
+                approved: false
+            }); 
+    }
+    showEvent2 = e => { 
+            this.setState({
+                approved: true
+            }); 
     }
     render() {
 
@@ -60,14 +71,14 @@ class Varificationven extends Component {
                         </div>
 
                             <div className="btnwrapvarv">
-                                <Link className="link_resetvar" to='/apprived_var'><button className="venverbtn">Approved Events</button></Link>
-                                <Link className="link_resetvar" to='/process_var'><button className="venverbtn">Pending Events</button></Link>
+                                <div className='link_resetvar'  onClick={this.showEvent2}><button  className={this.state.approved ? 'venverbtn active' :'venverbtn'} >Approved Events</button></div>
+                                <div className='link_resetvar' onClick={this.showEvent}><button className={!this.state.approved ? 'venverbtn active' :'venverbtn'}>Pending Events</button></div>
 
                             </div>
-
+                        {this.state.approved && <>
                             <div className="even1_var">
                                 <p className="ev1_vendorvar">Event 1</p>
-                                <p className="evvar_progress">Verification In Progress</p>
+                                <p className="evvar_progress">Approved Events</p>
 
                                 <div className="prog_var">
                                     <progress className="progres_varven1" value="7000" max="10000">70%</progress>
@@ -76,12 +87,32 @@ class Varificationven extends Component {
 
                             <div className="even1_var">
                                 <p className="ev1_vendorvar">Event 2</p>
+                                <p className="evvar_progress">Approved Events</p>
+
+                                <div className="prog_var">
+                                    <progress className="progres_varven1" value="3000" max="10000">30%</progress>
+                                </div>
+                            </div></>
+                            }
+                        {!this.state.approved && <>
+                            <div className="even1_var">
+                                <p className="ev1_vendorvar">Event 3</p>
+                                <p className="evvar_progress">Verification In Progress</p>
+
+                                <div className="prog_var">
+                                    <progress className="progres_varven1" value="7000" max="10000">70%</progress>
+                                </div>
+                            </div>
+
+                            <div className="even1_var">
+                                <p className="ev1_vendorvar">Event </p>
                                 <p className="evvar_progress">Verification In Progress</p>
 
                                 <div className="prog_var">
                                     <progress className="progres_varven1" value="3000" max="10000">30%</progress>
                                 </div>
-                            </div>
+                            </div></>
+                            }
                         </div>
                     </div>
 
