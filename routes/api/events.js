@@ -143,13 +143,13 @@ router.post("/addevent", (req, res) => {
         if (!isValid) {
           return res.status(400).json(errors);
         }
-        EventOrganisation.findOne({event_id: req.body.event_id}).then(event=>{
+        EventOrganisation.findOne({user_id: req.body.user_id}).then(event=>{
           if (event) {
             let organisation = {
               name: req.body.name,
               subdomain: req.body.subdomain
              };
-             EventOrganisation.updateOne({event_id: req.body.event_id}, {$set:organisation},{upsert: true }, function(err, result) {
+             EventOrganisation.updateOne({user_id: req.body.user_id}, {$set:organisation},{upsert: true }, function(err, result) {
                  if (err) {
                      console.log(err);
                  } else {
@@ -158,7 +158,7 @@ router.post("/addevent", (req, res) => {
              });
           } else {
             const newEventOrganisation = new EventOrganisation({
-              event_id: req.body.event_id,
+              user_id: req.body.user_id,
               name: req.body.name,
               subdomain: req.body.subdomain
             }); 
@@ -169,12 +169,12 @@ router.post("/addevent", (req, res) => {
           }
         });
   });
-  router.get('/get_organisation', function(req, res) {
-    const {errors, isValid} = validateGetOrganisationInput(req.body);
-    if (!isValid) {
-      return res.status(400).json(errors);
-    }
-    EventOrganisation.findOne({event_id: req.body.event_id}).then(event=>{
+  router.post('/get_organisation', function(req, res) {
+    // const {errors, isValid} = validateGetOrganisationInput(req.body);
+    // if (!isValid) {
+    //   return res.status(400).json(errors);
+    // }
+    EventOrganisation.findOne({user_id: req.body.user_id}).then(event=>{
       if (event) {
         return res.json(event);
       } else {

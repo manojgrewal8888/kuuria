@@ -2430,7 +2430,7 @@ p.fa_user {
 p.genset_name {
   margin-left: 45px;
   background: none;
-  margin-top: 88px;
+  margin-top: 50px;
 }
 
 p.gen_spara {
@@ -2585,6 +2585,7 @@ p.subdomain_p2 {
 }
 
 input.input_genset3 {
+  color:white;
   position: absolute;
   width: 63%;
   height: 42px;
@@ -2598,7 +2599,7 @@ input.input_genset3 {
   position: absolute;
   width: 100px;
   height: 100px;
-  left: 1332px;
+  left: 1200px;
   top: 825px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -2722,7 +2723,7 @@ button.setapp_btn {
   position: absolute;
   width: 120px;
   height: 120px;
-  left: 1350px;
+  left: 1200px;
   top: 340px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);

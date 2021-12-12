@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 // Create Schema
 const EventOrganisationSchema = new Schema({
-  event_id: {
+  user_id: {
     type: String,
     required: true
   },
@@ -15,4 +15,4 @@ const EventOrganisationSchema = new Schema({
     required: true
   }
 });
-module.exports = Event = mongoose.model("events_organisation", EventOrganisationSchema);
+module.exports = Event = mongoose.model("organisation", EventOrganisationSchema);

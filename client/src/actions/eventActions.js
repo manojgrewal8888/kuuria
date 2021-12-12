@@ -40,3 +40,14 @@ export const updateuser = (userData, history) => dispatch => {
       })
     );
 }; 
+export const addOrg = (userData, history) => dispatch => {
+  axios
+    .post("/api/event/organisation", userData)
+    .then(res => history.push("/settingorg")) // re-direct to login on successful register
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
+}; 
