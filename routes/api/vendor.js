@@ -147,6 +147,30 @@ router.post('/get_ticket', function(req, res) {
     }
   });
 });
+
+router.post('/update_ticket', function(req, res) {
+  let errors = {};
+    if (!req.body.ticket_id) {
+      errors.ticket_id = "ticket_id is required";
+    } 
+  let data = {
+    name: req.body.name,
+    date: req.body.date,
+    time: req.body.time,
+    price_votes: req.body.price_votes,
+    venue: req.body.venue,
+    number: req.body.number,
+    user_id: req.body.user_id,
+  };
+  Ticket.updateOne({_id: ObjectId(req.body.ticket_id)}, {$set:data},{upsert: true }, function(err, result) {
+      if (err) {
+          console.log(err);
+      } else {
+          return res.status(200).json('ticket updated successfully');
+      }
+  });
+});
+
 router.post('/add_question', function(req, res) { 
    const { errors, isValid } = validateQuestionInput(req.body);
    // Check validation
