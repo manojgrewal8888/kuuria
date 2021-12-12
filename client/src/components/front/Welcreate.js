@@ -91,8 +91,8 @@ render() {
         return (
             <div>
                 <div className="wrap_wcreate">
-                    <img src="./img/kuria-new.png" alt="" className="wcreate_img" />
-
+                    {/* <img src="./img/kuria-new.png" alt="" className="wcreate_img" />
+ */}
                     <div className="cae_details">
                         <Link className="ven_under back_ic"  to='/manage_events'> 
                             <div  className="logout_ven1">
