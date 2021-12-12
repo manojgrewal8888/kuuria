@@ -127,7 +127,7 @@ class Eventcat extends Component {
                                 <i className="fa fa-plus-circle ecat_iconnw"></i> New Category
                             </button>  
                             {this.state.showloader && <div>
-                                    <div className='text-center'><p className="loading">Loading Categories</p></div>
+                                    <div className='text -center'><p className="loading">Loading Categories</p></div>
                                 </div>}
                                 <div className="ecat_box">
                                 {
@@ -146,7 +146,7 @@ class Eventcat extends Component {
                                 <div className="addnewcat">
                                         <div className="wrapaddne">
                                     <form noValidate onSubmit={this.onSubmit}> 
-                                            <p className="headingaddon">Create New Category</p>
+                                            <p className="headingaddon">Category</p>
 
                                             <input onChange={this.onChange} type="text" value={this.state.title} name="title" id="title" className="addon_inp1" placeholder="Title" />
 
