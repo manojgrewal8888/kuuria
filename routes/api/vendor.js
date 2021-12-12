@@ -17,6 +17,11 @@ router.post('/category_list', async function(req,res) {
         return res.json(category);
     });
 });
+router.post('/single_cat', async function(req,res) {
+    EventCategory.find({_id:req.body.category_id}).then(category=>{
+        return res.json(category);
+    });
+});
 router.post('/add_category', function(req, res) {
     const { errors, isValid } = validateCategoryInput(req.body);
   // Check validation

@@ -5274,7 +5274,7 @@ i.fa.fa-send.cus_send_ic {
 
 /*===============================addon category========================================*/
 
-div#addnewcat { 
+div.addnewcat { 
   width: 100%;
   margin-top: 25px;
 }
