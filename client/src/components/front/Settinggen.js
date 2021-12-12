@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import axios from "axios";
 import Extramenu from './Extramenu';
+import { updateuser } from "../../actions/eventActions";
 
 
 class Settinggen extends PureComponent {
@@ -14,6 +15,8 @@ class Settinggen extends PureComponent {
         super();
         this.state = {
             event: [],
+            email:'',
+            name:'',
             showloader: true
         };
     }
@@ -24,8 +27,29 @@ class Settinggen extends PureComponent {
         if (this.props.auth.isAuthenticated == false) {
             this.props.history.push("/login");
         }
+        var email = localStorage.getItem('email');
+        var name = localStorage.getItem('name');
+        this.setState ({
+            email:email,
+            name:name,
+        });
     }
+    onChange = e => {
+        this.setState({ [e.target.id]: e.target.value });
+    };
+    onSubmit = e => {
+        var user_id = localStorage.getItem('_id'); 
+        e.preventDefault(); 
+        const userdata = {
+            name: this.state.name,
+            email: this.state.email,
+            user_id: user_id, 
+        };
+        this.props.updateuser(userdata, this.props.history);  
+    };
+    
     render() {
+        const { errors } = this.state;
         return (
             <div>
 
@@ -38,16 +62,18 @@ class Settinggen extends PureComponent {
 
                         <Extramenu history={this.props.history} />
 
+                        <form noValidate onSubmit={this.onSubmit}> 
                         <div className="right_gen">
                             <p className="fa_user">Profile Settings</p>
                             <div className="fauser_vl"></div>
                             <p className="genset_name">Name</p>
-                            <p className="gen_spara">Your Name Or The Name Of The Primary Contact Of The Account, Visit The <Link className="genset_link">Organisation Setting</Link> To Change Name Of The Organisation</p>
-                            <input type="text" name="suser" id="" className="input_genset1" />
+                            <p className="gen_spara">Your Name Or The Name Of The Primary Contact Of The Account{/* , Visit The <Link className="genset_link">Organisation Setting</Link> To Change Name Of The Organisation */}</p>
+                            <input  onChange={this.onChange}  type="text" name="name" value={this.state.name ?? ''} id="name" className="input_genset1" />
                             <label className="label_genset" htmlFor="Email Address">Email Address</label>
-                            <input type="email" id="" name="" className="input_genset2" />
+                            <input  onChange={this.onChange}  type="email" id="email" name="email" className="input_genset2" value={this.state.email ?? ''} />
                             <button className="genset_btn">Save</button>
                         </div>
+                        </form>
                     </div>
                     <div className="setgen_box1"></div>
                     <div className="setgen_box2"></div>
@@ -62,6 +88,7 @@ class Settinggen extends PureComponent {
 
 
 Settinggen.propTypes = {
+    updateuser: PropTypes.object.isRequired,
     auth: PropTypes.object.isRequired,
     errors: PropTypes.object.isRequired
 };
@@ -71,6 +98,6 @@ const mapStateToProps = state => ({
 });
 export default connect(
     mapStateToProps,
-    {}
+    {updateuser}
 )(Settinggen);
  

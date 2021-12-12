@@ -2443,6 +2443,7 @@ p.gen_spara {
 }
 
 input.input_genset1 {
+  color: white;
   position: absolute; 
   width: 63%;
   height: 42px; 
@@ -2455,7 +2456,7 @@ label.label_genset {
   position: absolute;
   height: 21px;
   left: 45px;
-  top: 370px;
+  top: 300px;
   font-family: Poppins;
   font-style: normal;
   color: #FFFFFF;
@@ -2464,10 +2465,11 @@ label.label_genset {
 
 input.input_genset2 {
   position: absolute;
+  color: white;
   width: 63%;
   height: 42px;
-  left: 42px;
-  top: 415px;
+  left: 46px;
+  top: 344px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 8px;
 }
@@ -2476,9 +2478,9 @@ button.genset_btn {
   position: absolute;
   width: 135px;
   height: 45px;
-  left: 42px;
-  top: 500px;
-  background: #FFD600;
+  left: 48px;
+  top: 430px;
+  background: #fbd402;
   box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
   border-radius: 5px;
   color: #000000;

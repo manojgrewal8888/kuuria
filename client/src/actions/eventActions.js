@@ -29,3 +29,14 @@ export const editevent = (userData, history) => dispatch => {
       })
     );
 }; 
+export const updateuser = (userData, history) => dispatch => {
+  axios
+    .post("/api/user/update_user", userData)
+    .then(res => history.push("/update_user")) // re-direct to login on successful register
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
+}; 
