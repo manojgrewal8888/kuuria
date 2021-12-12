@@ -88,18 +88,17 @@ class Eventcat extends Component {
          } 
     };
     
-    componentDidMount(){
+    async componentDidMount(){
         if (this.props.auth.isAuthenticated == false) {
             this.props.history.push("/login");
         }
-        var user_id = {
-            id: localStorage.getItem('_id')
-        }
+        var user_id = localStorage.getItem('_id') ;
         if (user_id) {
-            axios
-                .post("/api/vendor/category_list", user_id)
+            await axios
+                .post("/api/vendor/category_list",{ user_id:user_id})
                 .then(res => {
                     if (res) {
+                      console.log(res.data)
                         this.setState({
                             categories: res.data,
                             showloader: false
