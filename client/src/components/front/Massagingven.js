@@ -34,7 +34,7 @@ class Massagingven extends Component {
                     <Sidebar history={this.props.history} />
                     <div className="right_vendor">
                     <Extramenu history={this.props.history} />
-                        <div className="dropmenu_sidebar">
+                        {/* <div className="dropmenu_sidebar">
                             <div className="menusidebar">
                                 <button className="dropbtnzsidebar"><i className='fas fa-list'></i></button>
                                 <div className="dropdown-contentside">
@@ -48,11 +48,13 @@ class Massagingven extends Component {
                                 </div>
                             </div>
 
-                        </div>
+                        </div> */}
                         <div className="right_subven">
-                            <Logout />
+                          {/*   <Logout /> */}
+                            <div className='d-flex'>
                             <Hamburgerone />
                             <Hamburgertwo />
+                            </div>
 
                             <h2 className="msg_heading">Messages <span className="circle_msg">4</span></h2>
                             <div className="wrtap_msgdummy">

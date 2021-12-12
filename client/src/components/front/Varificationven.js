@@ -37,7 +37,7 @@ class Varificationven extends Component {
 
                     <div className="right_vendor">
                     <Extramenu history={this.props.history} />
-                        <div className="dropmenu_sidebar">
+                      {/*   <div className="dropmenu_sidebar">
                             <div className="menusidebar">
                                 <button className="dropbtnzsidebar">MENU</button>
                                 <div className="dropdown-contentside">
@@ -51,11 +51,13 @@ class Varificationven extends Component {
                                 </div>
                             </div>
 
-                        </div>
+                        </div> */}
                         <div className="right_subven">
-                            <Logout history={this.props.history} />
+                         {/*    <Logout history={this.props.history} /> */}
+                         <div className='d-flex'>
                             <Hamburgerone />
                             <Hamburgertwo />
+                        </div>
 
                             <div className="btnwrapvarv">
                                 <Link className="link_resetvar" to='/apprived_var'><button className="venverbtn">Approved Events</button></Link>

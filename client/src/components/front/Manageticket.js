@@ -58,7 +58,7 @@ class Manageticket extends Component {
 
                     <div className="right_vendor">
                     <Extramenu history={this.props.history} />
-                        <div className="dropmenu_sidebar">
+                        {/* <div className="dropmenu_sidebar">
                             <div className="menusidebar">
                                 <button className="dropbtnzsidebar"><i className='fas fa-list'></i></button>
                                 <div className="dropdown-contentside">
@@ -72,11 +72,13 @@ class Manageticket extends Component {
                                 </div>
                             </div>
 
-                        </div>
+                        </div> */}
                         <div className="right_subven">
-                            <Logout history={this.props.history} />
+                           {/*  <Logout history={this.props.history} /> */}
+                            <div className='d-flex'>
                             <Hamburgerone />
                             <Hamburgertwo />
+                            </div>
 
                             <input className="man_tickets" type="search" placeholder="Search Ticket" name="" id="" />
                             <Link to='/viewedit_ticket'>

@@ -63,7 +63,7 @@ class ManageQuestions extends Component {
 
                     <div className="right_vendor">
                     <Extramenu history={this.props.history} />
-                        <div className="dropmenu_sidebar">
+                        {/* <div className="dropmenu_sidebar">
                             <div className="menusidebar">
                                 <button className="dropbtnzsidebar"><i className='fas fa-list'></i></button>
                                 <div className="dropdown-contentside">
@@ -77,11 +77,13 @@ class ManageQuestions extends Component {
                                 </div>
                             </div>
 
-                        </div>
+                        </div> */}
                         <div className="right_subven">
-                            <Logout history={this.props.history} />
+                           {/*  <Logout history={this.props.history} /> */}
+                           <div className='d-flex'>
                             <Hamburgerone />
                             <Hamburgertwo />
+                            </div>
 
                             <h4 className="meve_headin">Manage Questions For Filling Of Nomination</h4>
 
