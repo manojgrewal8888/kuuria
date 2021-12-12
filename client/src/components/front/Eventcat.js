@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import axios from "axios";
 import Extramenu from './Extramenu'; 
-import { addcategory } from "../../actions/ManagerActions";
+import { addcategory,updatecategory } from "../../actions/ManagerActions";
 import Modal from 'react-modal';
 
 class Eventcat extends Component {
@@ -39,6 +39,7 @@ class Eventcat extends Component {
         var user_id = localStorage.getItem('_id'); 
         e.preventDefault(); 
         var userdata = {
+            category_id:this.state.edit_id,
             title: this.state.title,
             description: this.state.description,
             user_id: user_id, 
@@ -55,10 +56,9 @@ class Eventcat extends Component {
             axios
             .post("/api/vendor/single_cat", {category_id:e})
             .then(res => {
-                if (res) {
-                  console.log(res.data)
+                if (res) { 
                     this.setState({
-                        edit_id: res.data.edit_id,
+                        edit_id: res.data._id,
                         title: res.data.title,
                         description: res.data.description,
                         showloader: false,
@@ -154,7 +154,7 @@ class Eventcat extends Component {
 
                                     <textarea onChange={this.onChange} id="description" name="w3review"  rows="4" cols="50" className='w3review'>{this.state.description ?? ''}</textarea>
                                             <div className="wrapbtnaddon_bt">
-                                                    <button className="creteaddon_bt">CREATE</button>
+                                                    <button className="creteaddon_bt">Save</button>
                                             </div>
                                     </form>
                                         </div>   
@@ -175,5 +175,5 @@ const mapStateToProps = state => ({
 });
 export default connect(
     mapStateToProps,
-    { addcategory }
+    { addcategory,updatecategory }
 )(Eventcat);

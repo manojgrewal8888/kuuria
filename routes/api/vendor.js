@@ -18,7 +18,7 @@ router.post('/category_list', async function(req,res) {
     });
 });
 router.post('/single_cat', async function(req,res) {
-    EventCategory.find({_id:req.body.category_id}).then(category=>{
+    EventCategory.findOne({_id:req.body.category_id}).then(category=>{
         return res.json(category);
     });
 });
